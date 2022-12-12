@@ -1,40 +1,60 @@
 <template>
-  <header>
-    <Navbar />
+  <header class="sticky-top bg-lightPink elevation-5" id="nav">
+    <Navbar class="" id="navBar" />
   </header>
   <main>
     <router-view />
   </main>
-   <footer class="bg-dark text-light">
-    Made with 💖 by CodeWorks
-  </footer>
+
+  <Footer />
 </template>
 
 <script>
-import { computed } from 'vue'
-import { AppState } from './AppState'
-import Navbar from './components/Navbar.vue'
+import { computed, onMounted, watchEffect } from "vue";
+import { AppState } from "./AppState";
+import Footer from "./components/Footer.vue";
+import Navbar from "./components/Navbar.vue";
 
 export default {
   setup() {
-    return {
-      appState: computed(() => AppState)
+    onMounted(() => {
+      hideOnScrollTest();
+    });
+
+    watchEffect(() => {});
+
+    function hideOnScrollTest() {
+      let nav = document.querySelector("#nav");
+
+      let prevScrollpos = window.scrollY;
+      // console.log(["prev"], prevScrollpos);
+      window.onscroll = function () {
+        let currentScrollPos = window.scrollY;
+        // console.log(["current"], currentScrollPos);
+        if (prevScrollpos > currentScrollPos) {
+          nav.style.opacity = "1";
+          nav.style.transition = "all 0.25s ease";
+
+          // nav.classList.remove("showOnScroll");
+        } else {
+          // nav.classList.add("hiddenOnScroll");
+          nav.style.opacity = "0";
+        }
+        prevScrollpos = currentScrollPos;
+      };
     }
+
+    return {
+      appState: computed(() => AppState),
+    };
   },
-  components: { Navbar }
-}
+  components: { Navbar, Footer },
+};
 </script>
 <style lang="scss">
 @import "./assets/scss/main.scss";
 
-:root{
-  --main-height: calc(100vh - 32px - 64px);
-}
-
-
-footer {
-  display: grid;
-  place-content: center;
-  height: 32px;
+:root {
+  --main-height: calc(100vh - 32px - 80px);
 }
 </style>
