@@ -23,7 +23,7 @@
  <div class="row">
 
  
-   <div class="col-md-6">
+   <!-- <div class="col-md-6">
        <div
        class="d-flex rounded-pill  bg-white align-items-center elevation-5"
      >
@@ -36,7 +36,7 @@
        />
    
      </div>
-   </div>
+   </div> -->
    <!-- <div class="col-md-6">
        <div
        class="d-flex rounded-pill  bg-white align-items-center elevation-5"
@@ -59,6 +59,7 @@
          type="text"
          name=""
          id=""
+         v-model="editable.email"
          class="form-control rounded-pill p-3 mx-2 border-0 bg-white"
          placeholder="Enter email address"
        />
@@ -98,7 +99,9 @@ export default {
       editable,
     async   handleSubmit(){
 try {
+  // console.log(e);
     await newsLetterService.addNewsLetterSubscription(editable.value)
+    Pop.success('Thanks for Subscribing!')
   } catch (error) {
     Pop.error(error,'[addingNewsLetterSubscription]')
   }
