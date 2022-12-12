@@ -7,7 +7,7 @@ class NewsLetterService {
     if (res) {
       throw new BadRequest("already signed up");
     }
-    let newsLetter = await dbContext.NewsLetter.create(email);
+    let newsLetter = await dbContext.NewsLetter.create({email: email});
     return newsLetter;
   }
 }
