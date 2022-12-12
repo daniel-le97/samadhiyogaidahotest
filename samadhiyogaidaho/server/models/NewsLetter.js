@@ -5,6 +5,7 @@ const ObjectId = mongoose.Types.ObjectId;
 export const NewsLetterSchema = new Schema(
   {
     email: { type: String, required: true },
+    phone: { type: Number, required: false },
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
