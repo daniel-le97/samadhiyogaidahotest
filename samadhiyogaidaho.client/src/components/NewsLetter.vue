@@ -17,62 +17,64 @@
       </form>
     </div> -->
 
+<form @submit.prevent="handleSubmit()">
 
-     <div class="container mailing-list my-2">
-    <div class="row">
-  
-    
-      <div class="col-md-6">
-          <div
-          class="d-flex rounded-pill  bg-white align-items-center elevation-5"
-        >
-          <input
-            type="text"
-            name=""
-            id=""
-            class="form-control rounded-pill p-3 border-0 bg-transparent"
-            placeholder="Name"
-          />
-      
-        </div>
-      </div>
-      <div class="col-md-6">
-          <div
-          class="d-flex rounded-pill  bg-white align-items-center elevation-5"
-        >
-          <input
-            type="text"
-            name=""
-            id=""
-            class="form-control rounded-pill p-3  border-0 bg-transparent"
-            placeholder="(optional) Phone Number"
-          />
-         
-        </div>
-      </div>
-        <div class="col-md-12 my-4">
-        <div
-          class="d-flex rounded-pill p-1 bg-white align-items-center elevation-5"
-        >
-          <input
-            type="text"
-            name=""
-            id=""
-            class="form-control rounded-pill p-3 mx-2 border-0 bg-white"
-            placeholder="Enter email address"
-          />
-          <div class="">
-            <button
-              class="btn btn-dark fw-bold elevation-6 rounded-pill py-4 px-5"
-            >
-              SUBMIT
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="container mailing-list my-2">
+ <div class="row">
+
+ 
+   <div class="col-md-6">
+       <div
+       class="d-flex rounded-pill  bg-white align-items-center elevation-5"
+     >
+       <input
+         type="text"
+         name=""
+         id=""
+         class="form-control rounded-pill p-3 border-0 bg-transparent"
+         placeholder="Name"
+       />
    
+     </div>
+   </div>
+   <!-- <div class="col-md-6">
+       <div
+       class="d-flex rounded-pill  bg-white align-items-center elevation-5"
+     >
+       <input
+         type="text"
+         name=""
+         id=""
+         class="form-control rounded-pill p-3  border-0 bg-transparent"
+         placeholder="(optional) Phone Number"
+       />
+      
+     </div>
+   </div> -->
+     <div class="col-md-12 my-4">
+     <div
+       class="d-flex rounded-pill p-1 bg-white align-items-center elevation-5"
+     >
+       <input
+         type="text"
+         name=""
+         id=""
+         class="form-control rounded-pill p-3 mx-2 border-0 bg-white"
+         placeholder="Enter email address"
+       />
+       <div class="">
+         <button
+           class="btn btn-dark fw-bold elevation-6 rounded-pill py-4 px-5"
+         >
+           SUBMIT
+         </button>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+</form>
   </div>
 </template>
 
@@ -80,6 +82,7 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
+import { newsLetterService } from "../services/NewsLetterService.js";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
@@ -93,6 +96,13 @@ export default {
 
     return {
       editable,
+    async   handleSubmit(){
+try {
+    await newsLetterService.addNewsLetterSubscription(editable.value)
+  } catch (error) {
+    Pop.error(error,'[addingNewsLetterSubscription]')
+  }
+      }
     };
   },
 };
