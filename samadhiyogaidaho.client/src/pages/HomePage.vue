@@ -58,12 +58,11 @@
           /> -->
         </div>
 
-        <div class="join-newsletter-button" style="z-index: 9999;">
-          <a href="#newsletter" class="btn bg-dark selectable text-light  fs-3  px-4" > Join Our NewsLetter</a>
-        </div>
-        <div class="join-newsletter-button-2" style="z-index: 9999;">
+        <div class="join-newsletter-button flex-column d-flex" style="z-index: 9999;">
+          <a href="#newsletter" class="btn bg-dark selectable text-light  fs-3  px-4 mb-3" > Join Our NewsLetter</a>
           <a href="#newsletter" class="btn bg-warning selectable  fs-3  px-4" > Book a session</a>
         </div>
+  
       </div>
     </div>
     <RowSeporator2/>
