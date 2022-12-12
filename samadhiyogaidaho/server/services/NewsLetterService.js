@@ -3,11 +3,12 @@ import { dbContext } from "../db/DbContext";
 
 class NewsLetterService {
   async addNewsLetterSubscription(email) {
-    const res = await dbContext.NewsLetter.find({ email });
+    const hi = email
+    const res = await dbContext.NewsLetter.find(email);
     if (res) {
       throw new BadRequest("already signed up");
     }
-    let newsLetter = await dbContext.NewsLetter.create({email: email});
+    let newsLetter = await dbContext.NewsLetter.create(email);
     return newsLetter;
   }
 }
