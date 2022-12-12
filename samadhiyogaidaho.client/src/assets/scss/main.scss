@@ -3,9 +3,54 @@
 @import "./_overrides.scss";
 @import "./_utilities.scss";
 @import "./loaders.scss";
-
-body{
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Calligraffitti&family=Courgette&family=Oswald&family=Patrick+Hand&family=Quando&family=Roboto&display=swap');
+body {
   overscroll-behavior: none;
+}
+.font-1 {
+  font-family: "Courgette", cursive;
+}
+.font-2{
+  font-family: 'Patrick Hand', cursive;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 0; /* if you use -1 you have to set to `"window"` the interactivity.detectsOn property */
+}
+:root {
+  --link-color: #f68b59;
+  --link-underline-padding: 0.5em;
+  --darkPink: #f68b59;
+   --teal: #59f693;
+  --lightPink: #fef1eb;
+}
+
+.underline {
+  display: inline-block;
+  padding: 0 var(--link-underline-padding);
+  text-decoration: none;
+}
+
+.underline:after {
+  background-color: var(--darkPink);
+  content: "";
+  display: block;
+  height: 0.2em;
+  margin-left: calc(var(--link-underline-padding) * -1);
+  margin-top: 0.1em;
+  transition: width 0.5s;
+  width: 0;
+}
+
+.underline:hover:after {
+  width: calc(100% + var(--link-underline-padding) * 2);
 }
 
 #app {
@@ -13,6 +58,18 @@ body{
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--body-bg);
+}
+
+.text-shadow {
+  color: white;
+  -webkit-text-stroke: 0px #f1a3a3;
+  text-shadow: 0px 1px 4px #000000;
+}
+
+.hover-image:hover {
+  transform: scale(1.01);
+  transition: all 0.5s ease;
+  filter: brightness(120%);
 }
 
 main {
