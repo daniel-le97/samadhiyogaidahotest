@@ -52,6 +52,11 @@ const routes = [
     name: "Testimonials",
     component: loadPage("TestimonialPage"),
   },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: loadPage("AdminPage"),
+  },
 
 
   {
