@@ -1,22 +1,63 @@
 <template>
   <div class="hero-image"></div>
   <div class="container-fluid" style="margin-top: 100px">
-    <div class="row flex-wrap">
-      <div class="col-md-6 p-5">
-        <div class="card bg-dark text-white">
+    <div class="row justify-content-center">
+      <div class="col-md-6 p-5 d-flex justify-content-center">
+        <div class="card rounded-circle text-dark border-0 elevation-5 rounded-1 ">
           <img
-            class="card-img img-fluid"
+            class="card-img  rounded-circle"
             src="http://thiscatdoesnotexist.com"
             alt="Title"
           />
-          <div class="card-img-overlay">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">Text</p>
+          <div class="card-img-overlay ">
+            <h1 class=""> TESTING</h1>
           </div>
         </div>
       </div>
  
-
+   
+      <div class="col-md-6 p-5 d-flex justify-content-center">
+        <div class="card rounded-circle text-dark border-0 elevation-5 rounded-1 ">
+          <img
+            class="card-img  rounded-circle"
+            src="http://thiscatdoesnotexist.com"
+            alt="Title"
+          />
+          <div class="card-img-overlay ">
+            <h1 class=""> TESTING</h1>
+          </div>
+        </div>
+      </div>
+ 
+   
+      <div class="col-md-6 p-5 d-flex justify-content-center">
+        <div class="card rounded-circle text-dark border-0 elevation-5 rounded-1 ">
+          <img
+            class="card-img  rounded-circle"
+            src="http://thiscatdoesnotexist.com"
+            alt="Title"
+          />
+          <div class="card-img-overlay ">
+            <h1 class=""> TESTING</h1>
+          </div>
+        </div>
+      </div>
+ 
+   
+      <div class="col-md-6 p-5 d-flex justify-content-center">
+        <div class="card rounded-circle text-dark border-0 elevation-5 rounded-1 ">
+          <img
+            class="card-img  rounded-circle"
+            src="http://thiscatdoesnotexist.com"
+            alt="Title"
+          />
+          <div class="card-img-overlay ">
+            <h1 class=""> TESTING</h1>
+          </div>
+        </div>
+      </div>
+ 
+   
     
     </div>
   </div>
@@ -53,5 +94,32 @@ export default {
   background-position: center;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
+}
+.card{
+height: 400px;
+width: 400px;
+object-fit:cover ;
+}
+
+.card-img-overlay{
+  opacity: 0;
+    transition: all 0.25s ease;
+
+}
+.card img {
+    transition: all 0.25s ease;  
+}
+.card:hover{
+     transition: all 0.25s ease;
+     box-shadow: none;
+background: transparent;
+img{
+  opacity: 0;
+      transition: all 0.25s ease;
+}
+  .card-img-overlay{
+    opacity: 1;
+    transition: all 0.25s ease;
+  }
 }
 </style>
