@@ -439,7 +439,7 @@
             v-motion-fade-visible
             class="display-6 courgette text-lightPink darken-20 mb-4 underline"
           >
-        COUPLE'S REJUVINATION YOGA RETREAT
+        COUPLE'S REJUVENATION YOGA RETREAT
           </h2>
           <br>
           <h3
