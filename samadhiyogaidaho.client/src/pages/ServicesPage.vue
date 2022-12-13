@@ -48,7 +48,7 @@
         <div class="card rounded-circle text-dark border-0 elevation-5 rounded-1 ">
           <img
             class="card-img  rounded-circle"
-            src="http://thiscatdoesnotexist.com"
+            src="https://images.unsplash.com/photo-1636619297905-54f124aa90b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             alt="Title"
           />
           <div class="card-img-overlay ">
@@ -95,7 +95,7 @@ export default {
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
 }
-.card{
+.card  img{
 height: 400px;
 width: 400px;
 object-fit:cover ;
