@@ -118,14 +118,19 @@
         <a
           href="https://www.facebook.com/people/Samadhi-Yoga-Idaho/100083164429288/?fref=nf&paipv=0&eav=AfZsU1GyYC-3TCWawqpkhNjTENoxFcR48yXyJKsoQDuqyKNUkhTIyy2dAGa7wTrD6QQ&_rdr"
           class="text-dark me-4"
+          target="_blank"
         >
           <i class="mdi mdi-facebook fs-1"></i>
         </a>
         <a
           href="https://www.instagram.com/samadhiyogaidaho/"
           class="text-dark me-4"
+          target="_blank"
         >
           <i class="mdi mdi-instagram fs-1"></i>
+        </a>
+        <a href="https://www.youtube.com/@Samadhiyogaidaho" class="text-dark me-4" target="_blank">
+          <i class="mdi mdi-youtube fs-1"></i>
         </a>
       </section>
       <!-- Section: Social -->
