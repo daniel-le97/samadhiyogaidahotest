@@ -3,10 +3,10 @@ import { dbContext } from "../db/DbContext.js";
 
 class RetreatsService {
   async createRetreat(retreatData) {
-    const retreats = await dbContext.Retreat.find({ retreatData });
-    if (retreats) {
-      throw new BadRequest("Already created this type of retreat");
-    }
+    // const retreats = await dbContext.Retreat.find({ retreatData });
+    // if (retreats) {
+    //   throw new BadRequest("Already created this type of retreat");
+    // }
     const newRetreat = await dbContext.Retreat.create(retreatData);
     return newRetreat;
   }

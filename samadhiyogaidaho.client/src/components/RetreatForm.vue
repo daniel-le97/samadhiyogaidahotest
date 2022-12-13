@@ -21,9 +21,20 @@
               name="location"
               id="location"
               placeholder="location"
-              v-model="editable.location"
+              v-model="editable.location.address"
             />
             <label for="location">location</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="url"
+              class="form-control"
+              name="location"
+              id="location"
+              placeholder="location"
+              v-model="editable.location.img"
+            />
+            <label for="location">location Image</label>
           </div>
 
           <div class="form-floating mb-3">
@@ -41,12 +52,12 @@
             <input
               type="number"
               class="form-control"
-              name="price"
-              id="price"
-              placeholder="price"
+              name="cost"
+              id="cost"
+              placeholder="cost"
               v-model="editable.cost.price"
             />
-            <label for="price">cost/price</label>
+            <label for="cost">cost/price</label>
           </div>
           <div class="form-floating mb-3">
             <input
@@ -57,28 +68,21 @@
               placeholder="costText"
               v-model="editable.cost.text"
             />
-            <label for="price">cost/price</label>
+            <label for="price">cost flavor Text</label>
           </div>
           <div class="form-floating mb-3">
             <input
-              type="text"
+              type="url"
               class="form-control"
               name="coverImg"
               id="coverImg"
               placeholder="coverImage"
-              v-model-="editable.coverImg"
+              v-model="editable.coverImg"
             />
             <label for="coverImg">coverImg</label>
           </div>
           <div class="mb-3">
-            <label for="schedule" class="form-label">Schedule</label>
-            <textarea
-              class="form-control"
-              name="schedule"
-              id="schedule"
-              rows="3"
-              v-model="editable.schedule"
-            ></textarea>
+          <input type="text" class="form-control" name="schedule" id="" v-model="editable.schedule.time">
           </div>
           <div class="mb-3">
             <label for="description" class="form-label">Description</label>
@@ -100,6 +104,7 @@
               v-model="editable.activities"
             ></textarea>
           </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>
@@ -117,23 +122,28 @@ import Pop from "../utils/Pop.js";
 export default {
   props: {},
   setup(props) {
-    const editable = ref({});
+    const editable = ref({
+      cost:{},
+      location:{},
+      food:{},
+      schedule:{}
+    });
 
     onMounted(() => {});
     watchEffect(() => {});
 
     return {
       editable,
-      
-  async handleSubmit(){
-    try {
-        await retreatsService.createRetreat(editable.value)
-      } catch (error) {
-        Pop.error(error,'[createRetreat]')
-      }
-  }
-  }
-}
+
+      async handleSubmit() {
+        try {
+          await retreatsService.createRetreat(editable.value);
+        } catch (error) {
+          Pop.error(error, "[createRetreat]");
+        }
+      },
+    };
+  },
 };
 </script>
 
