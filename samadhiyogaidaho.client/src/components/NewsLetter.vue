@@ -1,81 +1,51 @@
 <template>
   <div
-  
-  v-motion-pop-visible
-  class="container mt-5 image d-flex align-items-center  rounded flex-column justify-content-center">
-    
-    <!-- <div class="w-100 my-4">
-      <form @submit.prevent="handleSubmit()">
-
-        <div class="form-floating p-0 w-100">
-          <input
-            type="text"
-            class="form-control" name="email" id="email" placeholder="">
-          <label for="email">Email</label>
+    v-motion-pop-visible
+    class="container mt-5 image d-flex align-items-center rounded flex-column justify-content-center"
+  >
+    <form @submit.prevent="handleSubmit()">
+      <div class="container mailing-list my-2">
+        <div class="row">
+          <div class="col-md-6">
+            <div
+              class="d-flex rounded-pill bg-white align-items-center elevation-5"
+            >
+              <input
+                type="num"
+                min="10"
+           pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
+                v-model="editable.phone"
+           
+                class="form-control rounded-pill p-3 border-0 bg-transparent"
+                placeholder="(optional) Phone Number"
+              />
+            </div>
+          </div>
+          <div class="col-md-12 my-4">
+            <div
+              class="d-flex rounded-pill p-1 bg-white align-items-center elevation-5"
+            >
+              <input
+                type="email"
+                name=""
+                id=""
+                
+                v-model="editable.email"
+                class="form-control rounded-pill p-3 mx-2 border-0 bg-white"
+                placeholder="Enter email address"
+              />
+              <div class="">
+                <button
+                  class="btn btn-dark fw-bold elevation-6 rounded-pill py-4 px-5"
+                >
+                  SUBMIT
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="btn btn-dark w-25 my-2 fs-5 py-2" type="submit">Send</button>
-      </form>
-    </div> -->
-
-<form @submit.prevent="handleSubmit()">
-
-  <div class="container mailing-list my-2">
- <div class="row">
-
- 
-   <!-- <div class="col-md-6">
-       <div
-       class="d-flex rounded-pill  bg-white align-items-center elevation-5"
-     >
-       <input
-         type="text"
-         name=""
-         id=""
-         class="form-control rounded-pill p-3 border-0 bg-transparent"
-         placeholder="Name"
-       />
-   
-     </div>
-   </div> -->
-   <!-- <div class="col-md-6">
-       <div
-       class="d-flex rounded-pill  bg-white align-items-center elevation-5"
-     >
-       <input
-         type="text"
-         name=""
-         id=""
-         class="form-control rounded-pill p-3  border-0 bg-transparent"
-         placeholder="(optional) Phone Number"
-       />
-      
-     </div>
-   </div> -->
-     <div class="col-md-12 my-4">
-     <div
-       class="d-flex rounded-pill p-1 bg-white align-items-center elevation-5"
-     >
-       <input
-         type="text"
-         name=""
-         id=""
-         v-model="editable.email"
-         class="form-control rounded-pill p-3 mx-2 border-0 bg-white"
-         placeholder="Enter email address"
-       />
-       <div class="">
-         <button
-           class="btn btn-dark fw-bold elevation-6 rounded-pill py-4 px-5"
-         >
-           SUBMIT
-         </button>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-
-</form>
+      </div>
+    </form>
   </div>
 </template>
 
@@ -97,21 +67,17 @@ export default {
 
     return {
       editable,
-    async   handleSubmit(){
-try {
-  // console.log(e);
-    await newsLetterService.addNewsLetterSubscription(editable.value)
-    Pop.success('Thanks for Subscribing!')
-  } catch (error) {
-    Pop.error(error,'[addingNewsLetterSubscription]')
-  }
-      }
+      async handleSubmit() {
+        try {
+          await newsLetterService.addNewsLetterSubscription(editable.value);
+          Pop.success("Thanks for Subscribing!");
+        } catch (error) {
+          Pop.error(error, "[addingNewsLetterSubscription]");
+        }
+      },
     };
   },
 };
 </script>
 
-<style lang="scss" scoped>
-
-
-</style>
+<style lang="scss" scoped></style>
