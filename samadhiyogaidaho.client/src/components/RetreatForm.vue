@@ -10,6 +10,7 @@
               name="title"
               id="title"
               placeholder="title"
+              v-model="editable.title"
             />
             <label for="title">title</label>
           </div>
@@ -20,6 +21,7 @@
               name="location"
               id="location"
               placeholder="location"
+              v-model="editable.location"
             />
             <label for="location">location</label>
           </div>
@@ -31,6 +33,7 @@
               name="date"
               id="date"
               placeholder="date"
+              v-model="editable.date"
             />
             <label for="date">date</label>
           </div>
@@ -41,27 +44,62 @@
               name="price"
               id="price"
               placeholder="price"
+              v-model="editable.cost.price"
             />
             <label for="price">cost/price</label>
           </div>
           <div class="form-floating mb-3">
             <input
               type="text"
-              class="form-control" name="coverImg" id="coverImg" placeholder="coverImage">
-            <label for="coverImg">coverImg</label>
+              class="form-control"
+              name="costText"
+              id="costText"
+              placeholder="costText"
+              v-model="editable.cost.text"
+            />
+            <label for="price">cost/price</label>
           </div>
           <div class="form-floating mb-3">
             <input
               type="text"
-              class="form-control" name="schedule" id="schedule" placeholder="schedule">
-            <label for="schedule">schedule</label>
+              class="form-control"
+              name="coverImg"
+              id="coverImg"
+              placeholder="coverImage"
+              v-model-="editable.coverImg"
+            />
+            <label for="coverImg">coverImg</label>
           </div>
-        
+          <div class="mb-3">
+            <label for="schedule" class="form-label">Schedule</label>
+            <textarea
+              class="form-control"
+              name="schedule"
+              id="schedule"
+              rows="3"
+              v-model="editable.schedule"
+            ></textarea>
+          </div>
           <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+            <textarea
+              class="form-control"
+              name="description"
+              id="description"
+              rows="3"
+              v-model="editable.description"
+            ></textarea>
           </div>
-     
+          <div class="mb-3">
+            <label for="activities" class="form-label">activities</label>
+            <textarea
+              class="form-control"
+              name="activities"
+              id="activities"
+              rows="3"
+              v-model="editable.activities"
+            ></textarea>
+          </div>
         </form>
       </div>
     </div>
@@ -85,13 +123,13 @@ export default {
 
     return {
       editable,
-      handleSubmit(){
+      handleSubmit() {
         try {
-            await 
-          } catch (error) {
-            Pop.error(error,'[createRetreat]')
-          }
-      }
+          // await;
+        } catch (error) {
+          Pop.error(error, "[createRetreat]");
+        }
+      },
     };
   },
 };
