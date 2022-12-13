@@ -110,6 +110,7 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
+import { retreatsService } from "../services/RetreatsService";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
@@ -123,8 +124,14 @@ export default {
 
     return {
       editable,
+      async handleSubmit() {
       handleSubmit() {
         try {
+          await retreatsService.createRetreat(editable.value);
+        } catch (error) {
+          Pop.error(error, "[createRetreat]");
+        }
+      },
           // await;
         } catch (error) {
           Pop.error(error, "[createRetreat]");
