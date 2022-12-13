@@ -1,6 +1,7 @@
 <template>
   <header class="sticky-top bg-lightPink elevation-5" id="nav">
-    <Navbar class="" id="navBar" />
+    <Navbar class="" id="navBar" v-if="!routeAdmin"/>
+    
   </header>
   <main>
     <router-view />
@@ -11,6 +12,7 @@
 
 <script>
 import { computed, onMounted, watchEffect } from "vue";
+import { useRoute } from "vue-router";
 import { AppState } from "./AppState";
 import Footer from "./components/MiscComponents/Footer.vue";
 import Navbar from "./components/MiscComponents/Navbar.vue";
@@ -25,7 +27,6 @@ export default {
 
     function hideOnScrollTest() {
       let nav = document.querySelector("#nav");
-
       let prevScrollpos = window.scrollY;
       // console.log(["prev"], prevScrollpos);
       window.onscroll = function () {
@@ -34,7 +35,6 @@ export default {
         if (prevScrollpos > currentScrollPos) {
           nav.style.opacity = "1";
           nav.style.transition = "all 0.25s ease";
-
           // nav.classList.remove("showOnScroll");
         } else {
           // nav.classList.add("hiddenOnScroll");
@@ -44,7 +44,10 @@ export default {
       };
     }
 
+    const route = useRoute()
+
     return {
+      routeAdmin: computed(() => route.name == "Admin"),
       appState: computed(() => AppState),
     };
   },
