@@ -1,19 +1,46 @@
 <template>
-  <div class="hero-image d-flex align-items-center justify-content-center">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="display-1 font-1 text-shadow text-light">Join Our Retreat</h1>
+  <section>
+
+    <div class="hero-image d-flex align-items-center justify-content-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-1 font-1 text-shadow text-light">Join Our Retreat</h1>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
+  <section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+<h1 class="font-1 text-dark display-2">{{retreat.title}}  </h1>
+<h2 class="font-1 display-6 text-muted"> Sub Title </h2>
+        </div>
 
       </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img :src="retreat.coverImg" alt="" class="img-fluid rounded-4 elevation-5 h-100">
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12 mb-3">
+                     <img :src="retreat.coverImg" alt="" class="img-fluid rounded-4 elevation-5">
+            </div>
+            <div class="col-md-6">
+                     <img :src="retreat.coverImg" alt="" class="img-fluid rounded-4 elevation-5">
+            </div>
+            <div class="col-md-6">
+                     <img :src="retreat.coverImg" alt="" class="img-fluid rounded-4 elevation-5">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -21,6 +48,7 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import RetreatForm from "../components/RetreatForm.vue";
+import { retreatsService } from "../services/RetreatsService.js";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
@@ -28,10 +56,22 @@ export default {
   props: {},
   setup(props) {
     const editable = ref({});
-    onMounted(() => {});
+    onMounted(() => {
+      getAllRetreats()
+    });
     watchEffect(() => {});
+
+    async function getAllRetreats(){
+      try {
+          await retreatsService.getAllRetreats()
+          console.log(AppState.currentRetreat);
+        } catch (error) {
+          Pop.error(error,'[getCurrentRetreat]')
+        }
+    }
     return {
       editable,
+      retreat:computed(() => AppState.currentRetreat),
     };
   },
   components: { RetreatForm },
@@ -47,5 +87,9 @@ export default {
   background-position: center;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
+}
+
+.img-fluid{
+  object-fit: cover;
 }
 </style>

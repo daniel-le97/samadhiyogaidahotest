@@ -10,12 +10,25 @@ class RetreatsService {
     const newRetreat = await dbContext.Retreat.create(retreatData);
     return newRetreat;
   }
-  async findRetreatById(retreatId){
-    const found = await dbContext.Retreat.findById(retreatId)
-    if (!found) {
-      throw new BadRequest('Invalid Retreat Id')
+
+  async getCurrentRetreat(id){
+    const currentRetreat = await dbContext.Retreat.findById(id)
+    if (!currentRetreat) {
+        throw new BadRequest("Invalid Retreat Id");
     }
-    return found
+    return currentRetreat
   }
+  async getAllRetreats(){
+    const retreats = await dbContext.Retreat.find()
+  
+    return retreats
+  }
+  // async findRetreatById(retreatId){
+  //   const found = await dbContext.Retreat.findById(retreatId)
+  //   if (!found) {
+  //     throw new BadRequest('Invalid Retreat Id')
+  //   }
+  //   return found
+  // }
 }
 export const retreatsService = new RetreatsService();

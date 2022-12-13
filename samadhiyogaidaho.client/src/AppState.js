@@ -10,5 +10,8 @@ export const AppState = reactive({
   newsLetterSubscription: [],
   
   /** @type {import('./models/Retreat.js').Retreat} */
-  currentRetreat: {}
+  currentRetreat: {},
+  
+  /** @type {import('./models/Retreat.js').Retreat[]} */
+  archivedRetreats:[]
 })

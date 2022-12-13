@@ -14,5 +14,7 @@ export class Retreat{
     this.featuredImg = data.featuredImg
     this.activities = data.activities
     
+
+    
   }
 }

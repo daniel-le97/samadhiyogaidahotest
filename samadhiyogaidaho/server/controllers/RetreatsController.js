@@ -6,7 +6,8 @@ export class RetreatsController extends BaseController {
   constructor() {
     super("/api/retreats");
     this.router
-    .get("")
+    .get("", this.getallRetreats)
+    .get('/:id',this.getCurrentRetreat)
     .post("", this.createRetreat);
   }
 
@@ -17,5 +18,22 @@ export class RetreatsController extends BaseController {
     } catch (error) {
       next(error);
     }
+  }
+  async getallRetreats(req,res,next){
+    try {
+        const retreats = await retreatsService.getAllRetreats()
+        await res.send(retreats)
+      } catch (error) {
+        next(error)
+      }
+  }
+
+  async getCurrentRetreat(req,res,next){
+try {
+    const currentRetreat = await retreatsService.getCurrentRetreat(req.params.id);
+    await res.send(currentRetreat)
+  } catch (error) {
+    next(error)
+  }
   }
 }
