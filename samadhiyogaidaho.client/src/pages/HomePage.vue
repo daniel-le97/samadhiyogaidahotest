@@ -476,8 +476,13 @@
 </template>
 
 <script>
+import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
 import RowSeperator from "../components/PluginComponents/RowSeperator.vue";
+import RowSeporator2 from "../components/PluginComponents/RowSeporator2.vue";
 import SwiperComponent from "../components/PluginComponents/SwiperComponent.vue";
+import SwiperComponent2 from "../components/PluginComponents/SwiperComponent2.vue";
+
+
 
 export default {
     setup() {
@@ -487,7 +492,7 @@ export default {
             }
         };
     },
-    components: { RowSeperator, SwiperComponent }
+    components: { RowSeperator, SwiperComponent2, ParticleComponent, RowSeporator2 }
 };
 </script>
 
