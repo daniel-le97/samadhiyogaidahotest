@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import ParticleTest from "../components/ParticleComponent.vue";
+import ParticleTest from "../components/PluginComponents/ParticleComponent.vue";
 import PersonComponent from "../components/PersonComponent.vue";
 
 export default {

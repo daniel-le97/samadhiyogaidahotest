@@ -40,9 +40,9 @@ s60.2,40,120,40s59.8,0,59.8,0l0.2,143H-60V96L-40,95.6z"></path>
 <script>
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
-import { AppState } from "../AppState.js";
-import { logger } from "../utils/Logger.js"
-import Pop from "../utils/Pop.js";
+import { AppState } from "../../AppState.js";
+import { logger } from "../../utils/Logger.js"
+import Pop from "../../utils/Pop.js";
 
 export default {
 props:{

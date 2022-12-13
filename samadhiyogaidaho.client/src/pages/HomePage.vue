@@ -476,8 +476,8 @@
 </template>
 
 <script>
-import RowSeperator from "../components/RowSeperator.vue";
-import SwiperComponent from "../components/SwiperComponent.vue";
+import RowSeperator from "../components/PluginComponents/RowSeperator.vue";
+import SwiperComponent from "../components/PluginComponents/SwiperComponent.vue";
 
 export default {
     setup() {

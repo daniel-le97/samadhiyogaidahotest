@@ -158,9 +158,6 @@ export default {
 
 <style lang="scss" scoped>
 
-.swiper {
-
-}
 
 
 .forcedImg{

@@ -12,8 +12,8 @@
 <script>
 import { computed, onMounted, watchEffect } from "vue";
 import { AppState } from "./AppState";
-import Footer from "./components/Footer.vue";
-import Navbar from "./components/Navbar.vue";
+import Footer from "./components/MiscComponents/Footer.vue";
+import Navbar from "./components/MiscComponents/Navbar.vue";
 
 export default {
   setup() {
