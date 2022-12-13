@@ -1,11 +1,11 @@
 <template>
-  <div class="container my-5">
+  <div class="container my-5 " >
     <div class="row">
       <div class="col-md-3">
         <AdminSidePanel />
       </div>
       <div class="col-md-9">
-        
+        <AdminTabs/>
       </div>
     </div>
   </div>
@@ -17,6 +17,7 @@ import { onMounted, ref, watchEffect } from "vue";
 import { RouterView } from "vue-router";
 import { AppState } from "../AppState.js";
 import AdminSidePanel from "../components/AdminComponents/AdminSidePanel.vue";
+import AdminTabs from "../components/AdminComponents/AdminTabs.vue";
 import RetreatForm from "../components/RetreatForm.vue";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
@@ -28,11 +29,9 @@ export default {
     onMounted(() => {});
     watchEffect(() => {});
     return {
-      editable,
-      activeTab: "",
-    };
+      editable,};
   },
-  components: { RetreatForm, AdminSidePanel, RouterView },
+  components: { RetreatForm, AdminSidePanel,AdminTabs},
 };
 </script>
 

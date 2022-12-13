@@ -7,7 +7,7 @@
     <router-view />
   </main>
 
-  <Footer />
+  <Footer v-if="!routeAdmin"/>
 </template>
 
 <script>

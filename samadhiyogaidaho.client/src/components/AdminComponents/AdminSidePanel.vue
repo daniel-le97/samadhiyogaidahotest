@@ -1,67 +1,97 @@
 <template>
   <div class="AdminSidePanel">
     <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        DashBoard
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-       <button class="btn btn-primary"></button>
-       <button class="btn btn-primary"></button>
-       <button class="btn btn-primary"></button>
-       <button class="btn btn-primary"></button>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            DashBoard
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <button class="btn btn-primary"></button>
+            <button class="btn btn-primary"></button>
+            <button class="btn btn-primary"></button>
+            <button class="btn btn-primary"></button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Retreats
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <div class="d-flex flex-column gap-2">
-          <button class="btn btn-warning">Add a new retreat</button>
-          <button class="btn btn-warning">edit a retreat</button>
-          <button class="btn btn-warning">delete a retreat</button>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            Retreats
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <!--  -->
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            Services
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <div class="d-flex flex-column gap-2">
+              <button class="btn btn-info">Add a new service</button>
+              <button class="btn btn-info">edit a service</button>
+              <button class="btn btn-info">delete a service</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Services
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-         <div class="d-flex flex-column gap-2">
-          <button class="btn btn-info">Add a new service</button>
-          <button class="btn btn-info">edit a service</button>
-          <button class="btn btn-info">delete a service</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
   </div>
 </template>
 
-
 <script>
+
+
 export default {
-  setup(){
-    return {}
-  }
-}
+  setup() {
+    return {};
+  },
+};
 </script>
 
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
