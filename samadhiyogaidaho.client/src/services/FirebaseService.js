@@ -1,5 +1,6 @@
 import { auth, storage } from "../../lib/firebase.js";
 import { AppState } from "../AppState.js";
+import { uploadsService } from "./UploadsService.js";
 class FirebaseService {
   async uploadFile(e) {
     const file = Array.from(e.target.files)[0];
@@ -8,20 +9,22 @@ class FirebaseService {
       // @ts-ignore
       `uploads/${Date.now()}.${extension}`
     );
-    // console.log("[file]", file);
-    // console.log("[extension]", extension);
-    console.log(ref);
-
-    // Starts the upload
+ 
     const task = ref.put(file);
-    
+ 
+
+// console.log(test);
+
     task
       .then((d) => ref.getDownloadURL())
-      .then((url) => {
+      .then((url)  => async () => {
         AppState.uploadedImgs.push(url);
-        
+        AppState.newActiveUpload = url
+      //  await  uploadsService.addUpload(url)
+        // console.log(AppState.uploadedImgs);
       });
 
+      await uploadsService.addUpload(AppState.newActiveUpload)
     // console.log(AppState.uploadedImgs);
     // AppState.uploadedImgs.push(task)
     // Listen to updates to upload task
@@ -36,5 +39,6 @@ class FirebaseService {
 
     // Get downloadURL AFTER task resolves (Note: this is not a native Promise)
   }
+
 }
 export const firebaseService = new FirebaseService();
