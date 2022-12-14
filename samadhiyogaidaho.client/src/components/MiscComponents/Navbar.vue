@@ -17,7 +17,7 @@
             alt=""
             width="70"
             height="70"
-            class="rounded-circle"
+            class="rounded-circle logo"
           />
            <!-- <div v-motion-fade class="text-center " style="margin-top:80px;">
           <img
@@ -159,6 +159,10 @@ export default {
 .nav-link:hover {
   text-transform: uppercase;
   color: var(--darkPink) ! important
+}
+
+.logo{
+  object-fit: cover;
 }
 
 .navbar-nav .router-link-exact-active {
