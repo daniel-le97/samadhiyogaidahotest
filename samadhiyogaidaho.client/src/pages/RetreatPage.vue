@@ -173,16 +173,12 @@ import Pop from "../utils/Pop.js";
 
 export default {
   props: {},
-  data: () => ({
-    tab: null,
-  }),
   setup(props) {
     const editable = ref({});
-    const retreatDate = AppState.currentRetreat.date;
+
     onMounted(() => {
       getAllRetreats();
     });
-    watchEffect(() => {});
 
     async function getAllRetreats() {
       try {
@@ -194,7 +190,6 @@ export default {
     }
     return {
       editable,
-      retreatDate,
       retreat: computed(() => AppState.currentRetreat),
       archived:computed(() => AppState.archivedRetreats),
       setActiveImage(image) {
