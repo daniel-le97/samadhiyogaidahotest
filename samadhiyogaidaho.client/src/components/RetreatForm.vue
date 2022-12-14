@@ -112,7 +112,7 @@
                 type="file"
                 id="file"
                 ref="file"
-                v-on:change="onChangeFileUpload()"
+                v-on:change="onChangeFileUpload"
               />
             </label>
 
@@ -152,7 +152,7 @@ import { AppState } from "../AppState.js";
 import { retreatsService } from "../services/RetreatsService";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
-
+import {firebaseService} from '../services/FirebaseService.js'
 export default {
   props: {},
   setup(props) {
@@ -177,9 +177,12 @@ file,
           Pop.error(error, "[createRetreat]");
         }
       },
-   async  onChangeFileUpload() {
-          console.log("selected file",file.value.files)
-        
+   async  onChangeFileUpload(e) {
+         try {
+             await  firebaseService.uploadFile(e)
+           } catch (error) {
+             Pop.error(error,'[fileUpload]')
+           }
       },
     };
   },
