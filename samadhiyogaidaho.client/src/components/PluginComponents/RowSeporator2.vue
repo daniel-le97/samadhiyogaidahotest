@@ -20,7 +20,7 @@
    <use xlink:href="#gentle-wave" x="50" y="0" fill="#f68b59"/>
     </g>
       <g class="parallax3">
-   <use xlink:href="#gentle-wave" x="50" y="9" fill="#f68b59"/>
+   <use xlink:href="#gentle-wave" x="50" y="9" fill="#f9ad8a"/>
    </g>
     <g class="parallax4">
    <use xlink:href="#gentle-wave" x="50" y="6" fill="#fff"/>  
@@ -71,25 +71,25 @@ props:{
 }
 
 .parallax1 > use {
-  animation: move-forever1 10s linear infinite;
+  animation: move-forever1 12s linear infinite;
   &:nth-child(1) {
     animation-delay: -2s;
   }
 }
 .parallax2 > use {
-  animation: move-forever2 8s linear infinite;
+  animation: move-forever2 10s linear infinite;
   &:nth-child(1) {
     animation-delay: -2s;
   }
 }
 .parallax3 > use {
-  animation: move-forever3 6s linear infinite;
+  animation: move-forever3 8s linear infinite;
   &:nth-child(1) {
     animation-delay: -2s;
   }
 }
 .parallax4 > use {
-  animation: move-forever4 4s linear infinite;
+  animation: move-forever4 46s linear infinite;
   &:nth-child(1) {
     animation-delay: -2s;
   }
