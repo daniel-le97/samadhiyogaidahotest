@@ -13,7 +13,7 @@
   <!-- <RetreatForm /> -->
   <section>
     <div class="container">
-      <div class="row">
+      <div class="row my-4">
         <div class="col-md-12">
           <h1 class="font-1 text-dark display-2">{{ retreat.title }}</h1>
         </div>
@@ -116,6 +116,15 @@
                 {{ retreat?.schedule?.description }}
               </p>
             </div>
+            <div class="row">
+<div class="col-md-4">
+  <div class="card border-0 elevation-6">
+  <div class="card-body">
+    <p>  Partner activities</p>
+  </div>
+  </div>
+</div>
+            </div>
           </div>
         </div>
         <div class="row my-5">
@@ -127,12 +136,8 @@
               <p class="fs-5 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
-          <div class="col-md-6 d-flex justify-content-center">
-            <img
-              src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt=""
-              class="img-fluid elevation-5 rounded-4 w-75"
-            />
+          <div class="col-md-6 d-flex justify-content-end">
+           <FoodImageSwiper v-if="retreat?.food?.imgs"/>
           </div>
         </div>
       </div>
@@ -160,6 +165,7 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import ArchivedRetreatCard from "../components/ArchivedRetreatCard.vue";
+import FoodImageSwiper from "../components/FoodImageSwiper.vue";
 import RetreatForm from "../components/RetreatForm.vue";
 import { retreatsService } from "../services/RetreatsService.js";
 import { logger } from "../utils/Logger.js";
@@ -196,7 +202,7 @@ export default {
       },
     };
   },
-  components: { RetreatForm, ArchivedRetreatCard },
+  components: { RetreatForm, ArchivedRetreatCard, FoodImageSwiper },
 };
 </script>
 

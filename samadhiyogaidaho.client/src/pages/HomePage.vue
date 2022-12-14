@@ -66,15 +66,9 @@
             Book a session</a
           >
         </div>
-
-        <div class="custom-shape-divider-bottom-1671044136">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-    </svg>
-</div>
       </div>
     </div>
-    <!-- <RowSeporator2 /> -->
+    <RowSeporator2 />
   </section>
 
   <section id="Mission-Section">
@@ -93,7 +87,7 @@
             v-motion-slide-visible-left
             class="display-6 font-1 underline text-lightPink darken-20 mb-4"
           >
-            Our Mission
+            Our Core Belief
           </h2>
 
           <p v-motion-fade-visible class="text-start fs-4 px-md-5">
@@ -141,8 +135,7 @@
               <div class="text-box">
                 <p class="title">Find What Matters</p>
                 <p class="content">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-                  animi ab similique blanditiis quos sequi.
+              
                 </p>
               </div>
             </div>
@@ -157,10 +150,9 @@
                 class="img-fluid rounded"
               />
               <div class="text-box">
-                <p class="title">Lorem ipsum dolor sit.</p>
+                <p class="title">Cultivate Your Uniqueness</p>
                 <p class="content">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
-                  obcaecati voluptas quam?
+                
                 </p>
               </div>
             </div>
@@ -191,19 +183,19 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
+    <div class="container my-5 pb-5" >
+      <div class="row mb-5">
         <div class="col-md-3">
-          <div class="card border-0">
+          <div class="card border-0 service-card">
             <img
               src="https://images.unsplash.com/photo-1512291313931-d4291048e7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
               alt=""
-              class="img-fluid opacity-50 rounded elevation-6"
+              class="img-fluid  rounded elevation-6"
             />
             <div
               class="card-img-overlay d-flex justify-content-center align-items-center"
             >
-              <p class="mb-0 display-3 font-1">
+              <p class="mb-0 display-3 font-1 text-light text-shadow">
                 Private <br />
                 Classes
               </p>
@@ -211,59 +203,6 @@
           </div>
         </div>
 
-        <div class="col-md-3">
-          <div class="card border-0">
-            <img
-              src="https://images.unsplash.com/photo-1512291313931-d4291048e7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-              alt=""
-              class="img-fluid opacity-50 rounded elevation-6"
-            />
-            <div
-              class="card-img-overlay d-flex justify-content-center align-items-center"
-            >
-              <p class="mb-0 display-3 font-1">
-                Private <br />
-                Classes
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="card border-0">
-            <img
-              src="https://images.unsplash.com/photo-1512291313931-d4291048e7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-              alt=""
-              class="img-fluid opacity-50 rounded elevation-6"
-            />
-            <div
-              class="card-img-overlay d-flex justify-content-center align-items-center"
-            >
-              <p class="mb-0 display-3 font-1">
-                Private <br />
-                Classes
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="card border-0">
-            <img
-              src="https://images.unsplash.com/photo-1512291313931-d4291048e7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-              alt=""
-              class="img-fluid opacity-50 rounded elevation-6"
-            />
-            <div
-              class="card-img-overlay d-flex justify-content-center align-items-center"
-            >
-              <p class="mb-0 display-3 font-1">
-                Private <br />
-                Classes
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -429,6 +368,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.service-card{
+
+  img{
+    filter: brightness(80%);
+  }
+}
 .join-newsletter-button {
   position: absolute;
   right: 5%;
@@ -576,26 +522,6 @@ export default {
   background-position: right 400% bottom 40%;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
-}
-
-.custom-shape-divider-bottom-1671044136 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1671044136 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-bottom-1671044136 .shape-fill {
-    fill: #FFFFFF;
 }
 
 //when screen is 768px OR LESS
