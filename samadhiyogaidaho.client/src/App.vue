@@ -6,7 +6,9 @@
   <main>
     <router-view />
   </main>
-
+<ModalComponent id="activeImage">
+<ActiveImage/>
+</ModalComponent>
   <Footer v-if="!routeAdmin"/>
 </template>
 
@@ -14,8 +16,10 @@
 import { computed, onMounted, watchEffect } from "vue";
 import { useRoute } from "vue-router";
 import { AppState } from "./AppState";
+import ActiveImage from "./components/ActiveImage.vue";
 import Footer from "./components/MiscComponents/Footer.vue";
 import Navbar from "./components/MiscComponents/Navbar.vue";
+import ModalComponent from "./components/ModalComponent.vue";
 
 export default {
   setup() {
@@ -51,7 +55,7 @@ export default {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, Footer },
+  components: { Navbar, Footer, ModalComponent, ActiveImage },
 };
 </script>
 <style lang="scss">

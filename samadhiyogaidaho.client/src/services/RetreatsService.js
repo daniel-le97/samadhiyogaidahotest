@@ -9,15 +9,25 @@ class RetreatsService {
   }
   async getCurrentRetreat() {
     const res = await api.get("api/retreats");
-    console.log(res.data[0]);
+    // console.log(res.data[0]);
     // AppState.currentRetreat = new Retreat(res.data);
   }
   async getAllRetreats() {
     const res = await api.get("api/retreats");
 console.log(res.data);
-    AppState.archivedRetreats = res.data.map((r) => new Retreat(r));
-    AppState.currentRetreat = AppState.archivedRetreats[0];
-    // console.log(AppState.archivedRetreats);
+
+  res.data.map(r => {
+    if (r.archived == false) {
+      AppState.currentRetreat = new Retreat(r)
+    }
+    else AppState.archivedRetreats.push(new Retreat(r))
+  })
+
+ 
+// AppState.currentRetreat = AppState.archivedRetreats[0];
+//     AppState.archivedRetreats = res.data.map((r) => new Retreat(r.archived==true));
+
+    console.log(AppState.archivedRetreats);
     // AppState.currentRetreat = new Retreat(res.data);
   }
 }

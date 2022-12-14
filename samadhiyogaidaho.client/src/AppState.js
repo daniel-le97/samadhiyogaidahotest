@@ -18,5 +18,6 @@ export const AppState = reactive({
   uploadedImgs:[],
   newActiveUpload:null,
   formPaginate:0,
-  loading: false
+  loading: false,
+  activeImage:null
 });

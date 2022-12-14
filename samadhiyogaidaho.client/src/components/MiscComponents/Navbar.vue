@@ -41,7 +41,7 @@
               :to="{ name: 'Home' }"
               v-motion-pop
               :delay="300"
-              class="btn text-uppercase  fw-bold fs-4 underline"
+              class="btn text-uppercase  fw-bold fs-4 nav-link"
             >
               Home
             </router-link>
@@ -51,7 +51,7 @@
               :to="{ name: 'About' }"
               v-motion-pop
               :delay="300"
-              class="btn text-dark text-uppercase fw-bold fs-4 underline"
+              class="btn text-dark text-uppercase fw-bold fs-4 nav-link"
             >
               About
             </router-link>
@@ -61,7 +61,7 @@
               :to="{ name: 'Retreat' }"
               v-motion-pop
               :delay="300"
-              class="btn text-uppercase fw-bold fs-4 underline"
+              class="btn text-uppercase fw-bold fs-4 nav-link"
             >
               Retreats
             </router-link>
@@ -71,7 +71,7 @@
               :to="{ name: 'Services' }"
               v-motion-pop
               :delay="300"
-              class="btn text-uppercase fw-bold fs-4 underline"
+              class="btn text-uppercase fw-bold fs-4 nav-link"
             >
               Services
             </router-link>
@@ -81,7 +81,7 @@
               :to="{ name: 'Blog' }"
               v-motion-pop
               :delay="300"
-              class="btn text-uppercase fw-bold fs-4 underline"
+              class="btn text-uppercase fw-bold fs-4 nav-link"
             >
               Blog
             </router-link>
@@ -91,7 +91,7 @@
               :to="{ name: 'NewsLetter' }"
               v-motion-pop
               :delay="300"
-              class="btn text-uppercase fw-bold fs-4 underline"
+              class="btn text-uppercase fw-bold fs-4 nav-link"
             >
               Stay Updated
             </router-link>
@@ -101,7 +101,7 @@
               :to="{ name: 'Testimonials' }"
               v-motion-pop
               :delay="300"
-              class="btn  text-uppercase fw-bold fs-4 underline"
+              class="btn  text-uppercase fw-bold fs-4 nav-link"
             >
               Testimonials
             </router-link>
@@ -111,7 +111,7 @@
               :to="{ name: 'Contact' }"
               v-motion-pop
               :delay="300"
-              class="btn text-uppercase fw-bold fs-4 underline"
+              class="btn text-uppercase fw-bold fs-4 nav-link"
             >
               Contact
             </router-link>
@@ -140,25 +140,18 @@ export default {
 </script>
 
 <style scoped>
-.navText{
 
-}
-  
 
-.bg-custom {
-  background-color: rgba(214, 140, 127, 0.548);
-}
-
-.bg-test {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, #2c2b2b 0%, rgba(29, 84, 66, 0) 100%);
-}
-a:hover {
-  text-decoration: none;
-}
 
 .nav-link {
   text-transform: uppercase;
+  color:var(--dark);
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.nav-link:hover {
+  text-transform: uppercase;
+  color: var(--darkPink) ! important
 }
 
 .navbar-nav .router-link-exact-active {

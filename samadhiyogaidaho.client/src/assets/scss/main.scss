@@ -67,9 +67,10 @@ body {
 }
 
 .hover-image:hover {
-  transform: scale(1.01);
-  transition: all 0.5s ease;
-  filter: brightness(120%);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transform: scale(1.02);
+  filter: brightness(80%);
+  transition: all 0.25s ease;
 }
 
 main {
