@@ -1,13 +1,14 @@
-import { dbContext } from "../db/DbContext.js"
+import { dbContext } from "../db/DbContext.js";
 
-class UploadsService{
-async getAllUploads() {
-const uploads = await dbContext.Upload.find()
-return uploads
+class UploadsService {
+  async getAllUploads() {
+    const uploads = await dbContext.Upload.find();
+    return uploads;
+  }
+  async addUpload(uploadData) {
+    let hi = uploadData;
+    // const upload = await dbContext.Upload.create(uploadData)
+    return hi;
+  }
 }
-async addUpload(uploadData){
-const upload = await dbContext.Upload.create(uploadData)
-return upload
-}
-}
-export const uploadsService = new UploadsService()
+export const uploadsService = new UploadsService();
