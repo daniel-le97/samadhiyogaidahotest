@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="font-1 text-dark display-2">{{ retreat.title }}</h1>
-          <h2 class="font-1 display-6 text-muted">Sub Title</h2>
+         
         </div>
       </div>
 
@@ -25,7 +25,7 @@
           <img
             :src="retreat.coverImg"
             alt=""
-            class="img-fluid rounded-4 elevation-5 h-100"
+            class="img-fluid rounded-4 elevation-6 h-100"
           />
         </div>
         <div class="col-md-6">
@@ -34,26 +34,36 @@
               <img
                 :src="retreat.coverImg"
                 alt=""
-                class="img-fluid rounded-4 elevation-5"
+                class="img-fluid rounded-4 elevation-6"
               />
             </div>
             <div class="col-md-6">
               <img
                 :src="retreat.coverImg"
                 alt=""
-                class="img-fluid rounded-4 elevation-5"
+                class="img-fluid rounded-4 elevation-6"
               />
             </div>
             <div class="col-md-6">
               <img
                 :src="retreat.coverImg"
                 alt=""
-                class="img-fluid rounded-4 elevation-5"
+                class="img-fluid rounded-4 elevation-6"
               />
             </div>
           </div>
         </div>
       </div>
+
+
+<div class="container my-4">
+  <div class="masonry">
+   <div class="card border-0 elevation-6 bg-transparent my-3 rounded-4" v-for="f in retreat.featuredImgs">
+<img :src="f" alt="" class="img-fluid rounded-4">
+   </div>
+  </div>
+</div>
+
 
       <div class="row my-5">
         <div class="col-md-6">
@@ -68,7 +78,7 @@
         </div>
 
         <div class="col-md-6 d-flex justify-content-center">
-         <img src="../assets/img/retreatSchedule.png" alt="" class="img-fluid elevation-5 rounded-4 w-75">
+         <img :src="retreat?.schedule?.img" alt="" class="img-fluid elevation-5 rounded-4 w-75">
         </div>
         <div class="col-md-6"></div>
       </div>
@@ -192,5 +202,9 @@ retreatDate,
 
 .img-fluid {
   object-fit: cover;
+}
+
+.masonry{
+  columns: 4;
 }
 </style>
