@@ -3,7 +3,7 @@ import { retreatsService } from "../services/RetreatsService.js";
 import { uploadsService } from "../services/UploadsService.js";
 import BaseController from "../utils/BaseController.js";
 
-export class RetreatsController extends BaseController {
+export class UploadsController extends BaseController {
   constructor() {
     super("/api/uploads");
     this.router

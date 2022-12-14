@@ -153,6 +153,7 @@ import { retreatsService } from "../services/RetreatsService";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 import {firebaseService} from '../services/FirebaseService.js'
+import { uploadsService } from "../services/UploadsService.js";
 export default {
   props: {},
   setup(props) {
@@ -180,6 +181,8 @@ file,
    async  onChangeFileUpload(e) {
          try {
              await  firebaseService.uploadFile(e)
+            //  console.log(AppState.newActiveUpload);
+            //  await uploadsService.addUpload
            } catch (error) {
              Pop.error(error,'[fileUpload]')
            }
