@@ -5,8 +5,8 @@ export class NewsLetterController extends BaseController {
   constructor() {
     super("/api/newsLetter");
     this.router
-    .get("")
-    .post("", this.addNewsLetterSubscription);
+      .get("")
+      .post("", this.addNewsLetterSubscription);
   }
 
   async addNewsLetterSubscription(req, res, next) {

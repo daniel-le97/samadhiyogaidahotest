@@ -22,6 +22,7 @@ export class UploadsController extends BaseController {
       next(error);
     }
   }
+  
   async getAllUploads(req, res, next) {
     try {
       const retreats = await uploadsService.getAllUploads();
