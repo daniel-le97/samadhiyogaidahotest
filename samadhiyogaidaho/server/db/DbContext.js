@@ -1,8 +1,9 @@
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 import { AccountSchema } from "../models/Account";
 import { ContactSchema } from "../models/Contact";
 import { NewsLetterSchema } from "../models/NewsLetter";
 import { RetreatSchema } from "../models/Retreat.js";
+import { UploadSchema } from "../models/Upload.js";
 import { ValueSchema } from "../models/Value";
 
 class DbContext {
@@ -11,6 +12,7 @@ class DbContext {
   NewsLetter = mongoose.model("NewsLetter", NewsLetterSchema);
   Contact = mongoose.model("Contact", ContactSchema);
   Retreat = mongoose.model("Retreat", RetreatSchema);
+  Upload = mongoose.model('Upload',UploadSchema)
 }
 
 export const dbContext = new DbContext();
