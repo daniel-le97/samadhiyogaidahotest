@@ -35,6 +35,10 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": true
     },
-    "cSpell.words": ["Scrollpos", "vuetify"]
+    "cSpell.words": [
+      "Alverson",
+      "Scrollpos",
+      "vuetify"
+    ]
   }
 }
