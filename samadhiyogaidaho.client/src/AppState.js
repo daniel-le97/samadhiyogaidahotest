@@ -16,5 +16,6 @@ export const AppState = reactive({
   archivedRetreats: [],
 
   uploadedImgs:[],
-  newActiveUpload:null
+  newActiveUpload:null,
+  formPaginate:0
 });
