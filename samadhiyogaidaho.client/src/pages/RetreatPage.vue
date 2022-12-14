@@ -68,7 +68,7 @@
         </div>
 
         <div class="col-md-6 d-flex justify-content-center">
-         <img src="../assets/img/samadhiretreatschedule.png" alt="" class="img-fluid elevation-5 rounded-4 w-75">
+         <img src="../assets/img/retreatSchedule.png" alt="" class="img-fluid elevation-5 rounded-4 w-75">
         </div>
         <div class="col-md-6"></div>
       </div>
