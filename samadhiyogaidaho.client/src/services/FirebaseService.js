@@ -10,15 +10,20 @@ class FirebaseService {
     const imgs = [];
 
     const files = Array.from(e.target.files);
-
+    AppState.uploadedImgs = 0
+    let totalBytes
+    let bytes
+    
+    
     for await (const file of files) {
       let id = await generateId();
       const extension = file.type.split("/")[1];
-      const ref = storage.ref(
-   
-        `uploads/${id}.${extension}`
-      );
+      const ref = storage.ref(`uploads/${id}.${extension}`);
       const task = await ref.put(file);
+      totalBytes = task.totalBytes / 3
+      bytes = task.bytesTransferred / 3
+      AppState.uploadedImgs = bytes/totalBytes
+      console.log(AppState.uploadedImgs);
       const img = await this.getURL(ref);
       imgs.push(img);
     }
@@ -29,10 +34,10 @@ class FirebaseService {
   async getURL(ref) {
     try {
       const res = await ref.getDownloadURL();
+      // let observer = ref.
       return res;
-      //  console.log(res);
     } catch (error) {
-      logger.error(error,'[getURL]')
+      logger.error(error)
     }
   }
 }

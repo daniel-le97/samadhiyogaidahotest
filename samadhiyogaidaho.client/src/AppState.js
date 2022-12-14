@@ -15,7 +15,7 @@ export const AppState = reactive({
   /** @type {import('./models/Retreat.js').Retreat[]} */
   archivedRetreats: [],
 
-  uploadedImgs:[],
+  uploadedImgs:0,
   newActiveUpload:null,
   formPaginate:0,
   loading: false,

@@ -6,11 +6,18 @@
     <div class="d-flex mx-auto">
       <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
         <div class="d-flex flex-column align-items-center">
-          <img
+          <!-- <img
             src="https://cdn-icons-png.flaticon.com/512/1927/1927059.png"
             alt=""
             width="70"
             height="70"
+          /> -->
+          <img
+            src="src\assets\img\Samadhi Yoga.png"
+            alt=""
+            width="70"
+            height="70"
+            class="rounded-circle"
           />
            <!-- <div v-motion-fade class="text-center " style="margin-top:80px;">
           <img
