@@ -10,7 +10,7 @@
       </div>
     </div>
   </section>
-
+<RetreatForm/>
   <section>
     <div class="container">
       <div class="row">
@@ -55,37 +55,85 @@
         </div>
       </div>
 
-      <div class="row my-5 ">
-  <div class="col-md-8">
-          <ul class="nav nav-pills mb-3 justify-content-center d-flex" id="pills-tab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="summary-tab" data-bs-toggle="pill" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="true">Summary</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="location-tab" data-bs-toggle="pill" data-bs-target="#location " type="button" role="tab" aria-controls="location " aria-selected="false">Location</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="cost-tab" data-bs-toggle="pill" data-bs-target="#cost" type="button" role="tab" aria-controls="cost" aria-selected="false">Cost</button>
-  </li>
+      <div class="row my-5">
+        <div class="col-md-6">
+          {{ retreat?.location?.address }}
+        </div>
+        <div class="col-md-6">
+          <img
+            :src="retreat?.location?.img"
+            alt=""
+            class="img-fluid rounded-4"
+          />
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center">
+         <img src="../assets/img/samadhiretreatschedule.png" alt="" class="img-fluid elevation-5 rounded-4 w-75">
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+
+      <!-- <div class="row my-5 ">
   
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="activities-tab" data-bs-toggle="pill" data-bs-target="#activities" type="button" role="tab" aria-controls="activities" aria-selected="false">Activities</button>
-  </li>
+  <div class="col-md-12">
+   <v-card class="border-0 ">
+    <v-tabs
+      v-model="tab"
+      class="bg-transparent  elevation-5 font-2 fw-bold"
+      slider-color="danger"
+    >
+      <v-tab value="summary">Summary</v-tab>
+      <v-tab value="location"> Location</v-tab>
+      <v-tab value="cost">Cost</v-tab>
+      <v-tab value="activities">Activities</v-tab>
+      <v-tab value="schedule">Schedule</v-tab>
+      <v-tab value="food">Food</v-tab>
+    </v-tabs>
+
+    <v-card-text>
+      <v-window v-model="tab">
+        <v-window-item value="summary">
+          {{retreat.description}}
+        </v-window-item>
+
+        <v-window-item value="location">
+         {{retreat.location}}
+        </v-window-item>
+
+        <v-window-item value="cost">
+          {{retreat.cost}}
+        </v-window-item>
+        <v-window-item value="activities">
+          <ul class="list-group">
+<li class="list-group-items" v-for="a in retreat.activities">
+  {{a}}
+</li>
+          </ul>
+        </v-window-item>
+        <v-window-item value="schedule">
+          Three
+        </v-window-item>
+        <v-window-item value="food">
+          Three
+        </v-window-item>
+      </v-window>
+    </v-card-text>
+  </v-card>
   
-</ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="summary" role="tabpanel" aria-labelledby="summary-tab" tabindex="0">...</div>
-  <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="location -tab" tabindex="0">...</div>
-  <div class="tab-pane fade" id="cost" role="tabpanel" aria-labelledby="cost-tab" tabindex="0">...</div>
-  <div class="tab-pane fade" id="activities" role="tabpanel" aria-labelledby="activities-tab" tabindex="0">...</div>
+  
+  
+  </div>
  
-</div>
-  </div>
-  <div class="col-md-4 d-flex justify-content-center">
-    <div class="card border-0 elevation-5 rounded-4 p-4">
-    <button class="btn btn-outline-success"> Price</button>
+      </div> -->
     </div>
-  </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-1 font-1 text-dark">Past Retreats</h1>
+        </div>
       </div>
     </div>
   </section>
@@ -102,8 +150,12 @@ import Pop from "../utils/Pop.js";
 
 export default {
   props: {},
+  data: () => ({
+    tab: null,
+  }),
   setup(props) {
     const editable = ref({});
+const retreatDate = AppState.currentRetreat.date
     onMounted(() => {
       getAllRetreats();
     });
@@ -119,6 +171,7 @@ export default {
     }
     return {
       editable,
+retreatDate,
       retreat: computed(() => AppState.currentRetreat),
     };
   },
@@ -128,7 +181,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero-image {
-  height: 100vh;
+  height: 50vh;
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1589790272257-8c0f79c221da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);

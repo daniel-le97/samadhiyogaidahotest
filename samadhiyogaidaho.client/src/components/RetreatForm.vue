@@ -18,9 +18,9 @@
             <input
               type="text"
               class="form-control"
-              name="location"
-              id="location"
-              placeholder="location"
+              name="locationAddress"
+              id="locationAddress"
+              placeholder="locationAddress"
               v-model="editable.location.address"
             />
             <label for="location">location</label>
@@ -29,14 +29,25 @@
             <input
               type="url"
               class="form-control"
-              name="location"
-              id="location"
-              placeholder="location"
+              name="locationImg"
+              id="locationImg"
+              placeholder="locationImg"
               v-model="editable.location.img"
             />
             <label for="location">location Image</label>
           </div>
-
+          <div class="mb-3">
+            <label for="locationDescription" class="form-label"
+              >locationDescription</label
+            >
+            <textarea
+              class="form-control"
+              name="locationDescription"
+              id="locationDescription"
+              rows="3"
+              v-model="editable.location.description"
+            ></textarea>
+          </div>
           <div class="form-floating mb-3">
             <input
               type="datetime-local"
@@ -59,6 +70,7 @@
             />
             <label for="cost">cost/price</label>
           </div>
+
           <div class="form-floating mb-3">
             <input
               type="text"
@@ -82,7 +94,29 @@
             <label for="coverImg">coverImg</label>
           </div>
           <div class="mb-3">
-          <input type="text" class="form-control" name="schedule" id="" v-model="editable.schedule.time">
+            <label for="scheduleDescription" class="form-label"
+              >Schedule Description</label
+            >
+            <textarea
+              class="form-control"
+              name="scheduleDescription"
+              id="scheduleDescription"
+              rows="3"
+              v-model="editable.schedule.description"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label
+              >File
+              <input
+                type="file"
+                id="file"
+                ref="file"
+                v-on:change="onChangeFileUpload()"
+              />
+            </label>
+
+            <div id="scheduleFile" class="form-text">Help text</div>
           </div>
           <div class="mb-3">
             <label for="description" class="form-label">Description</label>
@@ -123,24 +157,29 @@ export default {
   props: {},
   setup(props) {
     const editable = ref({
-      cost:{},
-      location:{},
-      food:{},
-      schedule:{}
+      cost: {},
+      location: {},
+      food: {},
+      schedule: {},
     });
-
+    const file = ref(null)
     onMounted(() => {});
     watchEffect(() => {});
 
     return {
       editable,
-
+file,
       async handleSubmit() {
         try {
-          await retreatsService.createRetreat(editable.value);
+          console.log(editable.value);
+          // await retreatsService.createRetreat(editable.value);
         } catch (error) {
           Pop.error(error, "[createRetreat]");
         }
+      },
+   async  onChangeFileUpload() {
+          console.log("selected file",file.value.files)
+        
       },
     };
   },
