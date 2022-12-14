@@ -33,10 +33,6 @@ props:{
 
 <style lang="scss" scoped>
 .image{
-position: absolute;
-right: -60%;
-bottom: -500px;
-  height: 70vh;
-  width: 70vw;
+
 }
 </style>
