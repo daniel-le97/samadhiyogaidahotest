@@ -11,10 +11,11 @@ export class Retreat{
     this.food = data.food
     this.schedule = data.schedule
     this.archived = data.archived
-    this.featuredImg = data.featuredImg
+    this.featuredImgs = data.featuredImgs
     this.activities = data.activities
-    
-
-    
+    this.highlights = data.highlights
+this.yoga = data.yoga
+    this.createdAt = data.createdAt
+    this.updatedAt = data.updatedAt
   }
 }

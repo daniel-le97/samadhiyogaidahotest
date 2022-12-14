@@ -1,41 +1,37 @@
+import { ref } from "vue";
 import { auth, storage } from "../../lib/firebase.js";
 import { AppState } from "../AppState.js";
+import { generateId } from "../utils/Helper.js";
+import { logger } from "../utils/Logger.js";
 import { uploadsService } from "./UploadsService.js";
 class FirebaseService {
   async uploadFile(e) {
-    const file = Array.from(e.target.files)[0];
-    const extension = file.type.split("/")[1];
-    const ref = storage.ref(
-      // @ts-ignore
-      `uploads/${Date.now()}.${extension}`
-    );
+    // AppState.loading++;
+    const imgs = [];
 
-    const task = ref.put(file);
+    const files = Array.from(e.target.files);
 
-    task
-      .then((d) => ref.getDownloadURL())
-      .then((res) => {
-         AppState.newActiveUpload = res
-        AppState.uploadedImgs.push(res);
-        
-        // console.log(AppState.newActiveUpload);
-      });
+    for await (const file of files) {
+      let id = await generateId();
+      const extension = file.type.split("/")[1];
+      const ref = storage.ref(
+        // @ts-ignore
+        `uploads/${id}.${extension}`
+      );
+      const task = await ref.put(file);
+      const img = await this.getURL(ref);
+      imgs.push(img);
+    }
 
-    // console.log(AppState.newActiveUpload);
-    await uploadsService.addUpload(AppState.newActiveUpload)
-    // console.log(AppState.uploadedImgs);
-    // AppState.uploadedImgs.push(task)
-    // Listen to updates to upload task
-    // task.on(STATE_CHANGED, (snapshot) => {
-    //   const pct = (
-    //     (snapshot.bytesTransferred / snapshot.totalBytes) *
-    //     100
-    //   ).toFixed(0);
-    //   // @ts-ignore
-    //   setProgress(pct);
-    // });
-
-    // Get downloadURL AFTER task resolves (Note: this is not a native Promise)
+    // console.log(imgs);
+    return imgs;
+  }
+  async getURL(ref) {
+    try {
+      const res = await ref.getDownloadURL();
+      return res;
+      //  console.log(res);
+    } catch (error) {}
   }
 }
 export const firebaseService = new FirebaseService();

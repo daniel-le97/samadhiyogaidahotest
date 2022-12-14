@@ -40,17 +40,30 @@
               />
               <label for="location">location Image</label>
             </div>
-            <div class="form-floating mb-3">
+          <div class="d-flex justify-content-around">
+              <div class="form-floating mb-3">
               <input
                 type="datetime-local"
                 class="form-control"
                 name="date"
                 id="date"
                 placeholder="date"
-                v-model="editable.date"
+                v-model="editable.startDate"
               />
-              <label for="date">date</label>
+              <label for="date">Start Date</label>
             </div>
+              <div class="form-floating mb-3">
+              <input
+                type="datetime-local"
+                class="form-control"
+                name="date"
+                id="date"
+                placeholder="date"
+                v-model="editable.endDate"
+              />
+              <label for="date">End Date</label>
+            </div>
+          </div>
             <div class="mb-3">
               <label for="locationDescription" class="form-label"
                 >Location Description</label
@@ -86,14 +99,64 @@
               />
               <label for="coverImg">Retreat Cover Image</label>
             </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name="foodChef  "
+                id="foodChef  "
+                placeholder="coverImage"
+                v-model="editable.food.chef  "
+              />
+              <label for="food Chef "> Culinary Chef</label>
+            </div>
+
+
+          <div class="mb-3">
+              <label for="foodAccommodations" class="form-label">
+               Food Accommodations</label
+              >
+              <textarea
+                class="form-control"
+                name="foodAccommodations"
+                id="foodAccommodations"
+                rows="3"
+                v-model="editable.food.accommodations"
+              ></textarea>
+            </div>
+
+          <div class="mb-3">
+              <label for="foodDescription" class="form-label">
+               Food Description</label
+              >
+              <textarea
+                class="form-control"
+                name="foodDescription"
+                id="foodDescription"
+                rows="3"
+                v-model="editable.food.description"
+              ></textarea>
+            </div>
+
+
+
             <div class="d-flex justify-content-end">
-              <button @click="multiStepForm(1)" type="button" class="btn btn-dark fs-3">
+              <button
+                @click="multiStepForm(1)"
+                type="button"
+                class="btn btn-dark fs-3"
+              >
                 Next
               </button>
             </div>
           </section>
 
-          <section v-if="formPaginate == 1" class="second-form" v-motion-pop :delay="0">
+          <section
+            v-if="formPaginate == 1"
+            class="second-form"
+            v-motion-pop
+            :delay="0"
+          >
             <div class="form-floating mb-3">
               <input
                 type="number"
@@ -140,8 +203,17 @@
                 type="file"
                 id="formFile"
                 ref="file"
+                multiple
                 v-on:change="onChangeFileUpload"
               />
+              <div class="spinner-border" role="status" v-if="!editable.schedule.img && loading" >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div class="p-1 m-1 d-flex flex-wrap gap-2" v-if="editable.schedule.img">
+                <div v-for="img in editable.schedule.img">
+                  <img :src="img" width="50" height="50">
+                </div>
+              </div>
             </div>
 
             <div class="mb-3">
@@ -154,13 +226,36 @@
                 v-model="editable.activities"
               ></textarea>
             </div>
-            <div class="d-flex justify-content-between">
-  <button @click="multiStepForm(0)" type="button" class="btn btn-dark fs-3">
-    Previous
-  </button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="mb-3">
+              <label for="yoga" class="form-label">Yoga Details</label>
+              <textarea
+                class="form-control"
+                name="yoga"
+                id="yoga"
+                rows="3"
+                v-model="editable.yoga"
+              ></textarea>
             </div>
-            
+            <div class="mb-3">
+              <label for="highlights" class="form-label"> Additional Highlights </label>
+              <textarea
+                class="form-control"
+                name="highlights"
+                id="highlights"
+                rows="3"
+                v-model="editable.highlights"
+              ></textarea>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button
+                @click="multiStepForm(0)"
+                type="button"
+                class="btn btn-dark fs-3"
+              >
+                Previous
+              </button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </section>
         </form>
       </div>
@@ -193,30 +288,33 @@ export default {
     return {
       editable,
       file,
-      formPaginate:computed(()=> AppState.formPaginate),
+      formPaginate: computed(() => AppState.formPaginate),
+      loading: computed(()=> AppState.loading),
       async handleSubmit() {
         try {
           console.log(editable.value);
-          // await retreatsService.createRetreat(editable.value);
+          await retreatsService.createRetreat(editable.value);
         } catch (error) {
           Pop.error(error, "[createRetreat]");
         }
       },
       async onChangeFileUpload(e) {
         try {
+          AppState.loading = true
           // console.log(e.target.files);
-          // await firebaseService.uploadFile(e);
-          //  console.log(AppState.newActiveUpload);
+          const img = await firebaseService.uploadFile(e);
+          // console.log(img);
+          editable.value.schedule.img = img;
+          AppState.loading = false
           //  await uploadsService.addUpload
         } catch (error) {
           Pop.error(error, "[fileUpload]");
         }
       },
       multiStepForm(x) {
-if (x == 1) {
-  AppState.formPaginate = 1
-}else 
-      AppState.formPaginate = 0
+        if (x == 1) {
+          AppState.formPaginate = 1;
+        } else AppState.formPaginate = 0;
       },
     };
   },
@@ -224,9 +322,7 @@ if (x == 1) {
 </script>
 
 <style lang="scss" scoped>
-
-.second-form{
+.second-form {
   transition: all 0.5s ease;
 }
-
 </style>

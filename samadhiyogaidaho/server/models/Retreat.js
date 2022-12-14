@@ -7,7 +7,8 @@ export const RetreatSchema = new Schema(
     title: { type: String, required: true },
     subTitle: { type: String, required: false },
     location: { type: Object, required: true },
-    date: { type: Date, required: true,},
+    startDate: { type: Date, required: true,},
+    endDate: { type: Date, required: true,},
     cost: { type: Object, required: true },
     description: { type: String, required: true },
     coverImg: { type: String, required: true },
@@ -16,6 +17,8 @@ export const RetreatSchema = new Schema(
     archived:{type:Boolean,required:true,default:false},
     featuredImgs:[{type:String,required:false}],
     activities: [{ type: String, required: false }],
+    highlights:[{type:String,required:false}],
+    yoga:{type:String, required: true}
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );

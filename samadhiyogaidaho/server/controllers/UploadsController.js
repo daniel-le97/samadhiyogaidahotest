@@ -1,3 +1,4 @@
+import { Auth0Provider } from "@bcwdev/auth0provider";
 import { newsLetterService } from "../services/NewsLetterService.js";
 import { retreatsService } from "../services/RetreatsService.js";
 import { uploadsService } from "../services/UploadsService.js";
@@ -7,14 +8,15 @@ export class UploadsController extends BaseController {
   constructor() {
     super("/api/uploads");
     this.router
+      // .use(Auth0Provider.getAuthorizedUserInfo)
       .get("", this.getAllUploads)
-    
+
       .post("", this.addUpload);
   }
 
   async addUpload(req, res, next) {
     try {
-     const upload = await uploadsService.addUpload(req.body)
+      const upload = await uploadsService.addUpload(req.body);
       await res.send(upload);
     } catch (error) {
       next(error);
@@ -29,6 +31,4 @@ export class UploadsController extends BaseController {
       next(error);
     }
   }
-
- 
 }
