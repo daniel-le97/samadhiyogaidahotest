@@ -141,13 +141,22 @@
 
 
             <div class="d-flex justify-content-end">
-              <button @click="multiStepForm(1)" type="button" class="btn btn-dark fs-3">
+              <button
+                @click="multiStepForm(1)"
+                type="button"
+                class="btn btn-dark fs-3"
+              >
                 Next
               </button>
             </div>
           </section>
 
-          <section v-if="formPaginate == 1" class="second-form" v-motion-pop :delay="0">
+          <section
+            v-if="formPaginate == 1"
+            class="second-form"
+            v-motion-pop
+            :delay="0"
+          >
             <div class="form-floating mb-3">
               <input
                 type="number"
@@ -194,8 +203,17 @@
                 type="file"
                 id="formFile"
                 ref="file"
+                multiple
                 v-on:change="onChangeFileUpload"
               />
+              <div class="spinner-border" role="status" v-if="!editable.schedule.img && loading" >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div class="p-1 m-1 d-flex flex-wrap gap-2" v-if="editable.schedule.img">
+                <div v-for="img in editable.schedule.img">
+                  <img :src="img" width="50" height="50">
+                </div>
+              </div>
             </div>
 
             <div class="mb-3">
@@ -229,12 +247,15 @@
               ></textarea>
             </div>
             <div class="d-flex justify-content-between">
-  <button @click="multiStepForm(0)" type="button" class="btn btn-dark fs-3">
-    Previous
-  </button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+              <button
+                @click="multiStepForm(0)"
+                type="button"
+                class="btn btn-dark fs-3"
+              >
+                Previous
+              </button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-            
           </section>
         </form>
       </div>
@@ -267,7 +288,8 @@ export default {
     return {
       editable,
       file,
-      formPaginate:computed(()=> AppState.formPaginate),
+      formPaginate: computed(() => AppState.formPaginate),
+      loading: computed(()=> AppState.loading),
       async handleSubmit() {
         try {
           console.log(editable.value);
@@ -278,19 +300,21 @@ export default {
       },
       async onChangeFileUpload(e) {
         try {
+          AppState.loading = true
           // console.log(e.target.files);
-          // await firebaseService.uploadFile(e);
-          //  console.log(AppState.newActiveUpload);
+          const img = await firebaseService.uploadFile(e);
+          // console.log(img);
+          editable.value.schedule.img = img;
+          AppState.loading = false
           //  await uploadsService.addUpload
         } catch (error) {
           Pop.error(error, "[fileUpload]");
         }
       },
       multiStepForm(x) {
-if (x == 1) {
-  AppState.formPaginate = 1
-}else 
-      AppState.formPaginate = 0
+        if (x == 1) {
+          AppState.formPaginate = 1;
+        } else AppState.formPaginate = 0;
       },
     };
   },
@@ -298,9 +322,7 @@ if (x == 1) {
 </script>
 
 <style lang="scss" scoped>
-
-.second-form{
+.second-form {
   transition: all 0.5s ease;
 }
-
 </style>
