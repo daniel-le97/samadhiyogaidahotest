@@ -164,7 +164,7 @@ const retreatDate = AppState.currentRetreat.date
     async function getAllRetreats() {
       try {
         await retreatsService.getAllRetreats();
-        console.log(AppState.currentRetreat);
+        // console.log(AppState.currentRetreat);
       } catch (error) {
         Pop.error(error, "[getCurrentRetreat]");
       }

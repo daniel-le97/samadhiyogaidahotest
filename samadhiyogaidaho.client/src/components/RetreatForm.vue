@@ -40,17 +40,30 @@
               />
               <label for="location">location Image</label>
             </div>
-            <div class="form-floating mb-3">
+          <div class="d-flex justify-content-around">
+              <div class="form-floating mb-3">
               <input
                 type="datetime-local"
                 class="form-control"
                 name="date"
                 id="date"
                 placeholder="date"
-                v-model="editable.date"
+                v-model="editable.startDate"
               />
-              <label for="date">date</label>
+              <label for="date">Start Date</label>
             </div>
+              <div class="form-floating mb-3">
+              <input
+                type="datetime-local"
+                class="form-control"
+                name="date"
+                id="date"
+                placeholder="date"
+                v-model="editable.endDate"
+              />
+              <label for="date">End Date</label>
+            </div>
+          </div>
             <div class="mb-3">
               <label for="locationDescription" class="form-label"
                 >Location Description</label
@@ -86,6 +99,47 @@
               />
               <label for="coverImg">Retreat Cover Image</label>
             </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name="foodChef  "
+                id="foodChef  "
+                placeholder="coverImage"
+                v-model="editable.food.chef  "
+              />
+              <label for="food Chef "> Culinary Chef</label>
+            </div>
+
+
+          <div class="mb-3">
+              <label for="foodAccommodations" class="form-label">
+               Food Accommodations</label
+              >
+              <textarea
+                class="form-control"
+                name="foodAccommodations"
+                id="foodAccommodations"
+                rows="3"
+                v-model="editable.food.accommodations"
+              ></textarea>
+            </div>
+
+          <div class="mb-3">
+              <label for="foodDescription" class="form-label">
+               Food Description</label
+              >
+              <textarea
+                class="form-control"
+                name="foodDescription"
+                id="foodDescription"
+                rows="3"
+                v-model="editable.food.description"
+              ></textarea>
+            </div>
+
+
+
             <div class="d-flex justify-content-end">
               <button @click="multiStepForm(1)" type="button" class="btn btn-dark fs-3">
                 Next
@@ -154,6 +208,26 @@
                 v-model="editable.activities"
               ></textarea>
             </div>
+            <div class="mb-3">
+              <label for="yoga" class="form-label">Yoga Details</label>
+              <textarea
+                class="form-control"
+                name="yoga"
+                id="yoga"
+                rows="3"
+                v-model="editable.yoga"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="highlights" class="form-label"> Additional Highlights </label>
+              <textarea
+                class="form-control"
+                name="highlights"
+                id="highlights"
+                rows="3"
+                v-model="editable.highlights"
+              ></textarea>
+            </div>
             <div class="d-flex justify-content-between">
   <button @click="multiStepForm(0)" type="button" class="btn btn-dark fs-3">
     Previous
@@ -197,7 +271,7 @@ export default {
       async handleSubmit() {
         try {
           console.log(editable.value);
-          // await retreatsService.createRetreat(editable.value);
+          await retreatsService.createRetreat(editable.value);
         } catch (error) {
           Pop.error(error, "[createRetreat]");
         }
