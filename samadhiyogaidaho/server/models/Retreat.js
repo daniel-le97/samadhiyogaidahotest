@@ -12,7 +12,7 @@ export const RetreatSchema = new Schema(
     cost: { type: Object, required: true },
     subTitle: { type: String, required: false },
     coverImg: { type: String, required: true },
-    accommodations: [{ type: Object, required: false }],
+    accommodations: { type: Object, required: false },
     food: { type: Object, required: false },
     schedule: { type: Object },
     vacancy: { type: Number, required: true },

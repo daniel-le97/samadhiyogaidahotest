@@ -21,20 +21,38 @@
 
       <div class="row">
         <div class="col-md-6">
-<div class="card elevation-6 border-0 rounded-4 p-3">
- <div class="d-flex justify-content-start"> <p class="fs-5 text-muted">4 days / 3nights</p></div>
-  <div class="d-flex text-muted">
-    <p class="fs-5 me-3 mb-0">EARLYBIRD</p> <p class="fw-bold fs-4">USD$425</p>
-  </div>
-  <div class="rounded-4 bg-grey lighten-10  p-2 d-flex justify-content-around">
-    <div class="">
-      <p class="mb-0 fs-5 "> <i class="mdi mdi-calendar bg-muted fs-3"></i> Start Date</p>
-      <p class="fw-semi-bold fs-4">Mar 10, 2023</p>
-    </div>
-  
-  </div>
-</div>
+          <div class="card elevation-6 border-0 rounded-4 p-3">
+            <div class="d-flex justify-content-start">
+              <p class="fs-5 text-muted">4 days / 3nights</p>
+            </div>
+            <div class="d-flex text-muted">
+              <p class="fs-4 me-3 mb-0 ">EARLY BIRD</p>
+              <p class="fw-bold fs-4 mb-0">USD  ${{retreat?.cost?.price}}  </p>
+           <p class="mb-0"> <b class="text-danger ">-$200 </b>(if paid in full by Dec 1st) </p>
+            </div>
+            <div
+              class="rounded-4 bg-grey lighten-10 p-2 d-flex justify-content-around"
+            >
+              <div class="">
+                <p class="mb-0 fs-5">
+                  <i class="mdi mdi-calendar bg-muted fs-3"></i> Start Date
+                </p>
+                <p class="fw-semi-bold fs-4"> {{new Date(retreat?.startDate).toLocaleDateString()}} </p>
+              </div>
+              <div class="">
+                <p class="mb-0 fs-5">
+                  <i class="mdi mdi-calendar bg-muted fs-3"></i> End Date
+                </p>
+                <p class="fw-semi-bold fs-4"> {{new Date(retreat?.endDate).toLocaleDateString()}} </p>
+              </div>
+            </div>
 
+           <div class="text-center">
+             <button class="btn btn-primary font-2 lighten-10 my-3 fs-3 fw-bold">CONTACT HOST</button>
+            <p> OR</p>
+              <button class="btn btn-outline-primary font-2 lighten-10 my-3 fs-3 fw-bold">BOOK INSTANTLY</button>
+           </div>
+          </div>
 
           <!-- <img
            src="https://static.wixstatic.com/media/b8cf7c_5d6c60bf684a4d28b53449c011a1e6b4~mv2.png/v1/fill/w_447,h_597,al_c,q_85,enc_auto/b8cf7c_5d6c60bf684a4d28b53449c011a1e6b4~mv2.png"
@@ -68,16 +86,16 @@
           </div>
         </div>
 
-        <div class="mt-3">
+        <div class="mt-3 sticky-top">
           <button
-            class="btn btn-dark font-2 fs-3"
+            class="btn btn-dark font-2 fs-3 sticky-top"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#retreatImages"
             aria-expanded="false"
             aria-controls="retreatImages"
           >
-            More Images
+            More Images <i class="mdi mdi-arrow-collapse-down"></i>
           </button>
         </div>
 
@@ -91,7 +109,11 @@
                 class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
                 v-for="f in retreat.featuredImgs"
               >
-                <img :src="f" alt="" class="img-fluid hover-image rounded-4 selectable" />
+                <img
+                  :src="f"
+                  alt=""
+                  class="img-fluid hover-image rounded-4 selectable"
+                />
               </div>
             </div>
           </div>
@@ -132,108 +154,109 @@
               </p>
             </div>
             <div class="row">
-<div class="col-md-4">
-  <div class="card border-0 elevation-6">
-  <div class="card-body">
-    <p>  Partner activities</p>
-  </div>
-  </div>
-</div>
+              <div class="col-md-4">
+                <div class="card border-0 elevation-6">
+                  <div class="card-body">
+                    <p>Partner activities</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="row my-5">
           <div class="col-md-6">
             <div class="">
-              <p class="display-3 font-2 mb-0">Food </p>
-              <p class="display-6 text-muted font-2"> Featuring {{ retreat?.food?.chef }} </p>
+              <p class="display-3 font-2 mb-0">Food</p>
+              <p class="display-6 text-muted font-2">
+                Featuring {{ retreat?.food?.chef }}
+              </p>
             </div>
             <div class="">
               <p class="fs-5 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
           <div class="col-md-6 d-flex justify-content-end">
-           <FoodImageSwiper v-if="retreat?.food?.imgs"/>
+            <FoodImageSwiper v-if="retreat?.food?.imgs" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section>
+    <div class="container">
+      <div class="row">
+      
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
 
-<section >
+     <AccommodationSwiper/>
+      
+      </div>
+      <div class="col-md-6">
+   <p class="display-3 font-2">Accommodations</p>
+  <p class="fs-5 text-start">
+              {{retreat?.accommodations?.description}}
+              </p>
+      </div>
+      </div>
+    </div>
+  </section>
+<section>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-          <p class="display-3 font-2">Accommodations</p>
+         <p class="display-3 font-2">Cost and Pricing</p>
       </div>
-      <div class="col-md-12 d-flex my-2" v-for="a in retreat?.accommodations">
-      <div class="">
-<img :src="a.img" alt="" class="img-fluid hover-image rounded">
-      </div>
-      <div class=" d-flex flex-column ms-5">
-        <p class="font-2 fs-3"> {{a.description}} </p>
-        <p class="font-2 fs-3 text-muted"> Vacant: <b :class="a.vacant? 'text-success darken-30':'text-danger'">{{a.vacant}} </b></p>
-      </div>
-      </div>
-    
-    </div>
-  </div>
-</section>
 
-<section>
- <div class="container">
-   <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
- </div>
 </section>
+  <section>
+    <div class="container my-3">
+      <div class="row">
+        <div class="col-md-12">
+           <p class="display-3 font-2">FAQ'S</p>
+        </div>
+      </div>
+      <div class="accordion elevation-6 border-0" id="accordionExample">
+        <div class="accordion-item border-0 elevation-3" v-for="(f, index) in retreat?.FAQS">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+            
+              class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6"
+              type="button"
+              data-bs-toggle="collapse"
+              :data-bs-target="`#collapse${index.toString()}`"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+            <i class="mdi mdi-help-circle me-3"></i>  {{ f.question }}
+            </button>
+          </h2>
+          <div
+            :id="`collapse${index.toString()}`"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p class="font-2 fs-3">{{ f.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="container my-5">
       <div class="row">
         <div class="col-md-12 mb-4">
-           <h1 class="display-2 font-1 ">
-            Check Out Our Past Retreats
-          </h1>
+          <h1 class="display-2 font-1">Check Out Our Past Retreats</h1>
         </div>
         <div class="col-md-4" v-for="a in archived">
-<ArchivedRetreatCard  :retreat="a" />
+          <ArchivedRetreatCard :retreat="a" />
         </div>
       </div>
     </div>
@@ -244,6 +267,7 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
+import AccommodationSwiper from "../components/AccommodationSwiper.vue";
 import ArchivedRetreatCard from "../components/ArchivedRetreatCard.vue";
 import FoodImageSwiper from "../components/FoodImageSwiper.vue";
 import RetreatForm from "../components/RetreatForm.vue";
@@ -271,13 +295,13 @@ export default {
     return {
       editable,
       retreat: computed(() => AppState.currentRetreat),
-      archived:computed(() => AppState.archivedRetreats),
+      archived: computed(() => AppState.archivedRetreats),
       setActiveImage(image) {
         AppState.activeImage = image;
       },
     };
   },
-  components: { RetreatForm, ArchivedRetreatCard, FoodImageSwiper },
+  components: { RetreatForm, ArchivedRetreatCard, FoodImageSwiper, AccommodationSwiper },
 };
 </script>
 
@@ -306,5 +330,12 @@ export default {
 
 .masonry {
   columns: 4;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  columns: 1;
+  }
+}
+.scrollable-y{
+  height: 650px;
 }
 </style>

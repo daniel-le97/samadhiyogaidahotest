@@ -4,7 +4,8 @@ export class Retreat {
     this.title = data.title;
     this.subTitle = data.subTitle;
     this.location = data.location;
-    this.date = data.date;
+    this.startDate = data.startDate;
+    this.endDate = data.endDate
     this.cost = data.cost;
     this.description = data.description;
     this.coverImg = data.coverImg;
