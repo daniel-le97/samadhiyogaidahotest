@@ -5,20 +5,22 @@ const Schema = mongoose.Schema;
 export const RetreatSchema = new Schema(
   {
     title: { type: String, required: true },
-    subTitle: { type: String, required: false },
     location: { type: Object, required: true },
-    startDate: { type: Date, required: true,},
-    endDate: { type: Date, required: true,},
-    cost: { type: Object, required: true },
+    startDate: { type: Date, required: true },
+    endDate: { type: Date, required: true },
     description: { type: String, required: true },
+    cost: { type: Object, required: true },
+    subTitle: { type: String, required: false },
     coverImg: { type: String, required: true },
+    accommodations: [{ type: Object, required: false }],
     food: { type: Object, required: false },
     schedule: { type: Object },
-    archived:{type:Boolean,required:true,default:false},
-    featuredImgs:[{type:String,required:false}],
+    yoga: { type: String, required: true },
+    archived: { type: Boolean, required: true, default: false },
+    featuredImgs: [{ type: String, required: false }],
     activities: [{ type: String, required: false }],
-    highlights:[{type:String,required:false}],
-    yoga:{type:String, required: true}
+    highlights: [{ type: String, required: false }],
+    FAQS: [{ type: Object, required: true }],
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
