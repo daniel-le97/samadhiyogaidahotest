@@ -1,5 +1,9 @@
 <template>
-  <div class="hero-image"></div>
+  <div class="hero-image d-flex justify-content-center align-items-center">
+    <h1 class="display-1 font-1 text-light text-shadow">
+      What We Offer
+    </h1>
+  </div>
   <div class="container-fluid" style="margin-top: 100px">
     <div class="row justify-content-center">
       <div class="col-md-6 p-5 d-flex justify-content-center">

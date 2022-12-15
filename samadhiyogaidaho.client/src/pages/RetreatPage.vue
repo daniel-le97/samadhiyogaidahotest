@@ -15,50 +15,18 @@
     <div class="container">
       <div class="row my-4">
         <div class="col-md-12">
-          <h1 class="font-1 text-dark display-2">{{ retreat.title }}</h1>
+          <h1 class="font-1 text-dark display-4">{{ retreat.title }}</h1>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <div class="card elevation-6 border-0 rounded-4 p-3">
-            <div class="d-flex justify-content-start">
-              <p class="fs-5 text-muted">4 days / 3nights</p>
-            </div>
-            <div class="d-flex text-muted">
-              <p class="fs-4 me-3 mb-0 ">EARLY BIRD</p>
-              <p class="fw-bold fs-4 mb-0">USD  ${{retreat?.cost?.price}}  </p>
-           <p class="mb-0"> <b class="text-danger ">-$200 </b>(if paid in full by Dec 1st) </p>
-            </div>
-            <div
-              class="rounded-4 bg-grey lighten-10 p-2 d-flex justify-content-around"
-            >
-              <div class="">
-                <p class="mb-0 fs-5">
-                  <i class="mdi mdi-calendar bg-muted fs-3"></i> Start Date
-                </p>
-                <p class="fw-semi-bold fs-4"> {{new Date(retreat?.startDate).toLocaleDateString()}} </p>
-              </div>
-              <div class="">
-                <p class="mb-0 fs-5">
-                  <i class="mdi mdi-calendar bg-muted fs-3"></i> End Date
-                </p>
-                <p class="fw-semi-bold fs-4"> {{new Date(retreat?.endDate).toLocaleDateString()}} </p>
-              </div>
-            </div>
-
-           <div class="text-center">
-             <button class="btn btn-primary font-2 lighten-10 my-3 fs-3 fw-bold">CONTACT HOST</button>
-            <p> OR</p>
-              <button class="btn btn-outline-primary font-2 lighten-10 my-3 fs-3 fw-bold">BOOK INSTANTLY</button>
-           </div>
-          </div>
-
-          <!-- <img
+        
+          <img
            src="https://static.wixstatic.com/media/b8cf7c_5d6c60bf684a4d28b53449c011a1e6b4~mv2.png/v1/fill/w_447,h_597,al_c,q_85,enc_auto/b8cf7c_5d6c60bf684a4d28b53449c011a1e6b4~mv2.png"
             alt=""
             class="img-fluid rounded-4 elevation-6 h-100"
-          /> -->
+          />
         </div>
         <div class="col-md-6">
           <div class="row">
@@ -119,11 +87,84 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="row my-5">
+<section>
+<div class="container my-5">
+  <div class="row">
+        <div class="col-md-6">
+        <div class="card elevation-6 border-0 rounded-4 p-3">
+            <div class="d-flex justify-content-start">
+              <p class="fs-5 text-muted">4 days / 3nights</p>
+            </div>
+            <div class="d-flex text-muted">
+              <p class="fs-4 me-3 mb-0">EARLY BIRD</p>
+              <p class="fw-bold fs-4 mb-0">USD ${{ retreat?.cost?.price }}</p>
+              <p class="mb-0">
+                <b class="text-danger">-$200 </b>(if paid in full by Dec 1st)
+              </p>
+            </div>
+            <div
+              class="rounded-4 bg-grey lighten-10 p-2 d-flex justify-content-around"
+            >
+              <div class="">
+                <p class="mb-0 fs-5">
+                  <i class="mdi mdi-calendar bg-muted fs-3"></i> Start Date
+                </p>
+                <p class="fw-semi-bold fs-4">
+                  {{ new Date(retreat?.startDate).toLocaleDateString() }}
+                </p>
+              </div>
+              <div class="">
+                <p class="mb-0 fs-5">
+                  <i class="mdi mdi-calendar bg-muted fs-3"></i> End Date
+                </p>
+                <p class="fw-semi-bold fs-4">
+                  {{ new Date(retreat?.endDate).toLocaleDateString() }}
+                </p>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button
+                class="btn btn-primary font-2 lighten-10 my-3 fs-3 fw-bold"
+              >
+                CONTACT HOST
+              </button>
+              <p>OR</p>
+              <button
+                class="btn btn-outline-primary font-2 lighten-10 my-3 fs-3 fw-bold"
+              >
+                BOOK INSTANTLY
+              </button>
+            </div>
+          </div>
+
+    </div>
+    <div class="col-md-6">
+      <div class=""> <h1>Summary</h1></div>
+      <div class="">
+        <p> {{retreat?.description}} </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+  <section>
+    <div class="container my-5">
+ 
+           <div class="row ">
         <div class="col-md-6">
           <div class="">
-            <p class="display-3 font-2">{{ retreat?.location?.address }}</p>
+            <h1 class="display-3 font-2">{{ retreat?.location?.address }}</h1>
           </div>
           <div class="">
             <p class="fs-5 text-start">{{ retreat?.location?.description }}</p>
@@ -133,7 +174,7 @@
           <img
             :src="retreat?.location?.img"
             alt=""
-            class="img-fluid rounded-4 elevation-5 w-50"
+            class="img-fluid rounded-4 elevation-5 "
           />
         </div>
         <div class="row my-5">
@@ -164,7 +205,12 @@
             </div>
           </div>
         </div>
-        <div class="row my-5">
+     
+      </div>
+      </div>
+<section>
+  <div class="container my-5">
+       <div class="row ">
           <div class="col-md-6">
             <div class="">
               <p class="display-3 font-2 mb-0">Food</p>
@@ -180,50 +226,47 @@
             <FoodImageSwiper v-if="retreat?.food?.imgs" />
           </div>
         </div>
-      </div>
-    </div>
+  </div>
+</section>
   </section>
-
   <section>
     <div class="container">
       <div class="row">
-      
-      <div class="col-md-6 d-flex align-items-center justify-content-center">
-
-     <AccommodationSwiper/>
-      
-      </div>
-      <div class="col-md-6">
-   <p class="display-3 font-2">Accommodations</p>
-  <p class="fs-5 text-start">
-              {{retreat?.accommodations?.description}}
-              </p>
-      </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+          <AccommodationSwiper />
+        </div>
+        <div class="col-md-6">
+          <h1 class="display-3 font-2">Accommodations</h1>
+          <p class="fs-5 text-start">
+            {{ retreat?.accommodations?.description }}
+          </p>
+        </div>
       </div>
     </div>
   </section>
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-         <p class="display-3 font-2">Cost and Pricing</p>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-3 font-2">Cost and Pricing</h1>
+        </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
   <section>
     <div class="container my-3">
       <div class="row">
         <div class="col-md-12">
-           <p class="display-3 font-2">FAQ'S</p>
+          <h1 class="display-3 font-2">FAQ'S</h1>
         </div>
       </div>
       <div class="accordion elevation-6 border-0" id="accordionExample">
-        <div class="accordion-item border-0 elevation-3" v-for="(f, index) in retreat?.FAQS">
+        <div
+          class="accordion-item border-0 elevation-3"
+          v-for="(f, index) in retreat?.FAQS"
+        >
           <h2 class="accordion-header" id="headingOne">
             <button
-            
               class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6"
               type="button"
               data-bs-toggle="collapse"
@@ -231,7 +274,7 @@
               aria-expanded="false"
               aria-controls="collapseOne"
             >
-            <i class="mdi mdi-help-circle me-3"></i>  {{ f.question }}
+              <i class="mdi mdi-help-circle me-3"></i> {{ f.question }}
             </button>
           </h2>
           <div
@@ -301,13 +344,18 @@ export default {
       },
     };
   },
-  components: { RetreatForm, ArchivedRetreatCard, FoodImageSwiper, AccommodationSwiper },
+  components: {
+    RetreatForm,
+    ArchivedRetreatCard,
+    FoodImageSwiper,
+    AccommodationSwiper,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .hero-image {
-  height: 50vh;
+  height: 20vh;
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1589790272257-8c0f79c221da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
@@ -331,11 +379,11 @@ export default {
 .masonry {
   columns: 4;
   //when screen is 768px OR LESS
-  @media only screen and (max-width: 768px){
-  columns: 1;
+  @media only screen and (max-width: 768px) {
+    columns: 1;
   }
 }
-.scrollable-y{
+.scrollable-y {
   height: 650px;
 }
 </style>

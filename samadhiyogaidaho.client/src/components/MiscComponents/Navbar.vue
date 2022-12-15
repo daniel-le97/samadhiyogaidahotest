@@ -85,6 +85,16 @@
           </li>
           <li>
             <router-link
+              :to="{ name: 'Events' }"
+              v-motion-pop
+              :delay="300"
+              class="btn text-uppercase fw-bold fs-4 nav-link"
+            >
+              Events
+            </router-link>
+          </li>
+          <li>
+            <router-link
               :to="{ name: 'Blog' }"
               v-motion-pop
               :delay="300"

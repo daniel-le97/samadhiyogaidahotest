@@ -6,8 +6,8 @@
       :loop="true"
     class="mySwiper  rounded-4"
   >
-    <swiper-slide v-for="i in images" class="bg-transparent elevation-6 rounded-4">
-<img :src="i" alt="" class="rounded-4 img-fluid h-100">
+    <swiper-slide v-for="i in images" class="bg-transparent elevation-6  rounded-4">
+<img :src="i" alt="" class="rounded-4 img-fluid h-100 ">
 
     </swiper-slide>
   </swiper>

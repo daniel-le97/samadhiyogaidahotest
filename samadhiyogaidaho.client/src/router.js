@@ -22,6 +22,11 @@ const routes = [
     name: "Services",
     component: loadPage("ServicesPage"),
   },
+  {
+    path: "/events",
+    name: "Events",
+    component: loadPage("EventsPage"),
+  },
 
   {
     path: "/blog",

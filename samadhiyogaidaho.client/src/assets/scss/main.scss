@@ -76,7 +76,9 @@ body {
   filter: brightness(80%);
   transition: all 0.25s ease;
 }
-
+p{
+   font-family: 'Patrick Hand', cursive;
+}
 main {
   flex-grow: 1;
 }
