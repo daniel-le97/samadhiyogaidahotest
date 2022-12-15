@@ -15,7 +15,7 @@ export const RetreatSchema = new Schema(
     accommodations: { type: Object, required: false },
     food: { type: Object, required: false },
     schedule: { type: Object },
-    vacancy: { type: Number, required: true },
+    vacancy: { type: Object, required: true },
     archived:{type:Boolean,required:true,default:false},
     featuredImgs:[{type:String,required:false}],
     yoga: { type: String, required: true },
