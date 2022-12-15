@@ -19,8 +19,6 @@ export const RetreatSchema = new Schema(
     archived:{type:Boolean,required:true,default:false},
     featuredImgs:[{type:String,required:false}],
     yoga: { type: String, required: true },
-    archived: { type: Boolean, required: true, default: false },
-    featuredImgs: [{ type: String, required: false }],
     activities: [{ type: String, required: false }],
     highlights: [{ type: String, required: false }],
     FAQS: [{ type: Object, required: true }],
