@@ -21,11 +21,26 @@
 
       <div class="row">
         <div class="col-md-6">
-          <img
+<div class="card elevation-6 border-0 rounded-4 p-3">
+ <div class="d-flex justify-content-start"> <p class="fs-5 text-muted">4 days / 3nights</p></div>
+  <div class="d-flex text-muted">
+    <p class="fs-5 me-3 mb-0">EARLYBIRD</p> <p class="fw-bold fs-4">USD$425</p>
+  </div>
+  <div class="rounded-4 bg-grey lighten-10  p-2 d-flex justify-content-around">
+    <div class="">
+      <p class="mb-0 fs-5 "> <i class="mdi mdi-calendar bg-muted fs-3"></i> Start Date</p>
+      <p class="fw-semi-bold fs-4">Mar 10, 2023</p>
+    </div>
+  
+  </div>
+</div>
+
+
+          <!-- <img
            src="https://static.wixstatic.com/media/b8cf7c_5d6c60bf684a4d28b53449c011a1e6b4~mv2.png/v1/fill/w_447,h_597,al_c,q_85,enc_auto/b8cf7c_5d6c60bf684a4d28b53449c011a1e6b4~mv2.png"
             alt=""
             class="img-fluid rounded-4 elevation-6 h-100"
-          />
+          /> -->
         </div>
         <div class="col-md-6">
           <div class="row">

@@ -327,16 +327,19 @@
     <div id="test" class="container p-md-5 mb-md-0">
       <div class="row justify-content-center">
         <div class="col-md-10">
-          <div class="image-box mb-5 mb-md-0">
+          <div class="image-box mb-5 mb-md-0 w-75">
             <img
-              src="https://images.unsplash.com/photo-1524901548305-08eeddc35080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              src="../assets/img/retreatCoverImage.png"
               alt=""
               class="hover-image img-fluid rounded-1 elevation-6"
             />
             <div class="text-box">
-              <button class="btn btn-dark display-1 fs-1">
-                More Information
-              </button>
+              <router-link :to="{name: 'Retreat', params:{ }}" @click="scrollToTop()"> 
+              
+                <button class="btn btn-dark display-1 fs-1 font-2">
+                  More Information
+                </button>
+              </router-link>
             </div>
           </div>
         </div>
