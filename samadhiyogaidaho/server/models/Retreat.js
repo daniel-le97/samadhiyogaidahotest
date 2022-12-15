@@ -14,6 +14,7 @@ export const RetreatSchema = new Schema(
     coverImg: { type: String, required: true },
     food: { type: Object, required: false },
     schedule: { type: Object },
+    vacancy: { type: Number, required: true },
     archived:{type:Boolean,required:true,default:false},
     featuredImgs:[{type:String,required:false}],
     activities: [{ type: String, required: false }],
