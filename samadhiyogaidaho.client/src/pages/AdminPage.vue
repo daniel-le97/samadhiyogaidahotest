@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid" v-if="admin?.isAuthenticated">
     <div class="row">
-   <AdminSidePanel/>
-   <AdminTabs/>
-   
+      <AdminSidePanel />
+      <AdminTabs />
     </div>
   </div>
+  <div v-else></div>
 </template>
 
 <script>
@@ -31,12 +31,19 @@ export default {
     watchEffect(() => {});
     return {
       editable,
+      admin: computed(() => AppState.user)
     };
   },
-  components: { RetreatForm, AdminSidePanel, AdminTabs, RetreatForm, EventForm, AdminSidePanel, AdminTabs },
+  components: {
+    RetreatForm,
+    AdminSidePanel,
+    AdminTabs,
+    RetreatForm,
+    EventForm,
+    AdminSidePanel,
+    AdminTabs,
+  },
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

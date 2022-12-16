@@ -34,7 +34,7 @@
           <div class="d-flex">
             <div class="form-floating mb-3 me-3">
               <input
-                type="date"
+                type="datetime-local"
                 class="form-control"
                 name="date"
                 id="date"
@@ -45,7 +45,7 @@
             </div>
             <div class="form-floating mb-3">
               <input
-                type="time"
+                type="datetime-local"
                 class="form-control"
                 name="time"
                 id="time"
@@ -104,6 +104,8 @@
 <script>
 import { computed, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
+import { eventsService } from "../../services/EventsService";
+import Pop from "../../utils/Pop";
 
 export default {
   setup() {
@@ -116,8 +118,7 @@ export default {
 
       async handleSubmit() {
         try {
-          //await service
-
+          await eventsService.createEvent(editable.value);
           Pop.success("Event Approved");
           editable.value = {};
         } catch (error) {

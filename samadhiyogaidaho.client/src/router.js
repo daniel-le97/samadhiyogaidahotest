@@ -38,6 +38,7 @@ const routes = [
     path: "/retreat",
     name: "Retreat",
     component: loadPage("RetreatPage"),
+    
   },
 
   {
@@ -61,6 +62,9 @@ const routes = [
     path: "/admin",
     name: "Admin",
     component: loadPage("AdminPage"),
+    beforeEnter: authGuard
+
+  
   },
 
 
