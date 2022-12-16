@@ -3,9 +3,9 @@ import { BadRequest, Forbidden } from "../utils/Errors";
 import { getAdmins } from "./AccountService";
 
 class EventsService {
-  async deleteEvent(eventData, userId) {
+  async deleteEvent(userId, eventId) {
     await getAdmins(userId);
-    const event = await this.getEventById(userId);
+    const event = await this.getEventById(eventId);
     // @ts-ignore
     await event.remove();
     return event;
@@ -29,9 +29,9 @@ class EventsService {
     }
     return event;
   }
-  async updateEvent(eventData, userId){
+  async updateEvent(eventId, eventData, userId){
     await getAdmins(userId)
-    const event = await this.getEventById(eventData.id)
+    const event = await this.getEventById(eventId)
     event.title = eventData.title || event.title
     event.location = eventData.location || event.location
     event.date = eventData.date || event.date
@@ -39,7 +39,9 @@ class EventsService {
     event.cost = eventData.cost || event.cost
     event.img = eventData.img || event.img
     event.isArchived = eventData.isArchived || event.isArchived
+    await event.save()
+    return group
   }
-  //
+  
 }
 export const eventsService = new EventsService();

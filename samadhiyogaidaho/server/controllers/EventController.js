@@ -10,14 +10,15 @@ export class EventsController extends BaseController {
       .get("")
       .use(Auth0Provider.getAuthorizedUserInfo)
       .post("", this.createEvent)
-      .delete(":id", this.deleteEvent);
+      .delete(":id", this.deleteEvent)
+      .put(":id", this.updateEvent);
   }
 
   async createEvent(req, res, next) {
     try {
       const newsLetter = await eventsService.createEvent(
         req.body,
-        req.userInfo?.id
+        req.userInfo.id
       );
       res.send(newsLetter);
     } catch (error) {
@@ -26,8 +27,23 @@ export class EventsController extends BaseController {
   }
   async deleteEvent(req, res, next) {
     try {
-      const event = await eventsService.deleteEvent(req.body, req.userInfo.id);
-     res.send(event);
+      const event = await eventsService.deleteEvent(
+        req.userInfo.id,
+        req.params.id
+      );
+      res.send(event);
+    } catch (error) {
+      next(error);
+    }
+  }
+  async updateEvent(req, res, next) {
+    try {
+      const event = await eventsService.updateEvent(
+        req.params.id,
+        req.body,
+        req.userInfo.id
+      );
+      res.send(event);
     } catch (error) {
       next(error);
     }
