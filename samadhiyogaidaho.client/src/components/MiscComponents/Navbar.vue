@@ -130,7 +130,7 @@
               :delay="300"
               class="btn text-uppercase fw-bold fs-4 nav-link"
             >
-              Contact
+              Connect
             </router-link>
           </li>
        
