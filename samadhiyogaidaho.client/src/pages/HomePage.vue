@@ -10,32 +10,38 @@
         <div style="margin-top: 80px" class="text-shadow container">
           <h5
             v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
-            :variants="{ custom: { scale: 2 } }"
-            :delay="600"
-            class="fs-2 font-2 text-light text-start"
-          ></h5>
+  :initial="{
+    y: 100,
+    opacity: 0,
+  }"
+  :enter="{
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 250,
+      damping: 25,
+      mass: 0.5,
+    },
+  }"
+            class="fs-1 font-1 text-light text-start mb-0"
+          >LEARN HOW TO SEE YOURSELF</h5>
           <h5
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
-            :variants="{ custom: { scale: 2 } }"
-            :delay="600"
+              v-motion-slide-top
+            :delay="1000"
+
             class="fs-2 font-2 text-light text-uppercase"
           >
-            LEARN HOW TO SEE YOURSELF <br />
+             <br />
             Become aware of your capacity to create, <br />
             to be authentic in every day life, <br />
             to transform & to love
           </h5>
 
           <h1
-            v-motion
-            :initial="{ opacity: 0, y: 100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
-            :variants="{ custom: { scale: 2 } }"
-            :delay="600"
+            v-motion-slide-left
+           
+            :delay="1600"
             class="display-3 text-light font-1"
           >
             ESCAPE WITH SAMADHI YOGA IDAHO
@@ -51,16 +57,20 @@
         </div> -->
 
         <div
+            v-motion-slide-top
           class="join-newsletter-button flex-column d-flex"
           style="z-index: 9999"
         >
           <a
+           
             href="#newsletter"
             class="btn bg-dark selectable text-light fs-3 px-4 mb-3"
           >
             Join Our NewsLetter</a
           >
-          <a href="#newsletter" class="btn bg-success selectable fs-3 px-4">
+          <a 
+            
+          href="#newsletter" class="btn bg-success selectable fs-3 px-4">
             Book a session</a
           >
         </div>
