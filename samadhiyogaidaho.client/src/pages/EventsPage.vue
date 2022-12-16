@@ -7,16 +7,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <iframe
-  width="450"
-  height="250"
-  frameborder="0" style="border:0"
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/place
-  ?key=YOUR_API_KEY
-  &q=Eiffel+Tower,Paris+France"
-  allowfullscreen>
-</iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1717.5793570263088!2d-116.20691322859092!3d43.61460617641476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aef8e52beed181%3A0xc28bec666be4f938!2sGrove%20Fitness%20Club%20and%20Spa!5e0!3m2!1sen!2sus!4v1671163124641!5m2!1sen!2sus" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </div>
