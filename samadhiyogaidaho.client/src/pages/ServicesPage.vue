@@ -1,11 +1,6 @@
 <template>
-  <div
-    class="hero-image d-flex flex-column justify-content-center align-items-center"
-  >
+  <div class="hero-image d-flex justify-content-center align-items-center">
     <h1 class="display-1 font-1 text-light text-shadow">What We Offer</h1>
-    <h3 class="display-4 font-1 text-light text-shadow">
-      Vinyasa, Baptiste, & Yin...
-    </h3>
   </div>
   <div class="container-fluid" style="margin-top: 100px">
     <div class="row justify-content-center">

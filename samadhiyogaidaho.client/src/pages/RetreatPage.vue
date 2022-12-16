@@ -95,18 +95,30 @@
   <div class="row">
         <div class="col-md-6">
         <div class="card elevation-6 border-0 rounded-4 p-3">
-            <div class="d-flex justify-content-start">
+            <div class="d-flex ">
               <p class="fs-5 text-muted">4 days / 3nights</p>
             </div>
-            <div class="d-flex text-muted">
-              <p class="fs-4 me-3 mb-0">EARLY BIRD</p>
+
+            <div >  <p class="fs-5 text-start">The pricing for the retreat starts at $3,275 per couple or broken down to $1,637.50 per person. The retreat price can increase based on what additional activities, if any, you choose to add on. </p></div>
+            <div class="">  <p class="fs-5 text-start"> Payment Options :</p></div>
+            <div class="d-flex text-dark p-2 bg-primary rounded">
+            
+              <p class="fs-4 me-3 mb-0">Early Bird</p>
               <p class="fw-bold fs-4 mb-0">USD ${{ retreat?.cost?.price }}</p>
-              <p class="mb-0">
+              <p class="mb-0 ms-2">
                 <b class="text-danger">-$200 </b>(if paid in full by Dec 1st)
               </p>
             </div>
+            <div class="d-flex text-dark p-2 bg-success rounded my-2">
+            
+              <p class="fs-4 me-3 mb-0">Payment Plan</p>
+              <p class="fw-bold fs-4 mb-0">USD $247.27</p>
+              <p class="mb-0 ms-2">
+                800$ deposit required for couple, $1637.50/$247.27
+              </p>
+            </div>
             <div
-              class="rounded-4 bg-grey lighten-10 p-2 d-flex justify-content-around"
+              class="rounded-4 bg-pink  p-2 d-flex justify-content-around"
             >
               <div class="">
                 <p class="mb-0 fs-5">
@@ -125,16 +137,17 @@
                 </p>
               </div>
             </div>
-            <div class="fs-5"><p class="mb-0">  Accepted Payment Methods</p></div>
-<div class="d-flex justify-content-between">
-
-  <img src="https://cdn-icons-png.flaticon.com/512/4305/4305518.png" alt="" class="img-fluid " width="80" height="40">
-  <img src="https://logodix.com/logo/385467.png" alt="" class="img-fluid rounded-5" width="80" height="40">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968630.png" alt="" class="img-fluid rounded-5" width="80" height="40">
-
-  <img src="https://cdn-icons-png.flaticon.com/512/423/423468.png" alt="" class="img-fluid " width="80" height="40">
-
-</div>
+            <div class="fs-5"><p class="">  Accepted Payment Methods</p></div>
+            <div class="d-flex justify-content-evenly">
+              
+              <img src="https://cdn-icons-png.flaticon.com/512/4305/4305518.png" alt="" class="img-fluid " width="40" height="20" title="Cash">
+              <img src="https://logodix.com/logo/385467.png" alt="" class="img-fluid rounded-5" width="40" height="20" title="Zelle">
+              <img src="https://cdn-icons-png.flaticon.com/512/5968/5968630.png" alt="" class="img-fluid rounded-5" width="40" height="20" title="Apple Pay">
+              
+              <img src="https://cdn-icons-png.flaticon.com/512/423/423468.png" alt="" class="img-fluid " width="40" height="20" title="Card payment option does incur a 3% charge each transaction">
+              
+            </div>
+            <div class=" mt-2 fs-5"><p class=""> Card payment option does incur a 3% charge each transaction </p></div>
             <div class="text-center">
               <button
                 class="btn btn-primary font-2 lighten-10 my-3 fs-3 fw-bold"
@@ -196,18 +209,24 @@
           </div>
           <div class="col-md-6">
             <div class="">
-              <p class="display-3 font-2">Typical Daily Schedule</p>
+              <p class="display-3 font-2">Daily Schedule</p>
             </div>
             <div class="">
               <p class="fs-4 text-start">
                 {{ retreat?.schedule?.description }}
               </p>
             </div>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card border-0 elevation-6">
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-6">
+                <div class="card border-0 elevation-6 p-2">
                   <div class="card-body">
-                    <p>Partner activities</p>
+                    <p class="fs-4"> Optional Activities</p>
+                   <ul>
+                      
+                    <li v-for="a in retreat?.activities">
+{{a}}
+                    </li>
+                   </ul>
                   </div>
                 </div>
               </div>
@@ -253,15 +272,7 @@
       </div>
     </div>
   </section>
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="display-3 font-2">Cost and Pricing</h1>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <section>
     <div class="container my-3">
       <div class="row">
