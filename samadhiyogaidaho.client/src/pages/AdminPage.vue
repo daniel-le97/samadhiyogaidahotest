@@ -4,6 +4,7 @@
       <AdminSidePanel />
       <AdminTabs />
     </div>
+  
   </div>
   <div v-else></div>
 </template>

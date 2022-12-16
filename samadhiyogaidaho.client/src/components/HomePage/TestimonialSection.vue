@@ -12,7 +12,7 @@
            v-motion-slide-visible-left
             class="display-6 courgette text-lightPink darken-20 font-2 underline"
           >
-            Hear From Our Past Workshops
+         Kind words from clients
           </h2>
         </div>
       </div>

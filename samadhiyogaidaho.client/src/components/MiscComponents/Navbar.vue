@@ -83,7 +83,7 @@
               Services
             </router-link>
           </li>
-          <li><div v-motion-fade :delay="1000" class="text-center">
+          <li class="mx-5"><div v-motion-fade :delay="1000" class="text-center">
             <img src="../../assets/img/Screenshot_4.png" alt="" class="rounded-pill elevation-orange logo-image " />
           </div></li>
           <li>

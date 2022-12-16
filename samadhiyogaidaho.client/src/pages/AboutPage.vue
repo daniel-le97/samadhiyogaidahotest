@@ -5,10 +5,10 @@
     </div>
     <div class="heroImage d-flex flex-column align-items-center justify-content-center">
       <div class="text-center">
-        <h1 v-motion-slide-top id="shadow1" class="text-shadow display-1 courgette fw-bolder text-light">
+        <h1 v-motion-slide-top id="shadow1" class=" font-1 text-shadow page-title courgette fw-bolder text-light">
           OUR STORY
         </h1>
-        <h3 class="text-shadow">Origin</h3>
+        <p class=" display-6 font-2 text-shadow">Why we came to build SamadhiYogaIdaho</p>
       </div>
     </div>
     <div class="container-fluid mt-5">
@@ -72,6 +72,10 @@ export default {
 };
 </script>
 <style scoped>
+
+.page-title{
+  font-size: 10rem;
+}
 .heroImage {
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */

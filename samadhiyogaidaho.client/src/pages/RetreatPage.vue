@@ -94,7 +94,7 @@
 <div class="container my-5">
   <div class="row">
         <div class="col-md-6">
-        <div class="card elevation-6 border-0 rounded-4 p-3">
+        <div class="card elevation-orange border-0 rounded-4 p-3">
             <div class="d-flex ">
               <p class="fs-5 text-muted">4 days / 3nights</p>
             </div>
@@ -218,7 +218,7 @@
             </div>
             <div class="row justify-content-center mt-5">
               <div class="col-md-6">
-                <div class="card border-0 elevation-6 p-2">
+                <div class="card border-0 elevation-orange p-2">
                   <div class="card-body">
                     <p class="fs-4 text-decoration-underline"> Optional Activities</p>
                    <ul>
@@ -262,7 +262,7 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <div class="col-md-6 d-flex align-items-center justify-content-center elevation-orange">
           <AccommodationSwiper />
         </div>
         <div class="col-md-6">
