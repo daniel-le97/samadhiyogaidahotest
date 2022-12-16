@@ -7,11 +7,20 @@ export class EventsController extends BaseController {
   constructor() {
     super("/api/events");
     this.router
-      .get("")
+      .get("", this.getAllEvents)
       .use(Auth0Provider.getAuthorizedUserInfo)
       .post("", this.createEvent)
-      .delete(":id", this.deleteEvent)
-      .put(":id", this.updateEvent);
+      .delete("/:id", this.deleteEvent)
+      .put("/:id", this.updateEvent);
+  }
+
+  async getAllEvents(req, res, next) {
+    try {
+      const events = await eventsService.getAllEvents(req.userInfo.id);
+      res.send(events);
+    } catch (error) {
+      next(error);
+    }
   }
 
   async createEvent(req, res, next) {
