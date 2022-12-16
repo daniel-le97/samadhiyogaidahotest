@@ -335,7 +335,7 @@ import { AppState } from "../AppState.js";
 import AccommodationSwiper from "../components/RetreatPage/AccommodationSwiper.vue";
 import ArchivedRetreatCard from "../components/RetreatPage/ArchivedRetreatCard.vue";
 import FoodImageSwiper from "../components/RetreatPage/FoodImageSwiper.vue";
-import RetreatForm from "../components/RetreatForm.vue";
+import RetreatForm from "../components/AdminComponents/RetreatForm.vue";
 import { retreatsService } from "../services/RetreatsService.js";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";

@@ -246,6 +246,18 @@
                 v-model="editable.highlights"
               ></textarea>
             </div>
+            <div class="mb-3">
+                <label for="formSpots" class="form-label"
+                >spots left</label
+              >
+              <input
+                class="form-control"
+                type="number"
+                id="formSpots"
+                v-model="editable.vacancy.totalSpots"
+              />
+
+            </div>
             <div class="d-flex justify-content-between">
               <button
                 @click="multiStepForm(0)"
@@ -266,12 +278,12 @@
 <script>
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
-import { AppState } from "../AppState.js";
-import { retreatsService } from "../services/RetreatsService";
-import { logger } from "../utils/Logger.js";
-import Pop from "../utils/Pop.js";
-import { firebaseService } from "../services/FirebaseService.js";
-import { uploadsService } from "../services/UploadsService.js";
+import { AppState } from "../../AppState.js";
+import { retreatsService } from "../../services/RetreatsService";
+import { logger } from "../../utils/Logger.js";
+import Pop from "../../utils/Pop.js";
+import { firebaseService } from "../../services/FirebaseService.js";
+import { uploadsService } from "../../services/UploadsService.js";
 
 export default {
   setup() {
@@ -280,6 +292,7 @@ export default {
       location: {},
       food: {},
       schedule: {},
+      vacancy: {filled: 0}
     });
     const file = ref(null);
     onMounted(() => {});
