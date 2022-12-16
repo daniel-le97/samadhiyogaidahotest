@@ -3,6 +3,24 @@
   <div class="hero-image d-flex justify-content-center align-items-center">
     <h1 class="display-1 text-light text-shadow font-1 text-wrap">Join In On Our Events  </h1>
   </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <iframe
+  width="450"
+  height="250"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place
+  ?key=YOUR_API_KEY
+  &q=Eiffel+Tower,Paris+France"
+  allowfullscreen>
+</iframe>
+    </div>
+  </div>
+</div>
+
 <div class="container my-5">
   <div class="row my-5">
    <div class="col-md-6">
