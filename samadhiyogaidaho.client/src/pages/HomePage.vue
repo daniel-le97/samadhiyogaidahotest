@@ -155,7 +155,7 @@
     </div>
   </section>
 
-  <section id="Booking-Section" class="bg-pink my-5">
+  <section id="Booking-Section" class=" my-5">
     <div class="container p-5 mt-5">
       <div class="row">
         <div class="col-md-12">
@@ -272,66 +272,28 @@
   </section>
 
   <section id="Retreat-Section" class="bg-pink">
-    <div class="container p-5">
-      <div class="row justify-content-center">
-        <div class="col-md-12">
-          <h1
-            v-motion-fade-visible
-            class="display-1 font-1 text-start underline"
-          >
-            Join Our Retreat
-          </h1>
-          <h2
-            v-motion-fade-visible
-            class="display-6 courgette text-lightPink darken-20 font-2 underline"
-          >
-            COUPLES REJUVENATION YOGA RETREAT
-          </h2>
-          <br />
-          <h3
-            v-motion-fade-visible
-            class="fs-4 font-2 text-lightPink darken-30 underline"
-          >
-            NOW BOOKING FOR 2023
-          </h3>
-        </div>
-        <div class="col-md-8">
-          <div class="image-box mb-5 mb-md-0">
-            <img
-              src="../assets/img/retreatCoverImage.png"
-              alt=""
-              class="hover-image img-fluid rounded-1 elevation-6"
-            />
-            <div class="text-box">
-              <router-link
-                :to="{ name: 'Retreat', params: {} }"
-                @click="scrollToTop()"
-              >
-                <button class="btn btn-dark display-1 fs-1 font-2">
-                  More Information
-                </button>
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <RetreatAndEvents/>
   </section>
 
   <section id="Video-Section">
-    <YouTubeSection/>
+    <YouTubeSection />
   </section>
 </template>
 
 <script>
 import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
 import RowSeporator2 from "../components/PluginComponents/RowSeporator2.vue";
-import SwiperComponent2 from "../components/HomePage/SwiperComponent2.vue";
+import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
 import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
 import YouTubeSection from "../components/HomePage/YouTubeSection.vue";
+import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue"
+import { defineAsyncComponent } from "vue";
+
 export default {
+ 
   setup() {
+    
     return {
       scrollToTop() {
         window.scrollTo(0, 0);
@@ -344,7 +306,9 @@ export default {
     RowSeporator2,
     CallToAction,
     TestimonialSection,
-  },
+    YouTubeSection,
+    RetreatAndEvents
+},
 };
 </script>
 
@@ -414,75 +378,6 @@ export default {
     width: 300px;
     height: 300px;
   }
-}
-.image-box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-.image-box img {
-  width: 100%;
-  transition: 0.5s;
-  border-radius: 6px;
-}
-
-.text-box {
-  position: absolute;
-  top: 0;
-  left: -200%;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 181, 150, 0.5);
-  transition: 0.5s;
-  backdrop-filter: blur(2px);
-  border-radius: 6px;
-}
-
-.text-box .title {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  width: 100%;
-  font-size: 3.5em;
-  font-weight: 700;
-  line-height: 1em;
-  color: white;
-  -webkit-text-stroke: 0px #f1a3a3;
-  text-shadow: 0px 1px 4px #000000;
-  transform: translateX(-50%) translateY(-50%);
-}
-.text-box button {
-  margin: 0;
-  padding: 4;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.text-box .content {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  width: 100%;
-  font-size: 1.25em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.image-box:hover .text-box {
-  left: 0%;
-}
-
-.image-box:hover img {
-  transform: scale(1.2);
 }
 
 .profile-image {

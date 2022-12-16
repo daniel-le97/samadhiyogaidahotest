@@ -25,9 +25,9 @@
 <script>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Retreat } from "../models/Retreat.js";
+import { Retreat } from "../../models/Retreat.js";
 import { computed } from "@vue/reactivity";
-import { AppState } from "../AppState.js";
+import { AppState } from "../../AppState.js";
 // Import Swiper styles
 import "swiper/css";
 
