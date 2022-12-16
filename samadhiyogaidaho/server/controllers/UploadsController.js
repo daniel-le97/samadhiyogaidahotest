@@ -8,7 +8,7 @@ export class UploadsController extends BaseController {
   constructor() {
     super("/api/uploads");
     this.router
-      // .use(Auth0Provider.getAuthorizedUserInfo)
+      .use(Auth0Provider.getAuthorizedUserInfo)
       .get("", this.getAllUploads)
 
       .post("", this.addUpload);
