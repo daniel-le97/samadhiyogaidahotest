@@ -8,7 +8,7 @@
             aria-labelledby="v-pills-home-tab"
             tabindex="0"
           >
-            ...
+            HOME TAB
           </div>
           <div
             class="tab-pane fade"
@@ -45,7 +45,7 @@
 <script>
 import { computed } from "@vue/reactivity";
 import { AppState } from "../../AppState";
-import RetreatForm from "../RetreatForm.vue";
+import RetreatForm from "./RetreatForm.vue";
 import EventForm from "./EventForm.vue";
 
 export default {

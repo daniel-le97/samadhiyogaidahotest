@@ -19,7 +19,7 @@ import AdminSidePanel from "../components/AdminComponents/AdminSidePanel.vue";
 import AdminTabs from "../components/AdminComponents/AdminTabs.vue";
 
 import EventForm from "../components/AdminComponents/EventForm.vue";
-import RetreatForm from "../components/RetreatForm.vue";
+import RetreatForm from "../components/AdminComponents/RetreatForm.vue";
 
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";

@@ -50,7 +50,7 @@
                 name="time"
                 id="time"
                 placeholder="Time"
-                v-model="editable.time"
+                v-model="editable.endDate"
               />
               <label for="time">time</label>
             </div>
@@ -64,7 +64,7 @@
                   name="coverImage"
                   id="coverImage"
                   placeholder="Event Cover Image"
-                  v-model="editable.coverImg"
+                  v-model="editable.img"
                 />
                 <label for="coverImage">cover Image</label>
               </div>
@@ -118,6 +118,7 @@ export default {
 
       async handleSubmit() {
         try {
+          
           await eventsService.createEvent(editable.value);
           Pop.success("Event Approved");
           editable.value = {};
@@ -131,3 +132,4 @@ export default {
 </script>
 
 <style scoped></style>
+

@@ -22,7 +22,7 @@
     }"
     :modules="modules"
       v-motion-pop-visible
-    class="mySwiper6 rounded elevation-6 "
+    class="mySwiper6 rounded"
   >
    <swiper-slide >  
           <div

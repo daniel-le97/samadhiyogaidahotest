@@ -25,6 +25,7 @@ export class EventsController extends BaseController {
 
   async createEvent(req, res, next) {
     try {
+      
       const newsLetter = await eventsService.createEvent(
         req.body,
         req.userInfo.id
