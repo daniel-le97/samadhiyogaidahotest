@@ -7,19 +7,19 @@ class RetreatsService {
     // if (retreats) {
     //   throw new BadRequest("Already created this type of retreat");
     // }
-    const newRetreat = await dbContext.Retreat.create(retreatData);
+    const newRetreat = await dbContext.Retreats.create(retreatData);
     return newRetreat;
   }
 
   async getCurrentRetreat(id){
-    const currentRetreat = await dbContext.Retreat.findById(id)
+    const currentRetreat = await dbContext.Retreats.findById(id)
     if (!currentRetreat) {
         throw new BadRequest("Invalid Retreat Id");
     }
     return currentRetreat
   }
   async getAllRetreats(){
-    const retreats = await dbContext.Retreat.find()
+    const retreats = await dbContext.Retreats.find()
   
     return retreats
   }

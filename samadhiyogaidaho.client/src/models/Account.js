@@ -8,5 +8,3 @@ export class Account {
   }
 }
 
-
-// Dan has a HUGE dick
