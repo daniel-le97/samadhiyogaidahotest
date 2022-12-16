@@ -15,7 +15,7 @@
       <div class="row mt-5 px-md-3">
         <div class="col-md-12 text-center">
           <div class="justify-content-center p-2">
-            <p v-motion-slide-bottom class="px-md-5 story-text my-3 text-center   ">
+            <p v-motion-slide-bottom class="px-md-5 story-text my-3 text-start   ">
               Back in 2013, our founder took her first yoga class in the hopes of finding some healing. Almost 10 years
               later, she
               took the initiative to receive her 200-hour training and found her passion in teaching. She realized that
@@ -26,7 +26,7 @@
               reconnect
               with themselves in a beautiful and serene atmosphere.
             </p>
-            <p class="px-md-5 story-text my-3 text-center   ">Physical and mental wellbeing are of
+            <p class="px-md-5 story-text my-3 text-start   ">Physical and mental wellbeing are of
               utmost importance to living a healthy life and require practice and
               dedication. Our
               Small Business provides the setting and guidance you need to strengthen your body, mind and soul. All you
