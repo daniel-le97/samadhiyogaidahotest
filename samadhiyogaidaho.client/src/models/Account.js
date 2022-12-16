@@ -7,3 +7,6 @@ export class Account {
     // TODO add additional properties if needed
   }
 }
+
+
+// Dan has a HUGE dick
