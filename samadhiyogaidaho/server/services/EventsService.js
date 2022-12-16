@@ -3,6 +3,10 @@ import { BadRequest, Forbidden } from "../utils/Errors";
 import { getAdmins } from "./AccountService";
 
 class EventsService {
+  async getAllEvents(userId) {
+    const isAdmin = await getAdmins(userId);
+    return await dbContext.Events.find();
+  }
   async deleteEvent(userId, eventId) {
     await getAdmins(userId);
     const event = await this.getEventById(eventId);
@@ -13,13 +17,8 @@ class EventsService {
   async createEvent(eventData, userId) {
     await getAdmins(userId);
     eventData.creatorId = userId;
-    // const isEvent = await dbContext.Events.find(eventData)
-    // if (isEvent) {
-    //   throw new BadRequest("this event may be a duplicate")
-    // }
     const event = await dbContext.Events.create(eventData);
-    // populate??
-
+    // populate
     return event;
   }
   async getEventById(id) {
@@ -29,19 +28,18 @@ class EventsService {
     }
     return event;
   }
-  async updateEvent(eventId, eventData, userId){
-    await getAdmins(userId)
-    const event = await this.getEventById(eventId)
-    event.title = eventData.title || event.title
-    event.location = eventData.location || event.location
-    event.date = eventData.date || event.date
-    event.description = eventData.description || event.description
-    event.cost = eventData.cost || event.cost
-    event.img = eventData.img || event.img
-    event.isArchived = eventData.isArchived || event.isArchived
-    await event.save()
-    return group
+  async updateEvent(eventId, eventData, userId) {
+    await getAdmins(userId);
+    const event = await this.getEventById(eventId);
+    event.title = eventData.title || event.title;
+    event.location = eventData.location || event.location;
+    event.date = eventData.date || event.date;
+    event.description = eventData.description || event.description;
+    event.cost = eventData.cost || event.cost;
+    event.img = eventData.img || event.img;
+    event.isArchived = eventData.isArchived || event.isArchived;
+    await event.save();
+    return event;
   }
-  
 }
 export const eventsService = new EventsService();
