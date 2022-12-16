@@ -1,18 +1,22 @@
 <template>
 
-  <div class="hero-image d-flex justify-content-center align-items-center">
-    <h1 class="display-1 text-light text-shadow font-1 text-wrap">Join In On Our Events  </h1>
+  <div class="hero-image  d-flex flex-column justify-content-center align-items-center">
+    <h1 class="display-1 text-light text-shadow font-1 text-wrap">Join our Events </h1>
+        <h4 class="font-1 text-light text-shadow">Enjoy an enriching and memorable experience</h4>
   </div>
 
 
 
 <div class="container my-5">
-  <div class="row my-5">
+  <div class="row">
+    
+  </div>
+  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
    <div class="col-md-6">
 <img src="../assets/img/Event1.png" alt="" class="img-fluid rounded elevation-6 hover-image">
    </div>
    <div class="col-md-6 text-start">
-<p class="fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">New Years Day Yoga Flow</p>
+<p class="underline  fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">New Years Day Yoga Flow</p>
 <p class="text-start">Sunday, January 1, 2023 </p>
 <p class="text-start">12:00 PM - 1:15PM </p>
 <p class="fs-4 text-start">Start out 2023 right by taking an hour for yourself the first day of the year and remind yourself that you are your priority for 2023. 
@@ -21,12 +25,12 @@
 <p class="fs-1">$25 per person</p>
    </div>
   </div>
-  <div class="row my-5">
+  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
    <div class="col-md-6">
 <img src="../assets/img/Event2.png" alt="" class="img-fluid rounded elevation-6 hover-image">
    </div>
    <div class="col-md-6 text-start">
-<p class="fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">Beginners Yoga Workshop</p>
+<p class=" underline fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">Beginners Yoga Workshop</p>
 <p class="text-start">Sunday, February 5, 2023 </p>
 <p class="text-start">12:00 PM - 2:00PM </p>
 <p class="fs-4 text-start">A beginners class about the fundamentals of yoga. Learn basic postures and basic flow to take and practice at home. 
@@ -35,12 +39,12 @@
 <p class="fs-1">$35 per person</p>
    </div>
   </div>
-  <div class="row my-5">
+  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
    <div class="col-md-6">
 <img src="../assets/img/Event3.png" alt="" class="img-fluid rounded elevation-6 hover-image">
    </div>
    <div class="col-md-6 text-start">
-<p class="fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">Alignment & Posture Workshop</p>
+<p class=" underline  fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">Alignment & Posture Workshop</p>
 <p class="text-start">Sunday, February 5, 2023 </p>
 <p class="text-start">12:00 PM - 2:00PM </p>
 <p class="fs-4 text-start"> A posture and alignment workshop for those who are wanting to deepen their practice or and get hands on assistance and adjustments to make the most is true work the best for you. 
