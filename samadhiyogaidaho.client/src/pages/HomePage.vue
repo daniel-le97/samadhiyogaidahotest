@@ -249,8 +249,12 @@
             class="profile-image elevation-6"
           />
 
-          <div class="text-center mt-3">
-            <h6 class="mb-0 fs-4 fw-bold">Katie Alverson</h6>
+          <div
+          v-motion-fade-visible :delay="200"
+          class="text-center mt-3">
+            <h6
+               
+            class="mb-0 fs-4 fw-bold">Katie Alverson</h6>
             <p class="fs-5">Founder, Owner & Teacher</p>
           </div>
         </div>

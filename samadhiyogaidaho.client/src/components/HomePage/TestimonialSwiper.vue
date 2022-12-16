@@ -21,6 +21,7 @@
       },
     }"
     :modules="modules"
+      v-motion-pop-visible
     class="mySwiper6 rounded elevation-6 "
   >
    <swiper-slide >  

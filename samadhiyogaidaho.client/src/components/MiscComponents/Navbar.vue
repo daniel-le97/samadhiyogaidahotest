@@ -172,12 +172,8 @@ export default {
 }
 
 .nav{
-        /* height: 12em; */
-            transition: all 1.25s ease;
-}
-.nav:hover{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.134) 0%);
-    transition: all 1.25s ease;
+       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.134) 0%);
+       
 }
 
 .logo-image{

@@ -1,87 +1,105 @@
 <template>
-  <div class="AdminSidePanel">
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            DashBoard
-          </button>
-        </h2>
+   <div class="col-md-2 p-0 rounded">
         <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample"
+          class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark rounded-end elevation-6 side-panel sticky-top"
         >
-          <div class="accordion-body">
-            <button class="btn btn-primary"></button>
-            <button class="btn btn-primary"></button>
-            <button class="btn btn-primary"></button>
-            <button class="btn btn-primary"></button>
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+          >
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4">Admin </span>
+          </a>
+          <hr />
+          <div
+            class="nav flex-column nav-pills me-3"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <button
+              class="nav-link active"
+              id="v-pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-home"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-home"
+              aria-selected="true"
+            >
+              Home
+            </button>
+            <button
+              class="nav-link"
+              id="event-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#event"
+              type="button"
+              role="tab"
+              aria-controls="event"
+              aria-selected="false"
+            >
+              Events
+            </button>
+
+            <button
+              class="nav-link"
+              id="retreats-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#retreats"
+              type="button"
+              role="tab"
+              aria-controls="retreats"
+              aria-selected="false"
+            >
+              Retreats
+            </button>
+            <button
+              class="nav-link"
+              id="v-pills-settings-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-settings"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-settings"
+              aria-selected="false"
+            >
+              Settings
+            </button>
+          </div>
+          <hr />
+          <div class="dropdown">
+            <a
+              href="#"
+              class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+              id="dropdownUser1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://github.com/mdo.png"
+                alt=""
+                width="32"
+                height="32"
+                class="rounded-circle me-2"
+              />
+              <strong>mdo</strong>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-dark text-small shadow"
+              aria-labelledby="dropdownUser1"
+            >
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo"
-            aria-expanded="false"
-            aria-controls="collapseTwo"
-          >
-            Retreats
-          </button>
-        </h2>
-        <div
-          id="collapseTwo"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <!--  -->
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseThree"
-            aria-expanded="false"
-            aria-controls="collapseThree"
-          >
-            Services
-          </button>
-        </h2>
-        <div
-          id="collapseThree"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <div class="d-flex flex-column gap-2">
-              <button class="btn btn-info">Add a new service</button>
-              <button class="btn btn-info">edit a service</button>
-              <button class="btn btn-info">delete a service</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -94,4 +112,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nav-link{
+  color: var(--teal);
+}
+.nav-link {
+
+}
+
+.active{
+  background: rgb(214, 163, 150) !important;
+}
+</style>

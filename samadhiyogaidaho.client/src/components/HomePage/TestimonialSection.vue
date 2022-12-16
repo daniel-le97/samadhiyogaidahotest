@@ -3,13 +3,13 @@
       <div class="row">
         <div class="col-md-8  mt-2">
           <h1
-            v-motion-fade-visible
+            v-motion-slide-visible-left
             class="display-1 font-1 text-start  underline"
           >
             Testimonials
           </h1>
            <h2
-            v-motion-fade-visible
+           v-motion-slide-visible-left
             class="display-6 courgette text-lightPink darken-20 font-2 underline"
           >
             Hear From Our Past Workshops

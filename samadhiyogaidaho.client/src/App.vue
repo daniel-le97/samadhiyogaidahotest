@@ -1,6 +1,6 @@
 <template>
-  <header class="sticky-top bg-lightPink elevation-5" id="nav">
-    <Navbar class="" id="navBar" v-if="!routeAdmin"/>
+  <header class="sticky-top bg-lightPink elevation-5">
+    <Navbar class="" id="nav" v-if="!routeAdmin"/>
     
   </header>
   <main>
@@ -37,12 +37,13 @@ export default {
         let currentScrollPos = window.scrollY;
         // console.log(["current"], currentScrollPos);
         if (prevScrollpos > currentScrollPos) {
-          nav.style.opacity = "1";
-          nav.style.transition = "all 0.25s ease";
+          nav.style.top = "0";
+          nav.style.transition = "all .50s ease";
           // nav.classList.remove("showOnScroll");
         } else {
           // nav.classList.add("hiddenOnScroll");
-          nav.style.opacity = "0";
+          nav.style.top = "-200px"
+               nav.style.transition = "all .50s ease";
         }
         prevScrollpos = currentScrollPos;
       };
