@@ -10,7 +10,7 @@
         </h1>
         <h3 class="text-shadow">Origin</h3>
       </div>
-      <div class="w-75 glass rounded-3 p-2">
+      <div class="w-75 rounded-3 p-2">
         <p v-motion-slide-bottom class="text-light px-md-5 story-text my-3 text-center  text-shadow ">
           Back in 2013, our founder took her first yoga class in the hopes of finding some healing. Almost 10 years
           later, she
