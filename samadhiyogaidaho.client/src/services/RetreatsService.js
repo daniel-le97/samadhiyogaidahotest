@@ -23,12 +23,8 @@ console.log(res.data);
     else AppState.archivedRetreats.push(new Retreat(r))
   })
 
- 
-// AppState.currentRetreat = AppState.archivedRetreats[0];
-//     AppState.archivedRetreats = res.data.map((r) => new Retreat(r.archived==true));
-
     console.log(AppState.archivedRetreats);
-    // AppState.currentRetreat = new Retreat(res.data);
+
   }
 }
 

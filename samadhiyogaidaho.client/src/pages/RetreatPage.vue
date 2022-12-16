@@ -337,16 +337,18 @@ import RetreatForm from "../components/RetreatForm.vue";
 import { retreatsService } from "../services/RetreatsService.js";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
-
+import { onBeforeMount } from "vue";
 export default {
   props: {},
   setup(props) {
     const editable = ref({});
 
     onMounted(() => {
-      getAllRetreats();
     });
+    onBeforeMount(()=>{
+  getAllRetreats();
 
+})
     async function getAllRetreats() {
       try {
         await retreatsService.getAllRetreats();

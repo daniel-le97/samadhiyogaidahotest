@@ -14,10 +14,8 @@
             :enter="{ opacity: 1, y: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
             :delay="600"
-            class="fs-2 font-2 text-light text-start "
-          >
-         
-          </h5>
+            class="fs-2 font-2 text-light text-start"
+          ></h5>
           <h5
             v-motion
             :initial="{ opacity: 0, y: 100 }"
@@ -26,7 +24,7 @@
             :delay="600"
             class="fs-2 font-2 text-light text-uppercase"
           >
-             LEARN HOW TO SEE YOURSELF <br>
+            LEARN HOW TO SEE YOURSELF <br />
             Become aware of your capacity to create, <br />
             to be authentic in every day life, <br />
             to transform & to love
@@ -50,7 +48,6 @@
             alt=""
             class="rounded-pill elevation-6 logo-image w-50"
           />
-       
         </div>
 
         <div
@@ -72,99 +69,11 @@
     <RowSeporator2 />
   </section>
 
-  <section id="Mission-Section">
-    <div class="container p-5 bg-white">
-      <div class="row">
-        <div class="col-md-12">
-          <h1
-            v-motion-slide-visible-left
-            class="display-1 font-1 underline text-start text-dark mt-5 mt-md-0"
-          >
-            Welcome Beautiful Soul
-          </h1>
-          <br />
-
-          <h2
-            v-motion-slide-visible-left
-            class="display-6 font-2 underline text-lightPink darken-20 mb-4"
-          >
-            Our Core Belief
-          </h2>
-
-          <p v-motion-fade-visible class="text-start fs-4 px-md-5 ">
-            We started <b>Samadhi Yoga Idaho</b> based on the idea that people
-            want to be at peace with who they truly are, and that they can be
-            authentic with themselves at every point of their lives.
-          </p>
-
-          <p v-motion-fade-visible class="text-start fs-4 px-md-5 ">
-           We believe
-            in using pranayama, asana, journaling, and meditation practices to
-            increase our knowledge of <em>self</em>, <em>life</em>, <em>mobility</em> and to help every person recognize their <em>worthiness</em> , <em>beauty</em>, and <em>uniqueness</em>. 
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mb-3">
-      <div class="row g-2">
-         <div class="col-md-4" v-motion-pop-visible>
-          <div class="card elevation-6 border-0">
-            <div class="image-box">
-              <img
-                src="https://scontent-fml2-1.xx.fbcdn.net/v/t39.30808-6/298219507_139281102128313_1469716182377953759_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a26aad&_nc_ohc=To8CopedlNEAX-AiRAt&_nc_ht=scontent-fml2-1.xx&oh=00_AfBkKQpI-3LdHaQxQf9C3A89NYIMt4ZN2Uf9O4B4qT4d4g&oe=63A04441"
-                alt=""
-                class="img-fluid rounded"
-              />
-              <div class="text-box">
-                <p class="title">Learn to delve into the slowness of breath work with Yin Yoga</p>
-                <p class="content">
-                
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" v-motion-pop-visible>
-          <div class="card elevation-6 border-0">
-            <div class="image-box">
-              <img
-                src="https://scontent-fml2-1.xx.fbcdn.net/v/t39.30808-6/291518073_128132356576521_7530546115358918920_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a26aad&_nc_ohc=bHJ0OcW_2gAAX-7oHpz&_nc_ht=scontent-fml2-1.xx&oh=00_AfAdzk-xLbVt1NsLbKqNuJJt5uo2-tJWeJrYyzXmfxQR9Q&oe=63A11BE8"
-                alt=""
-                class="img-fluid rounded"
-              />
-              <div class="text-box">
-                <p class="title">Awaken True WellBeing</p>
-                <p class="content"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4" v-motion-pop-visible>
-          <div class="card elevation-6 border-0">
-            <div class="image-box">
-              <img
-                src="https://scontent-fml2-1.xx.fbcdn.net/v/t39.30808-6/299321126_140398988683191_5641334468471087586_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=Uvb2uQ-INDUAX8lC2qW&tn=elLHl9auDysCO0fM&_nc_ht=scontent-fml2-1.xx&oh=00_AfBODjVEBO-DnbDH_WWDhSYDxRgHaMhu1L1yN_3Hp6REQw&oe=639FF51A"
-                alt=""
-                class="img-fluid rounded"
-              />
-              <div class="text-box">
-                <p class="title">Find Your Flow </p>
-                <p class="content">
-              
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-      </div>
-    </div>
+  <section id="Call-To-Action-Section">
+    <CallToAction />
   </section>
 
-
- <section id="YinYoga-Section" class="bg-pink my-5">
+  <section id="YinYoga-Section" class="bg-pink my-5">
     <div class="container p-5 mt-5">
       <div class="row">
         <div class="col-md-12">
@@ -172,61 +81,79 @@
             v-motion-slide-visible-left
             class="display-1 font-1 underline text-start"
           >
-           What Is Yin Yoga?
+            What Is Yin Yoga?
           </h1>
-        
-
-         
         </div>
 
         <div class="row">
           <div class="col-md-4">
-            <div class="card bg-dark border-0 elevation-6 p-2 ">
-            <p class="fs-4 text-warning">  Yin yoga is a quiet contemplative practice that involves working with deeper, passive, and longer held poses. It targets the deepest tissues of the body, our connective tissues,ligaments,joints,bones, the deep fascia networks of the body and the meridians. This is contract to a Yang Yoga practice such as Vinyasa Yoga which targets the muscles</p>
+            <div class="card bg-dark border-0 elevation-6 p-2">
+              <p class="fs-4 text-warning">
+                Yin yoga is a quiet contemplative practice that involves working
+                with deeper, passive, and longer held poses. It targets the
+                deepest tissues of the body, our connective
+                tissues,ligaments,joints,bones, the deep fascia networks of the
+                body and the meridians. This is contract to a Yang Yoga practice
+                such as Vinyasa Yoga which targets the muscles
+              </p>
             </div>
           </div>
           <div class="col-md-4">
-           <div class="card bg-dark border-0 elevation-6 p-2 ">
-           <p class="fs-4 text-warning">  A Yin yoga class usually consists of a series of long-held, passive floor poses that mainly work the lower part of the body - the hips, pelvis, inner thighs, and the lower spine which are especially rich in connective tissues. The poses are held for up to five minutes sometimes longer. Although almost entirely passive  some Yin asanas contain Yang elements, During the asanas the muscles are relaxed to avoid muscle spasm which could result from engaging muscles for long periods.</p>
-           </div>
-         </div>
+            <div class="card bg-dark border-0 elevation-6 p-2">
+              <p class="fs-4 text-warning">
+                A Yin yoga class usually consists of a series of long-held,
+                passive floor poses that mainly work the lower part of the body
+                - the hips, pelvis, inner thighs, and the lower spine which are
+                especially rich in connective tissues. The poses are held for up
+                to five minutes sometimes longer. Although almost entirely
+                passive some Yin asanas contain Yang elements, During the asanas
+                the muscles are relaxed to avoid muscle spasm which could result
+                from engaging muscles for long periods.
+              </p>
+            </div>
+          </div>
           <div class="col-md-4">
-            <div class="card bg-dark border-0 elevation-6 p-2 ">
-          <ul>
-            <li class="text-warning">
-                <p class="fs-4 text-warning"> Increases circulation & improves flexibility</p>
-            </li>
-            <li class="text-warning">
-                <p class="fs-4 text-warning"> Calms and balances the mind & body</p>
-            </li>
-            <li class="text-warning">
-                <p class="fs-4 text-warning"> Reduces stress & anxiety</p>
-            </li>
-            <li class="text-warning">
-                <p class="fs-4 text-warning"> Releases fascia</p>
-            </li>
-            <li class="text-warning">
-                <p class="fs-4 text-warning"> Encourages deeper relaxation</p>
-            </li>
-            <li class="text-warning">
-                <p class="fs-4 text-warning"> Improves Joint mobility</p>
-            </li>
-            <li class="text-warning">
-                <p class="fs-4 text-warning">Balance to the organs through meridian stimulation</p>
-            </li>
-            <li class="text-warning">
-                <p class="fs-4 text-warning">improved pranayama(breath work & life energy)</p>
-            </li>
-          </ul>
+            <div class="card bg-dark border-0 elevation-6 p-2">
+              <ul>
+                <li class="text-warning">
+                  <p class="fs-4 text-warning">
+                    Increases circulation & improves flexibility
+                  </p>
+                </li>
+                <li class="text-warning">
+                  <p class="fs-4 text-warning">
+                    Calms and balances the mind & body
+                  </p>
+                </li>
+                <li class="text-warning">
+                  <p class="fs-4 text-warning">Reduces stress & anxiety</p>
+                </li>
+                <li class="text-warning">
+                  <p class="fs-4 text-warning">Releases fascia</p>
+                </li>
+                <li class="text-warning">
+                  <p class="fs-4 text-warning">Encourages deeper relaxation</p>
+                </li>
+                <li class="text-warning">
+                  <p class="fs-4 text-warning">Improves Joint mobility</p>
+                </li>
+                <li class="text-warning">
+                  <p class="fs-4 text-warning">
+                    Balance to the organs through meridian stimulation
+                  </p>
+                </li>
+                <li class="text-warning">
+                  <p class="fs-4 text-warning">
+                    improved pranayama(breath work & life energy)
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    
   </section>
-
 
   <section id="Booking-Section" class="bg-pink my-5">
     <div class="container p-5 mt-5">
@@ -250,14 +177,14 @@
       </div>
     </div>
 
-    <div class="container " >
-      <div class="row ">
+    <div class="container">
+      <div class="row">
         <div class="col-md-3">
           <div class="card border-0 service-card">
             <img
               src="https://scontent-fml2-1.xx.fbcdn.net/v/t39.30808-6/287422540_121522807237476_598088348287290457_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=WQDZLsPbT7cAX8Li9RC&tn=elLHl9auDysCO0fM&_nc_ht=scontent-fml2-1.xx&oh=00_AfA4OiNAOA9uyJm0q19BSSf3QrU0I5h27ZErm1REPEm86w&oe=639FDFFA"
               alt=""
-              class="img-fluid  rounded elevation-6 "
+              class="img-fluid rounded elevation-6"
             />
             <div
               class="card-img-overlay d-flex justify-content-center align-items-center"
@@ -269,7 +196,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -283,7 +209,7 @@
         <div class="col-md-8 team-section-title">
           <h1
             v-motion-slide-visible-left
-            class="display-1 font-1 underline text-start "
+            class="display-1 font-1 underline text-start"
           >
             Katie Alverson
           </h1>
@@ -342,32 +268,7 @@
   </section>
 
   <section id="Testimonials-Section " class="mb-5">
-    <div class="container p-5">
-      <div class="row">
-        <div class="col-md-8  mt-2">
-          <h1
-            v-motion-fade-visible
-            class="display-1 font-1 text-start  underline"
-          >
-            Testimonials
-          </h1>
-           <h2
-            v-motion-fade-visible
-            class="display-6 courgette text-lightPink darken-20 font-2 underline"
-          >
-            Hear From Our Past Classes
-          </h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mt-5 mt-md-0">
-      <div class="row justify-content-center">
-        <div class="col-md-12">
-          <SwiperComponent2 />
-        </div>
-      </div>
-    </div>
+    <TestimonialSection />
   </section>
 
   <section id="Retreat-Section" class="bg-pink">
@@ -382,7 +283,7 @@
           </h1>
           <h2
             v-motion-fade-visible
-            class="display-6 courgette text-lightPink darken-20  font-2 underline"
+            class="display-6 courgette text-lightPink darken-20 font-2 underline"
           >
             COUPLES REJUVENATION YOGA RETREAT
           </h2>
@@ -394,16 +295,18 @@
             NOW BOOKING FOR 2023
           </h3>
         </div>
-           <div class="col-md-8 ">
-          <div class="image-box mb-5 mb-md-0 ">
+        <div class="col-md-8">
+          <div class="image-box mb-5 mb-md-0">
             <img
               src="../assets/img/retreatCoverImage.png"
               alt=""
               class="hover-image img-fluid rounded-1 elevation-6"
             />
             <div class="text-box">
-              <router-link :to="{name: 'Retreat', params:{ }}" @click="scrollToTop()"> 
-              
+              <router-link
+                :to="{ name: 'Retreat', params: {} }"
+                @click="scrollToTop()"
+              >
                 <button class="btn btn-dark display-1 fs-1 font-2">
                   More Information
                 </button>
@@ -413,38 +316,20 @@
         </div>
       </div>
     </div>
-
-    <div id="test" class="container ">
-      <div class="row justify-content-center">
-     
-      </div>
-    </div>
   </section>
 
-
-<section id="Video-Section" >
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-md-12 d-flex justify-content-center  mb-5">
-     <iframe width="950" height="544" src="https://www.youtube.com/embed/BYTDS1hw9kg" title="Gentle morning stretch and flow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded elevation-6"></iframe>
-      </div>
-      <div class="col-md-6">
-        <iframe width="550" height="544" src="https://www.youtube.com/embed/a8pro3zdh44" title="Gentle Thanksgiving Flow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded elevation-6"></iframe>
-      </div>
-      <div class="col-md-6">
-        <iframe width="550" height="544" src="https://www.youtube.com/embed/wSV2Vtf9318" title="Heart opening Beginners Flow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded elevation-6"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
+  <section id="Video-Section">
+    <YouTubeSection/>
+  </section>
 </template>
 
 <script>
 import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
 import RowSeporator2 from "../components/PluginComponents/RowSeporator2.vue";
-import SwiperComponent2 from "../components/PluginComponents/SwiperComponent2.vue";
-
+import SwiperComponent2 from "../components/HomePage/SwiperComponent2.vue";
+import CallToAction from "../components/HomePage/CallToAction.vue";
+import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
+import YouTubeSection from "../components/HomePage/YouTubeSection.vue";
 export default {
   setup() {
     return {
@@ -454,19 +339,18 @@ export default {
     };
   },
   components: {
-  
     SwiperComponent2,
     ParticleComponent,
     RowSeporator2,
+    CallToAction,
+    TestimonialSection,
   },
 };
 </script>
 
 <style scoped lang="scss">
-
-.service-card{
-
-  img{
+.service-card {
+  img {
     filter: brightness(80%);
   }
 }
