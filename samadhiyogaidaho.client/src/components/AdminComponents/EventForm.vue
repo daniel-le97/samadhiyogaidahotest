@@ -50,7 +50,7 @@
                 name="time"
                 id="time"
                 placeholder="Time"
-                v-model="editable.time"
+                v-model="editable.endDate"
               />
               <label for="time">time</label>
             </div>

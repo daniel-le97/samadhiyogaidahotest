@@ -8,7 +8,7 @@
             aria-labelledby="v-pills-home-tab"
             tabindex="0"
           >
-            ...
+            HOME TAB
           </div>
           <div
             class="tab-pane fade"
