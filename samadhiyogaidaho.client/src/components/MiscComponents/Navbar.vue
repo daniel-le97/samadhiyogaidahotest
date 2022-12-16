@@ -165,6 +165,7 @@ export default {
   color:#ffffff;
   margin-left: 8px;
   margin-right: 8px;
+    text-shadow: 0px 1px 4px #000000;
 }
 .nav-link:hover {
   text-transform: uppercase;
