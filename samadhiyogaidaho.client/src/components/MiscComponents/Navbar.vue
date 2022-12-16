@@ -12,13 +12,13 @@
             width="70"
             height="70"
           /> -->
-          <img
+          <!-- <img
             src="src\assets\img\Samadhi Yoga.png"
             alt=""
             width="70"
             height="70"
             class="rounded-circle logo"
-          />
+          /> -->
            <!-- <div v-motion-fade class="text-center " style="margin-top:80px;">
           <img
             src="../assets/img/Screenshot_4.png"
@@ -83,6 +83,9 @@
               Services
             </router-link>
           </li>
+          <li><div v-motion-fade :delay="1000" class="text-center">
+            <img src="../../assets/img/Screenshot_4.png" alt="" class="rounded-pill elevation-6 logo-image " />
+          </div></li>
           <li>
             <router-link
               :to="{ name: 'Events' }"
@@ -103,7 +106,7 @@
               Blog
             </router-link>
           </li>
-          <li>
+          <!-- <li>
             <router-link
               :to="{ name: 'NewsLetter' }"
               v-motion-pop
@@ -112,7 +115,7 @@
             >
               Stay Updated
             </router-link>
-          </li>
+          </li> -->
           <li>
             <router-link
               :to="{ name: 'Testimonials' }"
@@ -169,8 +172,17 @@ export default {
 }
 
 .nav{
+        /* height: 12em; */
+            transition: all 1.25s ease;
+}
+.nav:hover{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.134) 0%);
-      height: 10em;
+    transition: all 1.25s ease;
+}
+
+.logo-image{
+  width: 100px;
+  height: 160px;
 }
 
 .logo{
@@ -187,7 +199,7 @@ export default {
 
 @media screen and (min-width: 768px) {
   nav {
-    height: 80px;
+    height: 200px;
   }
 }
 </style>

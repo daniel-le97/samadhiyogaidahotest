@@ -42,13 +42,13 @@
           </h1>
         </div>
 
-        <div v-motion-fade :delay="1000" class="text-center">
+        <!-- <div v-motion-fade :delay="1000" class="text-center">
           <img
             src="../assets/img/Screenshot_4.png"
             alt=""
             class="rounded-pill elevation-6 logo-image w-50"
           />
-        </div>
+        </div> -->
 
         <div
           class="join-newsletter-button flex-column d-flex"
