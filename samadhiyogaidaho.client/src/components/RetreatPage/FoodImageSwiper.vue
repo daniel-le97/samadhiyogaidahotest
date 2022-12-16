@@ -25,7 +25,7 @@ import "swiper/css/effect-cards";
 
 // import required modules
 import { EffectCards } from "swiper";
-import { AppState } from "../AppState.js";
+import { AppState } from "../../AppState.js";
 
 export default {
   components: {
@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .swiper {
-  width: 500px;
+  width:475px;
   height: 700px;
 img{
   object-fit: cover;

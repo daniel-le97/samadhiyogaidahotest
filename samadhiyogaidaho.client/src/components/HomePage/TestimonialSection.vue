@@ -12,7 +12,7 @@
             v-motion-fade-visible
             class="display-6 courgette text-lightPink darken-20 font-2 underline"
           >
-            Hear From Our Past Classes
+            Hear From Our Past Workshops
           </h2>
         </div>
       </div>
@@ -21,7 +21,7 @@
     <div class="container mt-5 mt-md-0">
       <div class="row justify-content-center">
         <div class="col-md-12">
-          <SwiperComponent2 />
+          <TestimonialSwiper />
         </div>
       </div>
     </div>
@@ -29,13 +29,13 @@
 
 
 <script>
-import SwiperComponent2 from "./SwiperComponent2.vue";
+import TestimonialSwiper from "./TestimonialSwiper.vue";
 
 export default {
     setup() {
         return {};
     },
-    components: { SwiperComponent2 }
+    components: { TestimonialSwiper }
 }
 </script>
 

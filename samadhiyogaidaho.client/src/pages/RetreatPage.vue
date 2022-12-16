@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div class="mt-3 sticky-top">
+        <div class="mt-3 sticky-top d-flex justify-content-end">
           <button
             class="btn btn-dark font-2 fs-3 sticky-top"
             type="button"
@@ -220,11 +220,13 @@
               <div class="col-md-6">
                 <div class="card border-0 elevation-6 p-2">
                   <div class="card-body">
-                    <p class="fs-4"> Optional Activities</p>
+                    <p class="fs-4 text-decoration-underline"> Optional Activities</p>
                    <ul>
                       
                     <li v-for="a in retreat?.activities">
-{{a}}
+ <p class="fs-5 text-start">
+              {{a}} 
+              </p>
                     </li>
                    </ul>
                   </div>
@@ -239,7 +241,7 @@
 <section>
   <div class="container my-5">
        <div class="row ">
-          <div class="col-md-6">
+          <div class="col-md-5">
             <div class="">
               <p class="display-3 mb-0">Food</p>
               <p class="display-6 text-muted font-2">
@@ -250,7 +252,7 @@
               <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
-          <div class="col-md-6 d-flex justify-content-end">
+          <div class="col-md-7 d-flex justify-content-end">
             <FoodImageSwiper v-if="retreat?.food?.imgs" />
           </div>
         </div>
@@ -277,7 +279,7 @@
     <div class="container my-3">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="display-3 font-2">FAQ'S</h1>
+          <h1 class="display-3 font-2">FAQS</h1>
         </div>
       </div>
       <div class="accordion elevation-6 border-0" id="accordionExample">
@@ -330,9 +332,9 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
-import AccommodationSwiper from "../components/AccommodationSwiper.vue";
-import ArchivedRetreatCard from "../components/ArchivedRetreatCard.vue";
-import FoodImageSwiper from "../components/FoodImageSwiper.vue";
+import AccommodationSwiper from "../components/RetreatPage/AccommodationSwiper.vue";
+import ArchivedRetreatCard from "../components/RetreatPage/ArchivedRetreatCard.vue";
+import FoodImageSwiper from "../components/RetreatPage/FoodImageSwiper.vue";
 import RetreatForm from "../components/RetreatForm.vue";
 import { retreatsService } from "../services/RetreatsService.js";
 import { logger } from "../utils/Logger.js";
