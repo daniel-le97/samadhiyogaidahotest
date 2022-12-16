@@ -10,4 +10,10 @@ export const UploadSchema = new Schema(
   { timestamps: true, toJSON: { virtuals: true } }
 );
 
+UploadSchema.static({
+  findByName: function(){
+    console.log("hi");
+  }
+})
+
 

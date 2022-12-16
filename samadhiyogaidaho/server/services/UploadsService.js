@@ -2,7 +2,7 @@ import { dbContext } from "../db/DbContext.js";
 
 class UploadsService {
   async getAllUploads() {
-    const uploads = await dbContext.Upload.find();
+    const uploads = await dbContext.Uploads.find();
     return uploads;
   }
   async addUpload(uploadData) {

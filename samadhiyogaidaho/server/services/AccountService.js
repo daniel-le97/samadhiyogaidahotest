@@ -1,4 +1,5 @@
 import { dbContext } from '../db/DbContext'
+import { Forbidden } from '../utils/Errors'
 
 // Private Methods
 
@@ -76,3 +77,11 @@ class AccountService {
   }
 }
 export const accountService = new AccountService()
+
+ export async function getAdmins(id) {
+    const isAdmin = await dbContext.Account.find({id})
+    if (!isAdmin) {
+      throw new Forbidden("you should not be able to access this")
+    }
+    return isAdmin
+  }

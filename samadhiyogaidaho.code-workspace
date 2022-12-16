@@ -35,10 +35,8 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": true
     },
-    "cSpell.words": [
-      "Alverson",
-      "Scrollpos",
-      "vuetify"
-    ]
+    "cSpell.words": ["Alverson", "Scrollpos", "vuetify"],
+    "typescript.format.enable": true,
+    "javascript.validate.enable": false
   }
 }
