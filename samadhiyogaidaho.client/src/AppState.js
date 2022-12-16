@@ -8,7 +8,8 @@ export const AppState = reactive({
 
   /** @type {import('./models/NewsLetter.js').NewsLetter[]} */
   newsLetterSubscription: [],
-
+  /** @type {import('./models/Event.js').Event.js[]} */
+events: [],
   /** @type {import('./models/Retreat.js').Retreat} */
   currentRetreat: {},
 

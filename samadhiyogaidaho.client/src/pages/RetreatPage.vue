@@ -125,7 +125,16 @@
                 </p>
               </div>
             </div>
+            <div class="fs-5"><p class="mb-0">  Accepted Payment Methods</p></div>
+<div class="d-flex justify-content-between">
 
+  <img src="https://cdn-icons-png.flaticon.com/512/4305/4305518.png" alt="" class="img-fluid " width="80" height="40">
+  <img src="https://logodix.com/logo/385467.png" alt="" class="img-fluid rounded-5" width="80" height="40">
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968630.png" alt="" class="img-fluid rounded-5" width="80" height="40">
+
+  <img src="https://cdn-icons-png.flaticon.com/512/423/423468.png" alt="" class="img-fluid " width="80" height="40">
+
+</div>
             <div class="text-center">
               <button
                 class="btn btn-primary font-2 lighten-10 my-3 fs-3 fw-bold"
@@ -145,7 +154,7 @@
     <div class="col-md-6">
       <div class=""> <h1>Summary</h1></div>
       <div class="">
-        <p> {{retreat?.description}} </p>
+        <p class="fs-4"> {{retreat?.description}} </p>
       </div>
     </div>
 
@@ -167,7 +176,7 @@
             <h1 class="display-3 font-2">{{ retreat?.location?.address }}</h1>
           </div>
           <div class="">
-            <p class="fs-5 text-start">{{ retreat?.location?.description }}</p>
+            <p class="fs-4 text-start">{{ retreat?.location?.description }}</p>
           </div>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
@@ -190,7 +199,7 @@
               <p class="display-3 font-2">Typical Daily Schedule</p>
             </div>
             <div class="">
-              <p class="fs-5 text-start">
+              <p class="fs-4 text-start">
                 {{ retreat?.schedule?.description }}
               </p>
             </div>
@@ -213,13 +222,13 @@
        <div class="row ">
           <div class="col-md-6">
             <div class="">
-              <p class="display-3 font-2 mb-0">Food</p>
+              <p class="display-3 mb-0">Food</p>
               <p class="display-6 text-muted font-2">
                 Featuring {{ retreat?.food?.chef }}
               </p>
             </div>
             <div class="">
-              <p class="fs-5 text-start">{{ retreat?.food?.description }}</p>
+              <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
           <div class="col-md-6 d-flex justify-content-end">
@@ -237,7 +246,7 @@
         </div>
         <div class="col-md-6">
           <h1 class="display-3 font-2">Accommodations</h1>
-          <p class="fs-5 text-start">
+          <p class="fs-4 text-start">
             {{ retreat?.accommodations?.description }}
           </p>
         </div>
@@ -284,7 +293,7 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <p class="font-2 fs-3">{{ f.answer }}</p>
+              <p class=" fs-3">{{ f.answer }}</p>
             </div>
           </div>
         </div>
