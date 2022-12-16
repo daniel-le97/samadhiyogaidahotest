@@ -1,6 +1,7 @@
 <template>
-  <div class="hero-image d-flex justify-content-center align-items-center">
-    <h1 class="display-1 font-1 text-light text-shadow">What We Offer</h1>
+  <div class="hero-image d-flex justify-content-center align-items-center flex-column">
+    <h1 class="display-1 font-1 text-light text-shadow">Take A Moment For Yourself</h1>
+    <h4 class="font-1 text-light text-shadow">We Offer Vinyasa, Baptiste, & Yin Yoga</h4>
   </div>
   <div class="container-fluid" style="margin-top: 100px">
     <div class="row justify-content-center">
@@ -103,8 +104,8 @@ export default {
 }
 
 .card img {
-  height: 300px;
-  width: 300px;
+  height: 320px;
+  width: 320px;
   object-fit: cover;
 }
 
