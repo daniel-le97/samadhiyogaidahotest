@@ -1,7 +1,7 @@
 <template>
   <div class="hero-image d-flex justify-content-center align-items-center flex-column">
     <h1 class="display-1 font-1 text-light text-shadow">Take A Moment For Yourself</h1>
-    <h4 class="font-1 text-light text-shadow">Vinyasa, Baptiste, & Yin</h4>
+    <h4 class="font-1 text-light text-shadow">We Offer Vinyasa, Baptiste, & Yin Yoga</h4>
   </div>
   <div class="container-fluid" style="margin-top: 100px">
     <div class="row justify-content-center">

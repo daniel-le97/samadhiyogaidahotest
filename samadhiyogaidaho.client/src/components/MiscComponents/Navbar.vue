@@ -1,7 +1,7 @@
 <template>
   <nav
 
-    class="navbar navbar-expand-lg navbar-dark text-dark  px-3 fixed-top font-2"
+    class="navbar navbar-expand-lg navbar-dark text-dark  px-3 fixed-top font-2 nav py-5"
   >
     <div class="d-flex mx-auto">
       <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
@@ -58,7 +58,7 @@
               :to="{ name: 'About' }"
               v-motion-pop
               :delay="300"
-              class="btn text-dark text-uppercase fw-bold fs-4 nav-link"
+              class="btn text-uppercase text-uppercase fw-bold fs-4 nav-link"
             >
               About
             </router-link>
@@ -157,12 +157,9 @@ export default {
 </script>
 
 <style scoped>
-
-
-
 .nav-link {
   text-transform: uppercase;
-  color:var(--dark);
+  color:#ffffff;
   margin-left: 8px;
   margin-right: 8px;
 }
@@ -171,8 +168,14 @@ export default {
   color: var(--darkPink) ! important
 }
 
+.nav{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.134) 0%);
+      height: 10em;
+}
+
 .logo{
   object-fit: cover;
+
 }
 
 .navbar-nav .router-link-exact-active {
