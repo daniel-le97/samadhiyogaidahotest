@@ -19,7 +19,7 @@ import { AppState } from "./AppState";
 import ActiveImage from "./components/ActiveImage.vue";
 import Footer from "./components/MiscComponents/Footer.vue";
 import Navbar from "./components/MiscComponents/Navbar.vue";
-import ModalComponent from "./components/ModalComponent.vue";
+import ModalComponent from "./components/MiscComponents/ModalComponent.vue";
 
 export default {
   setup() {

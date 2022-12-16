@@ -10,11 +10,11 @@ import { ValueSchema } from "../models/Value";
 class DbContext {
   Values = mongoose.model("Value", ValueSchema);
   Account = mongoose.model("Account", AccountSchema);
-  NewsLetter = mongoose.model("NewsLetter", NewsLetterSchema);
-  Contact = mongoose.model("Contact", ContactSchema);
-  Retreat = mongoose.model("Retreat", RetreatSchema);
-  Upload = mongoose.model('Upload',UploadSchema)
-  Event = mongoose.model('Event', EventSchema)
+  NewsLetters = mongoose.model("NewsLetter", NewsLetterSchema);
+  Contacts = mongoose.model("Contact", ContactSchema);
+  Retreats = mongoose.model("Retreat", RetreatSchema);
+  Uploads = mongoose.model('Upload',UploadSchema)
+  Events = mongoose.model('Event', EventSchema)
 }
 
 export const dbContext = new DbContext();
