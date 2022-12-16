@@ -3,8 +3,8 @@
     <div class="hero-image d-flex align-items-center justify-content-center">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="display-1 font-1 text-shadow text-light">
-            Join Our Retreat
+          <h1 class=" font-1 text-shadow text-light page-title">
+            Embrace Nature
           </h1>
         </div>
       </div>
@@ -355,7 +355,10 @@ export default {
 
 <style lang="scss" scoped>
 .hero-image {
-  height: 20vh;
+  .page-title{
+    font-size: 10rem;
+  }
+  height: 100vh;
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1589790272257-8c0f79c221da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);

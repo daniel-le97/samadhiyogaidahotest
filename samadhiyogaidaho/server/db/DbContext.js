@@ -1,6 +1,7 @@
 import mongoose, { mongo } from "mongoose";
 import { AccountSchema } from "../models/Account";
 import { ContactSchema } from "../models/Contact";
+import { EventSchema } from "../models/Event.js";
 import { NewsLetterSchema } from "../models/NewsLetter";
 import { RetreatSchema } from "../models/Retreat.js";
 import { UploadSchema } from "../models/Upload.js";
@@ -13,6 +14,7 @@ class DbContext {
   Contact = mongoose.model("Contact", ContactSchema);
   Retreat = mongoose.model("Retreat", RetreatSchema);
   Upload = mongoose.model('Upload',UploadSchema)
+  Event = mongoose.model('Event', EventSchema)
 }
 
 export const dbContext = new DbContext();
