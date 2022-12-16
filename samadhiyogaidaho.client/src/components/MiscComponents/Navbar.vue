@@ -84,7 +84,7 @@
             </router-link>
           </li>
           <li><div v-motion-fade :delay="1000" class="text-center">
-            <img src="../../assets/img/Screenshot_4.png" alt="" class="rounded-pill elevation-6 logo-image " />
+            <img src="../../assets/img/Screenshot_4.png" alt="" class="rounded-pill elevation-orange logo-image " />
           </div></li>
           <li>
             <router-link
