@@ -23,7 +23,7 @@
    <div class="container ">
       <div class="row justify-content-center">
         <div class="col-md-12 my-3">
-          <div class="card border-0 square elevation-6 p-3 my-5">
+          <div class="card border-0 square elevation-orange p-3 my-5">
             <div class="row">
               <div class="col-md-6 text-center">
                 <div class="card">
@@ -51,7 +51,7 @@
                       <div class="form-floating mb-3">
                         <input
                           type="text"
-                          class="form-control border-0 elevation-6 "
+                          class="form-control border-0 elevation-orange "
                           name="name"
                           id="name"
                           placeholder=""
@@ -63,7 +63,7 @@
                       <div class="form-floating mb-3">
                         <input
                           type="text"
-                          class="form-control border-0 elevation-6"
+                          class="form-control border-0 elevation-orange"
                           name="email"
                           id="email"
                           placeholder=""
@@ -75,7 +75,7 @@
                   <div class="form-floating mb-3">
                     <input
                       type="text"
-                      class="form-control border-0 elevation-6"
+                      class="form-control border-0 elevation-orange"
                       name="subject"
                       id="subject"
                       placeholder=""
@@ -85,7 +85,7 @@
                   <div class="form-floating ">
                     <div class="mb-3">
                       <textarea
-                        class="form-control border-0 elevation-6"
+                        class="form-control border-0 elevation-orange"
                         name=""
                         id=""
                         rows="6"
