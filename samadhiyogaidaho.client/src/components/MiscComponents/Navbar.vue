@@ -13,7 +13,7 @@
             height="70"
           /> -->
           <!-- <img
-            src="src\assets\img\Samadhi Yoga.png"
+            src="src\assets\img\Samadhi-Yoga.png"
             alt=""
             width="70"
             height="70"
