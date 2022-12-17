@@ -8,7 +8,7 @@
             aria-labelledby="v-pills-home-tab"
             tabindex="0"
           >
-            HOME TAB
+            <HomeTabPage/>
           </div>
           <div
             class="tab-pane fade"
@@ -17,7 +17,8 @@
             aria-labelledby="event-tab"
             tabindex="0"
           >
-          <EventForm/>
+          <EventTabPage/>
+          <!-- <EventForm/> -->
           </div>
 
           <div
@@ -27,7 +28,8 @@
             aria-labelledby="retreats-tab"
             tabindex="0"
           >
-          <RetreatForm/>
+          <RetreatTabPage/>
+          <!-- <RetreatForm/> -->
           </div>
           <div
             class="tab-pane fade"
@@ -36,7 +38,7 @@
             aria-labelledby="v-pills-settings-tab"
             tabindex="0"
           >
-            ...
+            <SettingsTabPage/>
           </div>
         </div>
       </div>
@@ -47,12 +49,16 @@ import { computed } from "@vue/reactivity";
 import { AppState } from "../../AppState";
 import RetreatForm from "./RetreatForm.vue";
 import EventForm from "./EventForm.vue";
+import EventTabPage from "./AdminTabPages/EventTabPage.vue";
+import RetreatTabPage from "./AdminTabPages/RetreatTabPage.vue";
+import SettingsTabPage from "./AdminTabPages/SettingsTabPage.vue";
+import HomeTabPage from "./AdminTabPages/HomeTabPage.vue";
 
 export default {
     setup() {
         return {};
     },
-    components: { EventForm, RetreatForm }
+    components: { EventForm, RetreatForm, EventTabPage, RetreatTabPage, SettingsTabPage, HomeTabPage }
 };
 </script>
 
