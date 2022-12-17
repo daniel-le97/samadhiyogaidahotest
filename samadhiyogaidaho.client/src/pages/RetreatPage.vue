@@ -25,16 +25,16 @@
       </div>
 
       <div class="row">
-        <!-- <div class="col-md-6">
+        <div class="col-md-6">
           <img
           v-if="retreat"
                v-motion-pop-visible
-            :src="featureImg1"
+                :src="retreat.coverImg"
             alt=""
             class="img-fluid rounded-4 elevation-6 h-100"
           />
-        </div> -->
-        <!-- <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
           <div class="row">
             <div class="col-md-12 mb-3">
               <img
@@ -49,7 +49,7 @@
               <img
               v-if="retreat"
                    v-motion-pop-visible
-                :src="featureImg2"
+                :src="retreat.coverImg"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
@@ -57,13 +57,13 @@
             <div class="col-md-6">
               <img
                    v-motion-pop-visible
-                :src="featureImg3"
+                 :src="retreat.coverImg"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div class="mt-3 sticky-top d-flex justify-content-end">
           <button
@@ -398,7 +398,7 @@ export default {
     }
     return {
       editable,
-      // featureImg1: computed(() => AppState?.currentRetreat?.featuredImgs[8]),
+      // featureImg1: computed(() => AppState?.currentRetreat?.featuredImgs[3]),
       // featureImg2: computed(() => AppState?.currentRetreat?.featuredImgs[0]),
       // featureImg3: computed(() => AppState?.currentRetreat?.featuredImgs[1]),
       retreat: computed(() => AppState.currentRetreat),
