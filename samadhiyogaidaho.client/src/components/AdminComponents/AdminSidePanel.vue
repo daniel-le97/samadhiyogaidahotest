@@ -3,13 +3,19 @@
     <div class="row">
       <div class="col-md-12 p-0">
         <div
-          class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark rounded-end elevation-6 side-panel sticky-top grow"
+          class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark elevation-6 side-panel sticky-top grow"
         >
           <a
             href="/"
             class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
           >
-         <img src="../../assets/img/Samadhi-Yoga.png" alt="" height="50" width="50" class="rounded">
+            <img
+              src="../../assets/img/Samadhi-Yoga.png"
+              alt=""
+              height="50"
+              width="50"
+              class="rounded"
+            />
             <span class="fs-4">Dashboard</span>
           </a>
           <hr />
@@ -28,6 +34,7 @@
               role="tab"
               aria-controls="v-pills-home"
               aria-selected="true"
+              @click="loadTab('Home')"
             >
               Home
             </button>
@@ -40,6 +47,7 @@
               role="tab"
               aria-controls="event"
               aria-selected="false"
+              @click="loadTab('Events')"
             >
               Events
             </button>
@@ -53,6 +61,7 @@
               role="tab"
               aria-controls="retreats"
               aria-selected="false"
+              @click="loadTab('Retreats')"
             >
               Retreats
             </button>
@@ -65,6 +74,7 @@
               role="tab"
               aria-controls="v-pills-settings"
               aria-selected="false"
+              @click="loadTab('Settings')"
             >
               Settings
             </button>
@@ -93,9 +103,9 @@
               class="dropdown-menu dropdown-menu-dark text-small shadow"
               aria-labelledby="dropdownUser1"
             >
-              <li><a class="dropdown-item" href="#">New project...</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><button class="dropdown-item" >New project...</button></li>
+              <li><button class="dropdown-item" >Settings</button></li>
+              <li><button class="dropdown-item" >Profile</button></li>
               <li><hr class="dropdown-divider" /></li>
               <li>
                 <button class="dropdown-item" type="button" @click="logout">
@@ -119,6 +129,9 @@ export default {
   setup() {
     return {
       admin: computed(() => AppState?.account),
+      async loadTab(tab) {
+        AppState.activeTab = tab;
+      },
       async logout() {
         AuthService.logout({ returnTo: window.location.origin });
         // AuthService.

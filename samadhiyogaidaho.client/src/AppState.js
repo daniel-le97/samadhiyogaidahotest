@@ -20,5 +20,6 @@ events: [],
   newActiveUpload:null,
   formPaginate:0,
   loading: false,
-  activeImage:null
+  activeImage:null,
+  activeTab: "Home"
 });

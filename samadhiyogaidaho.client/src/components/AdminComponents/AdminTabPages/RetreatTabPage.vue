@@ -1,7 +1,7 @@
 <template>
   <div class="component">
 
-
+dogs
   </div>
 </template>
 

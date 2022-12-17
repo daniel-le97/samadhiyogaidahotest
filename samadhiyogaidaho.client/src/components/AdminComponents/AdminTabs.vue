@@ -10,7 +10,7 @@
             aria-labelledby="v-pills-home-tab"
             tabindex="0"
           >
-            <HomeTabPage />
+            <HomeTabPage v-if="activeTab == 'Home'" />
           </div>
           <div
             class="tab-pane fade"
@@ -19,7 +19,7 @@
             aria-labelledby="event-tab"
             tabindex="0"
           >
-            <EventTabPage />
+            <EventTabPage v-if="activeTab == 'Events'" />
             <!-- <EventForm/> -->
           </div>
 
@@ -30,7 +30,7 @@
             aria-labelledby="retreats-tab"
             tabindex="0"
           >
-            <RetreatTabPage />
+            <RetreatTabPage v-if="activeTab == 'Retreats'" />
             <!-- <RetreatForm/> -->
           </div>
           <div
@@ -40,7 +40,7 @@
             aria-labelledby="v-pills-settings-tab"
             tabindex="0"
           >
-            <SettingsTabPage />
+            <SettingsTabPage v-if="activeTab == 'Settings'" />
           </div>
         </div>
       </div>
@@ -60,7 +60,9 @@ import HomeTabPage from "./AdminTabPages/HomeTabPage.vue";
 
 export default {
   setup() {
-    return {};
+    return {
+      activeTab: computed(() => AppState.activeTab),
+    };
   },
   components: {
     EventForm,
