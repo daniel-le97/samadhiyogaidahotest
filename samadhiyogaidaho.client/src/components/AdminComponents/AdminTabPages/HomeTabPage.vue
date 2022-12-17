@@ -1,6 +1,6 @@
 <template>
   <div class="component">
-
+cats
 
   </div>
 </template>
