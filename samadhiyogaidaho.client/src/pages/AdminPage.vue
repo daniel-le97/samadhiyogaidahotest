@@ -5,8 +5,11 @@
         <AdminSidePanel />
       </div>
       <div class="col-9 p-0">
-        <AdminNavbar />
-        <AdminTabs />
+        <div>
+          <AdminNavbar />
+        </div>
+        <router-view></router-view>
+        <!-- <AdminTabs /> -->
       </div>
     </div>
   </div>

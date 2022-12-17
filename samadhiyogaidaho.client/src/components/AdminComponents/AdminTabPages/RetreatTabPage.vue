@@ -1,6 +1,6 @@
 <template>
   <div class="component">
-    <button @click="form = true" class="btn btn-primary">add an event</button>
+    <button @click="form = !form" class="btn btn-primary">add an event</button>
     <RetreatForm v-if="form" />
   </div>
 </template>

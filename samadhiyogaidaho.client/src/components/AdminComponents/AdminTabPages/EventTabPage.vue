@@ -1,6 +1,7 @@
 <template>
   <div class="component">
-    <button @click="form = true" class="btn btn-primary">add an event</button>
+    <button @click="form = !form" class="btn btn-primary">add an event</button>
+    <button @click="form = !form" class="btn btn-primary">edit an event</button>
     
 
 
@@ -11,11 +12,15 @@
 
 
 <script>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import EventForm from '../EventForm.vue';
 
 export default {
     setup() {
+      // onBe(() => {
+
+      // })
+      
       const form = ref(false)
         return {
           form

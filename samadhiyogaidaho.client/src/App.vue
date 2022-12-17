@@ -52,7 +52,7 @@ export default {
     const route = useRoute()
 
     return {
-      routeAdmin: computed(() => route.name == "Admin"),
+      routeAdmin: computed(() => route.name == "Admin" || route.name == "AdminHome"),
       appState: computed(() => AppState),
     };
   },
