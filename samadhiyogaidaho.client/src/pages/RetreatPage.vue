@@ -377,15 +377,15 @@ import RetreatForm from "../components/AdminComponents/RetreatForm.vue";
 import { retreatsService } from "../services/RetreatsService.js";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
-import { onBeforeMount } from "vue";
+// import { onBeforeMount } from "vue";
 import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
 export default {
   props: {},
   setup(props) {
     const editable = ref({});
 
-    onMounted(() => {});
-    onBeforeMount(() => {
+   
+    onMounted(() => {
       getAllRetreats();
     });
     async function getAllRetreats() {
