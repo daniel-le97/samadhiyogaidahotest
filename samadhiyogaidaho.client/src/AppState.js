@@ -21,5 +21,10 @@ events: [],
   formPaginate:0,
   loading: false,
   activeImage:null,
-  activeTab: "Home"
+  activeTab: "Home", 
+  fakeStats: [
+    {title: 'visitors online', sub: 'not sure', description: 100},
+    {title: 'visitors this month', sub: 'not sure',description: 10000},
+    {title: 'earnings', sub: 'not sure', description:1000000},
+    {title: 'subscriptions', sub: 'not sure', description:245}]
 });
