@@ -1,8 +1,13 @@
 <template>
   <div class="container-fluid" v-if="admin?.isAuthenticated">
     <div class="row">
-      <AdminSidePanel />
-      <AdminTabs />
+      <div class="col-3 ms-0 p-0">
+        <AdminSidePanel />
+      </div>
+      <div class="col-9">
+        <div>hi</div>
+        <AdminTabs />
+      </div>
     </div>
   
   </div>
@@ -32,7 +37,7 @@ export default {
     watchEffect(() => {});
     return {
       editable,
-      admin: computed(() => AppState.user)
+      admin: computed(() => AppState.user),
     };
   },
   components: {
