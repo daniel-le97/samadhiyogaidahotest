@@ -8,7 +8,7 @@ export const EventSchema = new Schema(
     title: { type: String, required: true },
     location: { type: Object, required: true },
     date: { type: Date, required: true },
-    endDate:{ type: Date, require: true}
+    endDate:{ type: Date, require: true},
     description: { type: String, required: true },
     cost: { type: Object, required: true },
     img: { type: String, required: true },
