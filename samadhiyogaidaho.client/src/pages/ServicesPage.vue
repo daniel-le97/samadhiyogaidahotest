@@ -1,8 +1,18 @@
 <template>
-  <div class="hero-image d-flex justify-content-center align-items-center flex-column">
-    <h1 class="display-1 font-1 text-light text-shadow">Take A Moment For Yourself</h1>
-    <h4 class="font-1 text-light text-shadow">We Offer Vinyasa, Baptiste, & Yin Yoga</h4>
-  </div>
+  <section>
+       <div class="tsparticles">
+  <ParticleComponent/>
+    </div>
+      <div class="hero-image d-flex justify-content-center align-items-center flex-column">
+  <div class="px-5">  <h1 
+       v-motion-slide-top :delay="200"
+    class="page-title font-1 text-light text-shadow text-center">Take A Moment For Yourself</h1></div>
+    <h4 
+       v-motion-slide-top :delay="300"
+    class="font-1 text-light text-shadow">We Offer Vinyasa, Baptiste, & Yin Yoga</h4>
+  </div>4
+  </section>
+
   <section>
 
     <div class="container-fluid" style="margin-top: 100px">
@@ -94,21 +104,21 @@ If you have a group of people you’re interested in getting together for a fun 
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
+import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
 export default {
-  props: {},
-  setup(props) {
-    const editable = ref({});
-
-    onMounted(() => {});
-    watchEffect(() => {});
-
-    return {
-      editable,
-    };
-  },
+    props: {},
+    setup(props) {
+        const editable = ref({});
+        onMounted(() => { });
+        watchEffect(() => { });
+        return {
+            editable,
+        };
+    },
+    components: { ParticleComponent }
 };
 </script>
 
@@ -156,5 +166,8 @@ export default {
     transition: all 0.25s ease;
     border: 4px solid rgb(135, 236, 211);
   }
+}
+.page-title{
+  font-size: 8rem;
 }
 </style>

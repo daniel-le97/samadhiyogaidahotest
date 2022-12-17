@@ -1,9 +1,14 @@
 <template>
   <section>
+       <div class="tsparticles">
+  <ParticleComponent/>
+    </div>
     <div class="hero-image d-flex align-items-center justify-content-center">
       <div class="row">
         <div class="col-md-12">
-          <h1 class=" font-1 text-shadow text-light page-title">
+          <h1
+          v-motion-slide-top :delay="200"
+          class="font-1 text-shadow text-light page-title">
             Embrace Nature
           </h1>
         </div>
@@ -21,9 +26,9 @@
 
       <div class="row">
         <div class="col-md-6">
-        
           <img
-           src="https://static.wixstatic.com/media/b8cf7c_5d6c60bf684a4d28b53449c011a1e6b4~mv2.png/v1/fill/w_447,h_597,al_c,q_85,enc_auto/b8cf7c_5d6c60bf684a4d28b53449c011a1e6b4~mv2.png"
+               v-motion-pop-visible
+            :src="featureImg1"
             alt=""
             class="img-fluid rounded-4 elevation-6 h-100"
           />
@@ -32,6 +37,7 @@
           <div class="row">
             <div class="col-md-12 mb-3">
               <img
+                   v-motion-pop-visible
                 :src="retreat.coverImg"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
@@ -39,14 +45,16 @@
             </div>
             <div class="col-md-6">
               <img
-                src="https://static.wixstatic.com/media/b8cf7c_4d877974bcb8417ca80ddc531f457acc~mv2.png/v1/fill/w_782,h_571,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/b8cf7c_4d877974bcb8417ca80ddc531f457acc~mv2.png"
+                   v-motion-pop-visible
+                :src="featureImg2"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
             </div>
             <div class="col-md-6">
               <img
-                src="https://static.wixstatic.com/media/b8cf7c_6bc5e680c17a494d9f4bd16b0a29960d~mv2.png/v1/fill/w_783,h_571,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b8cf7c_6bc5e680c17a494d9f4bd16b0a29960d~mv2.png"
+                   v-motion-pop-visible
+                :src="featureImg3"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
@@ -78,6 +86,7 @@
                 v-for="f in retreat.featuredImgs"
               >
                 <img
+                v-motion-pop-visible
                   :src="f"
                   alt=""
                   class="img-fluid hover-image rounded-4 selectable"
@@ -90,19 +99,20 @@
     </div>
   </section>
 
-<section>
-<div class="container my-5">
-  <div class="row">
+  <section>
+    <div class="container my-5">
+      <div class="row">
         <div class="col-md-6">
-        <div class="card elevation-orange border-0 rounded-4 p-3">
-            <div class="d-flex ">
+          <div class="card elevation-orange border-0 rounded-4 p-3">
+            <div class="d-flex">
               <p class="fs-5 text-muted">4 days / 3nights</p>
             </div>
 
-            <div >  <p class="fs-5 text-start">The pricing for the retreat starts at $3,275 per couple or broken down to $1,637.50 per person. The retreat price can increase based on what additional activities, if any, you choose to add on. </p></div>
-            <div class="">  <p class="fs-5 text-start"> Payment Options :</p></div>
+            <div>
+              <p class="fs-5 text-start">{{ retreat?.cost?.text }}</p>
+            </div>
+            <div class=""><p class="fs-5 text-start">Payment Options :</p></div>
             <div class="d-flex text-dark p-2 bg-primary rounded">
-            
               <p class="fs-4 me-3 mb-0">Early Bird</p>
               <p class="fw-bold fs-4 mb-0">USD ${{ retreat?.cost?.price }}</p>
               <p class="mb-0 ms-2">
@@ -110,16 +120,13 @@
               </p>
             </div>
             <div class="d-flex text-dark p-2 bg-success rounded my-2">
-            
               <p class="fs-4 me-3 mb-0">Payment Plan</p>
               <p class="fw-bold fs-4 mb-0">USD $247.27</p>
               <p class="mb-0 ms-2">
                 800$ deposit required for couple, $1637.50/$247.27
               </p>
             </div>
-            <div
-              class="rounded-4 bg-pink  p-2 d-flex justify-content-around"
-            >
+            <div class="rounded-4 bg-pink p-2 d-flex justify-content-around">
               <div class="">
                 <p class="mb-0 fs-5">
                   <i class="mdi mdi-calendar bg-muted fs-3"></i> Start Date
@@ -137,17 +144,47 @@
                 </p>
               </div>
             </div>
-            <div class="fs-5"><p class="">  Accepted Payment Methods</p></div>
+            <div class="fs-5"><p class="">Accepted Payment Methods</p></div>
             <div class="d-flex justify-content-evenly">
-              
-              <img src="https://cdn-icons-png.flaticon.com/512/4305/4305518.png" alt="" class="img-fluid " width="40" height="20" title="Cash">
-              <img src="https://logodix.com/logo/385467.png" alt="" class="img-fluid rounded-5" width="40" height="20" title="Zelle">
-              <img src="https://cdn-icons-png.flaticon.com/512/5968/5968630.png" alt="" class="img-fluid rounded-5" width="40" height="20" title="Apple Pay">
-              
-              <img src="https://cdn-icons-png.flaticon.com/512/423/423468.png" alt="" class="img-fluid " width="40" height="20" title="Card payment option does incur a 3% charge each transaction">
-              
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4305/4305518.png"
+                alt=""
+                class="img-fluid"
+                width="40"
+                height="20"
+                title="Cash"
+              />
+              <img
+                src="https://logodix.com/logo/385467.png"
+                alt=""
+                class="img-fluid rounded-5"
+                width="40"
+                height="20"
+                title="Zelle"
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968630.png"
+                alt=""
+                class="img-fluid rounded-5"
+                width="40"
+                height="20"
+                title="Apple Pay"
+              />
+
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/423/423468.png"
+                alt=""
+                class="img-fluid"
+                width="40"
+                height="20"
+                title="Card payment option does incur a 3% charge each transaction"
+              />
             </div>
-            <div class=" mt-2 fs-5"><p class=""> Card payment option does incur a 3% charge each transaction </p></div>
+            <div class="mt-2 fs-5">
+              <p class="">
+                Card payment option does incur a 3% charge each transaction
+              </p>
+            </div>
             <div class="text-center">
               <button
                 class="btn btn-primary font-2 lighten-10 my-3 fs-3 fw-bold"
@@ -162,31 +199,27 @@
               </button>
             </div>
           </div>
-
-    </div>
-    <div class="col-md-6">
-      <div class=""> <h1 class=" underline font-2 display-3">Summary</h1></div>
-      <div class="">
-        <p class="fs-4"> {{retreat?.description}} </p>
+        </div>
+        <div class="col-md-6">
+          <div class="">
+            <h1 class="underline font-2 display-3">Summary</h1>
+          </div>
+          <div class="">
+            <p class="fs-4 text-start7">{{ retreat?.description }}</p>
+          </div>
+        </div>
       </div>
     </div>
-
-  </div>
-</div>
-
-</section>
-
-
-
-
+  </section>
 
   <section>
     <div class="container my-5">
- 
-           <div class="row ">
+      <div class="row">
         <div class="col-md-6">
           <div class="">
-            <h1 class="display-3 font-2 underline">{{ retreat?.location?.address }}</h1>
+            <h1 class="display-3 font-2 underline">
+              {{ retreat?.location?.address }}
+            </h1>
           </div>
           <div class="">
             <p class="fs-4 text-start">{{ retreat?.location?.description }}</p>
@@ -196,7 +229,7 @@
           <img
             :src="retreat?.location?.img"
             alt=""
-            class="img-fluid rounded-4 elevation-5 "
+            class="img-fluid rounded-4 elevation-5"
           />
         </div>
         <div class="row my-5">
@@ -216,32 +249,32 @@
                 {{ retreat?.schedule?.description }}
               </p>
             </div>
-            <div class="row justify-content-center mt-5">
+            <div class="row justify-content-center mt-5" v-if="retreat?.activities">
               <div class="col-md-6">
                 <div class="card border-0 elevation-orange p-2">
                   <div class="card-body">
-                    <p class="fs-4 text-decoration-underline"> Optional Activities</p>
-                   <ul>
-                      
-                    <li v-for="a in retreat?.activities">
- <p class="fs-5 text-start">
-              {{a}} 
-              </p>
-                    </li>
-                   </ul>
+                    <p class="fs-4 text-decoration-underline">
+                      Optional Activities
+                    </p>
+                    <ul>
+                      <li v-for="a in retreat?.activities">
+                        <p class="fs-5 text-start">
+                          {{ a }}
+                        </p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-     
       </div>
-      </div>
-<section>
-  <div class="container my-5">
-       <div class="row ">
-          <div class="col-md-5">
+    </div>
+    <section>
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-md-4">
             <div class="">
               <p class="display-3 mb-0 underline">Food</p>
               <p class="display-6 text-muted font-2">
@@ -252,22 +285,24 @@
               <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
-          <div class="col-md-7 d-flex justify-content-end">
+          <div class="col-md-8 d-flex ">
             <FoodImageSwiper v-if="retreat?.food?.imgs" />
           </div>
         </div>
-  </div>
-</section>
+      </div>
+    </section>
   </section>
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 d-flex align-items-center justify-content-center elevation-orange">
+        <div
+          class="col-md-6 d-flex align-items-center justify-content-center elevation-orange"
+        >
           <AccommodationSwiper />
         </div>
         <div class="col-md-6">
           <h1 class="display-3 font-2 underline">Accommodations</h1>
-          <p class="fs-4 text-start">
+          <p class="fs-4 text-start ">
             {{ retreat?.accommodations?.description }}
           </p>
         </div>
@@ -306,7 +341,7 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <p class=" fs-3">{{ f.answer }}</p>
+              <p class="fs-3">{{ f.answer }}</p>
             </div>
           </div>
         </div>
@@ -340,17 +375,16 @@ import { retreatsService } from "../services/RetreatsService.js";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 import { onBeforeMount } from "vue";
+import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
 export default {
   props: {},
   setup(props) {
     const editable = ref({});
 
-    onMounted(() => {
+    onMounted(() => {});
+    onBeforeMount(() => {
+      getAllRetreats();
     });
-    onBeforeMount(()=>{
-  getAllRetreats();
-
-})
     async function getAllRetreats() {
       try {
         await retreatsService.getAllRetreats();
@@ -361,6 +395,9 @@ export default {
     }
     return {
       editable,
+      featureImg1: computed(() => AppState.currentRetreat.featuredImgs[8]),
+      featureImg2: computed(() => AppState.currentRetreat.featuredImgs[0]),
+      featureImg3: computed(() => AppState.currentRetreat.featuredImgs[1]),
       retreat: computed(() => AppState.currentRetreat),
       archived: computed(() => AppState.archivedRetreats),
       setActiveImage(image) {
@@ -373,13 +410,14 @@ export default {
     ArchivedRetreatCard,
     FoodImageSwiper,
     AccommodationSwiper,
-  },
+    ParticleComponent
+},
 };
 </script>
 
 <style lang="scss" scoped>
 .hero-image {
-  .page-title{
+  .page-title {
     font-size: 10rem;
   }
   height: 100vh;

@@ -8,7 +8,9 @@
         <h1 v-motion-slide-top id="shadow1" class=" font-1 text-shadow page-title courgette fw-bolder text-light">
           OUR STORY
         </h1>
-        <p class=" display-6 font-2 text-shadow">Why we came to build SamadhiYogaIdaho</p>
+        <p 
+        v-motion-slide-top :delay="200"
+        class=" display-6 font-2 text-shadow">Why we came to build SamadhiYogaIdaho</p>
       </div>
     </div>
     <div class="container-fluid mt-5">
