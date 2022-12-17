@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 p-0 rounded">
+      <div class="col-md-12 p-0">
         <div
           class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark rounded-end elevation-6 side-panel sticky-top grow"
         >
