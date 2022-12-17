@@ -1,5 +1,7 @@
 <template>
-   <div class="col-md-10">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
         <div class="tab-content" id="v-pills-tabContent">
           <div
             class="tab-pane fade show active"
@@ -8,7 +10,7 @@
             aria-labelledby="v-pills-home-tab"
             tabindex="0"
           >
-            <HomeTabPage/>
+            <HomeTabPage />
           </div>
           <div
             class="tab-pane fade"
@@ -17,8 +19,8 @@
             aria-labelledby="event-tab"
             tabindex="0"
           >
-          <EventTabPage/>
-          <!-- <EventForm/> -->
+            <EventTabPage />
+            <!-- <EventForm/> -->
           </div>
 
           <div
@@ -28,8 +30,8 @@
             aria-labelledby="retreats-tab"
             tabindex="0"
           >
-          <RetreatTabPage/>
-          <!-- <RetreatForm/> -->
+            <RetreatTabPage />
+            <!-- <RetreatForm/> -->
           </div>
           <div
             class="tab-pane fade"
@@ -38,10 +40,12 @@
             aria-labelledby="v-pills-settings-tab"
             tabindex="0"
           >
-            <SettingsTabPage/>
+            <SettingsTabPage />
           </div>
         </div>
       </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -55,15 +59,22 @@ import SettingsTabPage from "./AdminTabPages/SettingsTabPage.vue";
 import HomeTabPage from "./AdminTabPages/HomeTabPage.vue";
 
 export default {
-    setup() {
-        return {};
-    },
-    components: { EventForm, RetreatForm, EventTabPage, RetreatTabPage, SettingsTabPage, HomeTabPage }
+  setup() {
+    return {};
+  },
+  components: {
+    EventForm,
+    RetreatForm,
+    EventTabPage,
+    RetreatTabPage,
+    SettingsTabPage,
+    HomeTabPage,
+  },
 };
 </script>
 
 <style>
-.fill{
+.fill {
   min-height: 75vh;
   max-height: 75vh;
 }

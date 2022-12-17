@@ -4,12 +4,11 @@
       <div class="col-3 ms-0 p-0">
         <AdminSidePanel />
       </div>
-      <div class="col-9">
-        <div>hi</div>
+      <div class="col-9 p-0">
+        <AdminNavbar />
         <AdminTabs />
       </div>
     </div>
-  
   </div>
   <div v-else></div>
 </template>
@@ -19,6 +18,7 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { RouterView } from "vue-router";
 import { AppState } from "../AppState.js";
+import AdminNavbar from "../components/AdminComponents/AdminNavbar.vue";
 import AdminSidePanel from "../components/AdminComponents/AdminSidePanel.vue";
 
 import AdminTabs from "../components/AdminComponents/AdminTabs.vue";
@@ -48,6 +48,7 @@ export default {
     EventForm,
     AdminSidePanel,
     AdminTabs,
+    AdminNavbar,
   },
 };
 </script>

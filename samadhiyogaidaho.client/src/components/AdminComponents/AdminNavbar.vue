@@ -1,20 +1,24 @@
 <template>
-  <div class="component">
-
-
+  <div class="container-fluid bg-primary sticky-top">
+    <div class="row">
+      <div class="col-12">
+        <span v-if="admin">Hi, {{ admin.name }}!</span>
+      </div>
+    </div>
   </div>
 </template>
 
-
 <script>
+import { computed } from "@vue/reactivity";
+import { AppState } from "../../AppState";
+
 export default {
-  setup(){
-    return {}
-  }
-}
+  setup() {
+    return {
+      admin: computed(() => AppState.account),
+    };
+  },
+};
 </script>
 
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
