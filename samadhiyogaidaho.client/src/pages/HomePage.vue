@@ -185,6 +185,26 @@
           </h2>
         </div>
       </div>
+        <div class="row">
+  <CommentBox >
+    <p class="fs-4 text-start ">
+      On an inhale, think of the things that are no longer serving you, whatever that may be.
+      <br>
+
+Maybe it’s a thought
+<br>
+Maybe it’s a feeling
+<br>
+Maybe it’s a person
+<b></b>
+Or an experience
+
+But taking it,
+
+And on an exhale, choosing consciously to let it go.
+    </p>
+  </CommentBox>
+  </div>
     </div>
 
     <div class="container">
@@ -303,6 +323,7 @@ import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
 import YouTubeSection from "../components/HomePage/YouTubeSection.vue";
 import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue"
 import { defineAsyncComponent } from "vue";
+import CommentBox from "../components/MiscComponents/CommentBox.vue";
 
 export default {
  
@@ -321,7 +342,8 @@ export default {
     CallToAction,
     TestimonialSection,
     YouTubeSection,
-    RetreatAndEvents
+    RetreatAndEvents,
+    CommentBox
 },
 };
 </script>
