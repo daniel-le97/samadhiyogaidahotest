@@ -42,9 +42,13 @@
     <!-- Grid container -->
     <RowSeperator />
     <div class="container">
-      <div class="row">
+      <div class="row mt-4">
         <div class="col-md-6">
           <NewsLetter />
+        </div>
+        <div class="col-md-6 d-flex">
+          <p class="fs-3">Join Our NewsLetter and stay connected with us!</p>
+          <img src="https://img.freepik.com/free-vector/staying-touch-modern-communication-means-phone-calls-letters-emails-person-contacting-friends-customers-via-email-encouraging-feedback-vector-isolated-concept-metaphor-illustration_335657-2779.jpg?w=740&t=st=1671237218~exp=1671237818~hmac=f0cc7d983a1fc1055faa6830d3cb9820f93a12e81969470acf01ae2f51555029" alt="" class="img-fluid w-50 rounded-circle ">
         </div>
       </div>
 

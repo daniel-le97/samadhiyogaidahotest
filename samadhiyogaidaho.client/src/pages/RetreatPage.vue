@@ -165,7 +165,7 @@
 
     </div>
     <div class="col-md-6">
-      <div class=""> <h1>Summary</h1></div>
+      <div class=""> <h1 class=" underline font-2 display-3">Summary</h1></div>
       <div class="">
         <p class="fs-4"> {{retreat?.description}} </p>
       </div>
@@ -186,7 +186,7 @@
            <div class="row ">
         <div class="col-md-6">
           <div class="">
-            <h1 class="display-3 font-2">{{ retreat?.location?.address }}</h1>
+            <h1 class="display-3 font-2 underline">{{ retreat?.location?.address }}</h1>
           </div>
           <div class="">
             <p class="fs-4 text-start">{{ retreat?.location?.description }}</p>
@@ -209,7 +209,7 @@
           </div>
           <div class="col-md-6">
             <div class="">
-              <p class="display-3 font-2">Daily Schedule</p>
+              <p class="display-3 font-2 underline">Daily Schedule</p>
             </div>
             <div class="">
               <p class="fs-4 text-start">
@@ -243,7 +243,7 @@
        <div class="row ">
           <div class="col-md-5">
             <div class="">
-              <p class="display-3 mb-0">Food</p>
+              <p class="display-3 mb-0 underline">Food</p>
               <p class="display-6 text-muted font-2">
                 Featuring {{ retreat?.food?.chef }}
               </p>
@@ -266,7 +266,7 @@
           <AccommodationSwiper />
         </div>
         <div class="col-md-6">
-          <h1 class="display-3 font-2">Accommodations</h1>
+          <h1 class="display-3 font-2 underline">Accommodations</h1>
           <p class="fs-4 text-start">
             {{ retreat?.accommodations?.description }}
           </p>
@@ -279,7 +279,7 @@
     <div class="container my-3">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="display-3 font-2">FAQS</h1>
+          <h1 class="display-3 font-2 underline">FAQS</h1>
         </div>
       </div>
       <div class="accordion elevation-6 border-0" id="accordionExample">

@@ -10,29 +10,30 @@
         <div style="margin-top: 80px" class="text-shadow container">
           <h5
             v-motion
-  :initial="{
-    y: 100,
-    opacity: 0,
-  }"
-  :enter="{
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'spring',
-      stiffness: 250,
-      damping: 25,
-      mass: 0.5,
-    },
-  }"
+            :initial="{
+              y: 100,
+              opacity: 0,
+            }"
+            :enter="{
+              y: 0,
+              opacity: 1,
+              transition: {
+                type: 'spring',
+                stiffness: 250,
+                damping: 25,
+                mass: 0.5,
+              },
+            }"
             class="fs-1 font-1 text-light text-start mb-0"
-          >LEARN HOW TO SEE YOURSELF</h5>
+          >
+            LEARN HOW TO SEE YOURSELF
+          </h5>
           <h5
-              v-motion-slide-top
+            v-motion-slide-top
             :delay="1000"
-
             class="fs-2 font-2 text-light text-uppercase"
           >
-             <br />
+            <br />
             Become aware of your capacity to create, <br />
             to be authentic in every day life, <br />
             to transform & to love
@@ -40,7 +41,6 @@
 
           <h1
             v-motion-slide-left
-           
             :delay="1600"
             class="display-3 text-light font-1"
           >
@@ -57,20 +57,17 @@
         </div> -->
 
         <div
-            v-motion-slide-top
+          v-motion-slide-top
           class="join-newsletter-button flex-column d-flex"
           style="z-index: 9999"
         >
           <a
-           
             href="#newsletter"
             class="btn bg-dark selectable text-light fs-3 px-4 mb-3"
           >
             Join Our NewsLetter</a
           >
-          <a 
-            
-          href="#newsletter" class="btn bg-success selectable fs-3 px-4">
+          <a href="#newsletter" class="btn bg-success selectable fs-3 px-4">
             Book a session</a
           >
         </div>
@@ -95,7 +92,7 @@
           </h1>
         </div>
 
-        <div class="row">
+        <div class="row mt-3">
           <div class="col-md-4">
             <div class="card bg-dark border-0 elevation-6 p-2">
               <p class="fs-4 text-warning">
@@ -165,7 +162,7 @@
     </div>
   </section>
 
-  <section id="Booking-Section" class=" my-5">
+  <section id="Booking-Section" class="my-5">
     <div class="container p-5 mt-5">
       <div class="row">
         <div class="col-md-12">
@@ -185,26 +182,24 @@
           </h2>
         </div>
       </div>
-        <div class="row">
-  <CommentBox >
-    <p class="fs-4 text-start ">
-      On an inhale, think of the things that are no longer serving you, whatever that may be.
-      <br>
+      <div class="row">
+        <CommentBox>
+          <p class="fs-4 text-start">
+            On an inhale, think of the things that are no longer serving you,
+            whatever that may be.
+            <br />
 
-Maybe it’s a thought
-<br>
-Maybe it’s a feeling
-<br>
-Maybe it’s a person
-<b></b>
-Or an experience
-
-But taking it,
-
-And on an exhale, choosing consciously to let it go.
-    </p>
-  </CommentBox>
-  </div>
+            Maybe it’s a thought
+            <br />
+            Maybe it’s a feeling
+            <br />
+            Maybe it’s a person
+            <b></b>
+            Or an experience But taking it, And on an exhale, choosing
+            consciously to let it go.
+          </p>
+        </CommentBox>
+      </div>
     </div>
 
     <div class="container">
@@ -279,12 +274,8 @@ And on an exhale, choosing consciously to let it go.
             class="profile-image elevation-6"
           />
 
-          <div
-          v-motion-fade-visible :delay="200"
-          class="text-center mt-3">
-            <h6
-               
-            class="mb-0 fs-4 fw-bold">Katie Alverson</h6>
+          <div v-motion-fade-visible :delay="200" class="text-center mt-3">
+            <h6 class="mb-0 fs-4 fw-bold">Katie Alverson</h6>
             <p class="fs-5">Founder, Owner & Teacher</p>
           </div>
         </div>
@@ -306,7 +297,7 @@ And on an exhale, choosing consciously to let it go.
   </section>
 
   <section id="Retreat-Section" class="bg-pink">
-  <RetreatAndEvents/>
+    <RetreatAndEvents />
   </section>
 
   <section id="Video-Section">
@@ -321,14 +312,12 @@ import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
 import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
 import YouTubeSection from "../components/HomePage/YouTubeSection.vue";
-import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue"
+import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue";
 import { defineAsyncComponent } from "vue";
 import CommentBox from "../components/MiscComponents/CommentBox.vue";
 
 export default {
- 
   setup() {
-    
     return {
       scrollToTop() {
         window.scrollTo(0, 0);
@@ -343,8 +332,8 @@ export default {
     TestimonialSection,
     YouTubeSection,
     RetreatAndEvents,
-    CommentBox
-},
+    CommentBox,
+  },
 };
 </script>
 

@@ -12,10 +12,10 @@
 <p class=" comment-date me-3">
    SamadhiYogaIdaho
   </p>
-    <p class="comment-date">
+    <!-- <p class="comment-date">
       
       Dec 13, 2022
-    </p>
+    </p> -->
   </div>
 </div>
 <img src="../../assets/img/Screenshot_4.png" alt="" class="forcedImg  elevation-6 rounded-pill" >
