@@ -18,7 +18,7 @@
     </p> -->
   </div>
 </div>
-<img src="../../assets/img/Screenshot_4.png" alt="" class="forcedImg  elevation-6 rounded-pill" >
+<img src="../../assets/img/logo.png" alt="" class="forcedImg  elevation-6 rounded-pill" >
     </div>
 </template>
 

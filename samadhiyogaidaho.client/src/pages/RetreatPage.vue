@@ -11,6 +11,9 @@
           class="font-1 text-shadow text-light page-title">
             Embrace Nature
           </h1>
+              <p 
+        v-motion-slide-top :delay="400"
+        class=" display-6 font-2 text-shadow">Escape the hustle and bustle of everyday life! </p>
         </div>
       </div>
     </div>

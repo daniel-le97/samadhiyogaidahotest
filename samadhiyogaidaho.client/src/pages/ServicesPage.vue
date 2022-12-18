@@ -10,7 +10,7 @@
     <h4 
        v-motion-slide-top :delay="300"
     class="font-1 text-light text-shadow">We Offer Vinyasa, Baptiste, & Yin Yoga</h4>
-  </div>4
+  </div>
   </section>
 
   <section>

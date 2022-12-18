@@ -1,46 +1,8 @@
 <template>
-  <!-- <div class="container-fluid bg-lightPink">
-    <footer
-      class="d-flex flex-wrap justify-content-between align-items-center my-4"
-    >
-      <div class="col-md-4 d-flex align-items-center">
-        subscrib to our NEWSLETTER
-      </div>
-      <div class="col-md-8">
-        <div
-          class="d-flex rounded-pill p-1 bg-light align-items-center elevation-5"
-        >
-          <input
-            type="text"
-            name=""
-            id=""
-            class="form-control rounded-pill p-3 border-0 bg-transparent"
-            placeholder="Enter email address"
-          />
-          <div class="">
-            <button
-              class="btn btn-dark fw-bold elevation-6 rounded-pill py-4 px-5"
-            >
-              SUBMIT
-            </button>
-          </div>
-        </div>
-      </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, veritatis?
-      </div>
-    </div>
-  </div>
-    </footer>
-  </div> -->
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-
-  <!-- Footer -->
+ 
   <footer class="text-center text-dark footer-image bg-pink position-relative">
-    <!-- Grid container -->
-    <RowSeperator />
+
+    <FooterWave />
     <div class="container">
       <div class="row mt-4">
         <div class="col-md-6">
@@ -52,55 +14,46 @@
         </div>
       </div>
 
-      <!-- Section: Links -->
       <section class="mt-5">
-        <!-- Grid row-->
+   
         <div class="row text-center d-flex justify-content-center pt-5">
-          <!-- Grid column -->
+    
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
               <a href="#!" class="text-dark">About us</a>
             </h6>
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
+  
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
               <a href="#!" class="text-dark">Products</a>
             </h6>
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
+  
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
               <a href="#!" class="text-dark">Awards</a>
             </h6>
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
+  
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
               <a href="#!" class="text-dark">Help</a>
             </h6>
           </div>
-          <!-- Grid column -->
 
-          <!-- Grid column -->
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
               <a href="#!" class="text-dark">Contact</a>
             </h6>
           </div>
-          <!-- Grid column -->
+ 
         </div>
-        <!-- Grid row-->
+
       </section>
       <!-- Section: Links -->
 
-      <!-- <hr class="my-5" /> -->
+  
       <div class="divider div-transparent div-dot my-5"></div>
       <!-- Section: Text -->
       <section class="mb-5">
@@ -166,7 +119,7 @@ import { AppState } from "../../AppState.js";
 import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
 import NewsLetter from "../NewsLetter.vue";
-import RowSeperator from "../PluginComponents/RowSeperator.vue";
+import FooterWave from "../PluginComponents/FooterWave.vue";
 
 export default {
   props: {},
@@ -178,7 +131,7 @@ export default {
       editable,
     };
   },
-  components: { NewsLetter, RowSeperator },
+  components: { NewsLetter, FooterWave },
 };
 </script>
 

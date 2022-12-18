@@ -5,11 +5,11 @@
     </div>
     <div class="heroImage d-flex flex-column align-items-center justify-content-center">
       <div class="text-center">
-        <h1 v-motion-slide-top id="shadow1" class=" font-1 text-shadow page-title courgette fw-bolder text-light">
+        <h1 v-motion-slide-top :delay="200" id="shadow1" class=" font-1 text-shadow page-title courgette fw-bolder text-light">
           OUR STORY
         </h1>
         <p 
-        v-motion-slide-top :delay="200"
+        v-motion-slide-top :delay="400"
         class=" display-6 font-2 text-shadow">Why we came to build SamadhiYogaIdaho</p>
       </div>
     </div>

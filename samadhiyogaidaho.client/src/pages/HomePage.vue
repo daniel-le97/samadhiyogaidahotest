@@ -73,7 +73,7 @@
         </div>
       </div>
     </div>
-    <RowSeporator2 />
+    <GentleWave />
   </section>
 
   <section id="Call-To-Action-Section">
@@ -307,7 +307,7 @@
 
 <script>
 import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
-import RowSeporator2 from "../components/PluginComponents/RowSeporator2.vue";
+import GentleWave from "../components/PluginComponents/GentleWave.vue";
 import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
 import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
@@ -327,7 +327,7 @@ export default {
   components: {
     SwiperComponent2,
     ParticleComponent,
-    RowSeporator2,
+    GentleWave,
     CallToAction,
     TestimonialSection,
     YouTubeSection,
