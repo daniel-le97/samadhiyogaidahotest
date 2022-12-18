@@ -17,10 +17,6 @@ import EventForm from '../EventForm.vue';
 
 export default {
     setup() {
-      // onBe(() => {
-
-      // })
-      
       const form = ref(false)
         return {
           form

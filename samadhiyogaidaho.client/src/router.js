@@ -73,10 +73,22 @@ const routes = [
         component:loadComponent("HomeTab")
       },
       {
-      path: "/events",
-      name: 'Events',
-      component: loadComponent("EventTab")
-    }
+        path:'/events',
+        name:"Events",
+        component:loadComponent("EventsTab")
+      },
+      {
+        path:'/retreats',
+        name:"Retreats",
+        component:loadComponent("RetreatsTab")
+      },
+      // {
+      //   path:'/events',
+      //   name:"Events",
+      //   component:loadComponent("HomeTab")
+      // },
+
+   
   ]
 
   
