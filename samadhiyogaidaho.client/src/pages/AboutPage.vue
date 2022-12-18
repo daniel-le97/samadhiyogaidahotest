@@ -48,10 +48,10 @@
           <div class="">
             <p class="display-3 font-1"> Katy Alverson</p>
             <p class="display-5">Founder, owner and teacher</p>
-            <p class="text-start p-2 fs-4 mt-md-5">Katie believes that to question, to inquire, to seek understanding is
+            <p class="text-start p-2 fs-4 mt-md-5">I believe  that to question, to inquire, to seek understanding is
               a
               core part of what it means to be human. Whether
-              its at home or away on a retreat, they are always inspired by the experiences of life. She believes the
+              its at home or away on a retreat, they are always inspired by the experiences of life. the
               core
               of a
               healthy person is in the wellbeing of their body, mind, and soul.</p>

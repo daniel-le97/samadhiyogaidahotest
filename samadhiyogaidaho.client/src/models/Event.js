@@ -3,8 +3,10 @@ export class Event {
     this.id = data.id;
     this.title = data.title;
     this.location = data.location;
-    this.date = data.date;
+   this.startDate = data.startDate
+   this.endDate = data.endDate
     this.cost = data.cost;
     this.description = data.description;
+    this.img = data.img
   }
 }

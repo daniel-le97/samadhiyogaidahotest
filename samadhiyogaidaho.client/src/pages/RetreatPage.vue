@@ -1,25 +1,32 @@
 <template>
   <section>
-       <div class="tsparticles">
-  <ParticleComponent/>
+    <div class="tsparticles">
+      <ParticleComponent />
     </div>
     <div class="hero-image d-flex align-items-center justify-content-center">
       <div class="row">
         <div class="col-md-12">
           <h1
-          v-motion-slide-top :delay="200"
-          class="font-1 text-shadow text-light page-title">
+            v-motion-slide-top
+            :delay="200"
+            class="font-1 text-shadow text-light page-title"
+          >
             Embrace Nature
           </h1>
-              <p 
-        v-motion-slide-top :delay="400"
-        class=" display-6 font-2 text-shadow">Escape the hustle and bustle of everyday life! </p>
+          <p
+            v-motion-slide-top
+            :delay="400"
+            class="display-6 font-2 text-shadow"
+          >
+            Escape the hustle and bustle of everyday life!
+          </p>
         </div>
       </div>
     </div>
   </section>
   <!-- <RetreatForm /> -->
   <section>
+  
     <div class="container">
       <div class="row my-4">
         <div class="col-md-12">
@@ -30,9 +37,9 @@
       <div class="row">
         <div class="col-md-6">
           <img
-          v-if="retreat"
-               v-motion-pop-visible
-                :src="retreat.coverImg"
+            v-if="retreat"
+            v-motion-pop-visible
+            :src="featuredImg1"
             alt=""
             class="img-fluid rounded-4 elevation-6 h-100"
           />
@@ -41,8 +48,8 @@
           <div class="row">
             <div class="col-md-12 mb-3">
               <img
-              v-if="retreat"
-                   v-motion-pop-visible
+                v-if="retreat"
+                v-motion-pop-visible
                 :src="retreat.coverImg"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
@@ -50,17 +57,17 @@
             </div>
             <div class="col-md-6">
               <img
-              v-if="retreat"
-                   v-motion-pop-visible
-                :src="retreat.coverImg"
+                v-if="retreat"
+                v-motion-pop-visible
+                :src="featuredImg2"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
             </div>
             <div class="col-md-6">
               <img
-                   v-motion-pop-visible
-                 :src="retreat.coverImg"
+                v-motion-pop-visible
+                :src="featuredImg3"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
@@ -92,7 +99,7 @@
                 v-for="f in retreat.featuredImgs"
               >
                 <img
-                v-motion-pop-visible
+                  v-motion-pop-visible
                   :src="f"
                   alt=""
                   class="img-fluid hover-image rounded-4 selectable"
@@ -255,7 +262,10 @@
                 {{ retreat?.schedule?.description }}
               </p>
             </div>
-            <div class="row justify-content-center mt-5" v-if="retreat?.activities">
+            <div
+              class="row justify-content-center mt-5"
+              v-if="retreat?.activities"
+            >
               <div class="col-md-6">
                 <div class="card border-0 elevation-orange p-2">
                   <div class="card-body">
@@ -291,7 +301,7 @@
               <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
-          <div class="col-md-8 d-flex ">
+          <div class="col-md-8 d-flex">
             <FoodImageSwiper v-if="retreat?.food?.imgs" />
           </div>
         </div>
@@ -308,7 +318,7 @@
         </div>
         <div class="col-md-6">
           <h1 class="display-3 font-2 underline">Accommodations</h1>
-          <p class="fs-4 text-start ">
+          <p class="fs-4 text-start">
             {{ retreat?.accommodations?.description }}
           </p>
         </div>
@@ -386,7 +396,6 @@ export default {
   props: {},
   setup(props) {
     const editable = ref({});
-
    
     onMounted(() => {
       getAllRetreats();
@@ -401,9 +410,10 @@ export default {
     }
     return {
       editable,
-      // featureImg1: computed(() => AppState?.currentRetreat?.featuredImgs[3]),
-      // featureImg2: computed(() => AppState?.currentRetreat?.featuredImgs[0]),
-      // featureImg3: computed(() => AppState?.currentRetreat?.featuredImgs[1]),
+
+      featuredImg1: computed(() => AppState.currentRetreat?.featuredImgs?.splice(8,1)),
+      featuredImg2: computed(() => AppState.currentRetreat?.featuredImgs?.splice(0,1)),
+      featuredImg3: computed(() => AppState.currentRetreat?.featuredImgs?.splice(5  ,1)),
       retreat: computed(() => AppState.currentRetreat),
       archived: computed(() => AppState.archivedRetreats),
       setActiveImage(image) {
@@ -416,8 +426,8 @@ export default {
     ArchivedRetreatCard,
     FoodImageSwiper,
     AccommodationSwiper,
-    ParticleComponent
-},
+    ParticleComponent,
+  },
 };
 </script>
 

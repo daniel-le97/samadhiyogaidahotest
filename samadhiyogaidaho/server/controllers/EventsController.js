@@ -16,7 +16,7 @@ export class EventsController extends BaseController {
 
   async getAllEvents(req, res, next) {
     try {
-      const events = await eventsService.getAllEvents(req.userInfo.id);
+      const events = await eventsService.getAllEvents();
       res.send(events);
     } catch (error) {
       next(error);

@@ -1,6 +1,6 @@
 <template>
-<div class="modal-body bg-transparent text-center">
-  <img :src="image" alt="" class="image rounded-1 elevation-6">
+<div class="modal-body bg-transparent text-center d-flex align-items-center justify-content-center">
+  <img :src="image" alt="" class=" rounded-1 elevation-6 img-fluid">
 </div>
 </template>
 
@@ -33,6 +33,6 @@ props:{
 
 <style lang="scss" scoped>
 .image{
-
+transform: scale(1.5);
 }
 </style>

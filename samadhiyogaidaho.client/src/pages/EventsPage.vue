@@ -21,71 +21,50 @@ Our pop up schedule for 2023 will be posted soon so you can have an idea and pla
 
 <hr class="mt-4">
 
-  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
-   <div class="col-md-6 text-center" >
-<img src="../assets/img/Event1.png" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
-   </div>
-   <div class="col-md-6 text-start">
-<p class="underline  fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">New Years Day Yoga Flow</p>
-<p class="text-start">Sunday, January 1, 2023 </p>
-<p class="text-start">12:00 PM - 1:15PM </p>
-<p class="fs-4 text-start">Start out 2023 right by taking an hour for yourself the first day of the year and remind yourself that you are your priority for 2023. 
-</p>
-<p class="fs-4 text-start">We will be meeting at Grove Fitness Club and Spa where we will do a vinyasa flow, meditation and a few journaling questions to get you set up for success for your year</p>
-<p class="fs-1">$25 per person</p>
-   </div>
-  </div>
-  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
-   <div class="col-md-6 text-center">
-<img src="../assets/img/Event2.png" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
-   </div>
-   <div class="col-md-6 text-start">
-<p class=" underline fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">Beginners Yoga Workshop</p>
-<p class="text-start">Sunday, February 5, 2023 </p>
-<p class="text-start">12:00 PM - 2:00PM </p>
-<p class="fs-4 text-start">A beginners class about the fundamentals of yoga. Learn basic postures and basic flow to take and practice at home. 
-</p>
-<p class="fs-4 text-start">For those who are brand new or newer to yoga. this workshop will be two hours full of education,posture,adjustments,and learning names and postures. We will send you home with a little vinyasa flow for you to be able to practive at home</p>
-<p class="fs-1">$35 per person</p>
-   </div>
-  </div>
-  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
-   <div class="col-md-6 text-center">
-<img src="../assets/img/Event3.png" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
-   </div>
-   <div class="col-md-6 text-start">
-<p class=" underline  fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">Alignment & Posture Workshop</p>
-<p class="text-start">Sunday, February 5, 2023 </p>
-<p class="text-start">12:00 PM - 2:00PM </p>
-<p class="fs-4 text-start"> A posture and alignment workshop for those who are wanting to deepen their practice or and get hands on assistance and adjustments to make the most is true work the best for you. 
-</p>
-<p class="fs-4 text-start">For those who already know the basics of yoga but are wanting to know the perfect alignment for your body and different postures fit for you</p>
-<p class="fs-1">$35 per person</p>
-   </div>
-  </div>
+<div class="row">
+  <EventForm/>
+</div>
+<hr class="mt-4">
+
+
+<EventCard :event="e"  v-for="e in events" :key="e.id" />
+
+
 </div>
 </template>
 
 <script>
 import { computed } from "@vue/reactivity";
+;
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
+import EventForm from "../components/AdminComponents/EventForm.vue";
 import CommentBox from "../components/MiscComponents/CommentBox.vue";
 import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js";
-
+import {eventsService} from "../services/EventsService.js"
+import EventCard from "../components/EventsPage/EventCard.vue";
 export default {
-    props: {},
-    setup(props) {
+  
+    setup() {
         const editable = ref({});
         onMounted(() => {
+          getEvents()
         });
         watchEffect(() => { });
+        async function getEvents(){
+          try {
+              await eventsService.getEvents()
+            } catch (error) {
+              logger.error(error,'[getEvents]')
+            }
+        }
         return {
             editable,
+            events:computed(()=> AppState.events)
         };
     },
-    components: { CommentBox }
+    components: { CommentBox, EventForm, EventCard }
 }
 </script>
 

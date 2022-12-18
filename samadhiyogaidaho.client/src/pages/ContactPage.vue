@@ -11,9 +11,9 @@
         :enter="{ opacity: 1, y: 0, scale: 1 }"
         :variants="{ custom: { scale: 2 } }"
         :delay="600"
-        class="display-1 text-light courgette"
+        class="display-1 text-light font-1 page-title"
       >
-        Connect and be apart of a community
+        Connect 
       </h1>
     </div>
 
@@ -153,6 +153,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.page-title{
+  font-size: 12rem;
+}
 .image-1 {
   width: auto;
   height: 600px;

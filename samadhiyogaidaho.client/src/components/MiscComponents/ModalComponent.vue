@@ -6,8 +6,8 @@
     aria-labelledby="Label"
     aria-hidden="true"
   >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-transparent ">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent  ">
        <slot>
 
        </slot>

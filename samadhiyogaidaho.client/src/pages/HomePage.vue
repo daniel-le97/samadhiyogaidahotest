@@ -24,7 +24,7 @@
                 mass: 0.5,
               },
             }"
-            class="fs-1 font-1 text-light text-start mb-0"
+            class="display-4 font-1 text-light text-start mb-0"
           >
             LEARN HOW TO SEE YOURSELF
           </h5>
@@ -42,7 +42,7 @@
           <h1
             v-motion-slide-left
             :delay="1600"
-            class="display-3 text-light font-1"
+            class="display-2 text-light font-1"
           >
             ESCAPE WITH SAMADHI YOGA IDAHO
           </h1>
@@ -59,7 +59,7 @@
         <div
           v-motion-slide-top
           class="join-newsletter-button flex-column d-flex"
-          style="z-index: 9999"
+      
         >
           <a
             href="#newsletter"
@@ -182,7 +182,7 @@
           </h2>
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <CommentBox>
           <p class="fs-4 text-start">
             On an inhale, think of the things that are no longer serving you,
@@ -199,7 +199,7 @@
             consciously to let it go.
           </p>
         </CommentBox>
-      </div>
+      </div> -->
     </div>
 
     <div class="container">
@@ -348,11 +348,7 @@ export default {
   right: 5%;
   bottom: 15%;
 }
-.join-newsletter-button-2 {
-  position: absolute;
-  right: 5%;
-  bottom: 20%;
-}
+
 .testimonial-card {
   transition: all 0.25s ease;
 }
@@ -379,15 +375,7 @@ export default {
   color: var(--darkPink);
   transition: all 0.5s ease;
 }
-.testimonial-profile-image {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  object-fit: cover;
-  position: absolute;
-  top: -20%;
-  right: 35%;
-}
+
 .floating-image-1 {
   position: absolute;
   left: 65%;
@@ -418,7 +406,7 @@ export default {
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1600618528240-fb9fc964b853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
-  background-position: right 400% bottom 40%;
+  background-position: end;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
 }
