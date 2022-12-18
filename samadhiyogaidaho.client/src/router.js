@@ -82,25 +82,11 @@ const routes = [
         name:"Retreats",
         component:loadComponent("RetreatsTab")
       },
-      // {
-      //   path:'/events',
-      //   name:"Events",
-      //   component:loadComponent("HomeTab")
-      // },
-
-   
+  
   ]
 
   
   },
-
-
-  // {
-  //   path: "/",
-  //   name: "Home",
-  //   component: loadPage("HomePage"),
-  // },
-
   {
     path: "/account",
     name: "Account",
