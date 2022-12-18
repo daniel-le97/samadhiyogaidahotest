@@ -13,7 +13,7 @@
         :delay="600"
         class="display-1 text-light courgette"
       >
-        Get In Touch With Us
+        Connect and be apart of a community
       </h1>
     </div>
 

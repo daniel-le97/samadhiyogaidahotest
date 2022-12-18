@@ -67,7 +67,7 @@
           >
             Join Our NewsLetter</a
           >
-          <a href="#newsletter" class="btn bg-success selectable fs-3 px-4">
+          <a href="#newsletter" class="btn bg-warning selectable fs-3 px-4">
             Book a session</a
           >
         </div>
