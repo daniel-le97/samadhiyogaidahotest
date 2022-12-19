@@ -19,7 +19,7 @@
             <i class="mdi mdi-help-circle me-3"></i> What are the benefits of yoga?
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>
@@ -39,7 +39,7 @@
             <i class="mdi mdi-help-circle me-3"></i> Can I Eat Before Yoga Practice?
           </button>
         </h2>
-        <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>
@@ -57,7 +57,7 @@
             <i class="mdi mdi-help-circle me-3"></i> What do I need to bring?
           </button>
         </h2>
-        <div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading2"
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading2"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>
@@ -73,7 +73,7 @@
             <i class="mdi mdi-help-circle me-3"></i> Can I Eat Before Yoga Practice?
           </button>
         </h2>
-        <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading2"
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading2"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>
@@ -91,7 +91,7 @@
             <i class="mdi mdi-help-circle me-3"></i> Do I Need To Be Flexible To Do Yoga?
           </button>
         </h2>
-        <div id="collapse5" class="accordion-collapse collapse show" aria-labelledby="heading2"
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading2"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>
@@ -109,7 +109,7 @@
             <i class="mdi mdi-help-circle me-3"></i> What is Vinyasa Yoga?
           </button>
         </h2>
-        <div id="collapse6" class="accordion-collapse collapse show" aria-labelledby="heading2"
+        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading2"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>
@@ -126,7 +126,7 @@
             <i class="mdi mdi-help-circle me-3"></i> What is Baptiste style yoga?
           </button>
         </h2>
-        <div id="collapse7" class="accordion-collapse collapse show" aria-labelledby="heading2"
+        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading2"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>
@@ -143,7 +143,6 @@
 
     </div>
   </div>
-
 </template>
 
 <script>
