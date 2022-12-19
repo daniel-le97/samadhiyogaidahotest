@@ -1,5 +1,5 @@
 <template>
-<svg class="editorial"
+<svg class="editorial mb-0"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 24 150 28 "
@@ -64,7 +64,7 @@ props:{
   max-height: 60px;
   margin: 0;
   z-index:5;
-  bottom:0;
+  bottom:-20px; 
   position:absolute;
   left:0px;
   float:left;

@@ -74,17 +74,17 @@
           class="text-dark me-4"
           target="_blank"
         >
-          <i class="mdi mdi-facebook fs-1"></i>
+          <i class="mdi mdi-facebook fs-1 hover-image rounded-5"></i>
         </a>
         <a
           href="https://www.instagram.com/samadhiyogaidaho/"
           class="text-dark me-4"
           target="_blank"
         >
-          <i class="mdi mdi-instagram fs-1"></i>
+          <i class="mdi mdi-instagram fs-1 hover-image rounded-5"></i>
         </a>
         <a href="https://www.youtube.com/@Samadhiyogaidaho" class="text-dark me-4" target="_blank">
-          <i class="mdi mdi-youtube fs-1"></i>
+          <i class="mdi mdi-youtube fs-1 hover-image rounded-5"></i>
         </a>
       </section>
       <!-- Section: Social -->
@@ -162,47 +162,6 @@ export default {
   );
 }
 
-.div-arrow-down:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: -7px;
-  left: calc(50% - 7px);
-  width: 14px;
-  height: 14px;
-  transform: rotate(45deg);
-  background-color: white;
-  border-bottom: 1px solid rgb(48, 49, 51);
-  border-right: 1px solid rgb(48, 49, 51);
-}
-
-.div-tab-down:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: calc(50% - 10px);
-  width: 20px;
-  height: 14px;
-  background-color: white;
-  border-bottom: 1px solid rgb(48, 49, 51);
-  border-left: 1px solid rgb(48, 49, 51);
-  border-right: 1px solid rgb(48, 49, 51);
-  border-radius: 0 0 8px 8px;
-}
-
-.div-stopper:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: -6px;
-  left: calc(50% - 7px);
-  width: 14px;
-  height: 12px;
-  background-color: white;
-  border-left: 1px solid rgb(48, 49, 51);
-  border-right: 1px solid rgb(48, 49, 51);
-}
 
 .div-dot:after {
   content: "";
@@ -219,7 +178,5 @@ export default {
 }
 footer {
   margin-top: 50px;
-}
-.mailing-list {
 }
 </style>

@@ -21,6 +21,24 @@
   </div>
 
    <div class="container ">
+      <div class="row mt-5">
+        <CommentBox>
+          <p class="fs-4 text-start">
+            On an inhale, think of the things that are no longer serving you,
+            whatever that may be.
+            <br />
+
+            Maybe it’s a thought
+            <br />
+            Maybe it’s a feeling
+            <br />
+            Maybe it’s a person
+            <b></b>
+            Or an experience But taking it, And on an exhale, choosing
+            consciously to let it go.
+          </p>
+        </CommentBox>
+      </div>
       <div class="row justify-content-center">
         <div class="col-md-12 my-3">
           <div class="card border-0 square elevation-orange p-3 my-5">
@@ -134,21 +152,21 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
+import CommentBox from "../components/MiscComponents/CommentBox.vue";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
 export default {
-  props: {},
-  setup(props) {
-    const editable = ref({});
-
-    onMounted(() => {});
-    watchEffect(() => {});
-
-    return {
-      editable,
-    };
-  },
+    props: {},
+    setup(props) {
+        const editable = ref({});
+        onMounted(() => { });
+        watchEffect(() => { });
+        return {
+            editable,
+        };
+    },
+    components: { CommentBox }
 };
 </script>
 

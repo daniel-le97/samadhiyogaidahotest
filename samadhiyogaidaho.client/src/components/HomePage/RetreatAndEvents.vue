@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <div class="col-md-12">
         <h1    v-motion-slide-visible-left class="display-1 font-1 text-start underline">
-          Join Our Retreat
+         MY Offerings To You
         </h1>
         <h2
             v-motion-slide-visible-left

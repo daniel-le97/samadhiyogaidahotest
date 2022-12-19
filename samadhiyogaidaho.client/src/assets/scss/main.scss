@@ -76,6 +76,10 @@ body {
   filter: brightness(80%);
   transition: all 0.25s ease;
 }
+
+.hover-image{
+  transition: all 0.25s ease-in-out;
+}
 p{
    font-family: 'Patrick Hand', cursive;
 
