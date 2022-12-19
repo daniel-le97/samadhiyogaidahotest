@@ -15,7 +15,7 @@ import { AppState } from "../../AppState";
 export default {
   setup() {
     return {
-      admin: computed(() => AppState.account.name),
+      admin: computed(() => AppState.account),
     };
   },
 };
