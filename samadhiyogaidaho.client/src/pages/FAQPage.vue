@@ -5,143 +5,162 @@
       <div class="text-center">
         <h1 v-motion-slide-top :delay="200" id="shadow1"
           class=" font-1 text-shadow page-title courgette fw-bolder text-light">
-          You Are One Yoga Class Away
+          One Yoga Class
         </h1>
-        <p v-motion-slide-top :delay="400" class=" display-6 font-2 text-shadow">From A Good Mood</p>
+        <p v-motion-slide-top :delay="400" class=" display-6 font-2 text-shadow">Away From A Good Mood</p>
       </div>
     </div>
 
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <i class="mdi mdi-help-circle me-3"></i> What are the benefits of yoga?
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>
-              With regular practice, you will notice your body getting stronger and more flexible; you will feel more
-              grounded and
-              have better posture. On a mental level you will notice improved focus, the ability to stay calm and
-              maintain relaxed
-              breathing.
-            </p>
+    <section class="container my-3">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                  aria-controls="collapseOne">
+                  <i class="mdi mdi-help-circle me-3"></i> What are the benefits of yoga?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    With regular practice, you will notice your body getting stronger and more flexible; you will feel
+                    more
+                    grounded and
+                    have better posture. On a mental level you will notice improved focus, the ability to stay calm and
+                    maintain relaxed
+                    breathing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                  <i class="mdi mdi-help-circle me-3"></i> Can I Eat Before Yoga Practice?
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    It is best to wait an hour after eating before practicing yoga, but a small snack before your class
+                    is
+                    perfectly
+                    alright. Observe your body to learn how much time you need to digest your food before practice.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse2">
+                  <i class="mdi mdi-help-circle me-3"></i> What do I need to bring?
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading2"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    Just bring yourself, in appropriate clothing, a yoga mat if you have one, and a bottle of water.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse2">
+                  <i class="mdi mdi-help-circle me-3"></i> Can I Eat Before Yoga Practice?
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading2"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    Some people wear baggy, loose fitting bottoms or shorts and a t shirt. Other people wear tight,
+                    stretchy
+                    leggings +
+                    tops. The only thing that matters is that you wear comfortable clothes that you can easily move and
+                    stretch in. It's
+                    good to have clothes that keep you cool when you are active in yoga.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse2">
+                  <i class="mdi mdi-help-circle me-3"></i> Do I Need To Be Flexible To Do Yoga?
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading2"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    No you don’t have to be flexible to do yoga… It’s an urban myth that people who are tight can't do
+                    yoga.
+                    Yoga isn’t just
+                    stretching its extremely toning, calming, meditative, spiritual, healing and opening. Flexibility is
+                    only one aspect of
+                    it. Once you practice yoga for a period of time naturally you will gain flexibility with a myriad of
+                    other benefits
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse2">
+                  <i class="mdi mdi-help-circle me-3"></i> What is Vinyasa Yoga?
+                </button>
+              </h2>
+              <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading2"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    Vinyasa yoga focuses on connecting the breath to your movements, which tend to be set at a faster
+                    pace.
+                    In a vinyasa
+                    practice, you can expect to stay in a constant flow of movements.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse2">
+                  <i class="mdi mdi-help-circle me-3"></i> What is Baptiste style yoga?
+                </button>
+              </h2>
+              <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading2"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    Baptiste power yoga is a type of Vinyasa yoga with the poses flowing from one to another in a
+                    sequence
+                    rather than being
+                    held for seconds or even minutes, as is the case in some other forms of yoga.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-            <i class="mdi mdi-help-circle me-3"></i> Can I Eat Before Yoga Practice?
-          </button>
-        </h2>
-        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>
-              It is best to wait an hour after eating before practicing yoga, but a small snack before your class is
-              perfectly
-              alright. Observe your body to learn how much time you need to digest your food before practice.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse2">
-            <i class="mdi mdi-help-circle me-3"></i> What do I need to bring?
-          </button>
-        </h2>
-        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading2"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>
-              Just bring yourself, in appropriate clothing, a yoga mat if you have one, and a bottle of water.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse2">
-            <i class="mdi mdi-help-circle me-3"></i> Can I Eat Before Yoga Practice?
-          </button>
-        </h2>
-        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading2"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>
-              Some people wear baggy, loose fitting bottoms or shorts and a t shirt. Other people wear tight, stretchy leggings +
-              tops. The only thing that matters is that you wear comfortable clothes that you can easily move and stretch in. It's
-              good to have clothes that keep you cool when you are active in yoga.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse2">
-            <i class="mdi mdi-help-circle me-3"></i> Do I Need To Be Flexible To Do Yoga?
-          </button>
-        </h2>
-        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading2"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>
-              No you don’t have to be flexible to do yoga… It’s an urban myth that people who are tight can't do yoga. Yoga isn’t just
-              stretching its extremely toning, calming, meditative, spiritual, healing and opening. Flexibility is only one aspect of
-              it. Once you practice yoga for a period of time naturally you will gain flexibility with a myriad of other benefits
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse2">
-            <i class="mdi mdi-help-circle me-3"></i> What is Vinyasa Yoga?
-          </button>
-        </h2>
-        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading2"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>
-              Vinyasa yoga focuses on connecting the breath to your movements, which tend to be set at a faster pace. In a vinyasa
-              practice, you can expect to stay in a constant flow of movements.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse2">
-            <i class="mdi mdi-help-circle me-3"></i> What is Baptiste style yoga?
-          </button>
-        </h2>
-        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading2"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>
-              Baptiste power yoga is a type of Vinyasa yoga with the poses flowing from one to another in a sequence rather than being
-              held for seconds or even minutes, as is the case in some other forms of yoga.
-            </p>
-          </div>
-        </div>
-      </div>
-      
 
 
 
 
-    </div>
+    </section>
   </div>
 </template>
 
