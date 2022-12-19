@@ -139,8 +139,12 @@ export default {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.134) 0%);
 
 }
+/*
 
 .logo-image {
+background: linear-gradient(to bottom,  rgba(23, 50, 51, 0.65) 0%,rgba(255, 0, 0, 0) 100%); 
+*/
+.logo-image{
   width: 100px;
   height: 160px;
 }
