@@ -20,17 +20,18 @@
           </a>
           <hr />
           <div class="d-flex flex-column">
-            <router-link class="navbar-brand d-flex" :to="{ name: 'Admin'}"
-              >Home</router-link
-            >
-            <router-link
-              class="navbar-brand"
-              :to="{ name: 'AdminEvents'}"
-            >
+            <router-link class="navbar-brand d-flex" :to="{ name: 'AdminHome' }">
+              <button class="btn btn-primary">Home</button>
+            </router-link>
+            <router-link class="navbar-brand" :to="{ name: 'AdminEvents' }">
               <button class="btn btn-primary">Events</button>
             </router-link>
-            <button class="btn btn-primary">Retreats</button>
-            <button class="btn btn-primary">Settings</button>
+            <router-link class="navbar-brand" :to="{ name: 'AdminRetreats' }">
+              <button class="btn btn-primary">Retreats</button>
+            </router-link>
+            <router-link class="navbar-brand" :to="{ name: 'AdminSettings' }">
+              <button class="btn btn-primary">Settings</button>
+            </router-link>
           </div>
         </div>
       </div>
