@@ -35,7 +35,17 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": true
     },
-    "cSpell.words": ["Alverson", "Scrollpos", "vuetify"],
+    "cSpell.words": [
+      "Alverson",
+      "asanas",
+      "Freepik",
+      "pranayama",
+      "Scrollpos",
+      "tsparticles",
+      "Vinyasa",
+      "vuetify",
+      "samadhiyogaidaho"
+    ],
     "typescript.format.enable": true,
     "javascript.validate.enable": false
   }

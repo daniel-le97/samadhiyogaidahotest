@@ -102,7 +102,7 @@
     <div class="text-center p-3 bg-lightPink darken-10">
       © 2020 Copyright:
       <a class="text-dark" href="https://mdbootstrap.com/"
-        >Samahdi Yoga Idaho, created by <b> Le* Squared</b></a
+        >Samadhi Yoga Idaho, created by <b> Le* Squared</b></a
       >
     </div>
     <div class="">
