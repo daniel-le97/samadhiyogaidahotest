@@ -87,9 +87,9 @@
             </router-link>
           </li> -->
           <li>
-            <router-link :to="{ name: 'Testimonials' }" v-motion-pop :delay="300"
+            <router-link :to="{ name: 'FAQ' }" v-motion-pop :delay="300"
               class="btn  text-uppercase fw-bold fs-4 nav-link">
-              Testimonials
+              FAQ
             </router-link>
           </li>
           <li>
