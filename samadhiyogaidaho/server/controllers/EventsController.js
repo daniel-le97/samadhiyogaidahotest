@@ -5,7 +5,7 @@ import BaseController from "../utils/BaseController.js";
 
 export class EventsController extends BaseController {
   constructor() {
-    super("/api/events");
+    super("api/events");
     this.router
       .get("", this.getAllEvents)
       .use(Auth0Provider.getAuthorizedUserInfo)
@@ -16,6 +16,7 @@ export class EventsController extends BaseController {
 
   async getAllEvents(req, res, next) {
     try {
+
       const events = await eventsService.getAllEvents();
       res.send(events);
     } catch (error) {

@@ -3,9 +3,9 @@ import { BadRequest, Forbidden } from "../utils/Errors";
 import { getAdmins } from "./AccountService";
 
 class EventsService {
-  async getAllEvents(userId) {
-    // const isAdmin = await getAdmins(userId);
-    return await dbContext.Events.find();
+  async getAllEvents() {
+    const events = await dbContext.Events.find();
+    return events
   }
   async deleteEvent(userId, eventId) {
     await getAdmins(userId);
