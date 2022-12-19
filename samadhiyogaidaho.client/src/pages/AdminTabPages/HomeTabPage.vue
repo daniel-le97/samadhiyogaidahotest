@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import AdminCards from "./AdminCards.vue";
+import AdminCards from "../AdminCards.vue";
 import { AppState } from "../../../AppState";
 import { computed } from "@vue/reactivity";
 
