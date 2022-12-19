@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -20,7 +20,7 @@
             tabindex="0"
           >
             <EventTabPage v-if="activeTab == 'Events'" />
-            <!-- <EventForm/> -->
+          
           </div>
 
           <div
@@ -31,7 +31,6 @@
             tabindex="0"
           >
             <RetreatTabPage v-if="activeTab == 'Retreats'" />
-            <!-- <RetreatForm/> -->
           </div>
           <div
             class="tab-pane fade"
@@ -53,10 +52,11 @@ import { computed } from "@vue/reactivity";
 import { AppState } from "../../AppState";
 import RetreatForm from "./RetreatForm.vue";
 import EventForm from "./EventForm.vue";
-import EventTabPage from "./AdminTabPages/EventTabPage.vue";
-import RetreatTabPage from "./AdminTabPages/RetreatTabPage.vue";
 import SettingsTabPage from "./AdminTabPages/SettingsTabPage.vue";
+import RetreatTabPage from "./AdminTabPages/RetreatTabPage.vue";
+import EventTabPage from "./AdminTabPages/EventTabPage.vue";
 import HomeTabPage from "./AdminTabPages/HomeTabPage.vue";
+
 
 export default {
   setup() {
@@ -67,11 +67,11 @@ export default {
   components: {
     EventForm,
     RetreatForm,
-    EventTabPage,
-    RetreatTabPage,
     SettingsTabPage,
-    HomeTabPage,
-  },
+    RetreatTabPage,
+    EventTabPage,
+    HomeTabPage
+},
 };
 </script>
 
@@ -87,4 +87,17 @@ export default {
 .text-basil {
   color: #356859 !important;
 }
-</style>
+</style> -->
+<template>
+  <div class="component"></div>
+</template>
+
+<script>
+export default {
+  setup() {
+    return {};
+  },
+};
+</script>
+
+<style lang="scss" scoped></style>

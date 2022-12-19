@@ -5,7 +5,7 @@ function loadPage(page) {
   return () => import(`./pages/${page}.vue`);
 }
  function  loadComponent(component) {
-  return () => import(`./components/AdminComponents/AdminTabPages/${component}Page.vue`);
+  return () => import(`./pages/AdminTabPages/${component}Page.vue`);
 }
 
 const routes = [

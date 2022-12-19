@@ -13,7 +13,7 @@
 
 <script>
 import { onMounted, ref } from 'vue';
-import EventForm from '../EventForm.vue';
+import EventForm from '../../components/AdminComponents/EventForm.vue';
 
 export default {
     setup() {
