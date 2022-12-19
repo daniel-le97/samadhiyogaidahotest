@@ -11,7 +11,8 @@
   <div class="row">
   <CommentBox>
         <p class="fs-4 text-start">I have been working hard behind the scenes getting several classes and events set up for 2023! <br>
-        Space will be extremely limited at each event. DM us today or call the Grove Fitness Club and Spa to sign up!
+        Space will be extremely limited at each event, So please  DM us today or call the Grove Fitness Club & Spa to sign up.
+        <br>
 
 Our pop up schedule for 2023 will be posted soon so you can have an idea and plan for events you’d like to attend next year.
 </p>  

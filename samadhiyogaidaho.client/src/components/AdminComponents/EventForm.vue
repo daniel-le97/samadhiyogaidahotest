@@ -43,7 +43,7 @@
                 id="date"
                 placeholder="Date"
                 required
-                v-model="editable.date"
+                v-model="editable.startDate"
               />
               <label for="date">date</label>
             </div>
@@ -120,6 +120,29 @@
         </form>
       </div>
     </div>
+
+      <div class="row my-5 "  v-if="editable.title" v-motion-pop>
+   <div class="col-md-6 d-flex align-items-center justify-content-center" >
+<img :src="editable.img" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
+   </div>
+   <div class="col-md-6 text-start">
+<p class="underline  fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">{{editable.title}}</p>
+<div class="d-flex">
+  <div  class="me-3"><p class="text-start">{{editable.startDate}} - {{editable.endDate}}  (This Will Convert To Proper Format) </p>
+
+<p class="text-start">{{editable.location.place}} </p>
+<p class="text-start">{{editable.location.address}} </p></div>
+<div class="fs-2 font-2">
+${{editable.cost }}  per   <img src="https://cdn-icons-png.flaticon.com/512/8927/8927683.png" alt="" class="img-fluid" width="80" height="80">
+
+</div>
+</div>
+<p class="fs-4 text-start">{{editable.description}} 
+</p>
+
+
+   </div>
+  </div>
   </div>
 </template>
 
@@ -157,11 +180,14 @@ export default {
 
 .form-control, .form-control:required{
   border: 0;
+    background-color:rgba(253, 163, 107, 0.2);
   box-shadow: rgba(255, 113, 25, 0.2) 0px 13px 27px -5px, rgba(249, 130, 18, 0.3) 0px 8px 16px -8px;
 }
 
 .form-control:valid{
     border: 0;
+    background-color:rgba(71, 255, 25, 0.2) ;
+    transition: all 0.5s ease;
   box-shadow: rgba(71, 255, 25, 0.2) 0px 13px 27px -5px, rgba(249, 130, 18, 0.3) 0px 8px 16px -8px;
 }
 </style>

@@ -20,3 +20,10 @@ export function getDate(date) {
     minute: "2-digit",
   });
 }
+export function getDateTime(date) {
+  return new Date(date).toLocaleTimeString("en-Us", {
+  
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
