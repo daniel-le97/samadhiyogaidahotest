@@ -7,16 +7,18 @@
 
 <script>
 import { ref } from "vue";
-import RetreatForm from "../RetreatForm.vue";
+import RetreatForm from "../../components/AdminComponents/RetreatForm.vue";
+
 
 export default {
   setup() {
     const form = ref(false);
+    onMounted
     return {
       form,
     };
   },
-  components: { RetreatForm },
+  components: { RetreatForm},
 };
 </script>
 
