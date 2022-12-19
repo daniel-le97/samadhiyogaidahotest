@@ -2,9 +2,9 @@
   <header class="sticky-top bg-lightPink elevation-5">
     <Navbar class="" id="nav" v-if="!routeAdmin"/>
     
-  </header>
+  </header >
   <main>
-    <router-view />
+    <router-view  />
   </main>
 <ModalComponent id="activeImage">
 <ActiveImage/>

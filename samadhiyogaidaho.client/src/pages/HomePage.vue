@@ -1,5 +1,6 @@
 <template>
-  <section id="Hero-Section">
+<div >
+    <section id="Hero-Section">
     <div class="position-relative px-0">
       <div class="tsparticles">
         <ParticleComponent />
@@ -303,6 +304,7 @@
   <section id="Video-Section">
     <YouTubeSection />
   </section>
+</div>
 </template>
 
 <script>
