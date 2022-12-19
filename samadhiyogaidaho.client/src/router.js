@@ -4,9 +4,8 @@ import { authGuard } from "@bcwdev/auth0provider-client";
 function loadPage(page) {
   return () => import(`./pages/${page}.vue`);
 }
-function loadComponent(component) {
-  return () =>
-    import(`./components/AdminComponents/AdminTabPages/${component}Page.vue`);
+ function  loadComponent(component) {
+  return () => import(`./components/AdminComponents/AdminTabPages/${component}Page.vue`);
 }
 
 const routes = [
@@ -68,22 +67,23 @@ const routes = [
   },
   {
     path: "/admin",
+    name: "Admin",
     component: loadPage("AdminPage"),
     beforeEnter: authGuard,
     children: [
       {
-        path: "",
-        name: "Admin",
+        path: "/home",
+        name: "AdminHome",
         component: loadComponent("HomeTab"),
       },
       {
-        path: "/events",
+        path: "events",
         name: "AdminEvents",
-        component: loadComponent("EventsTab"),
+        component: loadComponent("EventTab"),
       },
       {
-        path: "/retreats",
-        name: "AdminRetreats",
+        path: "admin/retreats",
+        name: 'AdminRetreats',
         component: loadComponent("RetreatsTab"),
       },
     ],

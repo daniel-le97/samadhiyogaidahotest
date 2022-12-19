@@ -19,100 +19,18 @@
             <span class="fs-4">Dashboard</span>
           </a>
           <hr />
-          <div
-            class="nav flex-column nav-pills me-3"
-            id="v-pills-tab"
-            role="tablist"
-            aria-orientation="vertical"
-          >
-            <button
-              class="nav-link active"
-              id="v-pills-home-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-home"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-home"
-              aria-selected="true"
-              @click="loadTab('Home')"
+          <div class="d-flex flex-column">
+            <router-link class="navbar-brand d-flex" :to="{ name: 'Admin'}"
+              >Home</router-link
             >
-              Home
-            </button>
-            <button
-              class="nav-link"
-              id="event-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#event"
-              type="button"
-              role="tab"
-              aria-controls="event"
-              aria-selected="false"
-              @click="loadTab('Events')"
+            <router-link
+              class="navbar-brand"
+              :to="{ name: 'AdminEvents'}"
             >
-              Events
-            </button>
-
-            <button
-              class="nav-link"
-              id="retreats-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#retreats"
-              type="button"
-              role="tab"
-              aria-controls="retreats"
-              aria-selected="false"
-              @click="loadTab('Retreats')"
-            >
-              Retreats
-            </button>
-            <button
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#v-pills-settings"
-              type="button"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              @click="loadTab('Settings')"
-            >
-              Settings
-            </button>
-          </div>
-          <hr />
-          <div class="dropdown">
-            <a
-              href="#"
-              class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-              id="dropdownUser1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                :src="
-                  admin?.picture ? admin?.picture : 'https://github.com/mdo.png'
-                "
-                alt=""
-                width="32"
-                height="32"
-                class="rounded-circle me-2"
-              />
-              <strong>mdo</strong>
-            </a>
-            <ul
-              class="dropdown-menu dropdown-menu-dark text-small shadow"
-              aria-labelledby="dropdownUser1"
-            >
-              <li><button class="dropdown-item" >New project...</button></li>
-              <li><button class="dropdown-item" >Settings</button></li>
-              <li><button class="dropdown-item" >Profile</button></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <button class="dropdown-item" type="button" @click="logout">
-                  Sign out
-                </button>
-              </li>
-            </ul>
+              <button class="btn btn-primary">Events</button>
+            </router-link>
+            <button class="btn btn-primary">Retreats</button>
+            <button class="btn btn-primary">Settings</button>
           </div>
         </div>
       </div>

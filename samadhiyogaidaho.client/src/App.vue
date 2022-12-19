@@ -14,7 +14,7 @@
 
 <script>
 import { computed, onMounted, watchEffect } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { AppState } from "./AppState";
 import ActiveImage from "./components/ActiveImage.vue";
 import Footer from "./components/MiscComponents/Footer.vue";
@@ -25,9 +25,11 @@ export default {
   setup() {
     onMounted(() => {
       hideOnScrollTest();
+      getRoute()
     });
-
-    watchEffect(() => {});
+    function getRoute(){
+      console.log(route.name);
+    }
 
     function hideOnScrollTest() {
       let nav = document.querySelector("#nav");
@@ -50,9 +52,11 @@ export default {
     }
 
     const route = useRoute()
+    const router = useRouter()
+    const names = ["Admin", "AdminEvents", "AdminRetreats", "AdminHome"]
 
     return {
-      routeAdmin: computed(() => route.name == "Admin" || route.name == "AdminHome"),
+      routeAdmin: computed(() => names.find(n => n == route.name)),
       appState: computed(() => AppState),
     };
   },
