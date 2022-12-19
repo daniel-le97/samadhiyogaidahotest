@@ -153,6 +153,23 @@
                 </div>
               </div>
             </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse2">
+                  <i class="mdi mdi-help-circle me-3"></i> What is Yin Yoga?
+                </button>
+              </h2>
+              <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    Yin Yoga is a slower-paced, more meditative version of the popular physical and spiritual discipline of yoga. In Yin
+                    yoga, the poses are held for a long period of time (typically three to five minutes or longer) to target the connective
+                    tissues (such as the ligaments) rather than focusing on the muscles.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -161,6 +178,7 @@
 
 
     </section>
+
   </div>
 </template>
 
