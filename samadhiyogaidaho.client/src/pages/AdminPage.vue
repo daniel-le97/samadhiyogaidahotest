@@ -25,6 +25,7 @@ import AdminSidePanel from "../components/AdminComponents/AdminSidePanel.vue";
 
 import EventForm from "../components/AdminComponents/EventForm.vue";
 import RetreatForm from "../components/AdminComponents/RetreatForm.vue";
+import { eventsService } from "../services/EventsService.js";
 
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
@@ -33,7 +34,16 @@ export default {
   props: {},
   setup(props) {
     const editable = ref({});
-    onMounted(() => {});
+    onMounted(() => {
+      getEvents()
+    });
+    async function getEvents(){
+      try {
+          await eventsService.getEvents()
+        } catch (error) {
+          logger.error(error,'[getEvents]')
+        }
+    }
     watchEffect(() => {});
     return {
       editable,
