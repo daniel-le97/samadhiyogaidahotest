@@ -9,11 +9,10 @@
           <AdminNavbar />
         </div>
         <router-view></router-view>
-        <!-- <AdminTabs /> -->
       </div>
     </div>
   </div>
-  <div v-else></div>
+
 </template>
 
 <script>
@@ -23,8 +22,6 @@ import { RouterView } from "vue-router";
 import { AppState } from "../AppState.js";
 import AdminNavbar from "../components/AdminComponents/AdminNavbar.vue";
 import AdminSidePanel from "../components/AdminComponents/AdminSidePanel.vue";
-
-import AdminTabs from "../components/AdminComponents/AdminTabs.vue";
 
 import EventForm from "../components/AdminComponents/EventForm.vue";
 import RetreatForm from "../components/AdminComponents/RetreatForm.vue";
@@ -46,11 +43,9 @@ export default {
   components: {
     RetreatForm,
     AdminSidePanel,
-    AdminTabs,
     RetreatForm,
     EventForm,
     AdminSidePanel,
-    AdminTabs,
     AdminNavbar,
   },
 };

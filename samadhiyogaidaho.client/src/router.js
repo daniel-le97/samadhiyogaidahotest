@@ -57,9 +57,9 @@ const routes = [
   },
 
   {
-    path: "/testimonials",
-    name: "Testimonials",
-    component: loadPage("TestimonialPage"),
+    path: "/faq",
+    name: "FAQ",
+    component: loadPage("FAQPage"),
   },
   {
     path: "/account",
@@ -73,7 +73,7 @@ const routes = [
     beforeEnter: authGuard,
     children: [
       {
-        path: "/home",
+        path: "",
         name: "AdminHome",
         component: loadComponent("HomeTab"),
       },
@@ -83,9 +83,14 @@ const routes = [
         component: loadComponent("EventTab"),
       },
       {
-        path: "admin/retreats",
+        path: "retreats",
         name: 'AdminRetreats',
-        component: loadComponent("RetreatsTab"),
+        component: loadComponent("RetreatTab"),
+      },
+      {
+        path: "settings",
+        name: 'AdminSettings',
+        component: loadComponent("SettingsTab"),
       },
     ],
   },

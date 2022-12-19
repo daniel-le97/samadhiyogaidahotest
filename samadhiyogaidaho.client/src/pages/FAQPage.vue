@@ -1,45 +1,13 @@
 <template>
 
 <div >
-  
-  <div class="hero-image">
-    <div class="row">
-      <div class="col-md-12">
-        
-      </div>
-    </div>
-  </div>
-  <!-- <div class="img">
-  <PersonComponent/>
-  </div> -->
-<div class="container p-5">
-  <div class="row">
-    <div class="col-md-12">
-    <div class="card border-0 elevation-6 p-5">
-      <form @submit.prevent="handleSubmit()">
-<div class="form-floating mb-3">
-  <input
-    type="text"
-    class="form-control" name="name" id="name" placeholder="">
-  <label for="name">Name</label>
-</div>
-<div class="form-floating mb-3">
-  <input
-    type="text"
-    class="form-control" name="email" id="email" placeholder="">
-  <label for="email">Email</label>
-</div>
-
-<div class="form-floating mb-3">
-<div class="mb-3">
-  <label for="" class=""></label>
-  <textarea class="form-control" name="" id="" rows="3"></textarea>
-</div>
-  <label for="formId1">Name</label>
-</div>
-      </form>
-    </div>
-    </div>
+<div class="hero-image d-flex flex-column align-items-center justify-content-center">
+  <div class="text-center">
+    <h1 v-motion-slide-top :delay="200" id="shadow1"
+      class=" font-1 text-shadow page-title courgette fw-bolder text-light">
+      You Are One Yoga Class Away
+    </h1>
+    <p v-motion-slide-top :delay="400" class=" display-6 font-2 text-shadow">From A Good Mood</p>
   </div>
 </div>
 </div>
@@ -73,7 +41,6 @@ props:{
 </script>
 
 <style lang="scss" scoped>
-
 .hero-image{
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */
@@ -84,4 +51,21 @@ props:{
   background-attachment: fixed; 
 }
 
+.page-title {
+  font-size: 10rem;
+}
+
+.heroImage {
+  height: 100vh;
+  /* always scale the image to the appropriate size of your screen */
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1643915889122-4376c8deb317?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
+  background-position: center;
+  /* keeps the image fixed while scrolling , neat effect. */
+  background-attachment: fixed;
+}
+
+.story-text {
+  font-size: 20pt;
+}
 </style>
