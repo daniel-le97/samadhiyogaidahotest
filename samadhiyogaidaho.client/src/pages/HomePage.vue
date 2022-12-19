@@ -9,7 +9,7 @@
           class="hero-image d-flex flex-column justify-content-center align-items-center"
         >
           <div style="margin-top: 80px" class="text-shadow container">
-            <h5
+            <!-- <h5
               v-motion
               :initial="{
                 y: 100,
@@ -28,10 +28,10 @@
               class="display-4 font-1 text-light text-start mb-0"
             >
               LEARN HOW TO SEE YOURSELF
-            </h5>
+            </h5> -->
             <h5
               v-motion-slide-top
-              :delay="1000"
+              :delay="600"
               class="fs-2 font-2 text-light text-uppercase"
             >
               <br />
@@ -41,11 +41,25 @@
             </h5>
 
             <h1
-              v-motion-slide-left
-              :delay="1600"
+               v-motion
+              :initial="{
+                y: -100,
+                opacity: 0,
+              }"
+              :enter="{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  type: 'spring',
+                  stiffness: 250,
+                  damping: 25,
+                  mass: 2.5,
+                },
+              }"
+              :delay="1000"
               class="display-2 text-light font-1"
             >
-              ESCAPE WITH SAMADHI YOGA IDAHO
+            WONDER WITH SAMADHI YOGA IDAHO
             </h1>
           </div>
 
@@ -166,11 +180,8 @@
     <section>
       <ScheduleSection />
     </section>
-    <!-- <section id="Booking-Section" class="my-5">
-      <ServicesSection />
-    </section> -->
-
-    <section id="Team-Section" class="bg-pink">
+  
+    <section id="About-Katie-Section" class="bg-pink">
       <div class="container p-5 position-relative">
         <div class="floating-image-1">
           <PersonComponent />
@@ -185,21 +196,21 @@
             </h1>
             <h2
               v-motion-slide-visible-left
-              class="display-6 font-1 underline text-lightPink darken-20 mb-md-2"
+              class="display-6 font-2 underline text-lightPink darken-20 mb-md-2"
             >
               Experienced,
             </h2>
 
             <h2
               v-motion-slide-visible-left
-              class="display-6 font-1 underline text-lightPink darken-20 mb-md-2 me-md-2"
+              class="display-6 font-2 underline text-lightPink darken-20 mb-md-2 me-md-2"
             >
               Qualified,
             </h2>
 
             <h2
               v-motion-slide-visible-left
-              class="display-6 font-1 underline text-lightPink darken-20 mb-md-2"
+              class="display-6 font-2 underline text-lightPink darken-20 mb-md-2"
             >
               Passionate
             </h2>
@@ -207,29 +218,30 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container-fluid">
         <div class="row g-5 justify-content-center">
           <div
             v-motion-pop-visible
-            class="col-md-4 d-flex justify-content-center flex-column align-items-center team-member-card"
+            class="col-md-6  "
           >
             <img
               src="https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/306519061_129159436532870_6494007048333346057_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZyXKoZ6J5CIAX-iRhfY&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCPQrcs1-iLVW0CLPjhl0-intGdQOE1_KoCweThnqKaAg&oe=639D65A6"
               alt="Katie Alverson"
-              class="profile-image elevation-6"
+              class="img-fluid elevation-6 rounded"
             />
 
-            <div v-motion-fade-visible :delay="200" class="text-center mt-3">
-              <h6 class="mb-0 fs-4 fw-bold">Katie Alverson</h6>
-              <p class="fs-5">Founder, Owner & Teacher</p>
-            </div>
+         
+          </div>
+          <div class="col-md-6">
+               <h6 class="mb-0 fs-4 fw-bold text-center">Founder, Owner, Teacher</h6>
+            <p class=" text-start fs-4 font-2">I believe that to question, to inquire, to seek understanding is a core part of what it means to be human. Whether its at home or away on a retreat, they are always inspired by the experiences of life. the core of a healthy person is in the wellbeing of their body, mind, and soul.</p>
           </div>
         </div>
-        <div class="learn-more d-flex justify-content-end mt-2">
+        <div class=" d-flex justify-content-end ">
           <router-link
             @click="scrollToTop()"
             :to="{ name: 'About' }"
-            class="fs-3 btn bg-success font-2"
+            class="fs-3 btn bg-dark font-2 my-4"
           >
             Learn More
           </router-link>
@@ -288,6 +300,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/main.scss";
+.section-sub-title{
+
+}
 .service-card {
   img {
     filter: brightness(80%);
@@ -343,12 +359,7 @@ export default {
   }
 }
 
-.profile-image {
-  width: 30rem;
-  height: 30rem;
-  object-fit: cover;
-  border-radius: 4px;
-}
+
 
 .hero-image {
   width: 100%;
