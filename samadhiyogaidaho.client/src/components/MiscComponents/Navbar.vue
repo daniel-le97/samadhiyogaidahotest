@@ -136,7 +136,7 @@ export default {
 }
 
 .nav {
-background: linear-gradient(to bottom,  rgba(5, 5, 5, 0.65) 30%,rgba(255, 0, 0, 0) 100%);
+background: linear-gradient(to bottom,  rgba(5, 5, 5, 0.65) 30%,rgba(17, 16, 16, 0) 100%);
 }
 /*
 
