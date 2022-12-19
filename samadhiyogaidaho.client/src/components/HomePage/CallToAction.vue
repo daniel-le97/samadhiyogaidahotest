@@ -1,11 +1,11 @@
 <template>
   <div class="component">
  <div class="container p-5 bg-white">
-      <div class="row">
-        <div class="col-md-12">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
           <h1
             v-motion-slide-visible-left
-            class="display-1 font-1 underline text-start text-dark mt-5 mt-md-0"
+            class="display-1 font-1 underline text-center text-dark  mt-5 mt-md-0"
           >
             Welcome Beautiful Soul
           </h1>
@@ -18,16 +18,25 @@
             Our Core Belief
           </h2>
 
-          <p v-motion-fade-visible class="text-start fs-4 px-md-5 ">
-            We started <b>Samadhi Yoga Idaho</b> based on the idea that people
-            want to be at peace with who they truly are, and that they can be
-            authentic with themselves at every point of their lives.
+    
+        </div>
+            <div class="col-md-6 text-center">
+            <p v-motion-fade-visible class=" fs-4 px-md-5 ">
+            Is based on the idea that people
+            want to be at peace with who they truly are, and that at every moment is an opportunity where  they can be
+            authentic with themselves in everyday life.
           </p>
 
-          <p v-motion-fade-visible class="text-start fs-4 px-md-5 ">
-           We believe
+          <p v-motion-fade-visible class=" fs-4 px-md-5 ">
+           <b> SamadhiYogaIdaho </b> is a holistic approach
             in using pranayama, asana, journaling, and meditation practices to
             increase our knowledge of <em>self</em>, <em>life</em>, <em>mobility</em> and to help every person recognize their <em>worthiness</em> , <em>beauty</em>, and <em>uniqueness</em>. 
+          </p>
+          <p class="fs-4"> Escape with us and learn how to see yourself without judgment</p>
+          <p>
+              <a href="#newsletter" class="btn bg-warning selectable fs-3 px-4">
+              Begin Your Journey</a
+            >
           </p>
         </div>
       </div>
@@ -103,6 +112,5 @@ export default {
 
 
 <style lang="scss" scoped>
-
 
 </style>

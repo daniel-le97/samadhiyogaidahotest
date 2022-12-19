@@ -28,6 +28,23 @@
   <section>
   
     <div class="container">
+
+<div class="row my-5 justify-content-center">
+  <div class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center">
+    <blockquote class="font-1 quote ">On an inhale, think of the things that are no longer serving you, whatever that may be.
+
+Maybe it’s a thought
+Maybe it’s a feeling
+Maybe it’s a person
+Or an experience
+
+But taking it,
+
+And on an exhale, choosing consciously to let it go.</blockquote>
+<cite>- SamadhiYogaIdaho</cite>
+  </div>
+</div>
+
       <div class="row my-4">
         <div class="col-md-12">
           <h1 class="font-1 text-dark display-4">{{ retreat.title }}</h1>
@@ -366,7 +383,8 @@
   </section>
 
   <section>
-    <div class="container my-5">
+    <div class="container my-5 ">
+    
       <div class="row">
         <div class="col-md-12 mb-4">
           <h1 class="display-2 font-1">Check Out Our Past Retreats</h1>
@@ -432,6 +450,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.parallax{
+    background-size: cover;
+      height: 40vh;
+        background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1624704200567-760cf26ae848?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-attachment: fixed;
+}
+.quote{
+  font-size: 1.25rem;
+}
 .hero-image {
   .page-title {
     font-size: 10rem;
