@@ -4,7 +4,7 @@
     <div class="hero-image d-flex flex-column align-items-center justify-content-center">
       <div class="text-center">
         <h1 v-motion-slide-top :delay="200" id="shadow1"
-          class=" font-1 text-shadow page-title courgette fw-bolder text-light">
+          class="story-text font-1 text-shadow page-title courgette fw-bolder text-light">
           One Yoga Class
         </h1>
         <p v-motion-slide-top :delay="400" class=" display-6 font-2 text-shadow">Away From A Good Mood</p>
@@ -234,6 +234,12 @@ export default {
 }
 
 .story-text {
-  font-size: 20pt;
+  font-size: 10rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .story-text {
+    font-size: 60pt;
+  }
 }
 </style>
