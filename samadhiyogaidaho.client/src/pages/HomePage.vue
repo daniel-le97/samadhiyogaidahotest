@@ -239,6 +239,10 @@
           <div class="col-md-6">
                <h6 class="mb-0 fs-4 fw-bold text-center">Founder, Owner, Teacher</h6>
             <p class=" text-start fs-4 font-2">I believe that to question, to inquire, to seek understanding is a core part of what it means to be human. Whether its at home or away on a retreat, they are always inspired by the experiences of life. the core of a healthy person is in the wellbeing of their body, mind, and soul.</p>
+
+            <div class="">
+              <img src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg" alt="" width="150" height="150" class="rounded-circle elevation-orange">
+            </div>
           </div>
         </div>
         <div class=" d-flex justify-content-end ">

@@ -12,12 +12,12 @@
 </div>
   </div>
 
-  <div class="row">
-    
-    <img src="https://www.instagram.com/p/CmWqrGPOKbt/" alt="">
-    <!-- <div class="col-md-2" v-for="i in instagramFeed">
-<img :src="i" alt="" class="forcedImg">
-    </div> -->
+  <div class="row justify-content-center">
+    <div class="col-md-2 p-0 m-0 g-0 d-flex justify-content-center" v-for="i in 6">
+
+      <img :src="`https://source.unsplash.com/random/${i}`" alt=""  width="200" height="200">
+    </div>
+
   </div>
 </div>
 
