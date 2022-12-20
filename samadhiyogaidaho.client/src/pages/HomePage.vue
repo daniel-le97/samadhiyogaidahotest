@@ -257,11 +257,13 @@
       <TestimonialSection />
     </section>
 
-    <section id="Retreat-Section" class="bg-pink">
+    <!-- <section id="Retreat-Section" class="bg-pink">
       <RetreatAndEvents />
-    </section>
+    </section> -->
 
-   
+   <section class="bg-pink">
+    <InstagramFeed/>
+   </section>
   </div>
 </template>
 
@@ -280,12 +282,23 @@ import ServicesSection from "../components/HomePage/ServicesSection.vue";
 import Pop from "../utils/Pop.js";
 import { youtubeService } from "../services/YoutubeService.js";
 import { onMounted } from "vue";
+import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
+import { firebaseService } from "../services/FirebaseService.js";
 export default {
   setup() {
 
     onMounted(()=>{
       // getYoutubeVideos()
+      // getPastRetreatImages()
     })
+
+    async function getPastRetreatImages(){
+      try {
+          await firebaseService.getPastRetreatsImages() 
+        } catch (error) {
+          Pop.error(error,'[]')
+        }
+    }
     async function getYoutubeVideos(){
       try {
           await youtubeService.getPlayList()
@@ -310,7 +323,8 @@ export default {
     CommentBox,
     ScheduleSection,
     ServicesSection,
-  },
+    InstagramFeed
+},
 };
 </script>
 

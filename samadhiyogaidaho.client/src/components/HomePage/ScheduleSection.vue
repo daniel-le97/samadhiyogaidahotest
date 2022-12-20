@@ -31,26 +31,25 @@
         <div
            v-motion-pop-visible
         class=" mb-5 mb-md-0 ">
-          <img
+             <router-link
+              :to="{ name: 'Retreat' }"
+              @click="scrollToTop()"
+            >
+             <img
             src="../../assets/img/purpleroom2.png"
             alt=""
-            class=" img-fluid rounded-1 elevation-6"
+            class=" img-fluid rounded-1 elevation-6 hover-image"
           />
       
+            </router-link>
+        
           <div class="card-body">
             <div class=" text-pink darken-30 font-2 fs-2 my-3">Classes</div>
             <div class="">
               <p class="font-2 fs-4 text-start" style="z-index:99999;">
                Monday & Wednesday you can catch us at 6AM at HollyWood Market Yoga Where we hold Level 1-2 Vinyasa Style Yoga ( Commonly referred to as “flow”)
               </p>
-               <router-link
-              :to="{ name: 'Retreat' }"
-              @click="scrollToTop()"
-            >
-              <button class="btn btn-dark display-1 fs-4 font-2">
-                More Information
-              </button>
-            </router-link>
+          
             </div>
           </div>
         </div>
@@ -60,11 +59,17 @@
         <div
            v-motion-pop-visible
         class=" mb-5 mb-md-0 ">
-          <img
+             <router-link
+              :to="{ name: 'Retreat' }"
+              @click="scrollToTop()"
+            >
+             <img
             src="../../assets/img/YoutubeOffering.png"
             alt=""
-            class=" img-fluid rounded-1 elevation-6"
+            class=" img-fluid rounded-1 elevation-6 hover-image"
           />
+            </router-link>
+        
       
           <div class="card-body">
             <div class=" text-pink darken-30 font-2 fs-2 my-3">Online Classes</div>
@@ -72,43 +77,37 @@
               <p class="font-2 fs-4 text-start" style="z-index:99999;">
                 Starting in 2022 I began recording a mix of Online class series, and recorded content that can be accessed on your own time. Our online offerings are to meant to help you experience the beauty and art of transformation that takes place within yoga from the comfort of your own home and integrate it into your daily life
               </p>
-               <router-link
-              :to="{ name: 'Retreat' }"
-              @click="scrollToTop()"
-            >
-              <button class="btn btn-dark display-1 fs-4 font-2">
-                More Information
-              </button>
-            </router-link>
+          
             </div>
           </div>
         </div>
       </div>
 
   <div class="col-md-4">
+      
         <div
            v-motion-pop-visible
         class=" mb-5 mb-md-0 ">
-          <img
+  <router-link
+              :to="{ name: 'Retreat' }"
+              @click="scrollToTop()"
+            >
+             <img
             src="../../assets/img/retreatCoverImage.png"
             alt=""
-            class=" img-fluid rounded-1 elevation-6"
+            class=" img-fluid rounded-1 elevation-6 hover-image"
           />
+            </router-link>
+         
       
           <div class="card-body">
             <div class=" text-pink darken-30 font-2 fs-2 my-3">Our Retreats</div>
             <div class="">
               <p class="font-2 fs-4 text-start" style="z-index:99999;">
-                Starting in 2022 I began recording a mix of Online class series, and recorded content that can be accessed on your own time. Our online offerings are to meant to help you experience the beauty and art of transformation that takes place within yoga from the comfort of your own home and integrate it into your daily life
+                 Are you feeling the need to get away with your partner not just to relax, but to also delve deeper into your relationship?
+               It's time to stop putting yourself and your partner on the back burner and give yourselves a long weekend away from it all. A weekend full of relaxation, connection, and love.
               </p>
-               <router-link
-              :to="{ name: 'Retreat' }"
-              @click="scrollToTop()"
-            >
-              <button class="btn btn-dark display-1 fs-4 font-2">
-                More Information
-              </button>
-            </router-link>
+           
             </div>
           </div>
         </div>

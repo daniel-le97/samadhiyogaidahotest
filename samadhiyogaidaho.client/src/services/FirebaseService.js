@@ -1,4 +1,4 @@
-import { ref } from "vue";
+
 import {  storage } from "../../lib/firebase.js";
 import { AppState } from "../AppState.js";
 import { generateId } from "../utils/Helper.js";
@@ -23,7 +23,7 @@ class FirebaseService {
       totalBytes = task.totalBytes / 3
       bytes = task.bytesTransferred / 3
       AppState.uploadedImgs = bytes/totalBytes
-      console.log(AppState.uploadedImgs);
+      // console.log(AppState.uploadedImgs);
       const img = await this.getURL(ref);
       imgs.push(img);
     }
@@ -39,6 +39,13 @@ class FirebaseService {
     } catch (error) {
       logger.error(error)
     }
+  }
+
+
+  async getPastRetreatsImages(){
+const imgs = []
+const ref =storage.ref('past-retreat-images')
+;
   }
 }
 export const firebaseService = new FirebaseService();
