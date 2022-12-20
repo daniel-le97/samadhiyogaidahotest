@@ -35,7 +35,7 @@ export default {
   setup() {
     return {
       modules: [EffectCards],
-      images: computed(() => AppState.currentRetreat?.food.imgs),
+      images: computed(() => AppState.currentRetreat?.food?.imgs),
     };
   },
 };
