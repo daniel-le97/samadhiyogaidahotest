@@ -23,12 +23,9 @@ class FirebaseService {
       totalBytes = task.totalBytes / 3
       bytes = task.bytesTransferred / 3
       AppState.uploadedImgs = bytes/totalBytes
-      console.log(AppState.uploadedImgs);
       const img = await this.getURL(ref);
       imgs.push(img);
     }
-
-    // console.log(imgs);
     return imgs;
   }
   async getURL(ref) {

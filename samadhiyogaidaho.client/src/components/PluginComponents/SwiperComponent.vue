@@ -181,6 +181,7 @@
 
   // Import Swiper styles
   import 'swiper/css';
+import { logger } from '../../utils/Logger';
 
   export default {
     components: {
@@ -189,10 +190,10 @@
     },
     setup() {
       const onSwiper = (swiper) => {
-        console.log(swiper);
+        logger.log(swiper);
       };
       const onSlideChange = () => {
-        console.log('slide change');
+        logger.log('slide change');
       };
       return {
         onSwiper,

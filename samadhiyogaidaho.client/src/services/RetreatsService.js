@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { Retreat } from "../models/Retreat.js";
+import { logger } from "../utils/Logger.js";
 import { api } from "./AxiosService.js";
 
 class RetreatsService {
@@ -9,22 +10,19 @@ class RetreatsService {
   }
   async getCurrentRetreat() {
     const res = await api.get("api/retreats");
-    // console.log(res.data[0]);
     // AppState.currentRetreat = new Retreat(res.data);
   }
   async getAllRetreats() {
     const res = await api.get("api/retreats");
-console.log(res.data);
+    logger.log(res.data);
 
-  res.data.map(r => {
-    if (r.archived == false) {
-      AppState.currentRetreat = new Retreat(r)
-    }
-    else AppState.archivedRetreats.push(new Retreat(r))
-  })
+    res.data.map((r) => {
+      if (r.archived == false) {
+        AppState.currentRetreat = new Retreat(r);
+      } else AppState.archivedRetreats.push(new Retreat(r));
+    });
 
-    console.log(AppState.archivedRetreats);
-
+    logger.log(AppState.archivedRetreats);
   }
 }
 

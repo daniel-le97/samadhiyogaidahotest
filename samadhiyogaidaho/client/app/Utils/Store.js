@@ -1,4 +1,5 @@
 import { Pop } from "./Pop.js"
+import { logger } from "../Utils/Logger";
 
 const APP_NAME = "samadhiyogaidaho"
 
@@ -14,7 +15,7 @@ export function saveState(key, value) {
       window.localStorage.removeItem(keyName)
     }
   } catch (error) {
-    console.error('[SAVING_STATE]', { key, value })
+    logger.error('[SAVING_STATE]', { key, value })
     Pop.error(error)
   }
 }
@@ -34,7 +35,7 @@ export function loadState(key, instanceType) {
     }
     return data
   } catch (error) {
-    console.error('[ATTEMPTING_TO_LOAD_STATE]', { key, instanceType })
+    logger.error('[ATTEMPTING_TO_LOAD_STATE]', { key, instanceType })
     Pop.error(error)
   }
 }

@@ -20,6 +20,7 @@ import ActiveImage from "./components/ActiveImage.vue";
 import Footer from "./components/MiscComponents/Footer.vue";
 import Navbar from "./components/MiscComponents/Navbar.vue";
 import ModalComponent from "./components/MiscComponents/ModalComponent.vue";
+import { logger } from "./utils/Logger";
 
 export default {
   setup() {
@@ -28,16 +29,15 @@ export default {
       getRoute()
     });
     function getRoute(){
-      console.log(route.name);
+      logger.log(route.name);
     }
 
     function hideOnScrollTest() {
       let nav = document.querySelector("#nav");
       let prevScrollpos = window.scrollY;
-      // console.log(["prev"], prevScrollpos);
+
       window.onscroll = function () {
         let currentScrollPos = window.scrollY;
-        // console.log(["current"], currentScrollPos);
         if (prevScrollpos > currentScrollPos) {
           nav.style.top = "0";
           nav.style.transition = "all .50s ease";
