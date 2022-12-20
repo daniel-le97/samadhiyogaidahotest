@@ -34,16 +34,16 @@ export default {
   props: {},
   setup(props) {
     const editable = ref({});
-    onMounted(() => {
-      getEvents()
-    });
-    async function getEvents(){
-      try {
-          await eventsService.getEvents()
-        } catch (error) {
-          logger.error(error,'[getEvents]')
-        }
-    }
+    // onMounted(() => {
+    //   getEvents()
+    // });
+    // async function getEvents(){
+    //   try {
+    //       await eventsService.getEvents()
+    //     } catch (error) {
+    //       logger.error(error,'[getEvents]')
+    //     }
+    // }
     watchEffect(() => {});
     return {
       editable,
