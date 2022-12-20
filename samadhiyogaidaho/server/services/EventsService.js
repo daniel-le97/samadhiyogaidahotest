@@ -6,7 +6,7 @@ import { getAdmins } from "./AccountService";
 class EventsService {
   async getAllEvents() {
     const events = await dbContext.Events.find();
-    return events
+    return events;
   }
   async deleteEvent(userId, eventId) {
     await getAdmins(userId);
@@ -32,8 +32,9 @@ class EventsService {
   async updateEvent(eventId, eventData, userId) {
     await getAdmins(userId);
     let event = await this.getEventById(eventId);
-    let newEvent = await updateObject(eventData, event);
-    await newEvent.save()
+   
+    let newEvent = await update(eventData, event);
+    // await newEvent.save();
     return newEvent;
   }
   // event.title = eventData.title || event.title;
@@ -45,7 +46,12 @@ class EventsService {
   // event.isArchived = eventData.isArchived || event.isArchived;
   // await event.save();
 }
-export async function updateObject(newData, originalData) {
+
+/**
+ * @param {Object} newData data to replace existing fields
+ * @param {object} originalData old data to update
+ */
+export async function update(newData, originalData) {
   for (const key in newData) {
     if (originalData[key]) {
       originalData[key] = newData[key] ? newData[key] : originalData[key];
@@ -53,5 +59,32 @@ export async function updateObject(newData, originalData) {
   }
   return originalData;
 }
+// export async function updateObject(newData, originalData) {
+//   for (const key in newData) {
+//     if (originalData[key]) {
+//       let prop = originalData[key];
+//       if (typeof prop == Array) {
+//         originalData[key] = await sortArray(prop, newData[key]);
+//       } else {
+//         originalData[key] = await sortObject(prop, newData[key]);
+//       }
+//     }
+//   }
+//   return originalData;
+// }
+// async function sortArray(original, subData) {
+//   for (const prop of subData) {
+//     for (const key of original) {
+//       prop = key ? key : prop;
+//     }
+//   }
+//   return original;
+// }
+// function sortObject(prop, subData) {
+//   for (const subKey in subData) {
+//       prop[subKey] = subData[subKey] ? subData[subKey] : prop[subKey];
+//   }
+//   return prop;
+// }
 
 export const eventsService = new EventsService();
