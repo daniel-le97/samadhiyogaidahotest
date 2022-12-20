@@ -21,6 +21,7 @@ ${{event.cost }}  per   <img src="https://cdn-icons-png.flaticon.com/512/8927/89
 
    </div>
   </div>
+  <hr class="mt-4">
 </template>
 
 <script>

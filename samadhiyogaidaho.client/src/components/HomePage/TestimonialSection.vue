@@ -20,7 +20,7 @@
 
     <div class="container mt-5 mt-md-0">
       <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-8">
           <TestimonialSwiper />
         </div>
       </div>

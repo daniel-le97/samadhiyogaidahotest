@@ -17,7 +17,7 @@
 
     <div class="container-fluid" style="margin-top: 100px">
       <div class="row justify-content-center">
-        <div class="col-md-6 p-5 d-flex justify-content-center">
+        <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
             class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
           >
@@ -34,7 +34,7 @@
           </div>
         </div>
   
-        <div class="col-md-6 p-5 d-flex justify-content-center">
+        <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
             class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
           >
@@ -49,7 +49,7 @@
           </div>
         </div>
   
-        <div class="col-md-6 p-5 d-flex justify-content-center">
+        <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
             class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
           >
@@ -65,7 +65,7 @@
           </div>
         </div>
   
-        <div class="col-md-6 p-5 d-flex justify-content-center">
+        <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
             class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
           >
@@ -98,6 +98,11 @@ If you have a group of people you’re interested in getting together for a fun 
       </div>
     </div>
   </section>
+  <section>
+     <section id="Video-Section">
+      <YouTubeSection />
+    </section>
+  </section>
 </template>
 
 <script>
@@ -105,6 +110,7 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
@@ -118,7 +124,7 @@ export default {
             editable,
         };
     },
-    components: { ParticleComponent }
+    components: { ParticleComponent, YouTubeSection }
 };
 </script>
 

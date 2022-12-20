@@ -344,7 +344,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
   </section>
 
   <section>
-    <div class="container my-3">
+    <div class="container my-5">
       <div class="row">
         <div class="col-md-12">
           <h1 class="display-3 font-2 underline">FAQS</h1>
@@ -382,6 +382,11 @@ And on an exhale, choosing consciously to let it go.</blockquote>
     </div>
   </section>
 
+  <section class="my-5">
+      <div class="container-fluid parallax" >
+      
+      </div>
+  </section>
   <section>
     <div class="container my-5 ">
     
@@ -452,10 +457,11 @@ export default {
 <style lang="scss" scoped>
 
 .parallax{
+ 
     background-size: cover;
       height: 40vh;
         background-position: center;
-  background-image: url(https://images.unsplash.com/photo-1624704200567-760cf26ae848?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-image: url(https://images.unsplash.com/photo-1452109777848-a4de775da10d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80);
   background-attachment: fixed;
 }
 .quote{

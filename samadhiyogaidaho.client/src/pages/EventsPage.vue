@@ -8,24 +8,16 @@
 
 
 <div class="container my-5">
-  <div class="row">
-  <CommentBox>
-        <p class="fs-4 text-start">I have been working hard behind the scenes getting several classes and events set up for 2023! <br>
+      <p class="fs-4 ">
+        We have been working hard behind the scenes getting several classes and events set up for 2023! <br>
         Space will be extremely limited at each event, So please  DM us today or call the Grove Fitness Club & Spa to sign up.
         <br>
 
 Our pop up schedule for 2023 will be posted soon so you can have an idea and plan for events you’d like to attend next year.
 </p>  
 
-  </CommentBox>
-  </div>
-
 <hr class="mt-4">
 
-<div class="row">
-  <EventForm/>
-</div>
-<hr class="mt-4">
 
 
 <EventCard :event="e"  v-for="e in events" :key="e.id" />

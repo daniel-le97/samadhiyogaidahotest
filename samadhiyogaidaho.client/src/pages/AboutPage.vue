@@ -37,25 +37,46 @@
               show up and breathe.</p>
           </div>
         </div>
-        <div class="col-md-6 my-5 order-1 order-md-0">
+        <div class="col-md-6 my-5 ">
           <img
             src="https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/306519061_129159436532870_6494007048333346057_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZyXKoZ6J5CIAX-iRhfY&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCPQrcs1-iLVW0CLPjhl0-intGdQOE1_KoCweThnqKaAg&oe=639D65A6"
-            alt="" class="img-fluid framed elevation-5 ms-md-5 ">
+            alt="" class="img-fluid framed elevation-5 ms-md-5 sticky-top " style="z-index:-9;">
         </div>
         
-        <div class="col-md-6 order-0 order-md-1">
+        <div class="col-md-6 ">
           
           <div class="">
             <p class="display-3 font-1"> Katy Alverson</p>
             <p class="display-5">Founder, owner and teacher</p>
-            <p class="text-start p-2 fs-4 mt-md-5">I believe  that to question, to inquire, to seek understanding is
-              a
-              core part of what it means to be human. Whether
-              its at home or away on a retreat, they are always inspired by the experiences of life. the
-              core
-              of a
-              healthy person is in the wellbeing of their body, mind, and soul.</p>
+            <p class="text-start p-2 fs-4 mt-md-5">
+Hi! I’m Katie, and I LOVE to get to share the beauty of yoga with others! I have been practicing yoga for about ten years now, and made the jump in 2021 to train for and receive my 200 hr yoga teacher certification. I specialized in the Baptiste methodology, but now also teach Vinyasa, yin, and power!
+
+
+
+            </p>
+                <p class="text-start p-2 fs-4 mt-md-5">
+I love music with my whole soul and love to incorporate music into my classes. You’ll always catch me flowing to some classic gangster rap or Edm. Ice Cube, Dr. Dre, Eminem, Tupac, Troyboi, and Flume. I love to sing and if your lucky, you might catch me singing in shavasana at the end of your practice.</p>
+                <p class="text-start p-2 fs-4 mt-md-5">I’m a lover of animals, I’m a fur mom to @icecubester @lunameowgood and a beta fish named Ray. I would have an entire farm if I could and rescue all the precious animals in the world.</p>
           </div>
+        </div>
+
+        <div class="col-md-12 my-5">
+          <p class="fs-4 font-2 text-start ">
+            My favorite thing to do in the world is to put together fully-inclusive and restorative yoga retreats for people to get to know themselves and their bodies better. I have always been a planner. I love putting together great events.I used to want to plan peoples weddings, but I thought I’d be better suited to planning reLaxing retreats where I could help others learn more about themselves and re-find that magic that they have within themselves.
+
+          </p>
+             <p class="fs-4 font-2 text-start ">
+When I’m not teaching yoga, planning retreats, or working at my day job in finance, you can catch me spending time with my partner and our fur babies either traveling, exploring breweries and wineries, or spending time with family.
+             </p>
+             <p class="fs-4 font-2 text-start ">
+My favorite place to visit is the ocean, particularly the Oregon coast. I want to travel the world and have plans to host retreats globally all around the world someday.
+             </p>
+             <p class="fs-4 font-2 text-start ">
+I also love to paint, particularly with oil paint, rock climb, hike, workout, and learn as much as possible. On top of everything else, I’m going to school right now to get my bachelors in business management and plan to get my doctorates someday.
+             </p>
+             <p class="fs-4 font-2 text-start ">
+That’s a little about me, thanks for taking the time to get to know me and for supporting me and my business!
+             </p>
         </div>
       </div>
     </div>
@@ -92,14 +113,7 @@ export default {
   font-size: 20pt;
 }
 
-.framed {
-  height: 40em;
-  object-fit: cover;
 
-  box-shadow:
-    -50px -50px 0 -40px var(--darkPink),
-    50px 50px 0 -40px var(--darkPink);
-}
 
 @media only screen and (max-width: 768px) {
   .story-text {

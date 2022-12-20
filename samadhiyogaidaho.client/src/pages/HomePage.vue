@@ -71,7 +71,7 @@
           />
         </div> -->
 
-          <div
+          <!-- <div
             v-motion-slide-top
             class="join-newsletter-button flex-column d-flex"
           >
@@ -82,7 +82,7 @@
               Join Our NewsLetter</a
             >
           
-          </div>
+          </div> -->
         </div>
       </div>
       <GentleWave />
@@ -90,9 +90,10 @@
 
     <section id="Call-To-Action-Section">
       <CallToAction />
+   
     </section>
 
-    <section id="YinYoga-Section" class="bg-pink my-5">
+    <!-- <section id="YinYoga-Section" class="bg-pink my-5">
       <div class="container p-5 mt-5">
         <div class="row">
           <div class="col-md-12">
@@ -174,7 +175,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
+
+
+
+
     <section>
       <ScheduleSection />
     </section>
@@ -216,16 +222,16 @@
         </div>
       </div>
 
-      <div class="container-fluid">
+      <div class="container">
         <div class="row g-5 justify-content-center">
           <div
             v-motion-pop-visible
-            class="col-md-6  "
+            class="col-md-6 p-5 "
           >
             <img
               src="https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/306519061_129159436532870_6494007048333346057_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZyXKoZ6J5CIAX-iRhfY&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCPQrcs1-iLVW0CLPjhl0-intGdQOE1_KoCweThnqKaAg&oe=639D65A6"
               alt="Katie Alverson"
-              class="img-fluid elevation-6 rounded"
+              class="img-fluid elevation-6 rounded framed"
             />
 
          
@@ -241,7 +247,7 @@
             :to="{ name: 'About' }"
             class="fs-3 btn bg-dark font-2 my-4"
           >
-            Learn More
+            Learn more about Katie
           </router-link>
         </div>
       </div>
@@ -255,9 +261,7 @@
       <RetreatAndEvents />
     </section>
 
-    <section id="Video-Section">
-      <YouTubeSection />
-    </section>
+   
   </div>
 </template>
 
@@ -267,15 +271,28 @@ import GentleWave from "../components/PluginComponents/GentleWave.vue";
 import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
 import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
-import YouTubeSection from "../components/HomePage/YouTubeSection.vue";
+import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
 import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue";
 import { defineAsyncComponent } from "vue";
 import CommentBox from "../components/MiscComponents/CommentBox.vue";
 import ScheduleSection from "../components/HomePage/ScheduleSection.vue";
 import ServicesSection from "../components/HomePage/ServicesSection.vue";
-
+import Pop from "../utils/Pop.js";
+import { youtubeService } from "../services/YoutubeService.js";
+import { onMounted } from "vue";
 export default {
   setup() {
+
+    onMounted(()=>{
+      // getYoutubeVideos()
+    })
+    async function getYoutubeVideos(){
+      try {
+          await youtubeService.getPlayList()
+        } catch (error) {
+          Pop.error(error,'[]')
+        }
+    }
     return {
       scrollToTop() {
         window.scrollTo(0, 0);

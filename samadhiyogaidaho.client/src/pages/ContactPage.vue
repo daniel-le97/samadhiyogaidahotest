@@ -10,7 +10,7 @@
         :initial="{ opacity: 0, y: -100 }"
         :enter="{ opacity: 1, y: 0, scale: 1 }"
         :variants="{ custom: { scale: 2 } }"
-        :delay="600"
+        :delay="200"
         class="display-1 text-light font-1 page-title"
       >
         Connect 

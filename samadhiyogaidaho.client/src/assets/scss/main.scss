@@ -216,3 +216,11 @@ cite {
 	line-height: 3;
 	text-align: left;
 }
+.framed {
+  height: 40em;
+  object-fit: cover;
+
+  box-shadow:
+    -50px -50px 0 -40px var(--darkPink),
+    50px 50px 0 -40px var(--darkPink);
+}
