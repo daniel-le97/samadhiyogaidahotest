@@ -278,9 +278,9 @@
 </template>
 
 <script>
-import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+// import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
 import GentleWave from "../components/PluginComponents/GentleWave.vue";
-import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
+// import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
 import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
 import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
@@ -303,6 +303,7 @@ export default {
 
     async function getPastRetreatImages() {
       try {
+        const {firebaseService} = async() => await import(`../services/FirebaseService`)
         await firebaseService.getPastRetreatsImages();
       } catch (error) {
         Pop.error(error, "[]");
@@ -318,8 +319,8 @@ export default {
     return {};
   },
   components: {
-    SwiperComponent2,
-    ParticleComponent,
+    SwiperComponent2 : defineAsyncComponent(() => import(`../components/HomePage/TestimonialSwiper.vue`)) ,
+    ParticleComponent : defineAsyncComponent(() => import(`../components/PluginComponents/ParticleComponent.vue`)),
     GentleWave,
     CallToAction,
     TestimonialSection,
