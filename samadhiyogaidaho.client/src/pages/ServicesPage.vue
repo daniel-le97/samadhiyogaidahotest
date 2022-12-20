@@ -21,15 +21,15 @@
     </div>
   </section>
 
-  <section>
+  <!-- <section>
     <div class="container-fluid" style="margin-top: 100px">
       <div class="row justify-content-center">
         <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
-            class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
+            class="card rounded-circle text-dark border-0 elevation-5 "
           >
             <img
-              class="card-img rounded-circle"
+              class="img-fluid rounded-circle"
               src="https://images.unsplash.com/photo-1610344264630-e77bc4bf5983?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA3fHx5b2dhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
               alt="Title"
             />
@@ -43,10 +43,10 @@
 
         <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
-            class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
+            class="card  rounded-circle text-dark border-0 elevation-5 "
           >
             <img
-              class="card-img rounded-circle"
+              class="img-fluid rounded-circle"
               src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
               alt="Title"
             />
@@ -58,10 +58,10 @@
 
         <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
-            class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
+            class="card  rounded-circle text-dark border-0 elevation-5 "
           >
             <img
-              class="card-img rounded-circle"
+              class="img-fluid rounded-circle"
               src="https://images.unsplash.com/photo-1499728603263-13726abce5fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
               alt="Title"
             />
@@ -73,10 +73,10 @@
 
         <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
-            class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
+            class="card rounded-circle text-dark border-0 elevation-5 "
           >
             <img
-              class="card-img rounded-circle"
+              class="img-fluid rounded-circle"
               src="https://images.unsplash.com/photo-1636619297905-54f124aa90b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
               alt="Title"
             />
@@ -87,7 +87,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <section>
     <div class="container my-5">
       <div class="row">
@@ -119,6 +119,32 @@
           </p>
         </div>
       </div>
+  <div class="row">
+     
+        <div class="col-md-6">
+          <p class="fs-4 fw-bold text-center">   Why would someone want a private yoga lesson?</p>
+          <p class="fs-4 text-start">
+         
+
+  It’s an opportunity for so many things. To improve your practice, to improve your postures and make sure they’re anatomically correct, to work more in-depth on a certain area, and so much more.
+<br>
+
+  There are so many little adjustments that so many of us don’t recognize that we need. Proper alignment in Warrior II can prevent damage to joint structures, especially in your knees. This is vital because the knee is one of the most mechanically complex joints in the body.
+<br>
+
+  Interested in your own private yoga lesson to see where they can possibly help you and your practice? See our last post for an opportunity to win an amazing giveaway worth over $200, one of the things included being an hour long yoga session! Or go ahead and message us today to book yours!
+          </p>
+        </div>
+           <div class="col-md-6">
+          <img
+            src="../assets/img/PrivateLesson.png"
+            alt=""
+            class="img-fluid rounded elevation-6 hover-image"
+          />
+        </div>
+      </div>
+
+     
     </div>
   </section>
   <section>
@@ -162,11 +188,7 @@ export default {
   background-attachment: fixed;
 }
 
-.card img {
-  height: 320px;
-  width: 320px;
-  object-fit: cover;
-}
+
 
 .card-img-overlay {
   opacity: 0;
@@ -174,9 +196,6 @@ export default {
   transition: all 0.25s ease;
 }
 
-.card img {
-  transition: all 0.25s ease;
-}
 
 .card:hover {
   transition: all 0.25s ease;

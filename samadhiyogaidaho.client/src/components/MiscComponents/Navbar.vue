@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark text-dark  px-3 fixed-top font-2 nav py-5">
-    <div class="d-flex mx-auto">
+    <div class="d-md-flex mx-auto">
       <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
         <div class="d-flex flex-column align-items-center">
           <!-- <img
@@ -121,7 +121,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .nav-link {
   text-transform: uppercase;
   color: #ffffff;
@@ -137,6 +137,11 @@ export default {
 
 .nav {
 background: linear-gradient(to bottom,  rgba(5, 5, 5, 0.65) 0%,rgba(0, 0, 0, 0) 100%);
+
+ @media only screen and (max-width: 768px){
+ background: #ffa67cc2;
+  }
+
 }
 /*
 
@@ -164,5 +169,8 @@ background: linear-gradient(to bottom,  rgba(23, 50, 51, 0.65) 0%,rgba(255, 0, 0
   nav {
     height: 200px;
   }
+ 
 }
+
+
 </style>

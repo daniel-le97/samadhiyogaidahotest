@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <div class="container mt-5 mt-md-0">
+  <div class="container ">
     <div class="row justify-content-center">
       <div class="col-md-8">
         <TestimonialSwiper />

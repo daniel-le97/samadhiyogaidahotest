@@ -1,11 +1,11 @@
 <template>
-  <div class="component">
+
     <div class="container p-5 bg-white">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center">
           <h1
             v-motion-slide-visible-once-left
-            class="display-1 font-1 underline text-center text-dark mt-5 mt-md-0"
+            class="display-1 font-1 underline text-center text-dark mt-md-5 "
           >
             Welcome Beautiful Soul
           </h1>
@@ -18,7 +18,7 @@
             Our Core Belief
           </h2>
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-md-8 text-center">
           <p v-motion-fade-visible class="fs-4 px-md-5">
             Is based on the idea that people want to be at peace with who they
             truly are, and that at every moment is an opportunity where they can
@@ -42,9 +42,46 @@
           </p>
         </div>
       </div>
+
+      <div class="row my-md-5">
+        <div class="col-md-4">
+<div class="card  border-0 elevation-6 p-2" v-motion-fade-visible-once :delay="300">
+<div class="card-title font-2 fs-3 text-center">
+  Vinyasa Flow
+
+</div>
+<div class="card-body text-center font-2 fs-5">
+  Vinyasa Flow is a continuous flow of postures linked together by the breath. Classes build heat, endurance, flexibility, strength, and conscious breathing.
+</div>
+</div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+<div class="card  border-0 elevation-6 p-2" v-motion-fade-visible-once :delay="300">
+<div class="card-title font-2 fs-3 text-center">
+ Pranayama & Meditation
+
+</div>
+<div class="card-body text-center font-2 fs-5">
+Pranayama (Breath control) an ancient tradition, is the conscious awareness of breath using specific rhythms & techniques to bring us to the present moment increasing our self-awareness.
+</div>
+</div>
+        </div>
+        <div class="col-md-4">
+<div class="card  border-0 elevation-6 p-2" v-motion-fade-visible-once :delay="300">
+<div class="card-title font-2 fs-3 text-center">
+ Journaling
+
+</div>
+<div class="card-body text-center font-2 fs-5">
+Keeping a yoga journal leads to more mindful yoga practice. You notice the sensations of each of your movements, drawing your mind into the present moment, so you can really appreciate the process of your yoga practice.
+</div>
+</div>
+        </div>
+    
+      </div>
     </div>
 
-    <div class="container mb-3">
+    <!-- <div class="container mb-3">
       <div class="row g-2">
         <div class="col-md-4" v-motion-pop-visible-once>
           <div class="card elevation-6 border-0">
@@ -95,8 +132,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </div> -->
+
 </template>
 
 <script>
@@ -107,4 +144,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+
+
+.card{
+  background: rgba(255, 182, 153, 0.096);
+  box-shadow: 0px 10px 24px 6px rgb(0 0 0 / 6%);
+}
+</style>

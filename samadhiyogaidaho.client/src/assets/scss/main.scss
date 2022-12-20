@@ -80,6 +80,21 @@ body {
 .hover-image{
   transition: all 0.25s ease-in-out;
 }
+
+.zoom-hover{
+    position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.zoom-hover img{
+    width: 100%;
+  transition: 0.5s;
+  border-radius: 6px;
+}
+.zoom-hover:hover img{
+  transform: scale(1.2);
+}
 p{
    font-family: 'Patrick Hand', cursive;
 

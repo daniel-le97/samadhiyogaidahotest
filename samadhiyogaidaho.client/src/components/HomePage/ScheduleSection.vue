@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-5" style="margin-bottom: 300px">
+  <div class="container p-5 schedule-section ">
     <div class="row">
       <div class="col-md-12 text-center mt-2">
         <h1 v-motion-slide-visible-once-left class="display-1 font-1 underline">
@@ -46,14 +46,17 @@ $
     <div class="row my-4">
       <div class="col-md-4">
         <div v-motion-pop-visible-once class="mb-5 mb-md-0">
-          <router-link :to="{ name: 'Retreat' }" @click="scrollToTop()">
+          <div class="zoom-hover elevation-6">
+   <router-link :to="{ name: 'Retreat' }" @click="scrollToTop()">
             <img
-              src="../../assets/img/purpleroom2.png"
+              src="../../assets/img/servicePhoto2.png"
               alt=""
-              class="img-fluid rounded-1 elevation-6 hover-image"
+              class="img-fluid rounded "
             />
           </router-link>
 
+          </div>
+       
           <div class="card-body">
             <div class="text-pink darken-30 font-2 fs-2 my-3">Classes</div>
             <div class="">
@@ -70,17 +73,20 @@ $
 
       <div class="col-md-4">
         <div v-motion-pop-visible-once class="mb-5 mb-md-0">
-          <router-link :to="{ name: 'Retreat' }" @click="scrollToTop()">
+          <div class="zoom-hover elevation-6">
+  <router-link :to="{ name: 'Retreat' }" @click="scrollToTop()">
             <img
               src="../../assets/img/YoutubeOffering.png"
               alt=""
-              class="img-fluid rounded-1 elevation-6 hover-image"
+              class="img-fluid rounded"
             />
           </router-link>
 
+          </div>
+        
           <div class="card-body">
             <div class="text-pink darken-30 font-2 fs-2 my-3">
-              Online Classes
+              Online Series
             </div>
             <div class="">
               <p class="font-2 fs-4 text-start" style="z-index: 99999">
@@ -98,14 +104,17 @@ $
 
       <div class="col-md-4">
         <div v-motion-pop-visible-once class="mb-5 mb-md-0">
-          <router-link :to="{ name: 'Retreat' }" @click="scrollToTop()">
+          <div class="zoom-hover elevation-6">
+   <router-link :to="{ name: 'Retreat' }" @click="scrollToTop()">
             <img
-              src="../../assets/img/retreatCoverImage.png"
+              src="https://scontent-fml2-1.xx.fbcdn.net/v/t39.30808-6/291518073_128132356576521_7530546115358918920_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a26aad&_nc_ohc=bHJ0OcW_2gAAX-7oHpz&_nc_ht=scontent-fml2-1.xx&oh=00_AfAdzk-xLbVt1NsLbKqNuJJt5uo2-tJWeJrYyzXmfxQR9Q&oe=63A11BE8"
               alt=""
-              class="img-fluid rounded-1 elevation-6 hover-image"
+              class="img-fluid rounded"
             />
           </router-link>
 
+          </div>
+       
           <div class="card-body">
             <div class="text-pink darken-30 font-2 fs-2 my-3">Pop-Up Events</div>
             <div class="">
@@ -165,6 +174,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.schedule-section{
+  margin-bottom: 100px;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  margin-bottom: 100px;
+  }
+}
 .img-fluid {
   height: 300px;
   object-fit: cover;
