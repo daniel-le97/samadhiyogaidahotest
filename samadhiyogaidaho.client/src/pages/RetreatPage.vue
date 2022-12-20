@@ -426,7 +426,6 @@ export default {
     async function getAllRetreats() {
       try {
         await retreatsService.getAllRetreats();
-        // console.log(AppState.currentRetreat);
       } catch (error) {
         Pop.error(error, "[getCurrentRetreat]");
       }

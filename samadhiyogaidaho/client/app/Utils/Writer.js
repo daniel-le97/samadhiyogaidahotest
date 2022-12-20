@@ -1,3 +1,4 @@
+import { logger } from "./Logger.js"
 import { Pop } from "./Pop.js"
 
 function getElem(id) {
@@ -8,7 +9,7 @@ function getElem(id) {
     }
     return elem
   } catch (error) {
-    console.error('[ATTEMPTING_TO_SET_HTML]', id)
+    logger.error('[ATTEMPTING_TO_SET_HTML]', id)
     Pop.error(error)
   }
 }

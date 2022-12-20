@@ -27,8 +27,6 @@ class FirebaseService {
       const img = await this.getURL(ref);
       imgs.push(img);
     }
-
-    // console.log(imgs);
     return imgs;
   }
   async getURL(ref) {

@@ -1,14 +1,14 @@
 import { AppState } from "../AppState.js";
+import { logger } from "../utils/Logger.js";
 import { api } from "./AxiosService.js";
 
 class UploadsService {
   async addUpload(uploadData) {
-    console.log(uploadData);
+    logger.log(uploadData);
      let data = {url:uploadData}
     const res = await api.post("api/uploads", data);
-    console.log(res.data);
+    logger.log(res.data);
     // AppState.uploadedImgs.push(res.data)
-    // console.log('addUpload',res.data);
   }
 
   async getAllUploads() {

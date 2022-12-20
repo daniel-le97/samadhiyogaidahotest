@@ -98,7 +98,7 @@ export class Pop {
         return await this.prompt(title)
       }
     } catch (error) {
-      console.error('[PromptError]', error)
+      .error('[PromptError]', error)
     }
   }
   

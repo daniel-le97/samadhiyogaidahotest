@@ -85,13 +85,14 @@
 <script setup>
 import { loadFull } from "tsparticles";
 import { useRoute } from "vue-router";
+import { logger } from "../../utils/Logger";
 
 const particlesInit = async (engine) => {
   await loadFull(engine);
 };
 
 const particlesLoaded = async (container) => {
-  console.log("Particles container loaded", container);
+  logger.log("Particles container loaded", container);
 };
 </script>
 
