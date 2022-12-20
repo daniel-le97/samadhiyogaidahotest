@@ -1,0 +1,1 @@
+import{_ as e,j as t,c as o,A as a,o as c,a as s}from"./index.9ab0d73b.js";const n={setup(){return{stats:t(()=>a.fakeStats)}},components:{}},r={class:"container-fluid"},_=s("div",{class:"row"},[s("div",{class:"col-12"}," hello ")],-1),d=[_];function p(i,l,f,u,m,h){return c(),o("div",r,d)}const k=e(n,[["render",p]]);export{k as default};
