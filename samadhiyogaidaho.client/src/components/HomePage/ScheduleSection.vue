@@ -6,14 +6,42 @@
           Our Offerings To You
         </h1>
         <br />
-        <!-- <h2
+        <h2
            v-motion-slide-visible-once-left
-            class="display-6 courgette text-lightPink darken-20 font-2 underline"
+            class=" text-lightPink darken-20 font-2 underline"
           >
-         Current Layed Out Schedule
-          </h2> -->
+       These curated programs are to help align you towards your best self
+          </h2>
       </div>
     </div>
+
+
+
+
+ <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
+   <div class="col-md-6 d-flex align-items-center justify-content-center" >
+<img   src="../../assets/img/purpleroom2.png" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
+   </div>
+   <div class="col-md-6 text-start">
+<p class="underline  fs-2 font-1  border-2 border-bottom text-start text-pink darken-20">Level 1-2 Vinyasa Style Yoga  </p>
+<p> ( Commonly referred to as “flow”)</p>
+<div class="d-flex">
+  <div  class="me-3"><p class="text-start">Monday & Wednesday 6AM</p>
+
+<p class="text-start"> HollyWood Market Yoga</p>
+<p class="text-start">1319 N Eighth St, Boise, ID 83702, United States</p></div>
+<div class="fs-2 font-2">
+$
+
+</div>
+</div>
+<!-- <p class="fs-4 text-start">{{event.description}} 
+</p> -->
+
+
+   </div>
+  </div>
+
 
     <div class="row my-4">
       <div class="col-md-4">
@@ -33,6 +61,7 @@
                 Monday & Wednesday you can catch us at 6AM at HollyWood Market
                 Yoga Where we hold Level 1-2 Vinyasa Style Yoga ( Commonly
                 referred to as “flow”)
+                Saturday at 9AM we hold an authentic series class at Authentic yoga studio
               </p>
             </div>
           </div>

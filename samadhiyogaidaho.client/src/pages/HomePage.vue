@@ -9,26 +9,7 @@
           class="hero-image d-flex flex-column justify-content-center align-items-center"
         >
           <div style="margin-top: 80px" class="text-shadow container">
-            <!-- <h5
-              v-motion
-              :initial="{
-                y: 100,
-                opacity: 0,
-              }"
-              :enter="{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  type: 'spring',
-                  stiffness: 250,
-                  damping: 25,
-                  mass: 0.5,
-                },
-              }"
-              class="display-4 font-1 text-light text-start mb-0"
-            >
-              LEARN HOW TO SEE YOURSELF
-            </h5> -->
+       
             <h5
               v-motion-slide-top
               :delay="600"
@@ -63,29 +44,6 @@
             </h1>
           </div>
 
-          <div class="">
-            <!-- <img src="../assets/img/download.gif" alt=""> -->
-          </div>
-          <!-- <div v-motion-fade :delay="1000" class="text-center">
-          <img
-            src="../assets/img/Screenshot_4.png"
-            alt=""
-            class="rounded-pill elevation-6 logo-image w-50"
-          />
-        </div> -->
-
-          <!-- <div
-            v-motion-slide-top
-            class="join-newsletter-button flex-column d-flex"
-          >
-            <a
-              href="#newsletter"
-              class="btn bg-dark selectable text-light fs-3 px-4 mb-3"
-            >
-              Join Our NewsLetter</a
-            >
-          
-          </div> -->
         </div>
       </div>
       <GentleWave />
