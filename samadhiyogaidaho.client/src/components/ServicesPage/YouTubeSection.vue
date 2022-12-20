@@ -1,9 +1,7 @@
 <template>
   <div class="container my-5">
     <div class="row">
-      <div class="col-md-12">
-        
-      </div>
+      <div class="col-md-12"></div>
     </div>
     <div class="row">
       <!-- <CommentBox>
@@ -34,67 +32,69 @@ Don’t break. Just be. Just breathe. Just love. Just live.
         </p>
       </div>
       <div class="col-md-6">
-       <div class=" card elevation-60 iframe">
-         <iframe
-          v-motion-slide-visible-bottom
-          :delay="100"
-          src="https://www.youtube.com/embed/BYTDS1hw9kg"
-          title="Gentle morning stretch and flow"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          class="rounded elevation-6 img-fluid"
-        ></iframe>
-       </div>
-      </div>
-      <div class="col-md-6">
-        <div class=" card elevation-60 iframe">
-   <iframe
-         
-          src="https://www.youtube.com/embed/ftxEVraDUw8"
-          title="Women’s menstrual cycle relief yoga"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          class="img-fluid"
-        ></iframe>
-        </div>
-     
-      </div>
-      <div class="col-md-6">
-     <div class=" card elevation-60 iframe">
-         <iframe
-          v-motion-slide-visible-left
-          src="https://www.youtube.com/embed/a8pro3zdh44"
-          title="Gentle Thanksgiving Flow"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          class="rounded elevation-6 img-fluid"
-        ></iframe>
-     </div>
-      </div>
-      <div class="col-md-6">
-    <div class=" card elevation-60 iframe">
+        <div class="card elevation-60 iframe">
           <iframe
-          v-motion-slide-visible-right
-          src="https://www.youtube.com/embed/wSV2Vtf9318"
-          title="Heart opening Beginners Flow"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          class="rounded elevation-6 img-fluid"
-        ></iframe>
-    </div>
+            v-motion-slide-visible-bottom
+            :delay="100"
+            src="https://www.youtube.com/embed/BYTDS1hw9kg"
+            title="Gentle morning stretch and flow"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="rounded elevation-6 img-fluid"
+          ></iframe>
+        </div>
       </div>
       <div class="col-md-6">
-    <div class=" card elevation-60 iframe">
-         
-        <iframe 
-          v-motion-slide-visible-right
-        src="https://www.youtube.com/embed/yPOCYGBHgtQ" title="Virabhadrasana II setup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-        class="rounded elevation-6 img-fluid"></iframe>
-    </div>
+        <div class="card elevation-60 iframe">
+          <iframe
+            src="https://www.youtube.com/embed/ftxEVraDUw8"
+            title="Women’s menstrual cycle relief yoga"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="img-fluid"
+          ></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card elevation-60 iframe">
+          <iframe
+            v-motion-slide-visible-once-left
+            src="https://www.youtube.com/embed/a8pro3zdh44"
+            title="Gentle Thanksgiving Flow"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="rounded elevation-6 img-fluid"
+          ></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card elevation-60 iframe">
+          <iframe
+            v-motion-slide-visible-right
+            src="https://www.youtube.com/embed/wSV2Vtf9318"
+            title="Heart opening Beginners Flow"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="rounded elevation-6 img-fluid"
+          ></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card elevation-60 iframe">
+          <iframe
+            v-motion-slide-visible-right
+            src="https://www.youtube.com/embed/yPOCYGBHgtQ"
+            title="Virabhadrasana II setup"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="rounded elevation-6 img-fluid"
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -112,12 +112,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card{
+.card {
   margin: 4px;
 }
-iframe{
+iframe {
   height: 20rem;
   margin: 4px;
-
 }
 </style>

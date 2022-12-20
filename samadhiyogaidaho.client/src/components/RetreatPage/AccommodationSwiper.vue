@@ -8,7 +8,7 @@
           <div class="d-flex text-dark">
             <img :src="a.img" alt="" class="img-fluid hover-image rounded" />
           </div>
-          <div class="d-flex flex-column  bg-white">
+          <div class="d-flex flex-column  bg-white ms-4">
             <p class="font-2 fs-3 text-dark">{{ a.description }}</p>
             <p class="font-2 fs-3 text-muted">
               Available:

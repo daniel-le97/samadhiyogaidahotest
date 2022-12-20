@@ -1,40 +1,42 @@
 <template>
   <div class="component">
- <div class="container p-5 bg-white">
+    <div class="container p-5 bg-white">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center">
           <h1
-            v-motion-slide-visible-left
-            class="display-1 font-1 underline text-center text-dark  mt-5 mt-md-0"
+            v-motion-slide-visible-once-left
+            class="display-1 font-1 underline text-center text-dark mt-5 mt-md-0"
           >
             Welcome Beautiful Soul
           </h1>
           <br />
 
           <h2
-            v-motion-slide-visible-left
+            v-motion-slide-visible-once-left
             class="display-6 font-2 underline text-lightPink darken-20 mb-4"
           >
             Our Core Belief
           </h2>
-
-    
         </div>
-            <div class="col-md-6 text-center">
-            <p v-motion-fade-visible class=" fs-4 px-md-5 ">
-            Is based on the idea that people
-            want to be at peace with who they truly are, and that at every moment is an opportunity where  they can be
-            authentic with themselves in everyday life.
+        <div class="col-md-6 text-center">
+          <p v-motion-fade-visible class="fs-4 px-md-5">
+            Is based on the idea that people want to be at peace with who they
+            truly are, and that at every moment is an opportunity where they can
+            be authentic with themselves in everyday life.
           </p>
 
-          <p v-motion-fade-visible class=" fs-4 px-md-5 ">
-           <b> SamadhiYogaIdaho </b> is a holistic approach
-            in using pranayama, asana, journaling, and meditation practices to
-            increase our knowledge of <em>self</em>, <em>life</em>, <em>mobility</em> and to help every person recognize their <em>worthiness</em> , <em>beauty</em>, and <em>uniqueness</em>. 
+          <p v-motion-fade-visible class="fs-4 px-md-5">
+            <b> SamadhiYogaIdaho </b> is a holistic approach in using pranayama,
+            asana, journaling, and meditation practices to increase our
+            knowledge of <em>self</em>, <em>life</em>, <em>mobility</em> and to
+            help every person recognize their <em>worthiness</em> ,
+            <em>beauty</em>, and <em>uniqueness</em>.
           </p>
-          <p class="fs-4"> Escape with us and learn how to see yourself without judgment</p>
+          <p class="fs-4">
+            Escape with us and learn how to see yourself without judgment
+          </p>
           <p>
-              <a href="#newsletter" class="btn bg-warning selectable fs-3 px-4">
+            <a href="#newsletter" class="btn bg-warning selectable fs-3 px-4">
               Begin Your Journey</a
             >
           </p>
@@ -44,7 +46,7 @@
 
     <div class="container mb-3">
       <div class="row g-2">
-         <div class="col-md-4" v-motion-pop-visible>
+        <div class="col-md-4" v-motion-pop-visible-once>
           <div class="card elevation-6 border-0">
             <div class="image-box">
               <img
@@ -53,15 +55,15 @@
                 class="img-fluid rounded"
               />
               <div class="text-box">
-                <p class="title">Learn to delve into the slowness of breath work with Yin Yoga</p>
-                <p class="content">
-                
+                <p class="title">
+                  Learn to delve into the slowness of breath work with Yin Yoga
                 </p>
+                <p class="content"></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4" v-motion-pop-visible>
+        <div class="col-md-4" v-motion-pop-visible-once>
           <div class="card elevation-6 border-0">
             <div class="image-box">
               <img
@@ -76,8 +78,8 @@
             </div>
           </div>
         </div>
-        
-        <div class="col-md-4" v-motion-pop-visible>
+
+        <div class="col-md-4" v-motion-pop-visible-once>
           <div class="card elevation-6 border-0">
             <div class="image-box">
               <img
@@ -86,31 +88,23 @@
                 class="img-fluid rounded"
               />
               <div class="text-box">
-                <p class="title">Find Your Flow </p>
-                <p class="content">
-              
-                </p>
+                <p class="title">Find Your Flow</p>
+                <p class="content"></p>
               </div>
             </div>
           </div>
         </div>
-       
       </div>
     </div>
-
   </div>
 </template>
 
-
 <script>
 export default {
-  setup(){
-    return {}
-  }
-}
+  setup() {
+    return {};
+  },
+};
 </script>
 
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

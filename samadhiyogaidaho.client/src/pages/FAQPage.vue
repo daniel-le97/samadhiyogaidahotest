@@ -2,17 +2,37 @@
 
   <div>
     <div class="hero-image d-flex flex-column align-items-center justify-content-center">
-      <div class="text-center">
+      <div class="text-center container">
         <h1 v-motion-slide-top :delay="200" id="shadow1"
-          class="story-text font-1 text-shadow page-title courgette fw-bolder text-light">
-          One Yoga Class
+          class=" font-1 text-shadow page-title courgette fw-bolder text-light">
+          How Can We Help You?
         </h1>
-        <p v-motion-slide-top :delay="400" class=" display-6 font-2 text-shadow">Away From A Good Mood</p>
+    
       </div>
     </div>
 
-    <section class="container my-3">
-      <div class="row">
+    <section class="container my-5">
+  <div class="row my-5 justify-content-center">
+        <div
+          class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center"
+        >
+          <blockquote class="font-1 quote">
+            On an inhale, think of the things that are no longer serving you,
+            whatever that may be. Maybe it’s a thought Maybe it’s a feeling
+            Maybe it’s a person Or an experience But taking it, And on an
+            exhale, choosing consciously to let it go.
+          </blockquote>
+          <cite>- SamadhiYogaIdaho</cite>
+        </div>
+      </div>
+
+      
+      <div class="row justify-content-center">
+        
+      
+        <div class="col-md-10 text-center">
+          <img src="https://img.freepik.com/free-vector/faqs-concept-illustration_114360-5215.jpg?w=740&t=st=1671513722~exp=1671514322~hmac=355be1eb112615146c0d1c1ebe6899123fe88fa56388cc7ed9baffbab61394bc" alt="">
+        </div>
         <div class="col-md-12">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -220,7 +240,7 @@ export default {
 }
 
 .page-title {
-  font-size: 10rem;
+  font-size: 8rem;
 }
 
 .heroImage {

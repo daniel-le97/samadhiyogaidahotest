@@ -13,7 +13,7 @@
         class=" display-6 font-2 text-shadow">Why we came to build SamadhiYogaIdaho</p>
       </div>
     </div>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-5 plants">
       <div class="row mt-5 px-md-3">
         <div class="col-md-12 text-center">
           <div class="justify-content-center p-2">
@@ -39,8 +39,8 @@
         </div>
         <div class="col-md-6 my-5 ">
           <img
-            src="https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/306519061_129159436532870_6494007048333346057_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZyXKoZ6J5CIAX-iRhfY&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCPQrcs1-iLVW0CLPjhl0-intGdQOE1_KoCweThnqKaAg&oe=639D65A6"
-            alt="" class="img-fluid framed elevation-5 ms-md-5 sticky-top " style="z-index:-9;">
+            src="../assets/img/KatiePortrait.png"
+            alt="" class="img-fluid framed elevation-5 ms-md-5 rounded " style="z-index:-9;">
         </div>
         
         <div class="col-md-6 ">

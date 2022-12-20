@@ -32,7 +32,7 @@
             <h5
               v-motion-slide-top
               :delay="600"
-              class="fs-2 font-2 text-light text-uppercase"
+              class="fs-2 font-2 text-light text-uppercase text-center"
             >
               <br />
               Become aware of your capacity to create, <br />
@@ -41,7 +41,7 @@
             </h5>
 
             <h1
-               v-motion
+              v-motion
               :initial="{
                 y: -100,
                 opacity: 0,
@@ -57,12 +57,15 @@
                 },
               }"
               :delay="1000"
-              class="display-2 text-light font-1"
+              class="display-2 text-light font-1 text-center"
             >
-            WONDER WITH SAMADHI YOGA IDAHO
+              ESCAPE WITH SAMADHI YOGA IDAHO
             </h1>
           </div>
 
+          <div class="">
+            <!-- <img src="../assets/img/download.gif" alt=""> -->
+          </div>
           <!-- <div v-motion-fade :delay="1000" class="text-center">
           <img
             src="../assets/img/Screenshot_4.png"
@@ -90,7 +93,6 @@
 
     <section id="Call-To-Action-Section">
       <CallToAction />
-   
     </section>
 
     <!-- <section id="YinYoga-Section" class="bg-pink my-5">
@@ -98,7 +100,7 @@
         <div class="row">
           <div class="col-md-12">
             <h1
-              v-motion-slide-visible-left
+              v-motion-slide-visible-once-left
               class="display-1 font-1 underline text-start"
             >
               What Is Yin Yoga?
@@ -177,14 +179,10 @@
       </div>
     </section> -->
 
-
-
-
-
     <section>
       <ScheduleSection />
     </section>
-  
+
     <section id="About-Katie-Section" class="bg-pink">
       <div class="container p-5 position-relative">
         <div class="floating-image-1">
@@ -193,27 +191,27 @@
         <div class="row">
           <div class="col-md-8 team-section-title">
             <h1
-              v-motion-slide-visible-left
+              v-motion-slide-visible-once-left
               class="display-1 font-1 underline text-start"
             >
               Katie Alverson
             </h1>
             <h2
-              v-motion-slide-visible-left
+              v-motion-slide-visible-once-left
               class="display-6 font-2 underline text-lightPink darken-20 mb-md-2"
             >
               Experienced,
             </h2>
 
             <h2
-              v-motion-slide-visible-left
+              v-motion-slide-visible-once-left
               class="display-6 font-2 underline text-lightPink darken-20 mb-md-2 me-md-2"
             >
               Qualified,
             </h2>
 
             <h2
-              v-motion-slide-visible-left
+              v-motion-slide-visible-once-left
               class="display-6 font-2 underline text-lightPink darken-20 mb-md-2"
             >
               Passionate
@@ -224,30 +222,38 @@
 
       <div class="container">
         <div class="row g-5 justify-content-center">
-          <div
-            v-motion-pop-visible
-            class="col-md-6 p-5 "
-          >
+          <div v-motion-pop-visible-once class="col-md-6 p-5">
             <img
               src="https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/306519061_129159436532870_6494007048333346057_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZyXKoZ6J5CIAX-iRhfY&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCPQrcs1-iLVW0CLPjhl0-intGdQOE1_KoCweThnqKaAg&oe=639D65A6"
               alt="Katie Alverson"
               class="img-fluid elevation-6 rounded framed"
             />
-
-         
           </div>
           <div class="col-md-6">
-               <h6 class="mb-0 fs-4 fw-bold text-center">Founder, Owner, Teacher</h6>
-            <p class=" text-start fs-4 font-2">I believe that to question, to inquire, to seek understanding is a core part of what it means to be human. Whether its at home or away on a retreat, they are always inspired by the experiences of life. the core of a healthy person is in the wellbeing of their body, mind, and soul.</p>
+            <h6 class="mb-0 fs-4 fw-bold text-center">
+              Founder, Owner, Teacher
+            </h6>
+            <p class="text-start fs-4 font-2">
+              I believe that to question, to inquire, to seek understanding is a
+              core part of what it means to be human. Whether its at home or
+              away on a retreat, they are always inspired by the experiences of
+              life. the core of a healthy person is in the wellbeing of their
+              body, mind, and soul.
+            </p>
 
             <div class="">
-              <img src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg" alt="" width="150" height="150" class="rounded-circle elevation-orange">
+              <img
+                src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg"
+                alt=""
+                width="150"
+                height="150"
+                class="rounded-circle elevation-orange"
+              />
             </div>
           </div>
         </div>
-        <div class=" d-flex justify-content-end ">
+        <div class="d-flex justify-content-end">
           <router-link
-            @click="scrollToTop()"
             :to="{ name: 'About' }"
             class="fs-3 btn bg-dark font-2 my-4"
           >
@@ -265,9 +271,9 @@
       <RetreatAndEvents />
     </section> -->
 
-   <section class="bg-pink">
-    <InstagramFeed/>
-   </section>
+    <section class="bg-pink">
+      <InstagramFeed />
+    </section>
   </div>
 </template>
 
@@ -290,31 +296,26 @@ import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
 import { firebaseService } from "../services/FirebaseService.js";
 export default {
   setup() {
-
-    onMounted(()=>{
+    onMounted(() => {
       // getYoutubeVideos()
       // getPastRetreatImages()
-    })
+    });
 
-    async function getPastRetreatImages(){
+    async function getPastRetreatImages() {
       try {
-          await firebaseService.getPastRetreatsImages() 
-        } catch (error) {
-          Pop.error(error,'[]')
-        }
+        await firebaseService.getPastRetreatsImages();
+      } catch (error) {
+        Pop.error(error, "[]");
+      }
     }
-    async function getYoutubeVideos(){
+    async function getYoutubeVideos() {
       try {
-          await youtubeService.getPlayList()
-        } catch (error) {
-          Pop.error(error,'[]')
-        }
+        await youtubeService.getPlayList();
+      } catch (error) {
+        Pop.error(error, "[]");
+      }
     }
-    return {
-      scrollToTop() {
-        window.scrollTo(0, 0);
-      },
-    };
+    return {};
   },
   components: {
     SwiperComponent2,
@@ -327,15 +328,15 @@ export default {
     CommentBox,
     ScheduleSection,
     ServicesSection,
-    InstagramFeed
-},
+    InstagramFeed,
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../assets/scss/main.scss";
-.section-sub-title{
 
+.section-sub-title {
 }
 .service-card {
   img {
@@ -391,8 +392,6 @@ export default {
     height: 300px;
   }
 }
-
-
 
 .hero-image {
   width: 100%;

@@ -1,10 +1,10 @@
 <template>
- <div class="container-fluid" style="margin-bottom: 300px;">
+  <div class="container-fluid" style="margin-bottom: 300px">
     <div class="container p-5 mt-5">
       <div class="row">
         <div class="col-md-12">
           <h1
-            v-motion-slide-visible-left
+            v-motion-slide-visible-once-left
             class="display-1 font-1 underline text-start"
           >
             My Offerings
@@ -12,7 +12,7 @@
           <br />
 
           <!-- <h2
-            v-motion-slide-visible-left
+            v-motion-slide-visible-once-left
             class="display-6 font-1 underline text-lightPink darken-20"
           >
         
@@ -20,7 +20,6 @@
           </h2> -->
         </div>
       </div>
-    
     </div>
 
     <div class="container">
@@ -53,7 +52,7 @@
               class="card-img-overlay d-flex justify-content-center align-items-center"
             >
               <p class="mb-0 display-4 font-1 text-light text-shadow">
-               Workshops 
+                Workshops
               </p>
             </div>
           </div>
@@ -86,31 +85,27 @@
               class="card-img-overlay d-flex justify-content-center align-items-center"
             >
               <p class="mb-0 display-4 font-1 text-light text-shadow">
-               Inclusive <br>
-               Retreats
+                Inclusive <br />
+                Retreats
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
- </div>
+  </div>
 </template>
-
 
 <script>
 export default {
-  setup(){
-    return {}
-  }
-}
+  setup() {
+    return {};
+  },
+};
 </script>
 
-
 <style lang="scss" scoped>
-
-.card img{
-filter: brightness(60%);
+.card img {
+  filter: brightness(60%);
 }
-
 </style>

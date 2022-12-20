@@ -1,6 +1,6 @@
 <template>
   <div
-    v-motion-pop-visible
+    v-motion-pop-visible-once
     class="container mt-5 image d-flex align-items-center rounded flex-column justify-content-center"
   >
     <form @submit.prevent="handleSubmit()">
@@ -13,9 +13,8 @@
               <input
                 type="num"
                 min="10"
-           pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
+                pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
                 v-model="editable.phone"
-           
                 class="form-control rounded-pill p-3 border-0 bg-transparent"
                 placeholder="(optional) Phone Number"
               />
@@ -29,7 +28,6 @@
                 type="email"
                 name=""
                 id=""
-                
                 v-model="editable.email"
                 class="form-control rounded-pill p-3 mx-2 border-0 bg-white"
                 placeholder="Enter email address"

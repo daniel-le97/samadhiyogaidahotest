@@ -2,18 +2,21 @@
   <div class="container p-5">
     <div class="row justify-content-center">
       <div class="col-md-12">
-        <h1    v-motion-slide-visible-left class="display-1 font-1 text-start underline">
-         MY Offerings To You
+        <h1
+          v-motion-slide-visible-once-left
+          class="display-1 font-1 text-start underline"
+        >
+          MY Offerings To You
         </h1>
         <h2
-            v-motion-slide-visible-left
+          v-motion-slide-visible-once-left
           class="display-6 courgette text-lightPink darken-20 font-2 underline"
         >
           COUPLES REJUVENATION YOGA RETREAT
         </h2>
         <br />
         <h3
-           v-motion-slide-visible-left
+          v-motion-slide-visible-once-left
           class="fs-4 font-2 text-lightPink darken-30 underline"
         >
           NOW BOOKING FOR 2023
@@ -21,7 +24,7 @@
       </div>
       <!-- <div class="col-md-4">
         <div
-           v-motion-pop-visible
+           v-motion-pop-visible-once
         class=" mb-5 mb-md-0 ">
           <img
             src="../../assets/img/retreatCoverImage.png"

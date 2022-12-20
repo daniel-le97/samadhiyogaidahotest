@@ -26,24 +26,20 @@
   </section>
   <!-- <RetreatForm /> -->
   <section>
-  
     <div class="container">
-
-<div class="row my-5 justify-content-center">
-  <div class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center">
-    <blockquote class="font-1 quote ">On an inhale, think of the things that are no longer serving you, whatever that may be.
-
-Maybe it’s a thought
-Maybe it’s a feeling
-Maybe it’s a person
-Or an experience
-
-But taking it,
-
-And on an exhale, choosing consciously to let it go.</blockquote>
-<cite>- SamadhiYogaIdaho</cite>
-  </div>
-</div>
+      <div class="row my-5 justify-content-center" v-motion-pop-visible-once>
+        <div
+          class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center"
+        >
+          <blockquote class="font-1 quote">
+            On an inhale, think of the things that are no longer serving you,
+            whatever that may be. Maybe it’s a thought Maybe it’s a feeling
+            Maybe it’s a person Or an experience But taking it, And on an
+            exhale, choosing consciously to let it go.
+          </blockquote>
+          <cite>- SamadhiYogaIdaho</cite>
+        </div>
+      </div>
 
       <div class="row my-4">
         <div class="col-md-12">
@@ -52,10 +48,10 @@ And on an exhale, choosing consciously to let it go.</blockquote>
       </div>
 
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" >
           <img
             v-if="retreat"
-            v-motion-pop-visible
+            v-motion-pop-visible-once
             :src="featuredImg1"
             alt=""
             class="img-fluid rounded-4 elevation-6 h-100"
@@ -66,7 +62,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
             <div class="col-md-12 mb-3">
               <img
                 v-if="retreat"
-                v-motion-pop-visible
+                v-motion-pop-visible-once
                 :src="retreat.coverImg"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
@@ -75,7 +71,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
             <div class="col-md-6">
               <img
                 v-if="retreat"
-                v-motion-pop-visible
+                v-motion-pop-visible-once
                 :src="featuredImg2"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
@@ -83,7 +79,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
             </div>
             <div class="col-md-6">
               <img
-                v-motion-pop-visible
+                v-motion-pop-visible-once
                 :src="featuredImg3"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
@@ -116,7 +112,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
                 v-for="f in retreat.featuredImgs"
               >
                 <img
-                  v-motion-pop-visible
+               
                   :src="f"
                   alt=""
                   class="img-fluid hover-image rounded-4 selectable"
@@ -132,7 +128,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
   <section>
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" v-motion-slide-visible-once-left>
           <div class="card elevation-orange border-0 rounded-4 p-3">
             <div class="d-flex">
               <p class="fs-5 text-muted">4 days / 3nights</p>
@@ -230,7 +226,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" v-motion-slide-visible-once-right>
           <div class="">
             <h1 class="underline font-2 display-3">Summary</h1>
           </div>
@@ -245,7 +241,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
   <section>
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" v-motion-slide-visible-once-left>
           <div class="">
             <h1 class="display-3 font-2 underline">
               {{ retreat?.location?.address }}
@@ -255,7 +251,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
             <p class="fs-4 text-start">{{ retreat?.location?.description }}</p>
           </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center" v-motion-slide-visible-once-right>
           <img
             :src="retreat?.location?.img"
             alt=""
@@ -263,14 +259,14 @@ And on an exhale, choosing consciously to let it go.</blockquote>
           />
         </div>
         <div class="row my-5">
-          <div class="col-md-6 d-flex justify-content-center">
+          <div class="col-md-6 d-flex justify-content-center" v-motion-slide-visible-once-left>
             <img
               :src="retreat?.schedule?.img"
               alt=""
               class="img-fluid elevation-5 rounded-4 w-75"
             />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" v-motion-slide-visible-once-right>
             <div class="">
               <p class="display-3 font-2 underline">Daily Schedule</p>
             </div>
@@ -283,7 +279,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
               class="row justify-content-center mt-5"
               v-if="retreat?.activities"
             >
-              <div class="col-md-6">
+              <div class="col-md-6" v-motion-slide-visible-once-top>
                 <div class="card border-0 elevation-orange p-2">
                   <div class="card-body">
                     <p class="fs-4 text-decoration-underline">
@@ -307,7 +303,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
     <section>
       <div class="container my-5">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4" v-motion-slide-visible-once-left>
             <div class="">
               <p class="display-3 mb-0 underline">Food</p>
               <p class="display-6 text-muted font-2">
@@ -318,7 +314,7 @@ And on an exhale, choosing consciously to let it go.</blockquote>
               <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
-          <div class="col-md-8 d-flex">
+          <div class="col-md-8 d-flex" v-motion-slide-visible-once-right>
             <FoodImageSwiper v-if="retreat?.food?.imgs" />
           </div>
         </div>
@@ -327,18 +323,21 @@ And on an exhale, choosing consciously to let it go.</blockquote>
   </section>
   <section>
     <div class="container">
-      <div class="row">
-        <div
-          class="col-md-6 d-flex align-items-center justify-content-center elevation-orange"
-        >
-          <AccommodationSwiper />
-        </div>
-        <div class="col-md-6">
+      <div class="row justify-content-center">
+           <div class="col-md-12 text-center"
+        v-motion-slide-visible-once-top>
           <h1 class="display-3 font-2 underline">Accommodations</h1>
           <p class="fs-4 text-start">
             {{ retreat?.accommodations?.description }}
           </p>
         </div>
+        <div
+        v-motion-slide-visible-once-bottom
+          class="col-md-10 d-flex align-items-center justify-content-center elevation-orange"
+        >
+          <AccommodationSwiper />
+        </div>
+     
       </div>
     </div>
   </section>
@@ -346,11 +345,13 @@ And on an exhale, choosing consciously to let it go.</blockquote>
   <section>
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 text-center" v-motion-slide-visible-once-left>
           <h1 class="display-3 font-2 underline">FAQS</h1>
         </div>
       </div>
-      <div class="accordion elevation-6 border-0" id="accordionExample">
+      <div
+      v-motion-slide-visible-once-bottom
+      class="accordion elevation-6 border-0" id="accordionExample">
         <div
           class="accordion-item border-0 elevation-3"
           v-for="(f, index) in retreat?.FAQS"
@@ -383,20 +384,42 @@ And on an exhale, choosing consciously to let it go.</blockquote>
   </section>
 
   <section class="my-5">
-      <div class="container-fluid parallax" >
-      
-      </div>
+    <div class="container-fluid parallax"></div>
   </section>
   <section>
-    <div class="container my-5 ">
-    
+    <div class="container my-5">
       <div class="row">
-        <div class="col-md-12 mb-4">
-          <h1 class="display-2 font-1">Check Out Our Past Retreats</h1>
+        <div class="col-md-12 mb-4 text-center">
+          <h1 class="display-2 font-1">August 2022 Costal Reset Retreat</h1>
         </div>
-        <div class="col-md-4" v-for="a in archived">
+        <div class="col-md-12 mb-4 text-center">
+       
+        </div>
+        <!-- <div class="col-md-4" v-for="a in archived">
           <ArchivedRetreatCard :retreat="a" />
-        </div>
+        </div> -->
+
+   <div class="container my-4">
+            <div class="masonry2">
+              <div
+                @click="setActiveImage(f)"
+                data-bs-toggle="modal"
+                data-bs-target="#activeImage"
+                class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
+                v-for="f in retreat.featuredImgs"
+              >
+                <img
+               
+                  :src="f"
+                  alt=""
+                  class="img-fluid hover-image rounded-4 selectable"
+                />
+              </div>
+            </div>
+          </div>
+
+
+
       </div>
     </div>
   </section>
@@ -419,7 +442,7 @@ export default {
   props: {},
   setup(props) {
     const editable = ref({});
-   
+
     onMounted(() => {
       getAllRetreats();
     });
@@ -433,9 +456,15 @@ export default {
     return {
       editable,
 
-      featuredImg1: computed(() => AppState.currentRetreat?.featuredImgs?.splice(8,1)),
-      featuredImg2: computed(() => AppState.currentRetreat?.featuredImgs?.splice(0,1)),
-      featuredImg3: computed(() => AppState.currentRetreat?.featuredImgs?.splice(5  ,1)),
+      featuredImg1: computed(() =>
+        AppState.currentRetreat?.featuredImgs?.splice(8, 1)
+      ),
+      featuredImg2: computed(() =>
+        AppState.currentRetreat?.featuredImgs?.splice(0, 1)
+      ),
+      featuredImg3: computed(() =>
+        AppState.currentRetreat?.featuredImgs?.splice(5, 1)
+      ),
       retreat: computed(() => AppState.currentRetreat),
       archived: computed(() => AppState.archivedRetreats),
       setActiveImage(image) {
@@ -454,18 +483,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.parallax{
- 
-    background-size: cover;
-      height: 40vh;
-        background-position: center;
+.parallax {
+  background-size: cover;
+  height: 40vh;
+  background-position: center;
   background-image: url(https://images.unsplash.com/photo-1452109777848-a4de775da10d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80);
   background-attachment: fixed;
 }
-.quote{
-  font-size: 1.25rem;
-}
+
 .hero-image {
   .page-title {
     font-size: 10rem;
@@ -493,6 +518,15 @@ export default {
 
 .masonry {
   columns: 4;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px) {
+    columns: 1;
+  }
+}
+
+
+.masonry2 {
+  columns: 5;
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
     columns: 1;

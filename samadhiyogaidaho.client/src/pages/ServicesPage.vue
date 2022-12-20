@@ -1,20 +1,27 @@
 <template>
   <section>
-       <div class="tsparticles">
-  <ParticleComponent/>
+    <div class="tsparticles">
+      <ParticleComponent />
     </div>
-      <div class="hero-image d-flex justify-content-center align-items-center flex-column">
-  <div class="px-5">  <h1 
-       v-motion-slide-top :delay="200"
-    class="page-title font-1 text-light text-shadow text-center">Take A Moment For Yourself</h1></div>
-    <h4 
-       v-motion-slide-top :delay="300"
-    class="font-1 text-light text-shadow">We Offer Vinyasa, Baptiste, & Yin Yoga</h4>
-  </div>
+    <div
+      class="hero-image d-flex justify-content-center align-items-center flex-column"
+    >
+      <div class="px-5">
+        <h1
+          v-motion-slide-top
+          :delay="200"
+          class="page-title font-1 text-light text-shadow text-center"
+        >
+          Take A Moment For Yourself
+        </h1>
+      </div>
+      <h4 v-motion-slide-top :delay="300" class="font-1 text-light text-shadow">
+        We Offer Vinyasa, Baptiste, & Yin Yoga
+      </h4>
+    </div>
   </section>
 
   <section>
-
     <div class="container-fluid" style="margin-top: 100px">
       <div class="row justify-content-center">
         <div class="col-md-3 p-5 d-flex justify-content-center">
@@ -26,14 +33,14 @@
               src="https://images.unsplash.com/photo-1610344264630-e77bc4bf5983?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA3fHx5b2dhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
               alt="Title"
             />
-            <div class="card-img-overlay" v-motion-pop-visible>
+            <div class="card-img-overlay" v-motion-pop-visible-once>
               <h1 class="text-center">
                 Book a Private Class for your Work Group
               </h1>
             </div>
           </div>
         </div>
-  
+
         <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
             class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
@@ -43,28 +50,27 @@
               src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
               alt="Title"
             />
-            <div class="card-img-overlay" v-motion-pop-visible>
+            <div class="card-img-overlay" v-motion-pop-visible-once>
               <h1 class="text-center">Workshops</h1>
             </div>
           </div>
         </div>
-  
+
         <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
             class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
           >
             <img
-            
               class="card-img rounded-circle"
               src="https://images.unsplash.com/photo-1499728603263-13726abce5fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
               alt="Title"
             />
-            <div class="card-img-overlay" v-motion-pop-visible>
+            <div class="card-img-overlay" v-motion-pop-visible-once>
               <h1 class="text-center">Inclusive Retreats</h1>
             </div>
           </div>
         </div>
-  
+
         <div class="col-md-3 p-5 d-flex justify-content-center">
           <div
             class="card rounded-circle text-dark border-0 elevation-5 rounded-1"
@@ -74,7 +80,7 @@
               src="https://images.unsplash.com/photo-1636619297905-54f124aa90b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
               alt="Title"
             />
-            <div class="card-img-overlay" v-motion-pop-visible>
+            <div class="card-img-overlay" v-motion-pop-visible-once>
               <h1 class="text-center">Events</h1>
             </div>
           </div>
@@ -86,20 +92,37 @@
     <div class="container my-5">
       <div class="row">
         <div class="col-md-6">
-          <img src="../assets/img/servicePhoto1.png" alt="" class="img-fluid rounded elevation-6 hover-image">
+          <img
+            src="../assets/img/servicePhoto1.png"
+            alt=""
+            class="img-fluid rounded elevation-6 hover-image"
+          />
         </div>
         <div class="col-md-6">
-      <p class="fs-4 text-start  ">    One of our favorite things to do at Samadhi Yoga Is to host private classes for groups.We got to lead the amazing @onlyjewel personal training group through a 90 minute flow at a beautiful location in Kuna @oasisyogaidaho <br>
+          <p class="fs-4 text-start">
+            One of our favorite things to do at Samadhi Yoga Is to host private
+            classes for groups.We got to lead the amazing @onlyjewel personal
+            training group through a 90 minute flow at a beautiful location in
+            Kuna @oasisyogaidaho <br />
 
-It was a beautiful class and we had refreshments afterwards. It gave @onlyjewel clients an opportunity to meet like minded people, create connections, and make life long friends all while getting a “spiritual workout” in and getting to meditate and breathe together. <br>
+            It was a beautiful class and we had refreshments afterwards. It gave
+            @onlyjewel clients an opportunity to meet like minded people, create
+            connections, and make life long friends all while getting a
+            “spiritual workout” in and getting to meditate and breathe together.
+            <br />
 
-If you have a group of people you’re interested in getting together for a fun class, contact us! Whether that be a work group, a group of your clients, a bachelorette or bachelor party, or just a group of friends, we will work with you to create the class and experience you desire. Link in the bio to book today!</p>
+            If you have a group of people you’re interested in getting together
+            for a fun class, contact us! Whether that be a work group, a group
+            of your clients, a bachelorette or bachelor party, or just a group
+            of friends, we will work with you to create the class and experience
+            you desire. Link in the bio to book today!
+          </p>
         </div>
       </div>
     </div>
   </section>
   <section>
-     <section id="Video-Section">
+    <section id="Video-Section">
       <YouTubeSection />
     </section>
   </section>
@@ -115,21 +138,20 @@ import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 
 export default {
-    props: {},
-    setup(props) {
-        const editable = ref({});
-        onMounted(() => { });
-        watchEffect(() => { });
-        return {
-            editable,
-        };
-    },
-    components: { ParticleComponent, YouTubeSection }
+  props: {},
+  setup(props) {
+    const editable = ref({});
+    onMounted(() => {});
+    watchEffect(() => {});
+    return {
+      editable,
+    };
+  },
+  components: { ParticleComponent, YouTubeSection },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .hero-image {
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */
@@ -173,7 +195,7 @@ export default {
     border: 4px solid rgb(135, 236, 211);
   }
 }
-.page-title{
+.page-title {
   font-size: 8rem;
 }
 </style>

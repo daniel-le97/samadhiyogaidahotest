@@ -101,6 +101,13 @@ export const router = createRouter({
   linkExactActiveClass: "router-link-exact-active",
   history: createWebHashHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+     if (savedPosition) {
+       return savedPosition;
+     } else {
+       return { top: 0 };
+     }
+  },
 });
 
 
