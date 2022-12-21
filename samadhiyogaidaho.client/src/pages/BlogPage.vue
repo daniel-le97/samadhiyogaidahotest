@@ -2,7 +2,7 @@
 <section class="container" style="margin-top:300px">
   <div class="row">
     <div class="col-md-6">
-      <TipTapEditor/>
+  
     </div>
   </div>
 </section>
@@ -12,7 +12,7 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
-import TipTapEditor from "../components/TipTapEditor.vue";
+
 import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js";
 
@@ -27,7 +27,7 @@ export default {
             editable,
         };
     },
-    components: { TipTapEditor }
+    components: { }
 }
 </script>
 
