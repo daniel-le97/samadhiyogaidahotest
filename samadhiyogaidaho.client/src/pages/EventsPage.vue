@@ -37,6 +37,8 @@ import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js";
 import {eventsService} from "../services/EventsService.js"
 import EventCard from "../components/EventsPage/EventCard.vue";
+// import { getDate } from "../utils/Functions";
+
 export default {
   
     setup() {
@@ -54,6 +56,7 @@ export default {
         }
         return {
             editable,
+          //  getDate,
             events:computed(()=> AppState.events)
         };
     },

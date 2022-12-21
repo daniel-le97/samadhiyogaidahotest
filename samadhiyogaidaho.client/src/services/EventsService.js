@@ -16,5 +16,8 @@ class EventsService {
     logger.log(res.data)
     AppState.events = res.data.map(e=> new Event(e))
   }
+  async updateEvent(){
+    
+  }
 }
 export const eventsService = new EventsService();
