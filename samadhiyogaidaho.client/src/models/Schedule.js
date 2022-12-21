@@ -1,14 +1,12 @@
-import { getDate, getDateTime } from "../utils/Functions.js";
-
-export class Event {
+export class Schedule {
   constructor(data) {
     this.id = data.id;
     this.title = data.title;
     this.location = data.location;
-    this.startDate = data.startDate;
-    this.endDate = data.endDate;
-    this.cost = data.cost;
+  this.time = data.time
+this.address = data.address
     this.description = data.description;
+    this.cost = data.cost;
     this.img = data.img;
   }
 }

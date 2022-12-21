@@ -1,6 +1,46 @@
 <template>
   <div class="container p-5 schedule-section ">
-    <div class="row">
+ 
+
+
+
+ <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
+
+ <div class="col-md-12 text-center mt-2">
+        <h1 v-motion-slide-visible-once-left class="display-1 font-1 underline">
+          Schedule
+        </h1>
+        <br />
+        <h2
+           v-motion-slide-visible-once-left
+            class=" text-lightPink darken-20 font-2 underline"
+          >
+      
+          </h2>
+      </div>
+
+
+   <div class="col-md-6 d-flex align-items-center justify-content-center" >
+<img   src="../../assets/img/purpleroom2.png" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
+   </div>
+   <div class="col-md-6 text-start">
+<p class="underline  fs-2 font-1  border-2 border-bottom text-start text-pink darken-20">Level 1-2 Vinyasa Style Yoga  </p>
+
+<div class="d-flex">
+  <div  class="me-3"><p class="text-start fs-3">Monday & Wednesday 6AM</p>
+
+
+<a href="https://goo.gl/maps/7bXj27T2fFr8gJ7D6" target="_blank" class="  darken-20 text-dark font-2 fs-3"> <i class="mdi mdi-map-marker fs-1 text-pink darken-20 "></i>HollyWood Market Yoga</a></div>
+
+</div>
+<!-- <p class="fs-4 text-start">{{event.description}} 
+</p> -->
+
+
+   </div>
+  </div>
+ 
+    <div class="row my-4">
       <div class="col-md-12 text-center mt-2">
         <h1 v-motion-slide-visible-once-left class="display-1 font-1 underline">
           Our Offerings To You
@@ -13,37 +53,6 @@
        These curated programs are to help align you towards your best self
           </h2>
       </div>
-    </div>
-
-
-
-
- <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
-   <div class="col-md-6 d-flex align-items-center justify-content-center" >
-<img   src="../../assets/img/purpleroom2.png" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
-   </div>
-   <div class="col-md-6 text-start">
-<p class="underline  fs-2 font-1  border-2 border-bottom text-start text-pink darken-20">Level 1-2 Vinyasa Style Yoga  </p>
-<p> ( Commonly referred to as “flow”)</p>
-<div class="d-flex">
-  <div  class="me-3"><p class="text-start">Monday & Wednesday 6AM</p>
-
-<p class="text-start"> HollyWood Market Yoga</p>
-<p class="text-start">1319 N Eighth St, Boise, ID 83702, United States</p></div>
-<div class="fs-2 font-2">
-$
-
-</div>
-</div>
-<!-- <p class="fs-4 text-start">{{event.description}} 
-</p> -->
-
-
-   </div>
-  </div>
-
-
-    <div class="row my-4">
       <div class="col-md-4">
         <div v-motion-pop-visible-once class="mb-5 mb-md-0">
           <div class="zoom-hover elevation-6">
@@ -58,7 +67,7 @@ $
           </div>
        
           <div class="card-body">
-            <div class="text-pink darken-30 font-2 fs-2 my-3">Classes</div>
+            <div class="text-pink darken-20 font-2 fs-2 my-3">Classes</div>
             <div class="">
               <p class="font-2 fs-4 text-start" style="z-index: 99999">
                 Monday & Wednesday you can catch us at 6AM at HollyWood Market
@@ -85,7 +94,7 @@ $
           </div>
         
           <div class="card-body">
-            <div class="text-pink darken-30 font-2 fs-2 my-3">
+            <div class="text-pink darken-20 font-2 fs-2 my-3">
               Online Series
             </div>
             <div class="">
@@ -116,7 +125,7 @@ $
           </div>
        
           <div class="card-body">
-            <div class="text-pink darken-30 font-2 fs-2 my-3">Pop-Up Events</div>
+            <div class="text-pink darken-20 font-2 fs-2 my-3">Pop-Up Events</div>
             <div class="">
               <p class="font-2 fs-4 text-start" style="z-index: 99999">
                 Are you feeling the need to get away with your partner not just

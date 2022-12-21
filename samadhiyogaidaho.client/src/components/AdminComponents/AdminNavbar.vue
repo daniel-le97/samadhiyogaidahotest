@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bg-dark sticky-top border-light border-start">
+  <div class="container-fluid bg-dark sticky-top border-light border-start p-1">
     <div class="row">
       <div class="col-12">
         <span v-if="admin">Hi, {{ admin.name }}!</span>

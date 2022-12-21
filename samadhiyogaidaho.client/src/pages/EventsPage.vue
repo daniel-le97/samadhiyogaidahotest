@@ -20,7 +20,7 @@ Our pop up schedule for 2023 will be posted soon so you can have an idea and pla
 
 
 
-<EventCard :event="e"  v-for="e in events" :key="e.id" />
+<EventCard :event="e"  v-for="e in events" :key="e.id"  v-motion-slide-visible-bottom :delay="200" />
 
 
 </div>
@@ -37,6 +37,8 @@ import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js";
 import {eventsService} from "../services/EventsService.js"
 import EventCard from "../components/EventsPage/EventCard.vue";
+// import { getDate } from "../utils/Functions";
+
 export default {
   
     setup() {
@@ -54,6 +56,7 @@ export default {
         }
         return {
             editable,
+          //  getDate,
             events:computed(()=> AppState.events)
         };
     },

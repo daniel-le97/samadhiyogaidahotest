@@ -1,12 +1,12 @@
 <template>
-  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
+  <div class="row my-5" >
    <div class="col-md-6 d-flex align-items-center justify-content-center" >
 <img :src="event.img" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
    </div>
    <div class="col-md-6 text-start">
 <p class="underline  fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">{{event.title}}</p>
 <div class="d-flex">
-  <div  class="me-3"><p class="text-start">{{event.startDate}} - {{event.endDate}}</p>
+  <div  class="me-3"><p class="text-start">{{getDate(event.startDate)}} - {{getDateTime(event.endDate)}}</p>
 
 <p class="text-start">{{event.location.place}} </p>
 <p class="text-start">{{event.location.address}} </p></div>
@@ -28,6 +28,7 @@ ${{event.cost }}  per   <img src="https://cdn-icons-png.flaticon.com/512/8927/89
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { Event } from "../../models/Event.js";
+import { getDate, getDateTime } from "../../utils/Functions";
 
 export default {
 props:{
@@ -42,6 +43,8 @@ event:{type:Event, required:true}
     watchEffect(() => {});
 
     return {
+      getDate,
+      getDateTime,
       editable,
       }
     }
