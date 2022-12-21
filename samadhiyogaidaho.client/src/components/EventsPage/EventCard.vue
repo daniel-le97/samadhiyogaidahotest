@@ -1,5 +1,5 @@
 <template>
-  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
+  <div class="row my-5" >
    <div class="col-md-6 d-flex align-items-center justify-content-center" >
 <img :src="event.img" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
    </div>

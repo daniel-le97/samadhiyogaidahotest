@@ -1,20 +1,31 @@
 <template>
-  <div class="container-fluid" v-if="!activeEvent">
-    <div class="row flex-wrap">
-      <div class="col-12" v-for="event in events">
-        <div class="elevation-1 eventCard">
-          <div class="d-flex justify-content-center gap-2">
-            <button class="btn btn-primary" @click="editEvent(event)">
-              edit event
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 my-2 ">
+           <div class="d-flex justify-content-center ">
+ <button class="btn btn-outline-success font-2 fs-3" @click="createEvent()">
+              Create Event
             </button>
-            <button class="btn btn-primary">delete event</button>
-          </div>
-          <EventCard :event="event" />
-        </div>
+           </div>
       </div>
     </div>
-  </div>
-  <div v-else class="container-fluid">
+    <div class="row scrollable-y"  v-if="!activeEvent">
+      <div class="col-12" v-for="event in events">
+      
+         <div class="position-relative">
+
+           <EventCard :event="event" />
+               <div class="d-flex justify-content-center gap-2  position-absolute top-0 start-0">
+            <button class="btn btn-outline-warning font-2 fs-3" @click="editEvent(event)">
+              edit event
+            </button>
+            <button class="btn btn-outline-danger font-2 fs-3">delete event</button>
+          </div>
+         </div>
+   
+      </div>
+    </div>
+      <div v-else class="container-fluid">
     <div class="row">
       <div class="col-12">
         <EventForm />
@@ -24,6 +35,8 @@
       </div>
     </div>
   </div>
+  </div>
+
   <!-- <button @click="form = !form" class="btn btn-primary">add an event</button> -->
   <!-- <button @click="form = !form" class="btn btn-primary">edit an event</button> -->
 </template>
@@ -68,6 +81,13 @@ export default {
           Pop.error(error);
         }
       },
+      async createEvent(){
+        try {
+            await eventsService.createEvent()
+          } catch (error) {
+            Pop.error(error,'[create Event]')
+          }
+      }
     };
   },
   components: { EventForm, EventCard },
@@ -75,8 +95,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .eventCard {
-//   height: 25vh;
-//   overflow-y: auto;
-// }
+.scrollable-y{
+  height: 90vh;
+}
 </style>

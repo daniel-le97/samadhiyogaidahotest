@@ -65,7 +65,7 @@ export default {
   color: var(--teal);
 }
 .grow {
-  height: 100vh;
+  height: 97vh;
 }
 
 .active {
