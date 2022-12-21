@@ -47,6 +47,7 @@
       "samadhiyogaidaho"
     ],
     "typescript.format.enable": true,
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "liveServer.settings.multiRootWorkspaceName": "client"
   }
 }

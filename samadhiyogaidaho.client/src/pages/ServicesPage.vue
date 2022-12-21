@@ -122,7 +122,7 @@
   <div class="row">
      
         <div class="col-md-6">
-          <p class="fs-4 fw-bold text-center">   Why would someone want a private yoga lesson?</p>
+          <p class="fs-4 fw-bold text-center mt-3">   Why would someone want a private yoga lesson?</p>
           <p class="fs-4 text-start">
          
 
