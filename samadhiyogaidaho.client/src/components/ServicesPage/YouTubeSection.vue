@@ -1,9 +1,9 @@
 <template>
-  <div class="container my-5">
+  <div class="container-fluid my-5 bg-pink py-5">
     <div class="row">
       <div class="col-md-12"></div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
       <!-- <CommentBox>
   <p class="fs-4 text-start">
     Bend so you don’t break.
@@ -22,16 +22,21 @@ Don’t break. Just be. Just breathe. Just love. Just live.
   </p>
 </CommentBox> -->
 
-      <div class="col-md-12 my-5">
-        <p class="font-2 fs-4 text-start">
+    <div class="row justify-content-center">
+        <div class="col-md-8 my-5">
+        <p class="font-2 fs-4 ">
           Starting in 2022 I began recording a mix of Online class series, and
           recorded content that can be accessed on your own time. Our online
           offerings are to meant to help you experience the beauty and art of
           transformation that takes place within yoga from the comfort of your
           own home and integrate it into your daily life
         </p>
+        <p class="font-2 fs-4  fw-bold">
+          There Will be a new video every two weeks!
+        </p>
       </div>
-      <div class="col-md-6">
+    </div>
+      <div class="col-md-4">
         <div class="card elevation-60 iframe">
           <iframe
             v-motion-slide-visible-bottom
@@ -45,7 +50,7 @@ Don’t break. Just be. Just breathe. Just love. Just live.
           ></iframe>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="card elevation-60 iframe">
           <iframe
             src="https://www.youtube.com/embed/ftxEVraDUw8"
@@ -57,7 +62,7 @@ Don’t break. Just be. Just breathe. Just love. Just live.
           ></iframe>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="card elevation-60 iframe">
           <iframe
             v-motion-slide-visible-once-left
@@ -70,7 +75,7 @@ Don’t break. Just be. Just breathe. Just love. Just live.
           ></iframe>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="card elevation-60 iframe">
           <iframe
             v-motion-slide-visible-right
@@ -83,7 +88,7 @@ Don’t break. Just be. Just breathe. Just love. Just live.
           ></iframe>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="card elevation-60 iframe">
           <iframe
             v-motion-slide-visible-right

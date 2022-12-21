@@ -45,18 +45,18 @@
 
       <div class="row my-md-5">
         <div class="col-md-4">
-<div class="card  border-0 elevation-6 p-2" v-motion-fade-visible-once :delay="300">
+<div class="card  border-0 elevation-7 bg-pink p-2" v-motion-fade-visible-once :delay="300">
 <div class="card-title font-2 fs-3 text-center">
-  Vinyasa Flow
+  Vinyasa 
 
 </div>
 <div class="card-body text-center font-2 fs-5">
-  Vinyasa Flow is a continuous flow of postures linked together by the breath. Classes build heat, endurance, flexibility, strength, and conscious breathing.
+  Vinyasa (Flow) is a  flowing  of postures executed in succession, often timed with the breath to attain balance in the mind and body. Classes build heat, endurance, flexibility, strength and  conscious breathing.
 </div>
 </div>
         </div>
         <div class="col-md-4 my-3 my-md-0">
-<div class="card  border-0 elevation-6 p-2" v-motion-fade-visible-once :delay="300">
+<div class="card  border-0 elevation-7 bg-pink p-2" v-motion-fade-visible-once :delay="300">
 <div class="card-title font-2 fs-3 text-center">
  Pranayama & Meditation
 
@@ -67,7 +67,7 @@ Pranayama (Breath control) an ancient tradition, is the conscious awareness of b
 </div>
         </div>
         <div class="col-md-4">
-<div class="card  border-0 elevation-6 p-2" v-motion-fade-visible-once :delay="300">
+<div class="card  border-0 elevation-7 bg-pink p-2" v-motion-fade-visible-once :delay="300">
 <div class="card-title font-2 fs-3 text-center">
  Journaling
 
@@ -148,8 +148,5 @@ export default {
 
 
 
-.card{
-  background: rgba(255, 182, 153, 0.096);
-  box-shadow: 0px 10px 24px 6px rgb(0 0 0 / 6%);
-}
+
 </style>

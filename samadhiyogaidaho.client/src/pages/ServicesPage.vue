@@ -90,7 +90,7 @@
   </section> -->
   <section>
     <div class="container my-5">
-      <div class="row">
+      <div class="row my-4">
         <div class="col-md-6">
           <img
             src="../assets/img/servicePhoto1.png"
@@ -99,11 +99,12 @@
           />
         </div>
         <div class="col-md-6">
+          <p class="fs-4 fw-bold text-center">Private
+            classes  & Workshops for groups</p>
           <p class="fs-4 text-start">
             One of our favorite things to do at Samadhi Yoga Is to host private
-            classes for groups.We got to lead the amazing @onlyjewel personal
-            training group through a 90 minute flow at a beautiful location in
-            Kuna @oasisyogaidaho <br />
+            classes  & Workshops for groups .We got to lead the amazing @onlyjewel personal
+            training group through a 90 minute flow.<br />
 
             It was a beautiful class and we had refreshments afterwards. It gave
             @onlyjewel clients an opportunity to meet like minded people, create
@@ -111,15 +112,27 @@
             “spiritual workout” in and getting to meditate and breathe together.
             <br />
 
-            If you have a group of people you’re interested in getting together
+            <!-- If you have a group of people you’re interested in getting together
             for a fun class, contact us! Whether that be a work group, a group
             of your clients, a bachelorette or bachelor party, or just a group
             of friends, we will work with you to create the class and experience
-            you desire. Link in the bio to book today!
+            you desire. Link in the bio to book today! -->
           </p>
+             <div class="card border-0 bg-pink elevation-7">
+<div class="card-body">
+  <p class="fs-4">
+ If you have a group of people you’re interested in getting together
+            for a fun class, contact us! Whether that be a work group, a group
+            of your clients, a bachelorette or bachelor party, or just a group
+            of friends, we will work with you to create the class and experience
+            you desire.
+  </p>
+ 
+</div>
+          </div>
         </div>
       </div>
-  <div class="row">
+  <div class="row my-4">
      
         <div class="col-md-6">
           <p class="fs-4 fw-bold text-center">   Why would someone want a private yoga lesson?</p>
@@ -130,10 +143,19 @@
 <br>
 
   There are so many little adjustments that so many of us don’t recognize that we need. Proper alignment in Warrior II can prevent damage to joint structures, especially in your knees. This is vital because the knee is one of the most mechanically complex joints in the body.
-<br>
 
-  Interested in your own private yoga lesson to see where they can possibly help you and your practice? See our last post for an opportunity to win an amazing giveaway worth over $200, one of the things included being an hour long yoga session! Or go ahead and message us today to book yours!
+
           </p>
+            <div class="card border-0 bg-pink elevation-7">
+<div class="card-body">
+  <p class="fs-4">
+     Interested in your own private yoga lesson?
+  </p>
+  <p>Katie Alverson Hosts Sessions at the Grove for 90$/Hour or 45$ for 1/2 Hour</p>
+ 
+  <p>She also provides  At Home Visits for 100$ within an 20 mile radius and an additional $0.50 for every mile extending that radius</p>
+</div>
+          </div>
         </div>
            <div class="col-md-6">
           <img
@@ -141,6 +163,10 @@
             alt=""
             class="img-fluid rounded elevation-6 hover-image"
           />
+        </div>
+
+        <div class="col-md-12">
+        
         </div>
       </div>
 
@@ -197,6 +223,8 @@ export default {
 }
 
 
+/*
+
 .card:hover {
   transition: all 0.25s ease;
   box-shadow: none;
@@ -213,7 +241,7 @@ export default {
     transition: all 0.25s ease;
     border: 4px solid rgb(135, 236, 211);
   }
-}
+}*/
 .page-title {
   font-size: 8rem;
 }
