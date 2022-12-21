@@ -4,7 +4,7 @@
       <div class="col-md-8 mt-2 text-center">
         <h1
           v-motion-slide-visible-once-left
-          class="display-1 font-1 text-center  underline"
+          class="display-2 font-1 text-center  underline"
         >
           Testimonials
         </h1>

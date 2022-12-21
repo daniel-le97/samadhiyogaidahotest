@@ -7,7 +7,7 @@
           <div class="col-md-8 team-section-title">
             <h1
               v-motion-slide-visible-once-left
-              class="display-1 font-1 underline text-start"
+              class="display-2 font-1 underline text-start"
             >
               Katie Alverson
             </h1>
