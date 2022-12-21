@@ -30,9 +30,9 @@
       <div class="row justify-content-center">
         
       
-        <div class="col-md-10 text-center">
+        <!-- <div class="col-md-10 text-center">
           <img src="https://img.freepik.com/free-vector/faqs-concept-illustration_114360-5215.jpg?w=740&t=st=1671513722~exp=1671514322~hmac=355be1eb112615146c0d1c1ebe6899123fe88fa56388cc7ed9baffbab61394bc" alt="">
-        </div>
+        </div> -->
         <div class="col-md-12">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">

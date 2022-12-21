@@ -189,7 +189,30 @@ import TestimonialSwiper from "./TestimonialSwiper.vue";
 
 export default {
   setup() {
-    return {};
+    return {
+      schedule: {
+       popEvents: `Are you feeling the need to get away with your partner not just
+                to relax, but to also delve deeper into your relationship? It's
+                time to stop putting yourself and your partner on the back
+                burner and give yourselves a long weekend away from it all. A
+                weekend full of relaxation, connection, and love.`,
+        imgSrc: `https://scontent-fml2-1.xx.fbcdn.net/v/t39.30808-6/291518073_128132356576521_7530546115358918920_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a26aad&_nc_ohc=bHJ0OcW_2gAAX-7oHpz&_nc_ht=scontent-fml2-1.xx&oh=00_AfAdzk-xLbVt1NsLbKqNuJJt5uo2-tJWeJrYyzXmfxQR9Q&oe=63A11BE8`,
+        online: ` Starting in 2022 I began recording a mix of Online class series,
+                and recorded content that can be accessed on your own time. Our
+                online offerings are to meant to help you experience the beauty
+                and art of transformation that takes place within yoga from the
+                comfort of your own home and integrate it into your daily life`,
+        classes: ` Monday & Wednesday you can catch us at 6AM at HollyWood Market
+                Yoga Where we hold Level 1-2 Vinyasa Style Yoga ( Commonly
+                referred to as “flow”)
+                Saturday at 9AM we hold an authentic series class at Authentic yoga studio`,
+        subTitle: `These curated programs are to help align you towards your best self`,
+        title: `Our Offerings To You`
+      },
+      changeText(){
+
+      }
+    };
   },
   components: { TestimonialSwiper },
 };

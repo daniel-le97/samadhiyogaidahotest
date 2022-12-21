@@ -29,6 +29,9 @@
             <router-link class="navbar-brand" :to="{ name: 'AdminRetreats' }">
               <button class="btn btn-primary">Retreats</button>
             </router-link>
+            <router-link class="navbar-brand" :to="{ name: 'AdminSchedule' }">
+              <button class="btn btn-primary">Schedule</button>
+            </router-link>
             <router-link class="navbar-brand" :to="{ name: 'AdminSettings' }">
               <button class="btn btn-primary">Settings</button>
             </router-link>
