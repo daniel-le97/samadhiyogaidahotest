@@ -128,7 +128,7 @@
   <section>
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-6" v-motion-slide-visible-once-left>
+        <div class="col-md-6" >
           <div class="card elevation-orange border-0 rounded-4 p-3">
             <div class="d-flex">
               <p class="fs-5 text-muted">4 days / 3nights</p>
@@ -226,7 +226,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6" v-motion-slide-visible-once-right>
+        <div class="col-md-6" >
           <div class="">
             <h1 class="underline font-2 display-3">Summary</h1>
           </div>
@@ -241,7 +241,7 @@
   <section>
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-6" v-motion-slide-visible-once-left>
+        <div class="col-md-6" >
           <div class="">
             <h1 class="display-3 font-2 underline">
               {{ retreat?.location?.address }}
@@ -251,7 +251,7 @@
             <p class="fs-4 text-start">{{ retreat?.location?.description }}</p>
           </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-center" v-motion-slide-visible-once-right>
+        <div class="col-md-6 d-flex justify-content-center" >
           <img
             :src="retreat?.location?.img"
             alt=""
@@ -259,14 +259,14 @@
           />
         </div>
         <div class="row my-5">
-          <div class="col-md-6 d-flex justify-content-center" v-motion-slide-visible-once-left>
+          <div class="col-md-6 d-flex justify-content-center" >
             <img
               :src="retreat?.schedule?.img"
               alt=""
               class="img-fluid elevation-5 rounded-4 w-75"
             />
           </div>
-          <div class="col-md-6" v-motion-slide-visible-once-right>
+          <div class="col-md-6">
             <div class="">
               <p class="display-3 font-2 underline">Daily Schedule</p>
             </div>
@@ -279,7 +279,7 @@
               class="row justify-content-center mt-5"
               v-if="retreat?.activities"
             >
-              <div class="col-md-6" v-motion-slide-visible-once-top>
+              <div class="col-md-6" >
                 <div class="card border-0 elevation-orange p-2">
                   <div class="card-body">
                     <p class="fs-4 text-decoration-underline">
@@ -314,7 +314,7 @@
               <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
-          <div class="col-md-8 d-flex" v-motion-slide-visible-once-right>
+          <div class="col-md-8 " v-motion-slide-visible-once-right>
             <FoodImageSwiper v-if="retreat?.food?.imgs" />
           </div>
         </div>
@@ -502,6 +502,12 @@ export default {
   background-position: center;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+   .page-title {
+    font-size: 6rem;
+  }
+  }
 }
 
 .img-fluid {

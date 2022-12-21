@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark text-dark  px-3 fixed-top font-2 nav py-5">
-    <div class="d-md-flex mx-auto">
+    <div class="d-flex mx-auto">
       <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
         <div class="d-flex flex-column align-items-center">
           <!-- <img
