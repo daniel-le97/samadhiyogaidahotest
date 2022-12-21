@@ -1,7 +1,7 @@
 <template>
 
   <div class="hero-image  d-flex flex-column justify-content-center align-items-center">
-    <h1 class="display-1 text-light text-shadow font-1 text-wrap">Join our Events </h1>
+    <h1 class="display-1 text-light text-shadow font-1 text-wrap page-title text-center">Join our Events </h1>
         <p class="font-1 text-light text-shadow display-6">Enjoy an enriching and memorable experience</p>
   </div>
 
@@ -90,6 +90,11 @@ font-family:Helvetica,Arial,sans-serif;
 }
 
 
-
-
+@media only screen and (max-width: 768px) {
+  .hero-image {
+    h1{
+      font-size: 4rem;
+    }
+  }
+}
 </style>

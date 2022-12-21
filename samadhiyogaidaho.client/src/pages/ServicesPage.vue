@@ -245,4 +245,10 @@ export default {
 .page-title {
   font-size: 8rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .page-title {
+    font-size: 4rem;
+  }
+}
 </style>

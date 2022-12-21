@@ -258,8 +258,8 @@ export default {
 }
 
 @media only screen and (max-width: 768px) {
-  .story-text {
-    font-size: 60pt;
-  }
+  .page-title {
+      font-size: 4rem;
+    }
 }
 </style>
