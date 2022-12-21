@@ -33,7 +33,7 @@
               </div>
             </div>
           </div>
-          <div class="d-flex">
+          <div class="d-flex gap-2">
             <div class="col-md-6 d-flex justify-content-evenly">
               <div class="form-floating mb-3 me-3">
                 <input

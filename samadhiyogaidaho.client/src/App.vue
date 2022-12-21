@@ -53,7 +53,7 @@ export default {
 
     const route = useRoute()
     const router = useRouter()
-    const names = ["Admin", "AdminEvents", "AdminRetreats", "AdminHome", "AdminSettings"]
+    const names = ["Admin", "AdminEvents", "AdminRetreats", "AdminHome", "AdminSettings", "AdminSchedule"]
 
     return {
       routeAdmin: computed(() => names.find(n => n == route.name)),

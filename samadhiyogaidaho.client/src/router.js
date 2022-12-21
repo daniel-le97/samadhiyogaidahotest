@@ -92,6 +92,11 @@ const routes = [
         name: 'AdminSettings',
         component: loadComponent("SettingsTab"),
       },
+      {
+        path: "schedule",
+        name: 'AdminSchedule',
+        component: loadComponent("ScheduleTab"),
+      },
     ],
   },
 ];
