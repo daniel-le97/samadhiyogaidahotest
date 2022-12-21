@@ -7,7 +7,7 @@
  <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
 
  <div class="col-md-12 text-center mt-2">
-        <h1 v-motion-slide-visible-once-left class="display-1 font-1 underline">
+        <h1 v-motion-slide-visible-once-left class="display-2 font-1 underline">
           Schedule
         </h1>
         <br />
@@ -24,7 +24,8 @@
 <img   src="../../assets/img/purpleroom2.png" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
    </div>
    <div class="col-md-6 text-start">
-<p class="underline  fs-2 font-1  border-2 border-bottom text-start text-pink darken-20">Level 1-2 Vinyasa Style Yoga  </p>
+<div class="">
+  <p class="underline  fs-2 font-1  border-2 border-bottom text-start text-pink darken-20">Level 1-2 Vinyasa Style Yoga  </p>
 
 <div class="d-flex">
   <div  class="me-3"><p class="text-start fs-3">Monday & Wednesday 6AM</p>
@@ -32,6 +33,18 @@
 
 <a href="https://goo.gl/maps/7bXj27T2fFr8gJ7D6" target="_blank" class="  darken-20 text-dark font-2 fs-3"> <i class="mdi mdi-map-marker fs-1 text-pink darken-20 "></i>HollyWood Market Yoga</a></div>
 
+</div>
+</div>
+<div class="mt-4">
+  <p class="underline  fs-2 font-1  border-2 border-bottom text-start text-pink darken-20">Authentic Series </p>
+
+<div class="d-flex">
+  <div  class="me-3"><p class="text-start fs-3">Saturday 9AM</p>
+
+
+<a href="https://goo.gl/maps/g3Up6L4RFZxNmLqd6" target="_blank" class="  darken-20 text-dark font-2 fs-3"> <i class="mdi mdi-map-marker fs-1 text-pink darken-20 "></i>Authentic Yoga</a></div>
+
+</div>
 </div>
 <!-- <p class="fs-4 text-start">{{event.description}} 
 </p> -->
@@ -42,7 +55,7 @@
  
     <div class="row my-4">
       <div class="col-md-12 text-center mt-2">
-        <h1 v-motion-slide-visible-once-left class="display-1 font-1 underline">
+        <h1 v-motion-slide-visible-once-left class="display-2 font-1 underline">
           Our Offerings To You
         </h1>
         <br />
