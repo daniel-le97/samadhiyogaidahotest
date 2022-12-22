@@ -186,7 +186,7 @@ export default {
 
     async function getPastRetreatImages() {
       try {
-        const {firebaseService} = async() => await import(`../services/FirebaseService`)
+        // const {firebaseService} = async() => await import(`../services/FirebaseService`)
         await firebaseService.getPastRetreatsImages();
       } catch (error) {
         Pop.error(error, "[]");
