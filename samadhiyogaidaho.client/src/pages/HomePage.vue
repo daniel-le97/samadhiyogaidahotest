@@ -19,7 +19,6 @@
               to be authentic in every day life, <br />
               to transform & to love
             </h5>
-
             <h1
               v-motion
               :initial="{
@@ -42,7 +41,6 @@
               ESCAPE WITH SAMADHI YOGA IDAHO
             </h1>
           </div>
-
         </div>
       </div>
       <GentleWave />
