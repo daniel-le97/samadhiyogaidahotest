@@ -136,10 +136,13 @@
         </div>
       </div>
     </section> -->
-
+    
     <section>
       <ScheduleSection />
     </section>
+    <section id="Retreat-Section" class="bg-pink">
+         <RetreatAndEvents />
+       </section>
 
     <section id="About-Katie-Section" class="bg-pink">
    <AboutSection/>
@@ -149,13 +152,10 @@
       <TestimonialSection />
     </section>
 
-    <!-- <section id="Retreat-Section" class="bg-pink">
-      <RetreatAndEvents />
-    </section> -->
-
-    <!-- <section class="bg-pink">
+   
+    <section class="bg-pink">
       <InstagramFeed />
-    </section> -->
+    </section>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-5 schedule-section ">
+  <div class="container schedule-section ">
  
 
 
@@ -11,17 +11,16 @@
           Schedule
         </h1>
         <br />
-        <h2
-           v-motion-slide-visible-once-left
-            class=" text-lightPink darken-20 font-2 underline"
-          >
-      
-          </h2>
+    
       </div>
 
 
    <div class="col-md-6 d-flex align-items-center justify-content-center" >
-<img   src="../../assets/img/purpleroom2.png" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
+<div class="card">
+  <div class="image-box">
+  <img   src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" class="img-fluid rounded elevation-6 hover-image ">
+</div>
+</div>
    </div>
    <div class="col-md-6 text-start">
 <div class="">
@@ -46,14 +45,12 @@
 
 </div>
 </div>
-<!-- <p class="fs-4 text-start">{{event.description}} 
-</p> -->
 
 
    </div>
   </div>
  
-    <div class="row my-4">
+    <!-- <div class="row my-4">
       <div class="col-md-12 text-center mt-2">
         <h1 v-motion-slide-visible-once-left class="display-2 font-1 underline">
           Our Offerings To You
@@ -154,38 +151,11 @@
 
 
 
-<!-- 
-      <div class="col-md-4">
-        <div v-motion-pop-visible-once class="mb-5 mb-md-0">
-          <router-link :to="{ name: 'Retreat' }" @click="scrollToTop()">
-            <img
-              src="../../assets/img/retreatCoverImage.png"
-              alt=""
-              class="img-fluid rounded-1 elevation-6 hover-image"
-            />
-          </router-link>
-
-          <div class="card-body">
-            <div class="text-pink darken-30 font-2 fs-2 my-3">Our Retreats</div>
-            <div class="">
-              <p class="font-2 fs-4 text-start" style="z-index: 99999">
-                Are you feeling the need to get away with your partner not just
-                to relax, but to also delve deeper into your relationship? It's
-                time to stop putting yourself and your partner on the back
-                burner and give yourselves a long weekend away from it all. A
-                weekend full of relaxation, connection, and love.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import TestimonialSwiper from "./TestimonialSwiper.vue";
 
 export default {
   setup() {
@@ -214,21 +184,12 @@ export default {
       }
     };
   },
-  components: { TestimonialSwiper },
+
 };
 </script>
 
 <style lang="scss" scoped>
 
-.schedule-section{
-  margin-bottom: 100px;
-  //when screen is 768px OR LESS
-  @media only screen and (max-width: 768px){
-  margin-bottom: 100px;
-  }
-}
-.img-fluid {
-  height: 300px;
-  object-fit: cover;
-}
+
+
 </style>
