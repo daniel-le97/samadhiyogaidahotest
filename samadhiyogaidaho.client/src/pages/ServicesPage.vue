@@ -222,26 +222,6 @@ export default {
   transition: all 0.25s ease;
 }
 
-
-/*
-
-.card:hover {
-  transition: all 0.25s ease;
-  box-shadow: none;
-  background: transparent;
-
-  img {
-    opacity: 0;
-    transition: all 0.25s ease;
-  }
-
-  .card-img-overlay {
-    display: block;
-    opacity: 1;
-    transition: all 0.25s ease;
-    border: 4px solid rgb(135, 236, 211);
-  }
-}*/
 .page-title {
   font-size: 8rem;
 }

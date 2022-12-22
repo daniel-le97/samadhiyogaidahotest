@@ -96,7 +96,7 @@ export default {
 </script>
 <style scoped>
 .page-title{
-  font-size: 10rem;
+  font-size: 8rem;
 }
 .heroImage {
   height: 100vh;
