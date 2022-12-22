@@ -160,21 +160,21 @@
 </template>
 
 <script>
-// import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
-// import GentleWave from "../components/PluginComponents/GentleWave.vue";
-// import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
-// import CallToAction from "../components/HomePage/CallToAction.vue";
-// import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
-// import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
-// import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue";
+import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+import GentleWave from "../components/PluginComponents/GentleWave.vue";
+import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
+import CallToAction from "../components/HomePage/CallToAction.vue";
+import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
+import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
+import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue";
 import { defineAsyncComponent } from "vue";
-// import CommentBox from "../components/MiscComponents/CommentBox.vue";
-// import ScheduleSection from "../components/HomePage/ScheduleSection.vue";
-// import ServicesSection from "../components/HomePage/ServicesSection.vue";
+import CommentBox from "../components/MiscComponents/CommentBox.vue";
+import ScheduleSection from "../components/HomePage/ScheduleSection.vue";
+import ServicesSection from "../components/HomePage/ServicesSection.vue";
 import Pop from "../utils/Pop.js";
 import { youtubeService } from "../services/YoutubeService.js";
 import { onMounted } from "vue";
-// import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
+import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
 import { firebaseService } from "../services/FirebaseService.js";
 import AboutSection from "../components/HomePage/AboutSection.vue";
 export default {
@@ -186,7 +186,7 @@ export default {
 
     async function getPastRetreatImages() {
       try {
-        const {firebaseService} = async() => await import(`../services/FirebaseService`)
+        // const {firebaseService} = async() => await import(`../services/FirebaseService`)
         await firebaseService.getPastRetreatsImages();
       } catch (error) {
         Pop.error(error, "[]");
@@ -202,17 +202,17 @@ export default {
     return {};
   },
    components: {
-    SwiperComponent2: defineAsyncComponent(() => import(`../components/HomePage/TestimonialSwiper.vue`)),
-    ParticleComponent: defineAsyncComponent(() => import(`../components/PluginComponents/ParticleComponent.vue`)),
-    GentleWave: defineAsyncComponent(() => import("../components/PluginComponents/GentleWave.vue")),
-    CallToAction: defineAsyncComponent(() => import("../components/HomePage/CallToAction.vue")),
-    TestimonialSection: defineAsyncComponent(() => import("../components/HomePage/TestimonialSection.vue")),
-    YouTubeSection: defineAsyncComponent(() => import("../components/ServicesPage/YouTubeSection.vue")),
-    RetreatAndEvents: defineAsyncComponent(() => import("../components/HomePage/RetreatAndEvents.vue")),
-    CommentBox: defineAsyncComponent(() => import("../components/MiscComponents/CommentBox.vue")),
-    ScheduleSection: defineAsyncComponent(() => import("../components/HomePage/ScheduleSection.vue")),
-    ServicesSection: defineAsyncComponent(() => import("../components/HomePage/ServicesSection.vue")),
-    InstagramFeed: defineAsyncComponent(() => import("../components/HomePage/InstagramFeed.vue")),
+    SwiperComponent2,
+    ParticleComponent,
+    GentleWave,
+    CallToAction,
+    TestimonialSection,
+    YouTubeSection,
+    RetreatAndEvents,
+    CommentBox,
+    ScheduleSection,
+    ServicesSection,
+    InstagramFeed,
     AboutSection
 },
 };

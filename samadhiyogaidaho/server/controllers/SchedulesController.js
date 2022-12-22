@@ -1,9 +1,10 @@
 import { Auth0Provider } from "@bcwdev/auth0provider";
 import { schedulesService } from "../services/SchedulesService.js";
+// import { schedulesService } from "../services/SchedulesService.js";
 // import { newsLetterService } from "../services/NewsLetterService.js";
 import BaseController from "../utils/BaseController.js";
 
-export class schedulesController extends BaseController {
+export class SchedulesController extends BaseController {
   constructor() {
     super("api/schedules");
     this.router

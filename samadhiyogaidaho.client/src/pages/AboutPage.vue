@@ -95,7 +95,6 @@ export default {
 };
 </script>
 <style scoped>
-
 .page-title{
   font-size: 10rem;
 }
@@ -109,15 +108,9 @@ export default {
   background-attachment: fixed;
 }
 
-.story-text {
-  font-size: 20pt;
-}
-
-
-
 @media only screen and (max-width: 768px) {
-  .story-text {
-    font-size: 13pt;
-  }
+  .page-title {
+      font-size: 4rem;
+    }
 }
 </style>

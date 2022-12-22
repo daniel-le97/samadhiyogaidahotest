@@ -1,6 +1,9 @@
-class ScheduleService {
+import { dbContext } from "../db/DbContext";
+import { getAdmins } from "./AccountService";
+
+class SchedulesService {
   async getAllSchedules() {
-    const schedules = await dbContext.schedules.find();
+    const schedules = await dbContext.Schedules.find();
     return schedules;
   }
   async deleteSchedule(userId, scheduleId) {
@@ -12,13 +15,13 @@ class ScheduleService {
   }
   async createSchedule(scheduleData, userId) {
     await getAdmins(userId);
-    scheduleData.creatorId = userId;
-    const schedule = await dbContext.schedules.create(scheduleData);
+    // scheduleData.creatorId = userId;
+    const schedule = await dbContext.Schedules.create(scheduleData);
     // populate
     return schedule;
   }
   async getScheduleById(id) {
-    const schedule = await dbContext.schedules.findOne({ id });
+    const schedule = await dbContext.Schedules.findOne({ id });
     if (!schedule) {
       throw new BadRequest("unable to find schedule");
     }
@@ -34,4 +37,4 @@ class ScheduleService {
     return newSchedule;
   }
 }
-export const scheduleService = new ScheduleService()
+export const schedulesService = new SchedulesService()

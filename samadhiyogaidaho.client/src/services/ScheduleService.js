@@ -1,11 +1,14 @@
 import { AppState } from "../AppState.js";
 import { Schedule } from "../models/Schedule.js";
+import { logger } from "../utils/Logger.js";
 import { api } from "./AxiosService.js";
 
 class ScheduleService {
   async createSchedule(scheduleData) {
+   logger.log(scheduleData)
     const res = await api.post("api/schedules", scheduleData);
     let newSchedule = new Schedule(res.data);
+    logger.log(newSchedule)
     AppState.schedules.push(newSchedule);
   }
 
