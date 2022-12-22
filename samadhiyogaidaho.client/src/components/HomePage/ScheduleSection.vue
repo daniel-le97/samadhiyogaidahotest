@@ -1,26 +1,23 @@
 <template>
-  <div class="container schedule-section ">
- 
-
-
-
- <div class="row my-5"  v-motion-slide-visible-bottom :delay="200">
-
- <div class="col-md-12 text-center mt-2">
+  <div class="container schedule-section">
+    <div class="row my-5" v-motion-slide-visible-bottom :delay="200">
+      <div class="col-md-12 text-center mt-2">
         <h1 v-motion-slide-visible-once-left class="display-2 font-1 underline">
-          <button class="btn btn-primary" @click="changeText()"></button>
           Schedule
         </h1>
         <br />
-    
       </div>
 
       <div class="col-md-6 d-flex align-items-center justify-content-center">
-        <img
-          src="../../assets/img/purpleroom2.png"
-          alt=""
-          class="img-fluid rounded elevation-6 hover-image w-75"
-        />
+        <div class="card">
+          <div class="image-box">
+            <img
+              src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              alt=""
+              class="img-fluid rounded elevation-6 hover-image"
+            />
+          </div>
+        </div>
       </div>
       <div class="col-md-6 text-start">
         <div class="">
@@ -30,27 +27,16 @@
             Level 1-2 Vinyasa Style Yoga
           </p>
 
-   <div class="col-md-6 d-flex align-items-center justify-content-center" >
-<div class="card">
-  <div class="image-box">
-  <img   src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" class="img-fluid rounded elevation-6 hover-image ">
-</div>
-</div>
-   </div>
-   <div class="col-md-6 text-start">
-<div class="">
-  <p class="underline  fs-2 font-1  border-2 border-bottom text-start text-pink darken-20">Level 1-2 Vinyasa Style Yoga  </p>
-
-              <a
-                href="https://goo.gl/maps/7bXj27T2fFr8gJ7D6"
-                target="_blank"
-                class="darken-20 text-dark font-2 fs-3"
-              >
-                <i class="mdi mdi-map-marker fs-1 text-pink darken-20"></i
-                >HollyWood Market Yoga</a
-              >
-            </div>
-          </div>
+      <div class="d-flex">
+            <a
+            href="https://goo.gl/maps/7bXj27T2fFr8gJ7D6"
+            target="_blank"
+            class="darken-20 text-dark font-2 fs-3"
+          >
+            <i class="mdi mdi-map-marker fs-1 text-pink darken-20"></i>HollyWood
+            Market Yoga</a
+          >
+      </div>
         </div>
         <div class="mt-4">
           <p
@@ -63,26 +49,20 @@
             <div class="me-3">
               <p class="text-start fs-3">Saturday 9AM</p>
 
-<a href="https://goo.gl/maps/7bXj27T2fFr8gJ7D6" target="_blank" class="  darken-20 text-dark font-2 fs-3"> <i class="mdi mdi-map-marker fs-1 text-pink darken-20 "></i>HollyWood Market Yoga</a></div>
+              <a
+                href="https://goo.gl/maps/7bXj27T2fFr8gJ7D6"
+                target="_blank"
+                class="darken-20 text-dark font-2 fs-3"
+              >
+                <i class="mdi mdi-map-marker fs-1 text-pink darken-20"></i
+                >HollyWood Market Yoga</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</div>
-</div>
-<div class="mt-4">
-  <p class="underline  fs-2 font-1  border-2 border-bottom text-start text-pink darken-20">Authentic Series </p>
-
-<div class="d-flex">
-  <div  class="me-3"><p class="text-start fs-3">Saturday 9AM</p>
-
-
-<a href="https://goo.gl/maps/g3Up6L4RFZxNmLqd6" target="_blank" class="  darken-20 text-dark font-2 fs-3"> <i class="mdi mdi-map-marker fs-1 text-pink darken-20 "></i>Authentic Yoga</a></div>
-
-</div>
-</div>
-
-
-   </div>
-  </div>
- 
     <!-- <div class="row my-4">
       <div class="col-md-12 text-center mt-2">
         <h1 v-motion-slide-visible-once-left class="display-2 font-1 underline">
@@ -187,7 +167,6 @@
 </template>
 
 <script>
-
 export default {
   setup() {
     return {
@@ -207,12 +186,7 @@ export default {
       },
     };
   },
-
 };
 </script>
 
-<style lang="scss" scoped>
-
-
-
-</style>
+<style lang="scss" scoped></style>
