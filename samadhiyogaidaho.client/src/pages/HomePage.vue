@@ -9,7 +9,6 @@
           class="hero-image d-flex flex-column justify-content-center align-items-center"
         >
           <div style="margin-top: 80px" class="text-shadow container">
-       
             <h5
               v-motion-slide-top
               :delay="600"
