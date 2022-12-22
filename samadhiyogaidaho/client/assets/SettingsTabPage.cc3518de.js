@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as s}from"./index.0787da94.js";const o={setup(){return{}}},c={class:"component"};function n(r,a,_,p,i,d){return s(),e("div",c," skrrt ")}const u=t(o,[["render",n]]);export{u as default};

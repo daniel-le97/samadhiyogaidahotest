@@ -58,7 +58,7 @@ import Pop from "../utils/Pop.js";
 export default {
   props: {},
   setup(props) {
-    const editable = ref({});
+    const editable = ref({emailType:'subscribe'});
 
     onMounted(() => {});
     watchEffect(() => {});

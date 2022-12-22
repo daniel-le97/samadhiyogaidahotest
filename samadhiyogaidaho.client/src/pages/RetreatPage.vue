@@ -397,6 +397,43 @@
     <div class="container my-5">
       <div class="row">
         <div class="col-md-12 mb-4 text-center">
+          <h1 class="display-2 font-1">August 2023 Women's Desert Soul Awakening</h1>
+        </div>
+        <div class="col-md-12 mb-4 text-center">
+       
+        </div>
+        <!-- <div class="col-md-4" v-for="a in archived">
+          <ArchivedRetreatCard :retreat="a" />
+        </div> -->
+
+   <div class="container my-4">
+            <div class="masonry2">
+              <div
+                @click="setActiveImage(f)"
+                data-bs-toggle="modal"
+                data-bs-target="#activeImage"
+                class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
+                v-for="f in retreat.featuredImgs"
+              >
+                <img
+               
+                  :src="f"
+                  alt=""
+                  class="img-fluid hover-image rounded-4 selectable"
+                />
+              </div>
+            </div>
+          </div>
+
+
+
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-12 mb-4 text-center">
           <h1 class="display-2 font-1">August 2022 Costal Reset Retreat</h1>
         </div>
         <div class="col-md-12 mb-4 text-center">
@@ -494,7 +531,7 @@ export default {
   background-size: cover;
   height: 40vh;
   background-position: center;
-  background-image: url(https://images.unsplash.com/photo-1452109777848-a4de775da10d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80);
+  background-image: url(https://images.unsplash.com/photo-1576191919769-40424bb34367?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80);
   background-attachment: fixed;
 }
 

@@ -71,10 +71,10 @@
             </router-link>
           </li>
           <li>
-            <router-link :to="{ name: 'Blog' }" v-motion-pop :delay="300"
+            <a href=" https://ghost.apps.ledano.tk/ " target="_blank" v-motion-pop :delay="300"
               class="btn text-uppercase fw-bold fs-4 nav-link">
               Blog
-            </router-link>
+            </a>
           </li>
           <!-- <li>
             <router-link

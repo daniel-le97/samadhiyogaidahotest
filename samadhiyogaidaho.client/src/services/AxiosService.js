@@ -19,3 +19,11 @@ export const instagramAPI = Axios.create({
       "EAAM6LP8nbfgBANgHgWrZC9Mz7uWe5vERNKLqLEUIq8xs1NcpLNQZCWu35AQM1hHrshtm3Bf6ZCJzK4hoqSYtAmZAfeyBYrGgjRZC1aSr5txirP3nPaD8vGDJG3Jh0uVnKH0cgWdnvpZBCOqAjJPxFEUnN4yI0SPt663eZBQqD6gZC9FjAgzQvdBEVjIRifpZAl46NAy9EKj2MIQZDZD",
   },
 });
+
+export const ghostAPI = Axios.create({
+  baseURL: "https://ghost.apps.ledano.tk/members/",
+  timeout:8000,
+  params:{
+
+  }
+});
