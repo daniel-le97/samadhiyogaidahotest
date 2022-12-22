@@ -165,12 +165,12 @@ background: linear-gradient(to bottom,  rgba(23, 50, 51, 0.65) 0%,rgba(255, 0, 0
   color: var(--darkPink);
 }
 
-@media screen and (min-width: 768px) {
-  nav {
-    height: 200px;
-  }
+// @media screen and (min-width: 768px) {
+//   nav {
+//     height: 200px;
+//   }
  
-}
+// }
 
 
 </style>

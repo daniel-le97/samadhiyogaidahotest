@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <div class="hero-image d-flex flex-column align-items-center justify-content-center">
       <div class="text-center container">
@@ -7,15 +6,12 @@
           class=" font-1 text-shadow page-title courgette fw-bolder text-light">
           How Can We Help You?
         </h1>
-    
+
       </div>
     </div>
-
     <section class="container my-5">
-  <div class="row my-5 justify-content-center">
-        <div
-          class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center"
-        >
+      <div class="row my-5 justify-content-center">
+        <div class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center">
           <blockquote class="font-1 quote">
             On an inhale, think of the things that are no longer serving you,
             whatever that may be. Maybe it’s a thought Maybe it’s a feeling
@@ -25,14 +21,7 @@
           <cite>- SamadhiYogaIdaho</cite>
         </div>
       </div>
-
-      
       <div class="row justify-content-center">
-        
-      
-        <!-- <div class="col-md-10 text-center">
-          <img src="https://img.freepik.com/free-vector/faqs-concept-illustration_114360-5215.jpg?w=740&t=st=1671513722~exp=1671514322~hmac=355be1eb112615146c0d1c1ebe6899123fe88fa56388cc7ed9baffbab61394bc" alt="">
-        </div> -->
         <div class="col-md-12">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -180,11 +169,14 @@
                   <i class="mdi mdi-help-circle me-3"></i> What is Yin Yoga?
                 </button>
               </h2>
-              <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+              <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading2"
+                data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <p>
-                    Yin Yoga is a slower-paced, more meditative version of the popular physical and spiritual discipline of yoga. In Yin
-                    yoga, the poses are held for a long period of time (typically three to five minutes or longer) to target the connective
+                    Yin Yoga is a slower-paced, more meditative version of the popular physical and spiritual discipline
+                    of yoga. In Yin
+                    yoga, the poses are held for a long period of time (typically three to five minutes or longer) to
+                    target the connective
                     tissues (such as the ligaments) rather than focusing on the muscles.
                   </p>
                 </div>
@@ -193,12 +185,7 @@
           </div>
         </div>
       </div>
-
-
-
-
     </section>
-
   </div>
 </template>
 
@@ -259,7 +246,7 @@ export default {
 
 @media only screen and (max-width: 768px) {
   .page-title {
-      font-size: 4rem;
-    }
+    font-size: 4rem;
+  }
 }
 </style>
