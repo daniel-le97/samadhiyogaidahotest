@@ -19,33 +19,46 @@
         <div class="row text-center d-flex justify-content-center pt-5">
     
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">About us</a>
-            </h6>
+            <router-link :to="{ name: 'About' }" title="about">
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                About
+              </h6>
+              </router-link>
           </div>
   
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">Products</a>
-            </h6>
+            <router-link :to="{ name: 'Services' }" title="services">
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                Services
+              </h6>
+            </router-link>
           </div>
   
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">Awards</a>
-            </h6>
+            
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                <a href=" https://ghost.apps.ledano.tk/ " target="_blank"
+                  class="text-dark" title="blog">
+                  Blog
+                </a>
+              </h6>
+            
           </div>
   
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">Help</a>
-            </h6>
+            <router-link :to="{ name: 'FAQ' }" title="FAQ">
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                FAQ
+              </h6>
+            </router-link>
           </div>
 
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">Contact</a>
-            </h6>
+            <router-link :to="{ name: 'Contact' }" title="contact">
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                Connect
+              </h6>
+            </router-link>
           </div>
  
         </div>
