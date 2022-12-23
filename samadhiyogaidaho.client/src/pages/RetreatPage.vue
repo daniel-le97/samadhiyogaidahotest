@@ -17,17 +17,17 @@
             :delay="400"
             class="display-6 font-2 text-shadow"
           >
-            Escape the hustle and bustle of everyday life!
+            Escape the hustle and bustle of everyday life and enjoy a new experience
           </p>
   
     </div>
   </section>
-  <!-- <RetreatForm /> -->
-  <!-- <section>
+
+  <section>
     <div class="container">
       <div class="row my-5 justify-content-center">
         <div
-          class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center"
+          class="col-md-6 d-md-flex d-none justify-content-center flex-column align-content-center align-items-center"
         >
           <blockquote class="font-1 quote"  v-motion-pop-visible-once>
             On an inhale, think of the things that are no longer serving you,
@@ -45,18 +45,18 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row gy-3">
         <div class="col-md-6 text-center" >
           <img
             v-if="retreat"
             v-motion-pop-visible-once
             :src="featuredImg1"
             alt=""
-            class="img-fluid rounded-4 elevation-6 h-100"
+            class="img-fluid rounded-4 elevation-6 first-cover-image w-100 h-100 "
           />
         </div>
         <div class="col-md-6">
-          <div class="row">
+          <div class="row gy-3">
             <div class="col-md-12 mb-3">
               <img
                 v-if="retreat"
@@ -113,7 +113,7 @@
                
                   :src="f"
                   alt=""
-                  class="img-fluid hover-image rounded-4 selectable"
+                  class="img-fluid hover-image rounded-4 selectable h-100"
                 />
               </div>
             </div>
@@ -121,7 +121,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <section>
     <div class="container my-5">
@@ -261,7 +261,7 @@
             <img
               :src="retreat?.schedule?.img"
               alt=""
-              class="img-fluid elevation-5 rounded-4 w-75"
+              class="img-fluid elevation-5 rounded-4 schedule-img"
             />
           </div>
           <div class="col-md-6">
@@ -313,7 +313,10 @@
             </div>
           </div>
           <div class="col-md-7 " >
-            <FoodImageSwiper v-if="retreat?.food?.imgs"  v-motion-slide-visible-once-right/>
+            <div v-motion-slide-visible-once-right>
+
+              <FoodImageSwiper v-if="retreat?.food?.imgs"  />
+            </div>
           </div>
         </div>
       </div>
@@ -525,6 +528,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.schedule-img{
+  width: 75%;
+   
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+ width: 100%;
+  }
+}
+.first-cover-image{
+  
+
+  object-fit: cover;
+}
 .parallax {
   background-size: cover;
   height: 40vh;
