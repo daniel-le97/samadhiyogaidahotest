@@ -3,9 +3,8 @@
     <div class="tsparticles">
       <ParticleComponent />
     </div>
-    <div class="hero-image d-flex align-items-center justify-content-center">
-      <div class="row">
-        <div class="col-md-12">
+    <div class="hero-image text-center d-flex flex-column justify-content-center align-content-center">
+
           <h1
             v-motion-slide-top
             :delay="200"
@@ -20,24 +19,23 @@
           >
             Escape the hustle and bustle of everyday life!
           </p>
-        </div>
-      </div>
+  
     </div>
   </section>
   <!-- <RetreatForm /> -->
-  <section>
+  <!-- <section>
     <div class="container">
-      <div class="row my-5 justify-content-center" v-motion-pop-visible-once>
+      <div class="row my-5 justify-content-center">
         <div
           class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center"
         >
-          <blockquote class="font-1 quote">
+          <blockquote class="font-1 quote"  v-motion-pop-visible-once>
             On an inhale, think of the things that are no longer serving you,
             whatever that may be. Maybe it’s a thought Maybe it’s a feeling
             Maybe it’s a person Or an experience But taking it, And on an
             exhale, choosing consciously to let it go.
           </blockquote>
-          <cite>- SamadhiYogaIdaho</cite>
+          <cite  v-motion-pop-visible-once>- SamadhiYogaIdaho</cite>
         </div>
       </div>
 
@@ -123,7 +121,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section>
     <div class="container my-5">
@@ -239,8 +237,8 @@
   </section>
 
   <section>
-    <div class="container my-5">
-      <div class="row">
+    <div class="container my-5 ">
+      <div class="row justify-content-center gy-3">
         <div class="col-md-6" >
           <div class="">
             <h1 class="display-3 font-2 underline">
@@ -258,7 +256,7 @@
             class="img-fluid rounded-4 elevation-5"
           />
         </div>
-        <div class="row my-5">
+        <div class="row my-5 gy-5">
           <div class="col-md-6 d-flex justify-content-center" >
             <img
               :src="retreat?.schedule?.img"
@@ -267,7 +265,7 @@
             />
           </div>
           <div class="col-md-6">
-            <div class="">
+            <div class="text-center">
               <p class="display-3 font-2 underline">Daily Schedule</p>
             </div>
             <div class="">
@@ -302,9 +300,9 @@
     </div>
     <section>
       <div class="container my-5">
-        <div class="row">
-          <div class="col-md-6" >
-            <div class="" v-motion-slide-visible-once-left>
+        <div class="row gy-3">
+          <div class="col-md-5" >
+            <div class="text-center" v-motion-slide-visible-once-left>
               <p class="display-3 mb-0 underline">Food</p>
               <p class="display-6 text-muted font-2">
                 Featuring {{ retreat?.food?.chef }}
@@ -314,7 +312,7 @@
               <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
-          <div class="col-md-4 " >
+          <div class="col-md-7 " >
             <FoodImageSwiper v-if="retreat?.food?.imgs"  v-motion-slide-visible-once-right/>
           </div>
         </div>
@@ -349,7 +347,7 @@
 
   <section>
     <div class="container my-5">
-      <div class="row">
+      <div class="row gy-3">
         <div class="col-md-12 text-center" >
           <h1  
           v-motion-slide-visible-once-left

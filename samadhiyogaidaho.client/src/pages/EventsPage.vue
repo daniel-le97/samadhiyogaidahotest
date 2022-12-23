@@ -18,9 +18,11 @@ Our pop up schedule for 2023 will be posted soon so you can have an idea and pla
 
 <hr class="mt-4">
 
+<div v-motion-slide-visible-bottom :delay="200"  v-for="e in events" :key="e.id">
+<EventCard :event="e"    />
+</div>
 
 
-<EventCard :event="e"  v-for="e in events" :key="e.id"  v-motion-slide-visible-bottom :delay="200" />
 
 
 </div>

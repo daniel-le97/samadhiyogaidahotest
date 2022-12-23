@@ -173,6 +173,10 @@ export default {
 <style lang="scss" scoped>
 .page-title{
   font-size: 12rem;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  font-size: 6rem;
+  }
 }
 .image-1 {
   width: auto;

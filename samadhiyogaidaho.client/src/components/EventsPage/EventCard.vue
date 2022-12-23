@@ -1,7 +1,11 @@
 <template>
-  <div class="row my-5" >
+  <div class="row my-5 gy-3" >
    <div class="col-md-6 d-flex align-items-center justify-content-center" >
-<img :src="event.img" alt="" class="img-fluid rounded elevation-6 hover-image w-75">
+<div class="card elevation-6">
+  <div class="image-box">
+  <img :src="event.img" alt="" class="img-fluid rounded elevation-6  ">
+</div>
+</div>
    </div>
    <div class="col-md-6 text-start">
 <p class="underline  fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">{{event.title}}</p>
@@ -10,7 +14,7 @@
 
 <p class="text-start">{{event.location.place}} </p>
 <p class="text-start">{{event.location.address}} </p></div>
-<div class="fs-2 font-2">
+<div class="fs-2 font-2 ">
 ${{event.cost }}  per   <img src="https://cdn-icons-png.flaticon.com/512/8927/8927683.png" alt="" class="img-fluid" width="80" height="80">
 
 </div>

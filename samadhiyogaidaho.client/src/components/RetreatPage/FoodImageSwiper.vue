@@ -4,10 +4,19 @@
     :grabCursor="true"
     :modules="modules"
       :loop="true"
-    class="mySwiper  rounded-4"
+    class="mySwiper  rounded-4 d-none d-md-block"
+    
   >
     <swiper-slide v-for="i in images" class="bg-transparent elevation-6  rounded-4">
 <img :src="i" alt="" class="rounded-4 img-fluid h-100 ">
+
+    </swiper-slide>
+  </swiper>
+
+
+   <swiper :navigation="true" :modules="modules" class="mySwiper d-md-none d-block">
+       <swiper-slide v-for="i in images" class="bg-transparent elevation-6  rounded-4">
+<img :src="i" alt="" class="rounded-4 img-fluid h-100  ">
 
     </swiper-slide>
   </swiper>
@@ -24,17 +33,18 @@ import "swiper/css/effect-cards";
 
 
 // import required modules
-import { EffectCards } from "swiper";
+import { EffectCards, Navigation } from "swiper";
 import { AppState } from "../../AppState.js";
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
+
   },
   setup() {
     return {
-      modules: [EffectCards],
+      modules: [EffectCards,Navigation],
       images: computed(() => AppState.currentRetreat?.food?.imgs),
     };
   },
@@ -50,8 +60,8 @@ img{
 }
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px){
-  width: 300px;
-  height: 500px;
+ width: auto;
+  height: 70vh;
  
   }
 }
