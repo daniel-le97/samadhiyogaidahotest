@@ -2,9 +2,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
-  <button class="btn btn-primary" @click="getPocket()">pocket</button>
+        <input type="file" multiple v-on:change="uploadFile" />
       </div>
-    
     </div>
   </div>
 </template>
@@ -16,7 +15,7 @@ import { computed } from "@vue/reactivity";
 import { onBeforeMount, onMounted } from "vue";
 import { AppState } from "../../AppState";
 import { eventsService } from "../../services/EventsService";
-import { pocketBaseService } from "../../services/pocketBaseService";
+// import { pocketBaseService } from "../../services/pocketBaseService";
 import Pop from "../../utils/Pop";
 
 export default {
@@ -33,16 +32,28 @@ export default {
     // }
     return {
       stats: computed(() => AppState.fakeStats),
-      async getPocket(){
+      async getPocket() {
         try {
-            await pocketBaseService.getFiles()
-          } catch (error) {
-            Pop.error(error)
-          }
-      }
+          console.log("hi");
+          // const pocketBaseService = async() => await import(
+          //   "../../services/pocketBaseService.js"
+          // );
+          // console.log(pocketBaseService);
+        } catch (error) {
+          Pop.error(error);
+        }
+      },
+      async uploadFile(e) {
+        try {
+        const {pocketBaseService} = await import("../../services/pocketBaseService.js")
+          await pocketBaseService.uploadFile(e);
+        } catch (error) {
+          Pop.error(error)
+        }
+      },
     };
   },
-  components: { },
+  components: {},
 };
 </script>
 

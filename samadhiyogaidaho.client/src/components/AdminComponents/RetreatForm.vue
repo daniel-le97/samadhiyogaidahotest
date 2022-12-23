@@ -656,7 +656,7 @@ import { AppState } from "../../AppState.js";
 import { retreatsService } from "../../services/RetreatsService";
 import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
-// import { firebaseService } from "../../services/FirebaseService.js";
+// import { pocketBaseService } from "../../services/pocketBaseService.js";
 import { uploadsService } from "../../services/UploadsService.js";
 
 export default {
@@ -687,7 +687,7 @@ export default {
       async onChangeFileUpload(e) {
         try {
           AppState.loading = true;
-          // const img = await firebaseService.uploadFile(e);
+          // const img = await pocketBaseService.uploadFile(e);
           editable.value.schedule.img = img;
           AppState.loading = false;
         } catch (error) {
