@@ -1,1 +1,0 @@
-import{_ as t,q as a,v as o,s as c,c as _,o as r}from"./index.0787da94.js";const d={props:{},setup(s){const e=a({});return o(()=>{}),c(()=>{}),{editable:e}}},n={class:"hero-image"};function p(s,e,f,i,u,l){return r(),_("div",n," sdsdfds asasdada ")}const v=t(d,[["render",p],["__scopeId","data-v-c3296de2"]]);export{v as default};

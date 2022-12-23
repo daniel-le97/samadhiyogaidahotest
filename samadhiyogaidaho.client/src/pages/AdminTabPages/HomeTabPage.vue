@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
-    hello
+  <button class="btn btn-primary" @click="getPocket()">pocket</button>
       </div>
     
     </div>
@@ -16,6 +16,7 @@ import { computed } from "@vue/reactivity";
 import { onBeforeMount, onMounted } from "vue";
 import { AppState } from "../../AppState";
 import { eventsService } from "../../services/EventsService";
+import { pocketBaseService } from "../../services/pocketBaseService";
 import Pop from "../../utils/Pop";
 
 export default {
@@ -32,6 +33,13 @@ export default {
     // }
     return {
       stats: computed(() => AppState.fakeStats),
+      async getPocket(){
+        try {
+            await pocketBaseService.getFiles()
+          } catch (error) {
+            Pop.error(error)
+          }
+      }
     };
   },
   components: { },

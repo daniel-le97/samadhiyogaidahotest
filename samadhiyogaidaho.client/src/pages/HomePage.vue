@@ -172,7 +172,7 @@ import Pop from "../utils/Pop.js";
 import { youtubeService } from "../services/YoutubeService.js";
 import { onMounted } from "vue";
 import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
-import { firebaseService } from "../services/FirebaseService.js";
+// import { firebaseService } from "../services/FirebaseService.js";
 import AboutSection from "../components/HomePage/AboutSection.vue";
 export default {
   setup() {
@@ -184,7 +184,7 @@ export default {
     async function getPastRetreatImages() {
       try {
         // const {firebaseService} = async() => await import(`../services/FirebaseService`)
-        await firebaseService.getPastRetreatsImages();
+        // await firebaseService.getPastRetreatsImages();
       } catch (error) {
         Pop.error(error, "[]");
       }
