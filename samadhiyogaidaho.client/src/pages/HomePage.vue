@@ -133,23 +133,22 @@
         </div>
       </div>
     </section> -->
-    
+
     <section>
       <ScheduleSection />
     </section>
-    <section id="Retreat-Section" >
-         <RetreatAndEvents />
-       </section>
+    <section id="Retreat-Section" class="bg-pink">
+      <RetreatAndEvents />
+    </section>
 
     <section id="About-Katie-Section" class="bg-pink">
-   <AboutSection/>
+      <AboutSection />
     </section>
 
     <section id="Testimonials-Section " class="mb-5">
       <TestimonialSection />
     </section>
 
-   
     <section class="bg-pink">
       <div class="container">
         <InstagramFeed />
@@ -175,7 +174,7 @@ import Pop from "../utils/Pop.js";
 import { youtubeService } from "../services/YoutubeService.js";
 import { onMounted } from "vue";
 import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
-// import { firebaseService } from "../services/FirebaseService.js";
+// import { pocketBaseService } from "../services/pocketBaseService.js";
 import AboutSection from "../components/HomePage/AboutSection.vue";
 import { retreatsService } from "../services/RetreatsService.js";
 export default {
@@ -195,8 +194,8 @@ export default {
     }
     async function getPastRetreatImages() {
       try {
-        // const {firebaseService} = async() => await import(`../services/FirebaseService`)
-        // await firebaseService.getPastRetreatsImages();
+        // const {pocketBaseService} = async() => await import(`../services/pocketBaseService`)
+        // await pocketBaseService.getPastRetreatsImages();
       } catch (error) {
         Pop.error(error, "[]");
       }
@@ -210,7 +209,7 @@ export default {
     }
     return {};
   },
-   components: {
+  components: {
     SwiperComponent2,
     ParticleComponent,
     GentleWave,
@@ -222,15 +221,13 @@ export default {
     ScheduleSection,
     ServicesSection,
     InstagramFeed,
-    AboutSection
-},
+    AboutSection,
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../assets/scss/main.scss";
-
-
 
 .hero-image {
   width: 100%;
