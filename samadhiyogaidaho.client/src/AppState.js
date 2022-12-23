@@ -12,9 +12,11 @@ export const AppState = reactive({
   events: [],
   /** @type {import('./models/Retreat.js').Retreat} */
   currentRetreat: {},
-
   /** @type {import('./models/Retreat.js').Retreat[]} */
   archivedRetreats: [],
+
+  /** @type {import('./models/Retreat.js').Retreat[]} */
+  retreats: [],
   
   /** @type {import('./models/Schedule.js').Schedule.js[]} */
   schedules:[],

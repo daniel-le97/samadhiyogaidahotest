@@ -36,7 +36,10 @@ Don’t break. Just be. Just breathe. Just love. Just live.
         </p>
       </div>
     </div>
-      <div class="col-md-4">
+
+<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div> 
+
+      <!-- <div class="col-md-4">
         <div class="card elevation-60 iframe">
           <iframe
             v-motion-slide-visible-bottom
@@ -100,14 +103,18 @@ Don’t break. Just be. Just breathe. Just love. Just live.
             class="rounded elevation-6 img-fluid"
           ></iframe>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
 import CommentBox from "../MiscComponents/CommentBox.vue";
-
+(function(){
+var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+i.src="https://cdn.curator.io/published/47ef8422-eb07-4f6b-93e6-3b83561a5cf1.js";
+e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+})();
 export default {
   setup() {
     return {};
@@ -117,6 +124,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.script{
+  border-radius: 50%;
+}
 .card {
   margin: 4px;
 }

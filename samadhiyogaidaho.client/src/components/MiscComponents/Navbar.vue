@@ -1,38 +1,14 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark text-dark  px-3 fixed-top font-2 nav py-5">
-    <div class="d-flex mx-auto">
-      <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-        <div class="d-flex flex-column align-items-center">
-          <!-- <img
-            src="https://cdn-icons-png.flaticon.com/512/1927/1927059.png"
-            alt=""
-            width="70"
-            height="70"
-          /> -->
-          <!-- <img
-            src="src\assets\img\Samadhi-Yoga.png"
-            alt=""
-            width="70"
-            height="70"
-            class="rounded-circle logo"
-          /> -->
-          <!-- <div v-motion-fade class="text-center " style="margin-top:80px;">
-          <img
-            src="../assets/img/Screenshot_4.png"
-            alt=""
-            class="rounded-pill elevation-6 logoImage w-25"
-          />
-      
-        </div> -->
-        </div>
-      </router-link>
-
+  <nav class="navbar navbar-expand-lg navbar-dark text-dark  px-3 font-2 nav py-md-5">
+    <div class="d-flex mx-auto justify-content-center">
+    
+<p class="mb-0">
       <button class="navbar-toggler btn-dark text-dark bg-dark" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button></p>
       <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav me-auto ">
           <li>
             <router-link :to="{ name: 'Home' }" v-motion-pop :delay="300"
               class="btn text-uppercase  fw-bold fs-4 nav-link">
@@ -46,7 +22,7 @@
             </router-link>
           </li>
           <li>
-            <router-link :to="{ name: 'Retreat' }" v-motion-pop :delay="300"
+            <router-link :to="{ name: 'Retreats' }" v-motion-pop :delay="300"
               class="btn text-uppercase fw-bold fs-4 nav-link">
               Retreats
             </router-link>
@@ -57,7 +33,7 @@
               Services
             </router-link>
           </li>
-          <li class="mx-5">
+          <li class="mx-5  d-none d-md-flex justify-content-center align-items-center ">
             <div v-motion-fade :delay="1000" class="text-center">
               <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
                 <img src="../../assets/img/logo.png" alt="" class="rounded-pill elevation-orange logo-image" title="home button" />

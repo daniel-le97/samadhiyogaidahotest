@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container p-5 bg-white">
+    <div class="container  bg-white mt-4">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center">
           <h1
@@ -43,7 +43,7 @@
         </div>
       </div>
 
-      <div class="row g-4">
+      <div class="row ">
         <div class="col-md-4">
 <div class="card  border-0 elevation-7 bg-pink p-2" v-motion-fade-visible-once :delay="300">
 <div class="card-title font-2 fs-3 text-center">

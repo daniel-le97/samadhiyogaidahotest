@@ -39,8 +39,8 @@ const routes = [
   },
 
   {
-    path: "/retreat",
-    name: "Retreat",
+    path: "/retreats",
+    name: "Retreats",
     component: loadPage("RetreatPage"),
   },
 

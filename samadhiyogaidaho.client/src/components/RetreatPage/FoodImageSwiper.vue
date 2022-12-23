@@ -43,8 +43,8 @@ export default {
 
 <style lang="scss" scoped>
 .swiper {
-  width:475px;
-  height: 700px;
+  width:25rem;
+  height: 600px;
 img{
   object-fit: cover;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="container-md container-fluid p-5">
+  <div class="container-md container-fluid my-5">
     <div class="mb-5 text-center">
       <h1
         v-motion-slide-visible-once-left
@@ -9,7 +9,10 @@
       </h1>
     </div>
     <div class="row justify-content-center gy-5">
-      <div class="col-md-12">
+      <div class="col-md-12" v-for="r in retreats" :key="r.id">
+        <RetreatCard  :retreat="r" />
+      </div>
+      <!-- <div class="col-md-12">
         <div
           class="card elevation-6 text-white text-shadow font-2 border-0 text-uppercase"
         >
@@ -68,26 +71,33 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
+import { AppState } from "../../AppState.js";
+import { computed } from "@vue/reactivity";
+import RetreatCard from "./RetreatCard.vue";
 export default {
-  setup() {
-    return {
-      scrollToTop() {
-        window.scrollTo(0, 0);
-      },
-    };
-  },
+    setup() {
+        return {
+            retreats: computed(() => AppState.retreats),
+        };
+    },
+    components: { RetreatCard }
 };
 </script>
 
 <style lang="scss" scoped>
+.card-img{
+  height: 60vh;
+  object-fit: cover;
+}
 
-.card{
-  max-height: 40vh;
+//when screen is 768px OR LESS
+@media only screen and (max-width: 768px){
+
 }
 </style>

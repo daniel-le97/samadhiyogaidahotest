@@ -120,7 +120,19 @@
                 name="foodAccommodations"
                 id="foodAccommodations"
                 rows="3"
-                v-model="editable.food.accommodations"
+                v-model="editable.accommodations.description"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="foodAccommodations" class="form-label">
+                Food Accommodations</label
+              >
+              <textarea
+                class="form-control"
+                name="foodAccommodations"
+                id="foodAccommodations"
+                rows="3"
+                v-model="editable.accommodations.additionalDescription"
               ></textarea>
             </div>
 
@@ -618,7 +630,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>   
       </section>
 
       <!-- <section>

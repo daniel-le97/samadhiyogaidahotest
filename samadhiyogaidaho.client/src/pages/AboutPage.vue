@@ -14,10 +14,10 @@
       </div>
     </div>
     <div class="container-fluid mt-5 plants">
-      <div class="row mt-5 px-md-3">
+      <div class="row  px-md-3 g-5">
         <div class="col-md-12 text-center">
           <div class="justify-content-center p-2">
-            <p v-motion-slide-bottom class="px-md-5 story-text my-3 text-start   ">
+            <p v-motion-slide-bottom class="px-md-5 story-text my-3 text-start  fs-4  ">
               Back in 2013, our founder took her first yoga class in the hopes of finding some healing. Almost 10 years
               later, she
               took the initiative to receive her 200-hour training and found her passion in teaching. She realized that
@@ -28,7 +28,7 @@
               reconnect
               with themselves in a beautiful and serene atmosphere.
             </p>
-            <p class="px-md-5 story-text my-3 text-start   ">Physical and mental wellbeing are of
+            <p class="px-md-5 story-text my-3 text-start fs-4  ">Physical and mental wellbeing are of
               utmost importance to living a healthy life and require practice and
               dedication. Our
               Small Business provides the setting and guidance you need to strengthen your body, mind and soul. All you
@@ -37,7 +37,7 @@
               show up and breathe.</p>
           </div>
         </div>
-        <div class="col-md-6 my-5 ">
+        <div class="col-md-6 ">
           <img
             src="../assets/img/KatiePortrait.png"
             alt="" class="img-fluid framed elevation-5 ms-md-5 rounded " style="z-index:-9;">
@@ -59,9 +59,11 @@ I love music with my whole soul and love to incorporate music into my classes. Y
                 <p class="text-start p-2 fs-4 mt-md-5">I’m a lover of animals, I’m a fur mom to @icecubester @lunameowgood and a beta fish named Ray. I would have an entire farm if I could and rescue all the precious animals in the world.</p>
           </div>
         </div>
-
-        <div class="col-md-12 my-5">
-          <p class="fs-4 font-2 text-start ">
+   
+        <div class="col-md-6 ">
+          
+          <div class="">
+           <p class="fs-4 font-2 text-start ">
             My favorite thing to do in the world is to put together fully-inclusive and restorative yoga retreats for people to get to know themselves and their bodies better. I have always been a planner. I love putting together great events.I used to want to plan peoples weddings, but I thought I’d be better suited to planning reLaxing retreats where I could help others learn more about themselves and re-find that magic that they have within themselves.
 
           </p>
@@ -77,7 +79,17 @@ I also love to paint, particularly with oil paint, rock climb, hike, workout, an
              <p class="fs-4 font-2 text-start ">
 That’s a little about me, thanks for taking the time to get to know me and for supporting me and my business!
              </p>
+          </div>
         </div>
+     <div class="col-md-6 ">
+          <img
+            src="../assets/img/KatiePortrait.png"
+            alt="" class="img-fluid framed elevation-5 ms-md-5 rounded " style="z-index:-9;">
+        </div>
+        
+        <!-- <div class="col-md-12 my-5">
+         
+        </div> -->
       </div>
     </div>
   </div>

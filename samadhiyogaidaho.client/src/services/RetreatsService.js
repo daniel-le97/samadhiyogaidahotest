@@ -8,21 +8,37 @@ class RetreatsService {
     const res = await api.post("api/retreats", retreatFormData);
     AppState.currentRetreat = new Retreat(res.data);
   }
-  async getCurrentRetreat() {
-    const res = await api.get("api/retreats");
-    // AppState.currentRetreat = new Retreat(res.data);
-  }
+  // async getCurrentRetreat() {
+  //   const res = await api.get("api/retreats");
+  //   // AppState.currentRetreat = new Retreat(res.data);
+  // }
   async getAllRetreats() {
     const res = await api.get("api/retreats");
     logger.log(res.data);
+AppState.retreats = res.data.map(r=> new Retreat(r))
 
-    res.data.map((r) => {
-      if (r.archived == false) {
-        AppState.currentRetreat = new Retreat(r);
-      } else AppState.archivedRetreats.push(new Retreat(r));
-    });
+for (const r of AppState.retreats) {
+  if (r.archived == true) {
+      let index = AppState.retreats.findIndex((r) => {
+          r.id == r.id;
+        });
+    
+        AppState.retreats.splice(index, 1);
+    AppState.archivedRetreats.push(r)
+  }
+}
+AppState.retreats.find(f=> {
+  if (f.archived == false) {
+    AppState.currentRetreat = f
+  }
+})
+    // res.data.map((r) => {
+    //   if (r.archived == false) {
+    //     AppState.currentRetreat = new Retreat(r);
+    //   } else AppState.retreats.push(new Retreat(r));
+    // });
 
-    logger.log(AppState.archivedRetreats);
+    logger.log(AppState.retreats);
   }
 }
 

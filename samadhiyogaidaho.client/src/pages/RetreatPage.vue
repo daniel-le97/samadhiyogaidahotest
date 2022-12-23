@@ -303,7 +303,7 @@
     <section>
       <div class="container my-5">
         <div class="row">
-          <div class="col-md-4" >
+          <div class="col-md-6" >
             <div class="" v-motion-slide-visible-once-left>
               <p class="display-3 mb-0 underline">Food</p>
               <p class="display-6 text-muted font-2">
@@ -314,7 +314,7 @@
               <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
             </div>
           </div>
-          <div class="col-md-8 " >
+          <div class="col-md-4 " >
             <FoodImageSwiper v-if="retreat?.food?.imgs"  v-motion-slide-visible-once-right/>
           </div>
         </div>

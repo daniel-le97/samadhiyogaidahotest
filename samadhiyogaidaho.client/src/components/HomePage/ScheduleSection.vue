@@ -1,5 +1,5 @@
 <template>
-  <div class="container schedule-section">
+  <div class="container schedule-section my-5">
     <div class="row my-5" v-motion-slide-visible-bottom :delay="200">
       <div class="col-md-12 text-center mt-2">
         <h1 v-motion-slide-visible-once-left class="display-2 font-1 underline">

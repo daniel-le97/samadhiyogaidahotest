@@ -140,7 +140,7 @@
     <section>
       <ScheduleSection />
     </section>
-    <section id="Retreat-Section" class="bg-pink">
+    <section id="Retreat-Section" >
          <RetreatAndEvents />
        </section>
 
@@ -177,13 +177,22 @@ import { onMounted } from "vue";
 import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
 import { firebaseService } from "../services/FirebaseService.js";
 import AboutSection from "../components/HomePage/AboutSection.vue";
+import { retreatsService } from "../services/RetreatsService.js";
 export default {
   setup() {
     onMounted(() => {
       // getYoutubeVideos()
       // getPastRetreatImages()
+         getAllRetreats();
     });
-
+ 
+    async function getAllRetreats() {
+      try {
+        await retreatsService.getAllRetreats();
+      } catch (error) {
+        Pop.error(error, "[getCurrentRetreat]");
+      }
+    }
     async function getPastRetreatImages() {
       try {
         // const {firebaseService} = async() => await import(`../services/FirebaseService`)

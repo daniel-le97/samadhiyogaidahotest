@@ -1,11 +1,13 @@
 <template>
-  <header class="sticky-top bg-lightPink elevation-5">
-    <Navbar class="" id="nav" v-if="!routeAdmin"/>
+  <header >
+    <Navbar class="d-none fixed-top d-md-flex" id="nav" v-if="!routeAdmin"/>
     
   </header >
   <main>
     <router-view  />
   </main>
+ <Navbar class="d-block fixed-bottom d-md-none" id="nav" v-if="!routeAdmin"/>
+
 <ModalComponent id="activeImage">
 <ActiveImage/>
 </ModalComponent>
@@ -44,7 +46,7 @@ export default {
           // nav.classList.remove("showOnScroll");
         } else {
           // nav.classList.add("hiddenOnScroll");
-          nav.style.top = "-200px"
+          nav.style.top = "-250px"
                nav.style.transition = "all .50s ease";
         }
         prevScrollpos = currentScrollPos;

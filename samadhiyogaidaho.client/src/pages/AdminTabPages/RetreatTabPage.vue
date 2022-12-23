@@ -20,7 +20,7 @@
       <div class="container-fluid">
     <div class="row">
       <div class="col-12">
-        <EventForm />
+        <!-- <EventForm /> -->
         <!-- <div class="elevation-1">
           <EventCard :event="activeEvent" />
         </div> -->
@@ -28,10 +28,10 @@
     </div>
   </div>
   </div>
-  <!-- <div class="component">
+  <div class="component">
     <button @click="form = !form" class="btn btn-primary">add an event</button>
-    <RetreatForm v-if="form" />
-  </div> -->
+    <RetreatForm />
+  </div>
 </template>
 
 <script>

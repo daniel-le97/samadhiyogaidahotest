@@ -1,6 +1,6 @@
 <template>
-    <div class="container p-5 position-relative">
-        <div class="floating-image-1">
+    <div class="container position-relative py-5">
+        <div class="floating-image-1 d-none d-md-block">
           <PersonComponent />
         </div>
         <div class="row">
@@ -13,21 +13,21 @@
             </h1>
             <h2
               v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20 mb-md-2"
+              class="display-6 font-2 underline text-lightPink darken-20 "
             >
-              Experienced,
+              Experienced
             </h2>
 
             <h2
               v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20 mb-md-2 me-md-2"
+              class="display-6 font-2 underline text-lightPink darken-20  me-md-2"
             >
-              Qualified,
+              Qualified
             </h2>
 
             <h2
               v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20 mb-md-2"
+              class="display-6 font-2 underline text-lightPink darken-20 "
             >
               Passionate
             </h2>
@@ -36,9 +36,10 @@
       </div>
 
       <div class="container">
-        <div class="row g-5 justify-content-center">
-          <div v-motion-pop-visible-once class="col-md-6 p-5">
+        <div class="row  gy-5 justify-content-center">
+          <div class="col-md-6 ">
             <img
+             v-motion-pop-visible-once
               src="https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/306519061_129159436532870_6494007048333346057_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZyXKoZ6J5CIAX-iRhfY&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCPQrcs1-iLVW0CLPjhl0-intGdQOE1_KoCweThnqKaAg&oe=639D65A6"
               alt="Katie Alverson"
               class="img-fluid elevation-6 rounded framed "
@@ -56,7 +57,7 @@
               body, mind, and soul.
             </p>
 
-            <div class="">
+            <div class="text-center">
               <img
                 src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg"
                 alt=""
@@ -67,7 +68,7 @@
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-center justify-content-md-end">
           <router-link
             :to="{ name: 'About' }"
             class="fs-3 btn bg-dark font-2 my-4"
