@@ -19,33 +19,46 @@
         <div class="row text-center d-flex justify-content-center pt-5">
     
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">About us</a>
-            </h6>
+            <router-link :to="{ name: 'About' }" title="about">
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                About
+              </h6>
+              </router-link>
           </div>
   
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">Products</a>
-            </h6>
+            <router-link :to="{ name: 'Services' }" title="services">
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                Services
+              </h6>
+            </router-link>
           </div>
   
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">Awards</a>
-            </h6>
+            
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                <a href=" https://ghost.apps.ledano.tk/ " target="_blank"
+                  class="text-dark" title="blog">
+                  Blog
+                </a>
+              </h6>
+            
           </div>
   
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">Help</a>
-            </h6>
+            <router-link :to="{ name: 'FAQ' }" title="FAQ">
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                FAQ
+              </h6>
+            </router-link>
           </div>
 
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-dark">Contact</a>
-            </h6>
+            <router-link :to="{ name: 'Contact' }" title="contact">
+              <h6 class="text-uppercase font-weight-bold  text-dark">
+                Connect
+              </h6>
+            </router-link>
           </div>
  
         </div>
@@ -91,18 +104,18 @@
     </div>
     <!-- Grid container -->
 
-    <p>
+    <!-- <p>
       Vector Images by
       <a
         href="https://www.freepik.com/free-vector/organic-flat-people-meditating-illustration_13297280.htm#query=yoga&position=3&from_view=search&track=sph"
         >Freepik</a
       >
-    </p>
+    </p> -->
     <!-- Copyright -->
     <div class="text-center p-3 bg-lightPink darken-10">
-      © 2020 Copyright:
+      © 2022 Copyright:
       <a class="text-dark" href="https://mdbootstrap.com/"
-        >Samadhi Yoga Idaho, created by <b> Le* Squared</b></a
+        >Samadhi Yoga Idaho, created by <b> Dev Opportunities</b></a
       >
     </div>
     <div class="">

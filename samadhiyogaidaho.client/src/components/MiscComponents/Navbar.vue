@@ -11,13 +11,15 @@
         <ul class="navbar-nav me-auto ">
           <li>
             <router-link :to="{ name: 'Home' }" v-motion-pop :delay="300"
-              class="btn text-uppercase  fw-bold fs-4 nav-link">
+              class="btn text-uppercase  fw-bold fs-4 nav-link"
+              title="home">
               Home
             </router-link>
           </li>
           <li class="">
             <router-link :to="{ name: 'About' }" v-motion-pop :delay="300"
-              class="btn text-uppercase text-uppercase fw-bold fs-4 nav-link">
+              class="btn text-uppercase text-uppercase fw-bold fs-4 nav-link"
+              title="about">
               About
             </router-link>
           </li>
@@ -29,26 +31,29 @@
           </li>
           <li>
             <router-link :to="{ name: 'Services' }" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link">
+              class="btn text-uppercase fw-bold fs-4 nav-link"
+              title="services">
               Services
             </router-link>
           </li>
           <li class="mx-5  d-none d-md-flex justify-content-center align-items-center ">
             <div v-motion-fade :delay="1000" class="text-center">
               <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-                <img src="../../assets/img/logo.png" alt="" class="rounded-pill elevation-orange logo-image" title="home button" />
+                <img src="../../assets/img/logo.png" alt="" class="rounded-pill elevation-orange logo-image" title="home"  />
               </router-link>
             </div>
           </li>
           <li>
             <router-link :to="{ name: 'Events' }" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link">
+              class="btn text-uppercase fw-bold fs-4 nav-link"
+              title="events">
               Events
             </router-link>
           </li>
           <li>
             <a href=" https://ghost.apps.ledano.tk/ " target="_blank" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link">
+              class="btn text-uppercase fw-bold fs-4 nav-link"
+              title="blog">
               Blog
             </a>
           </li>
@@ -64,13 +69,15 @@
           </li> -->
           <li>
             <router-link :to="{ name: 'FAQ' }" v-motion-pop :delay="300"
-              class="btn  text-uppercase fw-bold fs-4 nav-link">
+              class="btn  text-uppercase fw-bold fs-4 nav-link"
+              title="FAQ">
               FAQ
             </router-link>
           </li>
           <li>
             <router-link :to="{ name: 'Contact' }" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link">
+              class="btn text-uppercase fw-bold fs-4 nav-link"
+              title="connect">
               Connect
             </router-link>
           </li>

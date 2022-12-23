@@ -9,7 +9,6 @@
           class="hero-image d-flex flex-column justify-content-center align-items-center"
         >
           <div style="margin-top: 80px" class="text-shadow container">
-       
             <h5
               v-motion-slide-top
               :delay="600"
@@ -20,7 +19,6 @@
               to be authentic in every day life, <br />
               to transform & to love
             </h5>
-
             <h1
               v-motion
               :initial="{
@@ -43,7 +41,6 @@
               ESCAPE WITH SAMADHI YOGA IDAHO
             </h1>
           </div>
-
         </div>
       </div>
       <GentleWave />
@@ -175,7 +172,7 @@ import Pop from "../utils/Pop.js";
 import { youtubeService } from "../services/YoutubeService.js";
 import { onMounted } from "vue";
 import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
-import { firebaseService } from "../services/FirebaseService.js";
+// import { firebaseService } from "../services/FirebaseService.js";
 import AboutSection from "../components/HomePage/AboutSection.vue";
 import { retreatsService } from "../services/RetreatsService.js";
 export default {
@@ -196,7 +193,7 @@ export default {
     async function getPastRetreatImages() {
       try {
         // const {firebaseService} = async() => await import(`../services/FirebaseService`)
-        await firebaseService.getPastRetreatsImages();
+        // await firebaseService.getPastRetreatsImages();
       } catch (error) {
         Pop.error(error, "[]");
       }

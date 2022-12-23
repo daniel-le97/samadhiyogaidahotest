@@ -207,7 +207,6 @@ export default {
 
     });
     watchEffect(() => { });
-
     return {
       editable,
     }
@@ -240,9 +239,6 @@ export default {
   background-attachment: fixed;
 }
 
-.story-text {
-  font-size: 10rem;
-}
 
 @media only screen and (max-width: 768px) {
   .page-title {
