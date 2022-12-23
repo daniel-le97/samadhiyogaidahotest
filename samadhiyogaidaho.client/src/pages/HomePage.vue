@@ -151,7 +151,10 @@
 
    
     <section class="bg-pink">
-      <InstagramFeed />
+      <div class="container">
+        <InstagramFeed />
+     
+      </div>
     </section>
   </div>
 </template>

@@ -11,7 +11,7 @@ export class Retreat {
     this.coverImg = data.coverImg;
     this.food = data.food;
     this.schedule = data.schedule;
-    this.archived = data.archived;
+    this.archived = data.archived || false
     this.featuredImgs = data.featuredImgs;
     this.activities = data.activities;
     this.highlights = data.highlights;
@@ -20,5 +20,6 @@ export class Retreat {
     this.FAQS = data.FAQS;
     this.createdAt = data.createdAt;
     this.updatedAt = data.updatedAt;
+    this.current = data.current || false
   }
 }

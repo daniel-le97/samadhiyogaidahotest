@@ -48,7 +48,7 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6" >
+        <div class="col-md-6 text-center" >
           <img
             v-if="retreat"
             v-motion-pop-visible-once

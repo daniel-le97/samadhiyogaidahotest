@@ -1,8 +1,8 @@
 <template>
     <div class="container position-relative py-5">
-        <div class="floating-image-1 d-none d-md-block">
+        <!-- <div class="floating-image-1 d-none d-md-block">
           <PersonComponent />
-        </div>
+        </div> -->
         <div class="row">
           <div class="col-md-8 team-section-title">
             <h1

@@ -16,19 +16,19 @@ class RetreatsService {
     const res = await api.get("api/retreats");
     logger.log(res.data);
 AppState.retreats = res.data.map(r=> new Retreat(r))
-
-for (const r of AppState.retreats) {
-  if (r.archived == true) {
-      let index = AppState.retreats.findIndex((r) => {
-          r.id == r.id;
-        });
+AppState.retreats = AppState.retreats.filter((r) => r.archived == false);
+// for (const r of AppState.retreats) {
+//   if (r.archived == true) {
+//       let index = AppState.retreats.findIndex((x) => {
+//           x.id == r.id;
+//         });
     
-        AppState.retreats.splice(index, 1);
-    AppState.archivedRetreats.push(r)
-  }
-}
+//         AppState.retreats.splice(index, 1);
+//     AppState.archivedRetreats.push(r)
+//   }
+// }
 AppState.retreats.find(f=> {
-  if (f.archived == false) {
+  if (f.current ) {
     AppState.currentRetreat = f
   }
 })
