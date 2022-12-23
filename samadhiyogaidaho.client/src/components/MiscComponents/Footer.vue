@@ -104,18 +104,18 @@
     </div>
     <!-- Grid container -->
 
-    <p>
+    <!-- <p>
       Vector Images by
       <a
         href="https://www.freepik.com/free-vector/organic-flat-people-meditating-illustration_13297280.htm#query=yoga&position=3&from_view=search&track=sph"
         >Freepik</a
       >
-    </p>
+    </p> -->
     <!-- Copyright -->
     <div class="text-center p-3 bg-lightPink darken-10">
-      © 2020 Copyright:
+      © 2022 Copyright:
       <a class="text-dark" href="https://mdbootstrap.com/"
-        >Samadhi Yoga Idaho, created by <b> Le* Squared</b></a
+        >Samadhi Yoga Idaho, created by <b> Dev Opportunities</b></a
       >
     </div>
     <div class="">
