@@ -78,19 +78,20 @@ import ParticleComponent from "../components/PluginComponents/ParticleComponent.
 import GentleWave from "../components/PluginComponents/GentleWave.vue";
 import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
-import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
-import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue";
+// import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
+// import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
+// import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue";
 import { defineAsyncComponent } from "vue";
 import CommentBox from "../components/MiscComponents/CommentBox.vue";
-import ScheduleSection from "../components/HomePage/ScheduleSection.vue";
+// import ScheduleSection from "../components/HomePage/ScheduleSection.vue";
 import ServicesSection from "../components/HomePage/ServicesSection.vue";
 import Pop from "../utils/Pop.js";
 
 import { onMounted } from "vue";
-import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
-
-import AboutSection from "../components/HomePage/AboutSection.vue";
-
+// import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
+// import { pocketBaseService } from "../services/PocketBaseService.js";
+// import AboutSection from "../components/HomePage/AboutSection.vue";
+// import { retreatsService } from "../services/RetreatsService.js";
 export default {
   setup() {
     onMounted(() => {
@@ -107,7 +108,22 @@ export default {
         Pop.error(error, "[getCurrentRetreat]");
       }
     }
-
+    async function getPastRetreatImages() {
+      try {
+        const {pocketBaseService} = await import("../services/PocketBaseService.js")
+        await pocketBaseService.getPastRetreats();
+      } catch (error) {
+        Pop.error(error, "[]");
+      }
+    }
+    async function getYoutubeVideos() {
+      try {
+        const {youtubeService} = await import("../services/YoutubeService.js")
+        await youtubeService.getPlayList();
+      } catch (error) {
+        Pop.error(error, "[]");
+      }
+    }
     return {};
   },
   components: {
@@ -115,16 +131,14 @@ export default {
     ParticleComponent,
     GentleWave,
     CallToAction,
-    TestimonialSection: defineAsyncComponent(() =>
-      import("../components/HomePage/TestimonialSection.vue")
-    ),
-    YouTubeSection,
-    RetreatAndEvents,
+    TestimonialSection: defineAsyncComponent(() => import("../components/HomePage/TestimonialSection.vue")),
+    YouTubeSection: defineAsyncComponent(() =>  import("../components/ServicesPage/YouTubeSection.vue")),
+    RetreatAndEvents: defineAsyncComponent(() =>  import("../components/HomePage/RetreatAndEvents.vue")),
     CommentBox,
-    ScheduleSection,
+    ScheduleSection: defineAsyncComponent(() => import("../components/HomePage/ScheduleSection.vue")),
     ServicesSection,
-    InstagramFeed,
-    AboutSection,
+    InstagramFeed: defineAsyncComponent(() => import("../components/HomePage/InstagramFeed.vue")),
+    AboutSection: defineAsyncComponent(() => import("../components/HomePage/AboutSection.vue")),
   },
 };
 </script>
