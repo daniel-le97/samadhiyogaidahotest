@@ -1,11 +1,13 @@
 <template>
  <div >
-  <div class="tsparticles">
-      <ParticleComponent />
-    </div>
-   <div
+
+  <section>
+     <div
     class="hero-image position-relative d-flex flex-column justify-content-center align-items-center"
   >
+    <div class="tsparticles">
+      <ParticleComponent />
+    </div>
     <div
       class="text-center text-shadow container d-flex flex-column justify-content-center align-items-center"
     >
@@ -22,27 +24,14 @@
     </div>
 
  
-  </div>
+  </div>  
+  </section>
 
-   <div class="container ">
-      <div class="row mt-5">
-        <CommentBox>
-          <p class="fs-4 text-start">
-            On an inhale, think of the things that are no longer serving you,
-            whatever that may be.
-            <br />
+ <section class="container">
+ 
+  
 
-            Maybe it’s a thought
-            <br />
-            Maybe it’s a feeling
-            <br />
-            Maybe it’s a person
-            <b></b>
-            Or an experience But taking it, And on an exhale, choosing
-            consciously to let it go.
-          </p>
-        </CommentBox>
-      </div>
+
       <div class="row justify-content-center">
         <div class="col-md-12 my-3">
           <div class="card border-0 square elevation-orange p-3 my-5">
@@ -125,9 +114,11 @@
           </div>
         </div>
       </div>
-    </div>
+ 
 
-  <div class="container-fluid" >
+ </section>
+<section class="container-fluid">
+  
     <div class="row">
       <div class="col-md-6 bg-pink p-5">
         <p class="display-4">Contact Us Directly or Visit Our Studio</p>
@@ -146,8 +137,9 @@
         />
       </div>
     </div>
-  </div>
 
+
+</section>
 
 
  </div>
@@ -157,6 +149,7 @@
 import { onMounted, ref, watchEffect } from "vue";
 import CommentBox from "../components/MiscComponents/CommentBox.vue";
 import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+
 
 
 export default {

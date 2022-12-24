@@ -1,22 +1,26 @@
 <template>
+  ]
+
   <div>
-    <div class="tsparticles">
-      <ParticleComponent />
-    </div>
-    <div
-      class="hero-image d-flex flex-column align-items-center justify-content-center"
-    >
-      <div class="text-center container">
-        <h1
-          v-motion-slide-top
-          :delay="200"
-          id="shadow1"
-          class="font-1 text-shadow page-title courgette fw-bolder text-light"
-        >
-          How Can We Help You?
-        </h1>
+    <section id="hero-section">
+      <div
+        class="hero-image d-flex flex-column align-items-center justify-content-center"
+      >
+        <div class="tsparticles">
+          <ParticleComponent />
+        </div>
+        <div class="text-center container">
+          <h1
+            v-motion-slide-top
+            :delay="200"
+            id="shadow1"
+            class="font-1 text-shadow page-title courgette fw-bolder text-light"
+          >
+            How Can We Help You?
+          </h1>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- <section id="YinYoga-Section" class="">
       <div class="container p-5 mt-5">
@@ -95,12 +99,12 @@
         </div>
       </div>
     </section> -->
-    <section class="container my-5">
+    <section id="accordion-faq" class="container my-5">
       <div class="row my-5 justify-content-center">
         <div
-          class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center"
+          class="col-md-8 d-flex justify-content-center flex-column align-content-center align-items-center"
         >
-          <blockquote class="font-1 quote">
+          <blockquote class="font-1 quote text-center">
             On an inhale, think of the things that are no longer serving you,
             whatever that may be. Maybe it’s a thought Maybe it’s a feeling
             Maybe it’s a person Or an experience But taking it, And on an
@@ -114,20 +118,22 @@
           <p class="fs-2 text-center">Frequently Asked Questions</p>
         </div>
         <div class="col-md-6">
-         <p class="fs-5"> Got a question? W're here to answer! if you don't see your question here, drop us a line on our <a href="/contact">Connect Page.</a></p> 
+          <p class="fs-5">
+            Got a question? W're here to answer! if you don't see your question
+            here, drop us a line on our <a href="/contact">Connect Page.</a>
+          </p>
         </div>
         <div class="col-md-12 text-center">
-       
-          <img src="   https://img.freepik.com/free-vector/flat-people-asking-questions-illustration_23-2148923411.jpg?w=740&t=st=1671858328~exp=1671858928~hmac=e00bddf1b609986bf818fe7305845d0301b1255429a2a13d65171468dde5d318" alt="" class="w-50">
+          <img src="../assets/img/FAQ.svg" alt="" class="w-50" />
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-md-12">
-          <div class="accordion " id="accordionExample">
+          <div class="accordion" id="accordionExample">
             <div class="accordion-item border-0">
               <h2 class="accordion-header border-0" id="headingOne">
                 <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent "
+                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -158,7 +164,7 @@
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button  text-dark font-2 fs-3   border-0 bg-transparent"
+                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse2"
@@ -188,7 +194,7 @@
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button text-dark font-2 fs-3   border-0 bg-transparent"
+                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse3"
@@ -216,7 +222,7 @@
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button text-dark font-2 fs-3   border-0 bg-transparent"
+                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse4"
@@ -248,7 +254,7 @@
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button text-dark font-2 fs-3   border-0 bg-transparent"
+                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse5"
@@ -281,7 +287,7 @@
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button text-dark font-2 fs-3   border-0 bg-transparent"
+                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse6"
@@ -310,15 +316,14 @@
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button text-dark font-2 fs-3   border-0 bg-transparent"
+                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse7"
                   aria-expanded="true"
                   aria-controls="collapse2"
                 >
-                  <i class="mdi mdi-help-circle me-3"></i> What is Baptiste
-                  style yoga?
+                  <i class="mdi mdi-help-circle me-3"></i>
                 </button>
               </h2>
               <div
@@ -328,26 +333,21 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p class="fs-5">
-                    Baptiste power yoga is a type of Vinyasa yoga with the poses
-                    flowing from one to another in a sequence rather than being
-                    held for seconds or even minutes, as is the case in some
-                    other forms of yoga.
-                  </p>
+                  <p class="fs-5"></p>
                 </div>
               </div>
             </div>
             <div class="accordion-item border-0">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button text-dark font-2 fs-3   border-0 bg-transparent"
+                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse8"
                   aria-expanded="true"
                   aria-controls="collapse2"
                 >
-                  <i class="mdi mdi-help-circle me-3"></i> What is Yin Yoga?
+                  <i class="mdi mdi-help-circle me-3"></i>
                 </button>
               </h2>
               <div
@@ -357,18 +357,22 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p class="fs-5">
-                    Yin Yoga is a slower-paced, more meditative version of the
-                    popular physical and spiritual discipline of yoga. In Yin
-                    yoga, the poses are held for a long period of time
-                    (typically three to five minutes or longer) to target the
-                    connective tissues (such as the ligaments) rather than
-                    focusing on the muscles.
-                  </p>
+                  <p class="fs-5"></p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+          <p class="fs-5">
+            Learn more about me and the yoga I love and teach by visiting my
+            blog!
+          </p>
         </div>
       </div>
     </section>
@@ -385,8 +389,41 @@ export default {
     const editable = ref({});
     onMounted(() => {});
     watchEffect(() => {});
+    const QA = [
+   
+      { q: "What are the benefits of yoga?", a: "  With regular practice, you will notice your body getting stronger and more flexible; you will feel more grounded and have better posture. On a mental level you will notice improved focus, the ability to stay calm and maintain relaxed breathing." },
+      {
+        q: "Can I eat before a yoga session?",
+        a: " It is best to wait an hour after eating before practicing yoga, but a small snack before your class is perfectly alright. Observe your body to learn how much time you need to digest your food before practice.",
+      },
+      {
+        q: "What do I need to bring?",
+        a: " Just bring yourself, in appropriate clothing, a yoga mat if you have one, and a bottle of water.",
+      },
+      {
+        q: "What should I wear during a session?",
+        a: " Some people wear baggy, loose fitting bottoms or shorts and a t shirt. Other people wear tight, stretchy leggings plus tops. The only thing that matters is that you wear comfortable clothes that you can easily move and stretch in. It's good to have clothes that keep you cool when you are active in yoga.",
+      },
+      {
+        q: "Do I need to be flexible to do yoga?",
+        a: "No you don't have to be flexible to do yoga It is an urban myth that people who tight can't do yoga. Yoga isn't just stretching it's extremely toning, calming, meditative, spiritual, healing and opening. Flexibility is only one aspect of it. Once you practice yoga for a period of time naturally you will gain flexibility with a myriad of other benefits",
+      },
+      {
+        q: "What is Vinyasa Yoga?",
+        a: "Vinyasa yoga focuses on connecting the breath to your movements, which tend to be set at a faster pace. In a vinyasa practice, you can expect to stay in a constant flow of movements.",
+      },
+      {
+        q: "What is Baptiste style yoga?",
+        a: "Baptiste power yoga is a type of Vinyasa yoga with the poses flowing from one to another in a sequence rather than being held for seconds or even minutes, as is the case in some other forms of yoga.",
+      },
+      {
+        q: "What is Yin Yoga?",
+        a: "Yin Yoga is a slower-paced, more meditative version of the popular physical and spiritual discipline of yoga. In Yin yoga, the poses are held for a long period of time (typically three to five minutes or longer) to target the connective tissues (such as the ligaments) rather than focusing on the muscles",
+      },
+    ];
     return {
       editable,
+      QA,
     };
   },
   components: { ParticleComponent },
@@ -394,9 +431,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
-
 .hero-image {
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */

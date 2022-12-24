@@ -16,8 +16,10 @@
       </p>
     </div>
 
-    <div class="container my-5">
-      <p class="fs-4 text-start">
+.<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10 ">
+        <p class="fs-4 text-start">
         We have been working hard behind the scenes getting several classes and
         events set up for 2023! <br />
         Space will be extremely limited at each event, So please DM us today or
@@ -28,7 +30,13 @@
         and plan for events you’d like to attend next year.
       </p>
 
-      <hr class="mt-4" />
+     
+    </div>
+  </div>
+</div>
+
+    <div class="container my-5">
+    
 
       <div
         v-motion-slide-visible-bottom
