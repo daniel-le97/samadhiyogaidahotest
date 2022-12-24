@@ -45,7 +45,7 @@ export default {
       },
       async uploadFile(e) {
         try {
-        const {pocketBaseService} = await import("../../services/pocketBaseService.js")
+        const {pocketBaseService} = await import("../../services/PocketBaseService.js")
           await pocketBaseService.uploadFile(e);
         } catch (error) {
           Pop.error(error)

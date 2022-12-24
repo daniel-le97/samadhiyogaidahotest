@@ -20,8 +20,12 @@ class PocketBaseService {
       const getLastFile = await pb.collection("images").update(createdFile.id, {url})
       imgs.push(url);
     }
+    // await pb.collection("images").subscribe("*",function(data))
     logger.log(imgs)
     return imgs;
+  }
+  async getPastRetreats(){
+   const res = await pb.collection("images").getFullList()
   }
 }
 export const pocketBaseService = new PocketBaseService()
