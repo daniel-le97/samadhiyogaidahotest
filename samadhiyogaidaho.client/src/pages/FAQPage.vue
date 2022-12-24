@@ -145,7 +145,7 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
+                  <p class="fs-5">
                     With regular practice, you will notice your body getting
                     stronger and more flexible; you will feel more grounded and
                     have better posture. On a mental level you will notice
@@ -176,7 +176,7 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
+                  <p class="fs-5">
                     It is best to wait an hour after eating before practicing
                     yoga, but a small snack before your class is perfectly
                     alright. Observe your body to learn how much time you need
@@ -206,7 +206,7 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
+                  <p class="fs-5">
                     Just bring yourself, in appropriate clothing, a yoga mat if
                     you have one, and a bottle of water.
                   </p>
@@ -234,7 +234,7 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
+                  <p class="fs-5">
                     Some people wear baggy, loose fitting bottoms or shorts and
                     a t shirt. Other people wear tight, stretchy leggings +
                     tops. The only thing that matters is that you wear
@@ -266,7 +266,7 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
+                  <p class="fs-5">
                     No you don’t have to be flexible to do yoga… It’s an urban
                     myth that people who are tight can't do yoga. Yoga isn’t
                     just stretching its extremely toning, calming, meditative,
@@ -298,7 +298,7 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
+                  <p class="fs-5">
                     Vinyasa yoga focuses on connecting the breath to your
                     movements, which tend to be set at a faster pace. In a
                     vinyasa practice, you can expect to stay in a constant flow
@@ -328,7 +328,7 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
+                  <p class="fs-5">
                     Baptiste power yoga is a type of Vinyasa yoga with the poses
                     flowing from one to another in a sequence rather than being
                     held for seconds or even minutes, as is the case in some
@@ -357,7 +357,7 @@
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
-                  <p>
+                  <p class="fs-5">
                     Yin Yoga is a slower-paced, more meditative version of the
                     popular physical and spiritual discipline of yoga. In Yin
                     yoga, the poses are held for a long period of time
