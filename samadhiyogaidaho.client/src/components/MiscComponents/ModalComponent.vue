@@ -7,7 +7,7 @@
     aria-hidden="true"
   >
     <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content bg-transparent  ">
+      <div class="modal-content bg-transparent border-0 ">
        <slot>
 
        </slot>

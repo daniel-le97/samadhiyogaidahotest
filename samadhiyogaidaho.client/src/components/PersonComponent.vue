@@ -6,15 +6,14 @@
       src="https://img.freepik.com/free-vector/organic-flat-people-meditating-illustration_23-2148906556.jpg?w=1380&t=st=1670086283~exp=1670086883~hmac=c1616d9968e977c320041463a603cc3653adbe028e09a4b1f4bf54b39ade1142"
       alt=""
       class="img-fluid elevation-6 rounded-pill p-1"
-         width="300"
-        height="300"
+      width="300"
+      height="300"
     />
     <img
       v-else
       ref="head"
       src="../assets/img/yogaperson2.png"
-        class="img-fluid  rounded-pill"
-     
+      class="img-fluid rounded-pill"
     />
   </div>
 </template>
@@ -26,27 +25,10 @@ import { useRoute } from "vue-router";
 
 export default defineComponent({
   setup() {
-    const bigBottomCircle = ref();
-    const smallBottomCircle = ref();
-    const bigTopCircle = ref();
     const head = ref();
-    const arms = ref();
-    const legs = ref();
-    const leftEye = ref();
-    const rightEye = ref();
-    const mouth = ref();
+
     const route = useRoute();
-    const refs = [
-      bigBottomCircle,
-      smallBottomCircle,
-      bigTopCircle,
-      head,
-      arms,
-      legs,
-      leftEye,
-      rightEye,
-      mouth,
-    ];
+    const refs = [head];
 
     refs.forEach((ref, index) => {
       const { variant } = useMotion(ref, {
@@ -80,15 +62,8 @@ export default defineComponent({
     });
 
     return {
-      bigBottomCircle,
-      smallBottomCircle,
-      bigTopCircle,
       head,
-      arms,
-      legs,
-      leftEye,
-      rightEye,
-      mouth,
+
       route,
     };
   },

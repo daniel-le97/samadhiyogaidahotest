@@ -29,7 +29,7 @@
         <div
           class="col-md-6 d-md-flex d-none justify-content-center flex-column align-content-center align-items-center"
         >
-          <blockquote class="font-1 quote"  v-motion-pop-visible-once>
+          <blockquote class="font-1 quote text-center"  v-motion-pop-visible-once>
             On an inhale, think of the things that are no longer serving you,
             whatever that may be. Maybe it’s a thought Maybe it’s a feeling
             Maybe it’s a person Or an experience But taking it, And on an

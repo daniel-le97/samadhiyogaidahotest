@@ -101,7 +101,7 @@
         <div class="col-md-6">
           <p class="fs-4 fw-bold text-center">Private
             classes  & Workshops for groups</p>
-          <p class="fs-4 text-start">
+          <p class="fs-5 text-start">
             One of our favorite things to do at Samadhi Yoga Is to host private
             classes  & Workshops for groups .We got to lead the amazing @onlyjewel personal
             training group through a 90 minute flow.<br />

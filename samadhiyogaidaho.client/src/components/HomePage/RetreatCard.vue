@@ -13,10 +13,10 @@
             class="card-img-overlay text-center d-flex flex-column justify-content-center align-content-center"
           >
             <hr />
-            <h4 class="card-title display-3">{{retreat?.title}}</h4>
-            <p class="display-6">IN</p>
+            <p class="card-title fs-1">{{retreat?.title}}</p>
+            <p class="fs-4">IN</p>
 
-            <p class="display-6">{{retreat?.location?.address}}</p>
+            <p class="fs-2">{{retreat?.location?.address}}</p>
               <div class="d-flex justify-content-center">
               <div class=" me-4">
                 <p class="mb-0 fs-5">
@@ -43,7 +43,7 @@
               
                 <button 
                
-                class="btn bg-danger text-light text-uppercase fs-5">
+                class="btn bg-danger text-light text-uppercase fs-5 selectable">
                   Find Out More
                 </button>
               </router-link>
@@ -77,4 +77,16 @@ retreat:{type:Retreat, required:true}
 </script>
 
 <style lang="scss" scoped>
+
+.card .card-img{
+  height: 50vh;
+  object-fit: cover;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+   
+  height: 60vh;
+  }
+
+
+}
 </style>

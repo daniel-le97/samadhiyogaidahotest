@@ -1,10 +1,10 @@
 <template>
-    <div class="container position-relative py-5">
-        <!-- <div class="floating-image-1 d-none d-md-block">
+    <div class="container position-relative py-5 ">
+        <div class="floating-image-1 d-none d-md-block">
           <PersonComponent />
-        </div> -->
+        </div>
         <div class="row">
-          <div class="col-md-8 team-section-title">
+          <div class="col-md-8 team-section-title d-flex d-md-block flex-column  align-items-sm-center  justify-content-sm-center">
             <h1
               v-motion-slide-visible-once-left
               class="display-2 font-1 underline text-start"
@@ -63,7 +63,7 @@
                 alt=""
                 width="150"
                 height="150"
-                class="rounded-circle elevation-orange"
+                class="rounded-circle elevation-6"
               />
             </div>
           </div>
@@ -95,7 +95,7 @@ export default {
 <style lang="scss" scoped>
 .floating-image-1 {
   position: absolute;
-  left: 65%;
+  left: 58%;
   top: -45%;
   width: 400px;
   height: 400px;

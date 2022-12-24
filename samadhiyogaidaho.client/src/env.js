@@ -10,5 +10,3 @@ export const clientId = "cH9nhmj9T9447D5GUi8eTVHtBhxEg67x";
 export const pocketUrl = "https://pocket.samadhiyogaidaho.com";
 
 
-
-//key=AIzaSyDUYz0F_yueltLcFXsvVrjViiiC9JBC35Q Google API Key

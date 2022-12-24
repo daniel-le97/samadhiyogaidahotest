@@ -50,89 +50,10 @@
       <CallToAction />
     </section>
 
-    <!-- <section id="YinYoga-Section" class="bg-pink my-5">
-      <div class="container p-5 mt-5">
-        <div class="row">
-          <div class="col-md-12">
-            <h1
-              v-motion-slide-visible-once-left
-              class="display-1 font-1 underline text-start"
-            >
-              What Is Yin Yoga?
-            </h1>
-          </div>
-
-          <div class="row mt-3">
-            <div class="col-md-4">
-              <div class="card bg-dark border-0 elevation-6 p-2">
-                <p class="fs-4 text-warning">
-                  Yin yoga is a quiet contemplative practice that involves
-                  working with deeper, passive, and longer held poses. It
-                  targets the deepest tissues of the body, our connective
-                  tissues,ligaments,joints,bones, the deep fascia networks of
-                  the body and the meridians. This is contract to a Yang Yoga
-                  practice such as Vinyasa Yoga which targets the muscles
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card bg-dark border-0 elevation-6 p-2">
-                <p class="fs-4 text-warning">
-                  A Yin yoga class usually consists of a series of long-held,
-                  passive floor poses that mainly work the lower part of the
-                  body - the hips, pelvis, inner thighs, and the lower spine
-                  which are especially rich in connective tissues. The poses are
-                  held for up to five minutes sometimes longer. Although almost
-                  entirely passive some Yin asanas contain Yang elements, During
-                  the asanas the muscles are relaxed to avoid muscle spasm which
-                  could result from engaging muscles for long periods.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card bg-dark border-0 elevation-6 p-2">
-                <ul>
-                  <li class="text-warning">
-                    <p class="fs-4 text-warning">
-                      Increases circulation & improves flexibility
-                    </p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="fs-4 text-warning">
-                      Calms and balances the mind & body
-                    </p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="fs-4 text-warning">Reduces stress & anxiety</p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="fs-4 text-warning">Releases fascia</p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="fs-4 text-warning">
-                      Encourages deeper relaxation
-                    </p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="fs-4 text-warning">Improves Joint mobility</p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="fs-4 text-warning">
-                      Balance to the organs through meridian stimulation
-                    </p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="fs-4 text-warning">
-                      improved pranayama(breath work & life energy)
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+    
+    <section id="About-Katie-Section" class="bg-pink about-section">
+      <AboutSection />
+    </section>
 
     <section>
       <ScheduleSection />
@@ -141,9 +62,6 @@
       <RetreatAndEvents />
     </section>
 
-    <section id="About-Katie-Section" class="bg-pink">
-      <AboutSection />
-    </section>
 
     <section id="Testimonials-Section " class="mb-5">
       <TestimonialSection />
@@ -229,6 +147,14 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/main.scss";
 
+
+.about-section{
+  margin-top: 10rem;
+//when screen is 768px OR LESS
+@media only screen and (max-width: 768px){
+margin-top: 0;
+}
+}
 .hero-image {
   width: 100%;
   height: 100vh;

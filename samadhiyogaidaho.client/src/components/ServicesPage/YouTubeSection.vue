@@ -37,8 +37,7 @@ Don’t break. Just be. Just breathe. Just love. Just live.
       </div>
     </div>
 
-<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div> 
-
+<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
       <!-- <div class="col-md-4">
         <div class="card elevation-60 iframe">
           <iframe

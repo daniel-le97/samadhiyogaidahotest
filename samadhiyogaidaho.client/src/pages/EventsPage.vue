@@ -8,7 +8,7 @@
 
 
 <div class="container my-5">
-      <p class="fs-4 ">
+      <p class="fs-4 text-start ">
         We have been working hard behind the scenes getting several classes and events set up for 2023! <br>
         Space will be extremely limited at each event, So please  DM us today or call the Grove Fitness Club & Spa to sign up.
         <br>
@@ -36,10 +36,10 @@ import { AppState } from "../AppState.js";
 import EventForm from "../components/AdminComponents/EventForm.vue";
 import CommentBox from "../components/MiscComponents/CommentBox.vue";
 import { logger } from "../utils/Logger.js"
-import Pop from "../utils/Pop.js";
+
 import {eventsService} from "../services/EventsService.js"
 import EventCard from "../components/EventsPage/EventCard.vue";
-// import { getDate } from "../utils/Functions";
+
 
 export default {
   
@@ -58,7 +58,6 @@ export default {
         }
         return {
             editable,
-          //  getDate,
             events:computed(()=> AppState.events)
         };
     },
@@ -67,11 +66,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.forcedImg{
-  height: 120px;
-  width: 80px;
-  object-fit: cover;
-}
+
 .hero-image{
   h1{
 font-size: 8rem;
@@ -84,11 +79,6 @@ font-size: 8rem;
   background-position: center;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed; 
-}
-
-
-body{
-font-family:Helvetica,Arial,sans-serif; 
 }
 
 

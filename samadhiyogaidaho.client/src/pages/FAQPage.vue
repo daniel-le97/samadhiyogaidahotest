@@ -9,7 +9,91 @@
 
       </div>
     </div>
+
+
+    <section id="YinYoga-Section" class="">
+      <div class="container p-5 mt-5">
+        <div class="row">
+          <div class="col-md-12">
+            <h1
+              v-motion-slide-visible-once-left
+              class="display-1 font-1 underline text-start"
+            >
+              What Is Yin Yoga?
+            </h1>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-4">
+              <div class="card bg-dark border-0 elevation-6 p-2">
+                <p class="text-warning">
+                  Yin yoga is a quiet contemplative practice that involves
+                  working with deeper, passive, and longer held poses. It
+                  targets the deepest tissues of the body, our connective
+                  tissues,ligaments,joints,bones, the deep fascia networks of
+                  the body and the meridians.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark border-0 elevation-6 p-2">
+                <p class="text-warning">
+                  A Yin yoga class usually consists of a series of long-held,
+                  passive floor poses that mainly work the lower part of the
+                  body - the hips, pelvis, inner thighs, and the lower spine
+                  which are especially rich in connective tissues. The poses are
+                  held for up to five minutes or longer.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark border-0 elevation-6 p-2">
+                <ul>
+                  <li class="text-warning">
+                    <p class="text-warning">
+                      Increases circulation & improves flexibility
+                    </p>
+                  </li>
+                  <li class="text-warning">
+                    <p class="text-warning">
+                      Calms and balances the mind & body
+                    </p>
+                  </li>
+                  <li class="text-warning">
+                    <p class="text-warning">Reduces stress & anxiety</p>
+                  </li>
+                  <li class="text-warning">
+                    <p class="text-warning">Releases fascia</p>
+                  </li>
+                  <li class="text-warning">
+                    <p class="text-warning">
+                      Encourages deeper relaxation
+                    </p>
+                  </li>
+                  <li class="text-warning">
+                    <p class="text-warning">Improves Joint mobility</p>
+                  </li>
+                  <li class="text-warning">
+                    <p class="text-warning">
+                      Balance to the organs through meridian stimulation
+                    </p>
+                  </li>
+                  <li class="text-warning">
+                    <p class="text-warning">
+                      improved pranayama(breath work & life energy)
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="container my-5">
+
+
+
       <div class="row my-5 justify-content-center">
         <div class="col-md-10 d-flex justify-content-center flex-column align-content-center align-items-center">
           <blockquote class="font-1 quote">

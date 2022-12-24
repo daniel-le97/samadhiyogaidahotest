@@ -3,7 +3,7 @@
 @import "./_overrides.scss";
 @import "./_utilities.scss";
 @import "./loaders.scss";
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Calligraffitti&family=Courgette&family=Oswald&family=Patrick+Hand&family=Quando&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=DM+Sans&family=Marko+One&family=Passion+One&family=Roboto&display=swap');
 body {
   overscroll-behavior: none;
 }
@@ -27,9 +27,9 @@ body {
 :root {
   --link-color: #f68b59;
   --link-underline-padding: 0.5em;
-  --darkPink: #f68b59;
+  --peach: #f68b59;
    --teal: #59f693;
-  --lightPink: #fef1eb;
+  --pink-light: #fef1eb;
 }
 
 .underline {
@@ -39,7 +39,7 @@ body {
 }
 
 .underline:after {
-  background-color: var(--darkPink);
+  background-color: var(--peach);
   content: "";
   display: block;
   height: 0.2em;
@@ -120,9 +120,8 @@ body {
   transform: scale(1.2);
 }
 p{
-   font-family: 'Patrick Hand', cursive;
-
-
+ font-family: 'DM Sans', sans-serif;
+text-align: start;
 }
 main {
   flex-grow: 1;
@@ -260,8 +259,8 @@ cite {
   object-fit: cover;
 
   box-shadow:
-    -50px -50px 0 -40px var(--darkPink),
-    50px 50px 0 -40px var(--darkPink);
+    -50px -50px 0 -40px var(--peach),
+    50px 50px 0 -40px var(--peach);
 }
 .quote {
   font-size: 1.25rem;

@@ -42,8 +42,8 @@
           </p>
         </div>
       </div>
-
-      <div class="row ">
+<hr class="my-5">
+      <div class="row gx-3  ">
         <div class="col-md-4">
 <div class="card  border-0 elevation-7 bg-pink p-2" v-motion-fade-visible-once :delay="300">
 <div class="card-title font-2 fs-3 text-center">

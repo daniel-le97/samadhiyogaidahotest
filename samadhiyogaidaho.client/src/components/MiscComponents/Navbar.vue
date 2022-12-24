@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark text-dark  px-3 font-2 nav py-md-5">
-    <div class="d-flex mx-auto justify-content-center">
+    <div class="d-md-flex mx-auto justify-content-center">
     
 <p class="mb-0">
       <button class="navbar-toggler btn-dark text-dark bg-dark" type="button" data-bs-toggle="collapse"
@@ -11,27 +11,27 @@
         <ul class="navbar-nav me-auto ">
           <li>
             <router-link :to="{ name: 'Home' }" v-motion-pop :delay="300"
-              class="btn text-uppercase  fw-bold fs-4 nav-link"
+              class=" nav-link"
               title="home">
               Home
             </router-link>
           </li>
           <li class="">
             <router-link :to="{ name: 'About' }" v-motion-pop :delay="300"
-              class="btn text-uppercase text-uppercase fw-bold fs-4 nav-link"
+              class="nav-link"
               title="about">
               About
             </router-link>
           </li>
           <li>
             <router-link :to="{ name: 'Retreats' }" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link">
+              class="  nav-link">
               Retreats
             </router-link>
           </li>
           <li>
             <router-link :to="{ name: 'Services' }" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link"
+              class=" nav-link"
               title="services">
               Services
             </router-link>
@@ -45,46 +45,36 @@
           </li>
           <li>
             <router-link :to="{ name: 'Events' }" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link"
+              class="  nav-link"
               title="events">
               Events
             </router-link>
           </li>
           <li>
             <a href=" https://ghost.apps.ledano.tk/ " target="_blank" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link"
+              class="  nav-link"
               title="blog">
               Blog
             </a>
           </li>
-          <!-- <li>
-            <router-link
-              :to="{ name: 'NewsLetter' }"
-              v-motion-pop
-              :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link"
-            >
-              Stay Updated
-            </router-link>
-          </li> -->
+      
           <li>
             <router-link :to="{ name: 'FAQ' }" v-motion-pop :delay="300"
-              class="btn  text-uppercase fw-bold fs-4 nav-link"
+              class="  nav-link"
               title="FAQ">
               FAQ
             </router-link>
           </li>
           <li>
             <router-link :to="{ name: 'Contact' }" v-motion-pop :delay="300"
-              class="btn text-uppercase fw-bold fs-4 nav-link"
+              class="  nav-link"
               title="connect">
               Connect
             </router-link>
           </li>
 
         </ul>
-        <!-- LOGIN COMPONENT HERE -->
-        <!-- <Login /> -->
+      
       </div>
     </div>
   </nav>
@@ -105,17 +95,22 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+@import '../../assets/scss/main.scss';
 .nav-link {
   text-transform: uppercase;
   color: #ffffff;
   margin-left: 8px;
   margin-right: 8px;
   text-shadow: 0px 1px 4px #000000;
+font-weight: bold;
+font-size: 1.25rem;
 }
 
 .nav-link:hover {
-  text-transform: uppercase;
-  color: var(--darkPink) ! important
+
+  color: var(--peach) ! important;
+
 }
 
 .nav {
@@ -123,14 +118,11 @@ background: linear-gradient(to bottom,  rgba(5, 5, 5, 0.65) 0%,rgba(0, 0, 0, 0) 
 
  @media only screen and (max-width: 768px){
  background: #ffa67cc2;
+  backdrop-filter: blur(4px);
   }
 
 }
-/*
 
-.logo-image {
-background: linear-gradient(to bottom,  rgba(23, 50, 51, 0.65) 0%,rgba(255, 0, 0, 0) 100%); 
-*/
 .logo-image{
   width: 100px;
   height: 160px;
@@ -142,10 +134,10 @@ background: linear-gradient(to bottom,  rgba(23, 50, 51, 0.65) 0%,rgba(255, 0, 0
 }
 
 .navbar-nav .router-link-exact-active {
-  border-bottom: 4px solid var(--darkPink);
+  border-bottom: 4px solid var(--peach);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  color: var(--darkPink);
+  color: var(--peach);
 }
 
 // @media screen and (min-width: 768px) {

@@ -8,7 +8,7 @@
 </div>
    </div>
    <div class="col-md-6 text-start">
-<p class="underline  fs-1 font-1  border-2 border-bottom text-start text-pink darken-20">{{event.title}}</p>
+<p class="underline  fs-1 font-1  border-2 border-bottom text-center text-pink darken-20">{{event.title}}</p>
 <div class="d-flex">
   <div  class="me-3"><p class="text-start">{{getDate(event.startDate)}} - {{getDateTime(event.endDate)}}</p>
 
@@ -19,7 +19,7 @@ ${{event.cost }}  per   <img src="https://cdn-icons-png.flaticon.com/512/8927/89
 
 </div>
 </div>
-<p class="fs-4 text-start">{{event.description}} 
+<p class="text-start">{{event.description}} 
 </p>
 
 
