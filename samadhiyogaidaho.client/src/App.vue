@@ -20,7 +20,7 @@
 
 <script>
 import { computed, onMounted, watchEffect } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import { useRoute} from "vue-router";
 import { AppState } from "./AppState";
 import ActiveImage from "./components/ActiveImage.vue";
 import Footer from "./components/MiscComponents/Footer.vue";
@@ -58,7 +58,6 @@ export default {
     }
 
     const route = useRoute()
-    const router = useRouter()
     const names = ["Admin", "AdminEvents", "AdminRetreats", "AdminHome", "AdminSettings", "AdminSchedule"]
 
     return {
