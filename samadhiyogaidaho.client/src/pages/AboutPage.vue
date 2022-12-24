@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="container-fluid mt-5 plants">
-      <div class="row  px-md-3 g-5 justify-content-center">
+      <div class="row  px-md-3 gy-5 justify-content-center">
         <div class="col-md-10 text-center">
           <div class="justify-content-center p-2">
             <p v-motion-slide-bottom class="my-3   fs-5  ">
