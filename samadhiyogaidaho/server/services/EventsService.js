@@ -14,6 +14,7 @@ class EventsService {
     // @ts-ignore
     await event.remove();
     return event;
+    // 
   }
   async createEvent(eventData, userId) {
     await getAdmins(userId);

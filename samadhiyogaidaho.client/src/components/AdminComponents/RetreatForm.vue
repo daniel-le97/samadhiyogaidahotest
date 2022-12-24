@@ -213,7 +213,7 @@
                 id="formFile"
                 ref="file"
                 multiple
-                v-on:change="onChangeFileUpload"
+                v-on:change="uploadFile"
               />
               <div
                 class="spinner-border"
@@ -653,11 +653,9 @@
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
-import { retreatsService } from "../../services/RetreatsService";
 import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
-// import { pocketBaseService } from "../../services/pocketBaseService.js";
-import { uploadsService } from "../../services/UploadsService.js";
+
 
 export default {
   setup() {
@@ -679,15 +677,17 @@ export default {
       loading: computed(() => AppState.loading),
       async handleSubmit() {
         try {
+          const {retreatsService} = await import("../../services/RetreatsService")
           await retreatsService.createRetreat(editable.value);
         } catch (error) {
           Pop.error(error, "[createRetreat]");
         }
       },
-      async onChangeFileUpload(e) {
+      async uploadFile(e) {
         try {
           AppState.loading = true;
-          // const img = await pocketBaseService.uploadFile(e);
+          const {pocketBaseService} = await import("../../services/PocketBaseService")
+          const img = await pocketBaseService.uploadFile(e);
           editable.value.schedule.img = img;
           AppState.loading = false;
         } catch (error) {
