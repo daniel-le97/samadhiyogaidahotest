@@ -1,5 +1,6 @@
 <template>
-  <section>
+ <div >
+   <section>
     <div class="tsparticles">
       <ParticleComponent />
     </div>
@@ -15,7 +16,7 @@
           <p
             v-motion-slide-top
             :delay="400"
-            class="display-6 font-2 text-shadow"
+            class="display-6 font-2 text-shadow text-cemter"
           >
             Escape the hustle and bustle of everyday life and enjoy a new experience
           </p>
@@ -468,6 +469,7 @@
       </div>
     </div>
   </section>
+ </div>
 </template>
 
 <script>
@@ -483,6 +485,7 @@ import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 // import { onBeforeMount } from "vue";
 import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+
 export default {
   props: {},
   setup(props) {
@@ -523,7 +526,8 @@ export default {
     FoodImageSwiper,
     AccommodationSwiper,
     ParticleComponent,
-  },
+
+},
 };
 </script>
 

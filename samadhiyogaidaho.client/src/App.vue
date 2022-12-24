@@ -4,7 +4,11 @@
     
   </header >
   <main>
-    <router-view  />
+     <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
   </main>
  <Navbar class="d-block fixed-bottom d-md-none" id="nav" v-if="!routeAdmin"/>
 
@@ -66,6 +70,26 @@ export default {
 };
 </script>
 <style lang="scss">
+
+.slideX-enter-active,
+.slideX-leave-active {
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+.slideX-enter-from,
+.slideX-leave-to {
+  transform: translateX(100vw);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .25s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+ 
+}
 @import "./assets/scss/main.scss";
 
 :root {

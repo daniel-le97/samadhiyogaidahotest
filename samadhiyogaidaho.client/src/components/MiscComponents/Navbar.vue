@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark text-dark  px-3 font-2 nav py-md-5">
+  <nav class="navbar navbar-expand-lg navbar-dark text-dark  px-3 font-2 nav py-md-2">
     <div class="d-md-flex mx-auto justify-content-center">
     
 <p class="mb-0">

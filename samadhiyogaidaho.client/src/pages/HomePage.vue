@@ -50,7 +50,6 @@
       <CallToAction />
     </section>
 
-    
     <section id="About-Katie-Section" class="bg-pink about-section">
       <AboutSection />
     </section>
@@ -62,7 +61,6 @@
       <RetreatAndEvents />
     </section>
 
-
     <section id="Testimonials-Section " class="mb-5">
       <TestimonialSection />
     </section>
@@ -70,7 +68,6 @@
     <section class="bg-pink">
       <div class="container">
         <InstagramFeed />
-     
       </div>
     </section>
   </div>
@@ -81,7 +78,6 @@ import ParticleComponent from "../components/PluginComponents/ParticleComponent.
 import GentleWave from "../components/PluginComponents/GentleWave.vue";
 import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
-// import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
 import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
 import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue";
 import { defineAsyncComponent } from "vue";
@@ -89,44 +85,29 @@ import CommentBox from "../components/MiscComponents/CommentBox.vue";
 import ScheduleSection from "../components/HomePage/ScheduleSection.vue";
 import ServicesSection from "../components/HomePage/ServicesSection.vue";
 import Pop from "../utils/Pop.js";
-// import { youtubeService } from "../services/YoutubeService.js";
+
 import { onMounted } from "vue";
 import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
-// import { pocketBaseService } from "../services/PocketBaseService.js";
+
 import AboutSection from "../components/HomePage/AboutSection.vue";
-// import { retreatsService } from "../services/RetreatsService.js";
+
 export default {
   setup() {
     onMounted(() => {
-      // getYoutubeVideos()
-      // getPastRetreatImages()
-         getAllRetreats();
+      getAllRetreats();
     });
- 
+
     async function getAllRetreats() {
       try {
-        const {retreatsService} = await import("../services/RetreatsService.js")
+        const { retreatsService } = await import(
+          "../services/RetreatsService.js"
+        );
         await retreatsService.getAllRetreats();
       } catch (error) {
         Pop.error(error, "[getCurrentRetreat]");
       }
     }
-    async function getPastRetreatImages() {
-      try {
-        const {pocketBaseService} = await import(`../services/PocketBaseService`)
-        await pocketBaseService.getPastRetreats();
-      } catch (error) {
-        Pop.error(error, "[]");
-      }
-    }
-    async function getYoutubeVideos() {
-      try {
-        const {youtubeService} = await import("../services/YoutubeService.js")
-        await youtubeService.getPlayList();
-      } catch (error) {
-        Pop.error(error, "[]");
-      }
-    }
+
     return {};
   },
   components: {
@@ -134,7 +115,9 @@ export default {
     ParticleComponent,
     GentleWave,
     CallToAction,
-    TestimonialSection: defineAsyncComponent(() => import("../components/HomePage/TestimonialSection.vue")),
+    TestimonialSection: defineAsyncComponent(() =>
+      import("../components/HomePage/TestimonialSection.vue")
+    ),
     YouTubeSection,
     RetreatAndEvents,
     CommentBox,
@@ -149,13 +132,12 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/main.scss";
 
-
-.about-section{
+.about-section {
   margin-top: 10rem;
-//when screen is 768px OR LESS
-@media only screen and (max-width: 768px){
-margin-top: 0;
-}
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px) {
+    margin-top: 0;
+  }
 }
 .hero-image {
   width: 100%;

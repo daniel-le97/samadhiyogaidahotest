@@ -20,7 +20,7 @@
               <div class="d-flex justify-content-center">
               <div class=" me-4">
                 <p class="mb-0 fs-5">
-                  <i class="mdi mdi-calendar bg-muted fs-3"></i> Start Date
+                  <i class="mdi mdi-calendar  fs-3"></i> Start Date
                 </p>
                 <p class="fw-semi-bold fs-4">
                   {{ new Date(retreat?.startDate).toLocaleDateString() }}
@@ -28,7 +28,7 @@
               </div>
               <div class="">
                 <p class="mb-0 fs-5">
-                  <i class="mdi mdi-calendar bg-muted fs-3"></i> End Date
+                  <i class="mdi mdi-calendar fs-3"></i> End Date
                 </p>
                 <p class="fw-semi-bold fs-4">
                   {{ new Date(retreat?.endDate).toLocaleDateString() }}
@@ -43,7 +43,7 @@
               
                 <button 
                
-                class="btn bg-danger text-light text-uppercase fs-5 selectable">
+                class="btn btn-dark  text-uppercase fs-5 ">
                   Find Out More
                 </button>
               </router-link>

@@ -1,5 +1,9 @@
 <template>
-  <div
+ <div >
+  <div class="tsparticles">
+      <ParticleComponent />
+    </div>
+   <div
     class="hero-image position-relative d-flex flex-column justify-content-center align-items-center"
   >
     <div
@@ -146,15 +150,14 @@
 
 
 
+ </div>
 </template>
 
 <script>
-import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
-import { AppState } from "../AppState.js";
 import CommentBox from "../components/MiscComponents/CommentBox.vue";
-import { logger } from "../utils/Logger.js";
-import Pop from "../utils/Pop.js";
+import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+
 
 export default {
     props: {},
@@ -166,7 +169,7 @@ export default {
             editable,
         };
     },
-    components: { CommentBox }
+    components: { CommentBox, ParticleComponent }
 };
 </script>
 
@@ -183,12 +186,6 @@ export default {
   height: 600px;
   object-fit: cover;
 }
-
-.contact-form {
-  position: absolute;
-  top: 60%;
-}
-
 .hero-image {
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */

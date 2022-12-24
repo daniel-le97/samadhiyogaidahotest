@@ -1,5 +1,6 @@
 <template>
-    <div class="container position-relative py-5 ">
+<div >
+      <div class="container position-relative py-5 ">
         <div class="floating-image-1 d-none d-md-block">
           <PersonComponent />
         </div>
@@ -77,6 +78,7 @@
           </router-link>
         </div>
       </div>
+</div>
 </template>
 
 

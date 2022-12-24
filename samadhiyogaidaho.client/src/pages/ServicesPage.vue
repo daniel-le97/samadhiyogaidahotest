@@ -1,5 +1,6 @@
 <template>
-  <section>
+ <div >
+ <section>
     <div class="tsparticles">
       <ParticleComponent />
     </div>
@@ -178,6 +179,7 @@
       <YouTubeSection />
     </section>
   </section>
+ </div>
 </template>
 
 <script>
@@ -185,6 +187,7 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+
 import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
@@ -199,7 +202,7 @@ export default {
       editable,
     };
   },
-  components: { ParticleComponent, YouTubeSection },
+  components: { YouTubeSection, ParticleComponent },
 };
 </script>
 
