@@ -19,7 +19,8 @@
           <li class="">
             <router-link :to="{ name: 'About' }" v-motion-pop :delay="300"
               class="nav-link"
-              title="about">
+              title="about"
+              >
               About
             </router-link>
           </li>
