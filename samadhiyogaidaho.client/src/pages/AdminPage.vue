@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid test" v-if="admin?.isAuthenticated">
     <div class="row">
-      <div class="col-3 ms-0 p-0">
+      <div class="col-md-3 ms-0 p-0 order-1 order-md-0">
         <AdminSidePanel class=" " />
       </div>
-      <div class="col-9 p-0 router-view">
+      <div class="col-md-9 p-0 router-view order-0 order-md-1">
         <!-- <div>
      
         </div> -->
@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-
+<div class="" v-else>loading...</div>
 </template>
 
 <script>
