@@ -1,11 +1,23 @@
 <template>
-  <div class="container-fluid">
-    <div class="row scrollable-y" v-if="!activeEvent">
+  <div class="container-fluid my-3">
+    <div class="row my-5" v-if="!activeEvent">
+      <div class="col-md-12">
+ 
+  <button class="btn btn-outline-success font-2 fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Create Event
+  </button>
+
+<div class="collapse" id="collapseExample">
+   <EventForm />
+</div>
+      </div>
+    </div>
+    <div class="row " v-if="!activeEvent">
       <div class="col-12" v-for="event in events">
         <div class="position-relative">
           <EventCard :event="event" />
           <div
-            class="d-flex justify-content-center gap-2 position-absolute top-0 start-0"
+            class="d-flex justify-content-center gap-2 position-absolute bottom-100 "
           >
             <button
               class="btn btn-outline-warning font-2 fs-3"
@@ -23,13 +35,11 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" v-if="activeEvent">
       <div class="row">
         <div class="col-12">
           <EventForm />
-          <!-- <div class="elevation-1">
-          <EventCard :event="activeEvent" />
-        </div> -->
+       
         </div>
       </div>
     </div>

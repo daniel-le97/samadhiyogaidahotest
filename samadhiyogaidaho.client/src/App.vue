@@ -1,26 +1,25 @@
 <template>
-  <header >
-    <Navbar class="d-none fixed-top d-md-flex" id="nav" v-if="!routeAdmin"/>
-    
-  </header >
+  <header>
+    <Navbar class="d-none fixed-top d-md-flex" id="nav" v-if="!routeAdmin" />
+  </header>
   <main>
-     <router-view v-slot="{ Component }">
-    <transition name="fade">
-      <component :is="Component" />
-    </transition>
-  </router-view>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </main>
- <Navbar class="d-block fixed-bottom d-md-none" id="nav" v-if="!routeAdmin"/>
+  <Navbar class="d-block fixed-bottom d-md-none" id="nav" v-if="!routeAdmin" />
 
-<ModalComponent id="activeImage">
-<ActiveImage/>
-</ModalComponent>
-  <Footer v-if="!routeAdmin"/>
+  <ModalComponent id="activeImage">
+    <ActiveImage />
+  </ModalComponent>
+  <Footer v-if="!routeAdmin" />
 </template>
 
 <script>
 import { computed, onMounted, watchEffect } from "vue";
-import { useRoute} from "vue-router";
+import { useRoute } from "vue-router";
 import { AppState } from "./AppState";
 import ActiveImage from "./components/ActiveImage.vue";
 import Footer from "./components/MiscComponents/Footer.vue";
@@ -32,9 +31,9 @@ export default {
   setup() {
     onMounted(() => {
       hideOnScrollTest();
-      getRoute()
+      getRoute();
     });
-    function getRoute(){
+    function getRoute() {
       logger.log(route.name);
     }
 
@@ -46,22 +45,25 @@ export default {
         let currentScrollPos = window.scrollY;
         if (prevScrollpos > currentScrollPos) {
           nav.style.top = "0";
-          nav.style.transition = "all .50s ease";
-          // nav.classList.remove("showOnScroll");
         } else {
-          // nav.classList.add("hiddenOnScroll");
-          nav.style.top = "-250px"
-               nav.style.transition = "all .50s ease";
+          nav.style.top = "-250px";
         }
         prevScrollpos = currentScrollPos;
       };
     }
 
-    const route = useRoute()
-    const names = ["Admin", "AdminEvents", "AdminRetreats", "AdminHome", "AdminSettings", "AdminSchedule"]
+    const route = useRoute();
+    const names = [
+      "Admin",
+      "AdminEvents",
+      "AdminRetreats",
+      "AdminHome",
+      "AdminSettings",
+      "AdminSchedule",
+    ];
 
     return {
-      routeAdmin: computed(() => names.find(n => n == route.name)),
+      routeAdmin: computed(() => names.find((n) => n == route.name)),
       appState: computed(() => AppState),
     };
   },
@@ -69,7 +71,9 @@ export default {
 };
 </script>
 <style lang="scss">
-
+#nav {
+  transition: all 0.5s ease;
+}
 .slideX-enter-active,
 .slideX-leave-active {
   transform: translateX(0);
@@ -82,12 +86,11 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
- 
 }
 @import "./assets/scss/main.scss";
 

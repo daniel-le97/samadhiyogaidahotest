@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid sticky-top">
     <div class="row">
       <div class="col-md-12 p-0">
         <div
@@ -7,33 +7,33 @@
         >
           <a
             href="/"
-            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none justify-content-center"
           >
             <img
               src="../../assets/img/Samadhi-Yoga.png"
               alt=""
               height="50"
               width="50"
-              class="rounded"
+              class="rounded me-4"
             />
             <span class="fs-4">Dashboard</span>
           </a>
           <hr />
-          <div class="d-flex flex-column">
-            <router-link class="navbar-brand d-flex" :to="{ name: 'AdminHome' }">
-              <button class="btn btn-primary">Home</button>
+          <div class="d-flex flex-column navbar-nav">
+            <router-link class="nav-link " :to="{ name: 'AdminHome' }">
+              Home
             </router-link>
-            <router-link class="navbar-brand" :to="{ name: 'AdminEvents' }">
-              <button class="btn btn-primary">Events</button>
+            <router-link class="nav-link" :to="{ name: 'AdminEvents' }">
+            Events
             </router-link>
-            <router-link class="navbar-brand" :to="{ name: 'AdminRetreats' }">
-              <button class="btn btn-primary">Retreats</button>
+            <router-link class="nav-link" :to="{ name: 'AdminRetreats' }">
+            Retreats
             </router-link>
-            <router-link class="navbar-brand" :to="{ name: 'AdminSchedule' }">
-              <button class="btn btn-primary">Schedule</button>
+            <router-link class="nav-link" :to="{ name: 'AdminSchedule' }">
+            Schedule
             </router-link>
-            <router-link class="navbar-brand" :to="{ name: 'AdminSettings' }">
-              <button class="btn btn-primary">Settings</button>
+            <router-link class="nav-link" :to="{ name: 'AdminSettings' }">
+             Settings
             </router-link>
           </div>
         </div>
@@ -64,11 +64,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-link {
-  color: var(--teal);
+.grow{
+  height: 100vh;
 }
-.grow {
-  height: 97vh;
+.navbar-nav .router-link-exact-active {
+
+
+  color: var(--peach);
+  transform: translateX(80px);
+  transition: all 0.25s ease !important;
+  text-decoration: underline;
+  font-size: 2.5rem;
+}
+
+.nav-link{
+  margin-bottom: 5px;
+  font-size: 1.75rem;
+}
+.nav-link:hover {
+  color: var(--peach) !important;
+  transition: all 0.25s ease;
+
+
 }
 
 .active {

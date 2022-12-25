@@ -665,6 +665,7 @@ export default {
       food: {},
       schedule: {},
       vacancy: { filled: 0 },
+      accommodations:{}
     });
     const file = ref(null);
     onMounted(() => {});

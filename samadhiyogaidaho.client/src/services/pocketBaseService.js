@@ -7,6 +7,10 @@ import Pop from "../utils/Pop";
 
 class PocketBaseService {
 
+
+  async getCollections(){
+    const collections = await pb.collections.
+  }
   async getFiles() {
     const record = await pb.collection("images").getFullList();
     logger.log(record);
@@ -44,7 +48,7 @@ class PocketBaseService {
   }
   async transferToMongo(){
     const files = await pb.collection("images").getFullList(200)
-    console.log(res);
+    console.log(files);
   }
 }
 export const pocketBaseService = new PocketBaseService();

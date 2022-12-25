@@ -29,12 +29,12 @@
                   required
                   v-model="editable.location.place"
                 />
-                <label for="location">location</label>
+                <label for="location">Location</label>
               </div>
             </div>
           </div>
-          <div class="d-flex gap-2">
-            <div class="col-md-6 d-flex justify-content-evenly">
+          <div class="d-flex">
+            <div class="col-md-8 d-flex ">
               <div class="form-floating mb-3 me-3">
                 <input
                   type="datetime-local"
@@ -45,7 +45,7 @@
                   required
                   v-model="editable.startDate"
                 />
-                <label for="date">date</label>
+                <label for="date">StartDate</label>
               </div>
               <div class="form-floating mb-3">
                 <input
@@ -57,22 +57,23 @@
                   required
                   v-model="editable.endDate"
                 />
-                <label for="time">time</label>
+                <label for="time">endDate</label>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-floating mb-3">
+            <div class="col-md-4">
+                  <div class="form-floating mb-3">
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
-                  name="location"
-                  id="location"
-                  placeholder="Location"
+                  name="cost"
+                  id="cost"
+                  placeholder=""
                   required
-                  v-model="editable.location.address"
+                  v-model="editable.cost"
                 />
-                <label for="location">Address</label>
+                <label for="cost">Cost</label>
               </div>
+            
             </div>
           </div>
           <div class="row">
@@ -93,17 +94,17 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-floating mb-3">
+            <div class="form-floating mb-3">
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
-                  name="cost"
-                  id="cost"
-                  placeholder=""
+                  name="location"
+                  id="location"
+                  placeholder="Location"
                   required
-                  v-model="editable.cost"
+                  v-model="editable.location.address"
                 />
-                <label for="cost">Cost</label>
+                <label for="location">Address</label>
               </div>
             </div>
           </div>

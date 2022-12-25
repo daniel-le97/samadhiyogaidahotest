@@ -1,13 +1,14 @@
 <template>
-  <div class="container-fluid" v-if="admin?.isAuthenticated">
+  <div class="container-fluid test" v-if="admin?.isAuthenticated">
     <div class="row">
       <div class="col-3 ms-0 p-0">
-        <AdminSidePanel />
+        <AdminSidePanel class=" " />
       </div>
-      <div class="col-9 p-0">
-        <div>
-          <AdminNavbar />
-        </div>
+      <div class="col-9 p-0 router-view">
+        <!-- <div>
+     
+        </div> -->
+             <!-- <AdminNavbar /> -->
         <router-view></router-view>
       </div>
     </div>
@@ -62,5 +63,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 
 </style>
