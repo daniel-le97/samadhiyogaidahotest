@@ -88,6 +88,7 @@ import ServicesSection from "../components/HomePage/ServicesSection.vue";
 import Pop from "../utils/Pop.js";
 
 import { onMounted } from "vue";
+import { pocketBaseService } from "../services/PocketBaseService.js";
 // import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
 // import { pocketBaseService } from "../services/PocketBaseService.js";
 // import AboutSection from "../components/HomePage/AboutSection.vue";
@@ -96,8 +97,15 @@ export default {
   setup() {
     onMounted(() => {
       getAllRetreats();
+      // getCollections()
     });
-
+// async function getCollections(){
+//   try {
+//       await pocketBaseService.getCollectionsList()
+//     } catch (error) {
+//       Pop.error(error,'[]')
+//     }
+// }
     async function getAllRetreats() {
       try {
         const { retreatsService } = await import(
