@@ -5,12 +5,16 @@
     <FooterWave />
     <div class="container">
       <div class="row mt-4">
+        <div class="col-md-12 text-center mb-3">
+           <p class="fs-2">Stay Connected With Us</p>
+           <p class="fs-4">Sign up for our news letter and stay up to date with events, classes and retreats</p>
+        </div>
         <div class="col-md-6">
           <NewsLetter />
         </div>
         <div class="col-md-6 d-flex">
-          <p class="fs-3">Join Our NewsLetter and stay connected with us!</p>
-          <img src="https://img.freepik.com/free-vector/staying-touch-modern-communication-means-phone-calls-letters-emails-person-contacting-friends-customers-via-email-encouraging-feedback-vector-isolated-concept-metaphor-illustration_335657-2779.jpg?w=740&t=st=1671237218~exp=1671237818~hmac=f0cc7d983a1fc1055faa6830d3cb9820f93a12e81969470acf01ae2f51555029" alt="" class="img-fluid w-50 rounded-circle ">
+         
+          <img src="https://img.freepik.com/free-vector/staying-touch-modern-communication-means-phone-calls-letters-emails-person-contacting-friends-customers-via-email-encouraging-feedback-vector-isolated-concept-metaphor-illustration_335657-2779.jpg?w=740&t=st=1671237218~exp=1671237818~hmac=f0cc7d983a1fc1055faa6830d3cb9820f93a12e81969470acf01ae2f51555029" alt="" class="img-fluid w-50 rounded-circle elevation-6">
         </div>
       </div>
 
@@ -104,13 +108,14 @@
     </div>
     <!-- Grid container -->
 
-    <!-- <p>
+    <p>
       Vector Images by
       <a
+      target="_blank"
         href="https://www.freepik.com/free-vector/organic-flat-people-meditating-illustration_13297280.htm#query=yoga&position=3&from_view=search&track=sph"
         >Freepik</a
       >
-    </p> -->
+    </p>
     <!-- Copyright -->
     <div class="text-center p-3 bg-lightPink darken-10">
       © 2022 Copyright:

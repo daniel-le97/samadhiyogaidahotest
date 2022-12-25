@@ -1,9 +1,11 @@
 <template>
-  <div class="">
-    <div class="tsparticles">
+  <div class=" about-page">
+    
+   <section>
+     <div class="heroImage d-flex flex-column align-items-center justify-content-center">
+      <div class="tsparticles">
       <ParticleTest />
     </div>
-    <div class="heroImage d-flex flex-column align-items-center justify-content-center">
       <div class="text-center">
         <h1 v-motion-slide-top :delay="200" id="shadow1" class=" font-1 text-shadow page-title courgette fw-bolder text-light">
           OUR STORY
@@ -13,7 +15,9 @@
         class=" display-6 font-2 text-shadow">Why we came to build SamadhiYogaIdaho</p>
       </div>
     </div>
-    <div class="container-fluid mt-5 plants">
+   </section>
+
+   <section class="container-fluid mt-5 ">
       <div class="row  px-md-3 gy-5 justify-content-center">
         <div class="col-md-10 text-center">
           <div class="justify-content-center p-2">
@@ -69,7 +73,8 @@
    
 
       </div>
-    </div>
+   </section>
+   
   </div>
 </template>
 
@@ -85,8 +90,12 @@ export default {
 };
 </script>
 <style scoped>
+
+.about-page{
+  margin-bottom: 100px;
+}
 .framed {
- 
+ width: 90%;
   object-fit: cover;
 
   box-shadow: -50px -50px 0 -40px var(--peach), 50px 50px 0 -40px var(--peach);

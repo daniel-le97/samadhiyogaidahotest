@@ -32,11 +32,6 @@ const routes = [
     component: loadPage("EventsPage"),
   },
 
-  {
-    path: "/blog",
-    name: "Blog",
-    component: loadPage("BlogPage"),
-  },
 
   {
     path: "/retreats",

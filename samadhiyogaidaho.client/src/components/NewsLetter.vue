@@ -6,10 +6,8 @@
     <form @submit.prevent="handleSubmit()">
       <div class="container mailing-list my-2">
         <div class="row">
-          <div class="col-md-12">
-            <p> Join Our Newsletter $ Stay up to date with new events , Retreats, Pop-up classes and Deals!</p>
-          </div>
-          <div class="col-md-6">
+          
+          <!-- <div class="col-md-6">
             <div
               class="d-flex rounded-pill bg-white align-items-center elevation-5"
             >
@@ -22,7 +20,7 @@
                 placeholder="(optional) Phone Number"
               />
             </div>
-          </div>
+          </div> -->
           <div class="col-md-12 my-4">
             <div
               class="d-flex rounded-pill p-1 bg-white align-items-center elevation-5"
