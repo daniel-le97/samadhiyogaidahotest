@@ -14,12 +14,12 @@
   </swiper>
 
 
-   <swiper :navigation="true" :modules="modules" class="mySwiper d-md-none d-block">
+   <!-- <swiper :navigation="true" :modules="modules" class="mySwiper d-md-none d-flex">
        <swiper-slide v-for="i in images" class="bg-transparent elevation-6  rounded-4">
 <img :src="i" alt="" class="rounded-4 img-fluid h-100  ">
 
     </swiper-slide>
-  </swiper>
+  </swiper> -->
 </template>
 <script>
 // Import Swiper Vue.js components
@@ -60,7 +60,7 @@ img{
 }
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px){
- width: auto;
+ width: 80%;
   height: 70vh;
  
   }

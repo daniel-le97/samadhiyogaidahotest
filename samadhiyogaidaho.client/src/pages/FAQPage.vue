@@ -1,6 +1,4 @@
 <template>
-  ]
-
   <div>
     <section id="hero-section">
       <div
@@ -22,89 +20,13 @@
       </div>
     </section>
 
-    <!-- <section id="YinYoga-Section" class="">
-      <div class="container p-5 mt-5">
-        <div class="row">
-          <div class="col-md-12">
-            <h1
-              v-motion-slide-visible-once-left
-              class="display-1 font-1 underline text-start"
-            >
-              What Is Yin Yoga?
-            </h1>
-          </div>
-
-          <div class="row mt-3">
-            <div class="col-md-4">
-              <div class="card bg-dark border-0 elevation-6 p-2">
-                <p class="text-warning">
-                  Yin yoga is a quiet contemplative practice that involves
-                  working with deeper, passive, and longer held poses. It
-                  targets the deepest tissues of the body, our connective
-                  tissues,ligaments,joints,bones, the deep fascia networks of
-                  the body and the meridians.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card bg-dark border-0 elevation-6 p-2">
-                <p class="text-warning">
-                  A Yin yoga class usually consists of a series of long-held,
-                  passive floor poses that mainly work the lower part of the
-                  body - the hips, pelvis, inner thighs, and the lower spine
-                  which are especially rich in connective tissues. The poses are
-                  held for up to five minutes or longer.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card bg-dark border-0 elevation-6 p-2">
-                <ul>
-                  <li class="text-warning">
-                    <p class="text-warning">
-                      Increases circulation & improves flexibility
-                    </p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="text-warning">
-                      Calms and balances the mind & body
-                    </p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="text-warning">Reduces stress & anxiety</p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="text-warning">Releases fascia</p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="text-warning">Encourages deeper relaxation</p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="text-warning">Improves Joint mobility</p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="text-warning">
-                      Balance to the organs through meridian stimulation
-                    </p>
-                  </li>
-                  <li class="text-warning">
-                    <p class="text-warning">
-                      improved pranayama(breath work & life energy)
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+    
     <section id="accordion-faq" class="container my-5">
       <div class="row my-5 justify-content-center">
         <div
           class="col-md-8 d-flex justify-content-center flex-column align-content-center align-items-center"
         >
-          <blockquote class="font-1 quote text-center">
+          <blockquote class="font-1 quote text-center ">
             On an inhale, think of the things that are no longer serving you,
             whatever that may be. Maybe it’s a thought Maybe it’s a feeling
             Maybe it’s a person Or an experience But taking it, And on an
@@ -129,235 +51,34 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-12">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header border-0" id="headingOne">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0" v-for="(faq, index) in QA">
+              <h2
+                class="accordion-header border-0"
+                :id="`heading${index.toString()}`"
+              >
                 <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
+                  class="accordion-button text-dark font-2 fs-3 bg-transparent"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
+                  :data-bs-target="`#Collapse${index.toString()}`"
+                  :aria-expanded="index == 0 ? true : false"
+                  :aria-controls="`Collapse${index.toString()}`"
                 >
-                  <i class="mdi mdi-help-circle me-3"></i> What are the benefits
-                  of yoga?
+                  <i class="mdi mdi-help-circle me-3"></i> {{ faq.q }}
                 </button>
               </h2>
               <div
-                id="collapseOne"
+                :class="index == 0 ? '' : ''"
+                :id="`Collapse${index.toString()}`"
                 class="accordion-collapse collapse"
-                aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample"
+                :aria-labelledby="`heading${index.toString()}`"
+                data-bs-parent="#faqAccordion"
               >
                 <div class="accordion-body">
                   <p class="fs-5">
-                    With regular practice, you will notice your body getting
-                    stronger and more flexible; you will feel more grounded and
-                    have better posture. On a mental level you will notice
-                    improved focus, the ability to stay calm and maintain
-                    relaxed breathing.
+                    {{ faq.a }}
                   </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse2"
-                  aria-expanded="true"
-                  aria-controls="collapse2"
-                >
-                  <i class="mdi mdi-help-circle me-3"></i> Can I Eat Before Yoga
-                  Practice?
-                </button>
-              </h2>
-              <div
-                id="collapse2"
-                class="accordion-collapse collapse"
-                aria-labelledby="heading2"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="fs-5">
-                    It is best to wait an hour after eating before practicing
-                    yoga, but a small snack before your class is perfectly
-                    alright. Observe your body to learn how much time you need
-                    to digest your food before practice.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse3"
-                  aria-expanded="true"
-                  aria-controls="collapse2"
-                >
-                  <i class="mdi mdi-help-circle me-3"></i> What do I need to
-                  bring?
-                </button>
-              </h2>
-              <div
-                id="collapse3"
-                class="accordion-collapse collapse"
-                aria-labelledby="heading2"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="fs-5">
-                    Just bring yourself, in appropriate clothing, a yoga mat if
-                    you have one, and a bottle of water.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse4"
-                  aria-expanded="true"
-                  aria-controls="collapse2"
-                >
-                  <i class="mdi mdi-help-circle me-3"></i> Can I Eat Before Yoga
-                  Practice?
-                </button>
-              </h2>
-              <div
-                id="collapse4"
-                class="accordion-collapse collapse"
-                aria-labelledby="heading2"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="fs-5">
-                    Some people wear baggy, loose fitting bottoms or shorts and
-                    a t shirt. Other people wear tight, stretchy leggings +
-                    tops. The only thing that matters is that you wear
-                    comfortable clothes that you can easily move and stretch in.
-                    It's good to have clothes that keep you cool when you are
-                    active in yoga.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse5"
-                  aria-expanded="true"
-                  aria-controls="collapse2"
-                >
-                  <i class="mdi mdi-help-circle me-3"></i> Do I Need To Be
-                  Flexible To Do Yoga?
-                </button>
-              </h2>
-              <div
-                id="collapse5"
-                class="accordion-collapse collapse"
-                aria-labelledby="heading2"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="fs-5">
-                    No you don’t have to be flexible to do yoga… It’s an urban
-                    myth that people who are tight can't do yoga. Yoga isn’t
-                    just stretching its extremely toning, calming, meditative,
-                    spiritual, healing and opening. Flexibility is only one
-                    aspect of it. Once you practice yoga for a period of time
-                    naturally you will gain flexibility with a myriad of other
-                    benefits
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse6"
-                  aria-expanded="true"
-                  aria-controls="collapse2"
-                >
-                  <i class="mdi mdi-help-circle me-3"></i> What is Vinyasa Yoga?
-                </button>
-              </h2>
-              <div
-                id="collapse6"
-                class="accordion-collapse collapse"
-                aria-labelledby="heading2"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="fs-5">
-                    Vinyasa yoga focuses on connecting the breath to your
-                    movements, which tend to be set at a faster pace. In a
-                    vinyasa practice, you can expect to stay in a constant flow
-                    of movements.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse7"
-                  aria-expanded="true"
-                  aria-controls="collapse2"
-                >
-                  <i class="mdi mdi-help-circle me-3"></i>
-                </button>
-              </h2>
-              <div
-                id="collapse7"
-                class="accordion-collapse collapse"
-                aria-labelledby="heading2"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="fs-5"></p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button text-dark font-2 fs-3 border-0 bg-transparent"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapse8"
-                  aria-expanded="true"
-                  aria-controls="collapse2"
-                >
-                  <i class="mdi mdi-help-circle me-3"></i>
-                </button>
-              </h2>
-              <div
-                id="collapse8"
-                class="accordion-collapse collapse"
-                aria-labelledby="heading2"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="fs-5"></p>
                 </div>
               </div>
             </div>
@@ -390,8 +111,10 @@ export default {
     onMounted(() => {});
     watchEffect(() => {});
     const QA = [
-   
-      { q: "What are the benefits of yoga?", a: "  With regular practice, you will notice your body getting stronger and more flexible; you will feel more grounded and have better posture. On a mental level you will notice improved focus, the ability to stay calm and maintain relaxed breathing." },
+      {
+        q: "What are the benefits of yoga?",
+        a: "  With regular practice, you will notice your body getting stronger and more flexible; you will feel more grounded and have better posture. On a mental level you will notice improved focus, the ability to stay calm and maintain relaxed breathing.",
+      },
       {
         q: "Can I eat before a yoga session?",
         a: " It is best to wait an hour after eating before practicing yoga, but a small snack before your class is perfectly alright. Observe your body to learn how much time you need to digest your food before practice.",
@@ -448,6 +171,9 @@ export default {
 @media only screen and (max-width: 768px) {
   .page-title {
     font-size: 4rem;
+  }
+  .quote{
+    font-size: 16px;
   }
 }
 </style>
