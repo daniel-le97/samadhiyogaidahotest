@@ -48,7 +48,17 @@ class PocketBaseService {
   }
   async transferToMongo(){
     const files = await pb.collection("images").getFullList(200)
-    console.log(files);
+
+    console.log(res);
+    return await this.createCollection()
+  }
+  async createCollection(){
+   const collection = await pb.admins.authWithPassword(
+      "daniel97.le@gmail.com",
+      "2MSOBk4SXEY4yYuhsxuQ3atZiVSaShtE"
+    );
+    // const collection = await pb.collections.getOne("aug22Retreat")
+    console.log(collection);
   }
 }
 export const pocketBaseService = new PocketBaseService();

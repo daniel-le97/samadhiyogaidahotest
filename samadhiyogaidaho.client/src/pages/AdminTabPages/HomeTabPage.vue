@@ -58,7 +58,7 @@ export default {
       async transferToMongo(){
         try {
              const {pocketBaseService} = await import("../../services/PocketBaseService.js")
-          await pocketBaseService.transferToMongo()
+          await pocketBaseService.createCollection()
           } catch (error) {
             Pop.error(error)
           }
