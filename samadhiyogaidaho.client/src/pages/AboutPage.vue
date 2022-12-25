@@ -42,15 +42,12 @@
               show up and breathe.</p>
           </div>
         </div>
-        <div class="col-md-6  d-flex align-items-center justify-content-center ">
-       <img
-            src="../assets/img/KatiePortrait.png"
-            alt="" class="img-fluid framed ms-md-5 rounded " >
-      
-        <div class="col-md-6 ">
+           <div class="col-md-6  d-flex align-items-center justify-content-center  ">
           <img src="../assets/img/KatiePortrait.png" alt="" class="img-fluid framed elevation-5 ms-md-5 rounded "
             style="z-index:-9;">
         </div>
+    
+      
 
         <div class="col-md-6 ">
           <div class="">
@@ -90,7 +87,7 @@
         </div>
 
 
-      </div>
+   
       </div>
    </section>
    
