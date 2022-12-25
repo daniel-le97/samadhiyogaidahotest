@@ -1,6 +1,9 @@
-import {pb} from "../../lib/pocketBase"
+import { pop } from "@vueuse/motion";
+import { pb } from "../../lib/pocketBase";
+import { AppState } from "../AppState";
 import { generateId } from "../utils/Helper";
-import { logger } from "../utils/Logger"
+import { logger } from "../utils/Logger";
+import Pop from "../utils/Pop";
 
 class PocketBaseService {
 
@@ -14,22 +17,34 @@ class PocketBaseService {
     const files = Array.from(e.target.files);
     // console.log(files);
 
-
+    // hi
     for await (const file of files) {
-      let formData = new FormData()
-      formData.append("file", file)
-      const createdFile = await pb.collection('images').create(formData)
-      const url = await pb.getFileUrl(createdFile, createdFile.file)
-      const getLastFile = await pb.collection("images").update(createdFile.id, {url})
+      let formData = new FormData();
+      formData.append("file", file);
+      const createdFile = await this.createFile(formData)
+      const url = await pb.getFileUrl(createdFile, createdFile.file);
+      const getLastFile = await pb
+        .collection("images")
+        .update(createdFile.id, { url });
       imgs.push(url);
     }
-    // await pb.collection("images").subscribe("*",function(data))
-    logger.log(imgs)
+    logger.log(imgs);
     return imgs;
   }
-
+  async createFile(formData) {
+    try {
+      const file = await pb.collection("images").create(formData);
+      return file
+    } catch (error) {
+      Pop.error(e, "please contact an admin");
+    }
+  }
   async getPastRetreats() {
     const res = await pb.collection("images").getFullList();
   }
+  async transferToMongo(){
+    const files = await pb.collection("images").getFullList(200)
+    console.log(res);
+  }
 }
-export const pocketBaseService = new PocketBaseService()
+export const pocketBaseService = new PocketBaseService();

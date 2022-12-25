@@ -3,6 +3,8 @@
     <div class="row">
       <div class="col-12">
         <input type="file" multiple v-on:change="uploadFile" />
+        <div v-if="loading">loading</div>
+        <button @click="transferToMongo()">transfer</button>
       </div>
     </div>
   </div>
@@ -31,7 +33,7 @@ export default {
     //     }
     // }
     return {
-      stats: computed(() => AppState.fakeStats),
+      loading: computed(() => AppState.loading),
       async getPocket() {
         try {
           console.log("hi");
@@ -45,12 +47,22 @@ export default {
       },
       async uploadFile(e) {
         try {
+          AppState.loading = true
         const {pocketBaseService} = await import("../../services/PocketBaseService.js")
           await pocketBaseService.uploadFile(e);
+          AppState.loading = false
         } catch (error) {
           Pop.error(error)
         }
       },
+      async transferToMongo(){
+        try {
+             const {pocketBaseService} = await import("../../services/PocketBaseService.js")
+          await pocketBaseService.transferToMongo()
+          } catch (error) {
+            Pop.error(error)
+          }
+      }
     };
   },
   components: {},
