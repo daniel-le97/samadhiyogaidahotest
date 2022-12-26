@@ -49,7 +49,10 @@
             </li>
           
           </ul>
+         Logged in:
+              {{ admin.name }}
         </div>
+    
       </div>
     </div>
   </div>
@@ -59,20 +62,22 @@
 import { AppState } from "../../AppState";
 import { AuthService } from "../../services/AuthService";
 import { computed } from "@vue/reactivity";
+import Login from "../MiscComponents/Login.vue";
 
 export default {
-  setup() {
-    return {
-      admin: computed(() => AppState?.account),
-      async loadTab(tab) {
-        AppState.activeTab = tab;
-      },
-      async logout() {
-        AuthService.logout({ returnTo: window.location.origin });
-        // AuthService.
-      },
-    };
-  },
+    setup() {
+        return {
+            admin: computed(() => AppState?.account),
+            async loadTab(tab) {
+                AppState.activeTab = tab;
+            },
+            async logout() {
+                AuthService.logout({ returnTo: window.location.origin });
+                // AuthService.
+            },
+        };
+    },
+    components: { Login }
 };
 </script>
 
