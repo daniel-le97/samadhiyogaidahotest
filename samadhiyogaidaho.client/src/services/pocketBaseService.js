@@ -3,6 +3,8 @@ import { AppState } from "../AppState";
 import { generateId } from "../utils/Helper";
 import { logger } from "../utils/Logger";
 import Pop from "../utils/Pop";
+import { api } from "./AxiosService";
+import { Upload } from "../models/Upload";
 
 class PocketBaseService {
   async getFiles() {
@@ -43,13 +45,7 @@ class PocketBaseService {
     // AppState.aug22RetreatImages= res
     res.forEach((r) => AppState.aug22RetreatImages.push(r.url));
     // console.log(res);
-    console.log(AppState.aug22RetreatImages);
-  }
-  async transferToMongo() {
-    const files = await pb.collection("images").getFullList(200);
-
-    console.log(res);
-    return await this.createCollection();
+    logger.log(AppState.aug22RetreatImages);
   }
   async createCollection() {
     const hi = AppState.admin;
@@ -59,7 +55,28 @@ class PocketBaseService {
       type: collection.type,
       schema: collection.schema,
     });
-    console.log(newCollection);
+    logger.log(newCollection);
+  }
+  async transferToMongo() {
+    // let imgs = []
+    const yes = await Pop.confirm();
+    if (!yes) {
+      return;
+    } else {
+      return;
+    }
+    const collections = await pb.collections.getList();
+    // console.log(collections);
+    for await (const collection of collections.items) {
+      const images = await pb.collection(`${collection.name}`).getFullList();
+      for await (const image of images) {
+        let data = new Upload(image);
+        const res = await api.post("/api/uploads", data);
+        console.log(res.data);
+      }
+      // imgs.push(imgs?.url)
+    }
+    // logger.log(imgs)
   }
 }
 export const pocketBaseService = new PocketBaseService();

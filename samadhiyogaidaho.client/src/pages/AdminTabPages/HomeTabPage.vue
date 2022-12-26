@@ -34,17 +34,6 @@ export default {
     // }
     return {
       loading: computed(() => AppState.loading),
-      async getPocket() {
-        try {
-          console.log("hi");
-          // const pocketBaseService = async() => await import(
-          //   "../../services/pocketBaseService.js"
-          // );
-          // console.log(pocketBaseService);
-        } catch (error) {
-          Pop.error(error);
-        }
-      },
       async uploadFile(e) {
         try {
           AppState.loading = true
@@ -58,7 +47,7 @@ export default {
       async transferToMongo(){
         try {
              const {pocketBaseService} = await import("../../services/PocketBaseService.js")
-          await pocketBaseService.createCollection()
+          await pocketBaseService.transferToMongo()
           } catch (error) {
             Pop.error(error)
           }

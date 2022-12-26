@@ -128,45 +128,6 @@
     <div v-if="event">
       <EventCard :event="new Event(editable)" />
     </div>
-
-    <!-- <div class="row my-5 elevation-1" v-if="editable.title" v-motion-pop>
-      <div class="col-md-6 d-flex align-items-center justify-content-center">
-        <img
-          :src="editable.img"
-          alt=""
-          class="img-fluid rounded elevation-6 hover-image w-75"
-        />
-      </div>
-      <div class="col-md-6 text-start">
-        <p
-          class="underline fs-1 font-1 border-2 border-bottom text-start text-pink darken-20"
-        >
-          {{ editable.title }}
-        </p>
-        <div class="d-flex">
-          <div class="me-3">
-            <p class="text-start">
-              {{ editable.startDate }} - {{ editable.endDate }} (This Will
-              Convert To Proper Format)
-            </p>
-
-            <p class="text-start">{{ editable.location.place }}</p>
-            <p class="text-start">{{ editable.location.address }}</p>
-          </div>
-          <div class="fs-2 font-2">
-            ${{ editable.cost }} per
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/8927/8927683.png"
-              alt=""
-              class="img-fluid"
-              width="80"
-              height="80"
-            />
-          </div>
-        </div>
-        <p class="fs-4 text-start">{{ editable.description }}</p>
-      </div>
-    </div> -->
   </div>
 </template>
 

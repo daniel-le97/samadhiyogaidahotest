@@ -18,6 +18,8 @@ export const AppState = reactive({
 
   /** @type {import('./models/Retreat.js').Retreat[]} */
   retreats: [],
+  /** @type {import('./models/Retreat.js').Retreat | null} */
+  activeRetreat: null,
 
   /** @type {import('./models/Schedule.js').Schedule.js[]} */
   schedules: [],

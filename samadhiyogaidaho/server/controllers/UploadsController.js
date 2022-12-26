@@ -16,7 +16,7 @@ export class UploadsController extends BaseController {
 
   async addUpload(req, res, next) {
     try {
-      const upload = await uploadsService.addUpload(req.body);
+      const upload = await uploadsService.addUpload(req.body, req.userInfo.id);
       await res.send(upload);
     } catch (error) {
       next(error);
