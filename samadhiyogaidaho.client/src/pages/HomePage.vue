@@ -105,6 +105,7 @@ export default {
       try {
      
       await retreatsService.getAllRetreats()
+      await pocketBaseService.getPastRetreats()
       } catch (error) {
         Pop.error(error, "[getRetreats]");
       }
