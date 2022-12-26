@@ -98,7 +98,7 @@ export default {
     onMounted(() => {
       getAllRetreats();
       // getCollections()
-      getPastRetreatImages()
+      // getPastRetreatImages()
     });
 async function getPastRetreatImages(){
   try {
