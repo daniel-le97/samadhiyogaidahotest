@@ -16,6 +16,7 @@ class DbContext {
   Uploads = mongoose.model('Upload',UploadSchema)
   Events = mongoose.model('Event', EventSchema)
   Schedules = mongoose.model('Schedule', ScheduleSchema)
+  
 }
 
 export const dbContext = new DbContext();

@@ -4,7 +4,7 @@ import { authGuard } from "@bcwdev/auth0provider-client";
 function loadPage(page) {
   return () => import(`./pages/${page}.vue`);
 }
- function  loadComponent(component) {
+function loadComponent(component) {
   return () => import(`./pages/AdminTabPages/${component}Page.vue`);
 }
 
@@ -18,7 +18,6 @@ const routes = [
     path: "/about",
     name: "About",
     component: loadPage("AboutPage"),
-  
   },
 
   {
@@ -31,7 +30,6 @@ const routes = [
     name: "Events",
     component: loadPage("EventsPage"),
   },
-
 
   {
     path: "/retreats",
@@ -79,17 +77,17 @@ const routes = [
       },
       {
         path: "retreats",
-        name: 'AdminRetreats',
+        name: "AdminRetreats",
         component: loadComponent("RetreatTab"),
       },
       {
         path: "settings",
-        name: 'AdminSettings',
+        name: "AdminSettings",
         component: loadComponent("SettingsTab"),
       },
       {
         path: "schedule",
-        name: 'AdminSchedule',
+        name: "AdminSchedule",
         component: loadComponent("ScheduleTab"),
       },
     ],
@@ -102,12 +100,10 @@ export const router = createRouter({
   history: createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-     if (savedPosition) {
-       return savedPosition;
-     } else {
-       return { top: 0 };
-     }
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
   },
 });
-
-

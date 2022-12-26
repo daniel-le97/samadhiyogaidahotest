@@ -6,11 +6,7 @@ import { logger } from "../utils/Logger";
 import Pop from "../utils/Pop";
 
 class PocketBaseService {
-
-
-  async getCollections(){
-    const collections = await pb.collections.
-  }
+ 
   async getFiles() {
     const record = await pb.collection("images").getFullList();
     logger.log(record);
@@ -25,7 +21,7 @@ class PocketBaseService {
     for await (const file of files) {
       let formData = new FormData();
       formData.append("file", file);
-      const createdFile = await this.createFile(formData)
+      const createdFile = await this.createFile(formData);
       const url = await pb.getFileUrl(createdFile, createdFile.file);
       const getLastFile = await pb
         .collection("images")
@@ -38,22 +34,27 @@ class PocketBaseService {
   async createFile(formData) {
     try {
       const file = await pb.collection("images").create(formData);
-      return file
+      return file;
     } catch (error) {
       Pop.error(e, "please contact an admin");
     }
   }
   async getPastRetreats() {
-    const res = await pb.collection("images").getFullList();
+    const res = await pb.collection("aug22Retreat").getFullList();
+    // let urls=[]
+    // AppState.aug22RetreatImages= res
+    res.forEach(r=>  AppState.aug22RetreatImages.push(r.url))
+    // console.log(res);
+    console.log(AppState.aug22RetreatImages);
   }
-  async transferToMongo(){
-    const files = await pb.collection("images").getFullList(200)
+  async transferToMongo() {
+    const files = await pb.collection("images").getFullList(200);
 
     console.log(res);
-    return await this.createCollection()
+    return await this.createCollection();
   }
-  async createCollection(){
-   const collection = await pb.admins.authWithPassword(
+  async createCollection() {
+    const collection = await pb.admins.authWithPassword(
       "daniel97.le@gmail.com",
       "2MSOBk4SXEY4yYuhsxuQ3atZiVSaShtE"
     );

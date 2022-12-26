@@ -360,14 +360,14 @@
       </div>
       <div
       v-motion-slide-visible-once-bottom
-      class="accordion elevation-6 border-0" id="accordionExample">
+      class="accordion  border-0" id="accordionExample">
         <div
-          class="accordion-item border-0 elevation-3"
+          class="accordion-item border-0 "
           v-for="(f, index) in retreat?.FAQS"
         >
           <h2 class="accordion-header" id="headingOne">
             <button
-              class="accordion-button text-dark font-2 fs-3 bg-pink border-0 elevation-6"
+              class="accordion-button text-dark font-2 fs-3 bg-transparent border-0 "
               type="button"
               data-bs-toggle="collapse"
               :data-bs-target="`#collapse${index.toString()}`"
@@ -452,11 +452,11 @@
                 data-bs-toggle="modal"
                 data-bs-target="#activeImage"
                 class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
-                v-for="f in retreat.featuredImgs"
+                v-for="a in aug22RetreatImages"
               >
                 <img
                
-                  :src="f"
+                  :src="a"
                   alt=""
                   class="img-fluid hover-image rounded-4 selectable"
                 />
@@ -503,7 +503,7 @@ export default {
     }
     return {
       editable,
-
+aug22RetreatImages:computed(() => AppState.aug22RetreatImages),
       featuredImg1: computed(() =>
         AppState.currentRetreat?.featuredImgs?.splice(8, 1)
       ),

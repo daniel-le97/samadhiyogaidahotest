@@ -8,6 +8,7 @@ export class RetreatsController extends BaseController {
     this.router
     .get("", this.getallRetreats)
     .get('/:id',this.getCurrentRetreat)
+    .get('/august-22-retreat-images', this.getAug22RetreatImgs)
     .post("", this.createRetreat);
   }
 
@@ -36,4 +37,14 @@ try {
     next(error)
   }
   }
+async getAug22RetreatImgs(req,res,next){
+  try {
+      const imgs = await retreatsService.getAug22RetreatImgs()
+      await res.send(imgs)
+    } catch (error) {
+      next(error)
+    }
+}
+
+
 }

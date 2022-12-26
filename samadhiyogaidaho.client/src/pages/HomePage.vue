@@ -98,14 +98,16 @@ export default {
     onMounted(() => {
       getAllRetreats();
       // getCollections()
+      getPastRetreatImages()
     });
-// async function getCollections(){
-//   try {
-//       await pocketBaseService.getCollectionsList()
-//     } catch (error) {
-//       Pop.error(error,'[]')
-//     }
-// }
+async function getPastRetreatImages(){
+  try {
+      const {pocketBaseService} = await import("../services/PocketBaseService.js")
+      await pocketBaseService.getPastRetreats()
+    } catch (error) {
+      Pop.error(error,'[getPastRetreatImages]')
+    }
+}
     async function getAllRetreats() {
       try {
         const { retreatsService } = await import(

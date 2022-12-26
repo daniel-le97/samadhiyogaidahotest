@@ -20,6 +20,7 @@ export const AppState = reactive({
   
   /** @type {import('./models/Schedule.js').Schedule.js[]} */
   schedules:[],
+  aug22RetreatImages:[],
   uploadedImgs: 0,
   newActiveUpload: null,
   formPaginate: 0,
