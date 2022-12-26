@@ -8,27 +8,27 @@
           <div class="col-md-8 team-section-title d-flex d-md-block flex-column  align-items-sm-center  justify-content-sm-center">
             <h1
               v-motion-slide-visible-once-left
-              class="display-2 font-1 underline text-start"
+              class="display-2 font-1 underline text-start text-dark"
             >
               Katie Alverson
             </h1>
             <h2
               v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20 "
+              class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start"
             >
               Experienced
             </h2>
 
             <h2
               v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20  me-md-2"
+              class="display-6 font-2 underline text-lightPink darken-20 text-center  text-md-start me-md-2"
             >
               Qualified
             </h2>
 
             <h2
               v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20 "
+              class="display-6 font-2 underline text-lightPink darken-20  text-center text-md-start"
             >
               Passionate
             </h2>
@@ -38,7 +38,7 @@
 
       <div class="container">
         <div class="row  gy-5 justify-content-center">
-          <div class="col-md-6 ">
+          <div class="col-md-6  d-flex justify-content-center align-items-center">
           <div class="card framed border-0">
             <div class="image-box">
                 <img

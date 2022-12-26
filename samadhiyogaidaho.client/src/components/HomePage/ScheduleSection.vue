@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 text-start">
+      <div class="col-md-6 d-flex flex-column align-content-center justify-content-center  ">
     <ScheduleCard  :schedule="s"  v-for="s in schedules"/>
       </div>
     </div>

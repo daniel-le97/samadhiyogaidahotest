@@ -9,17 +9,7 @@
           class="hero-image d-flex flex-column justify-content-center align-items-center"
         >
           <div style="margin-top: 80px" class="text-shadow container">
-            <h5
-              v-motion-slide-top
-              :delay="600"
-              class="fs-2 font-2 text-light text-uppercase text-center"
-            >
-              <br />
-              Become aware of your capacity to create, <br />
-              to be authentic in every day life, <br />
-              to transform & to love
-            </h5>
-            <h1
+               <h1
               v-motion
               :initial="{
                 y: -100,
@@ -38,15 +28,26 @@
               :delay="1000"
               class="display-2 text-light font-1 text-center"
             >
-              ESCAPE WITH SAMADHI YOGA IDAHO
+             SAMADHI YOGA IDAHO
             </h1>
+            <h5
+              v-motion-slide-top
+              :delay="600"
+              class="fs-2 font-2 text-light text-uppercase text-center"
+            >
+              <br />
+              Become aware of your capacity to create <br />
+              to be authentic in every day life <br />
+              to transform & to love
+            </h5>
+         
           </div>
         </div>
       </div>
       <GentleWave />
     </section>
 
-    <section id="Call-To-Action-Section">
+    <section id="Call-To-Action-Section" class="my-5">
       <CallToAction />
     </section>
 
@@ -65,7 +66,7 @@
       <TestimonialSection />
     </section>
 
-    <section class="bg-pink">
+    <section >
       <div class="container">
     <InstagramFeed/>
       </div>

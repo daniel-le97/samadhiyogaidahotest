@@ -1,14 +1,14 @@
 <template>
-   <div class="mt-4">
+   <div class="mt-4 text-center text-md-start">
           <p
-            class="underline fs-2 font-1 border-2 border-bottom text-start text-pink darken-20"
+            class="underline fs-2 font-1 border-2 border-bottom  text-pink darken-20"
           >
            {{ schedule.title }}
           </p>
 
-          <div class="d-flex">
-            <div class="me-3">
-              <p class="text-start fs-3">{{schedule.time}}</p>
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <div class="me-3  ">
+              <p class="fs-3">{{schedule.time}}</p>
 
               <a
                :href="schedule.address"

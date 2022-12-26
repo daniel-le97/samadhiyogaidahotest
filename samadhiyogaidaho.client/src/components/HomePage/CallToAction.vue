@@ -43,8 +43,8 @@
         </div>
       </div>
 <hr class="my-5">
-      <div class="row gx-3  ">
-        <div class="col-md-4">
+      <div class="row g-3  ">
+        <div class="col-md-4 mb-3 mb-md-0">
 <div class="card  border-0 elevation-7 bg-pink p-2" v-motion-fade-visible-once :delay="300">
 <div class="card-title font-2 fs-3 text-center">
   Vinyasa 
@@ -55,7 +55,7 @@
 </div>
 </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3 mb-md-0">
 <div class="card  border-0 elevation-7 bg-pink p-2" v-motion-fade-visible-once :delay="300">
 <div class="card-title font-2 fs-3 text-center">
  Pranayama & Meditation
