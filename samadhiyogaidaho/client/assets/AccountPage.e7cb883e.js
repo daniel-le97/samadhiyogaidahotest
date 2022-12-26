@@ -1,0 +1,1 @@
+import{_ as t,i as e,c,A as o,o as a}from"./index.18a47402.js";const s={setup(){return{account:e(()=>o.account)}}},_={class:"about text-center"};function n(p,r,u,d,f,i){return a(),c("div",_)}const m=t(s,[["render",n],["__scopeId","data-v-9f8acf89"]]);export{m as default};
