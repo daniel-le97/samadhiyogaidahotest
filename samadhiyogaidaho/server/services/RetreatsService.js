@@ -33,8 +33,6 @@ class RetreatsService {
 
 
 
- async getAug22RetreatImgs(){
-  const imgs = await dbContext.
- }
+
 }
 export const retreatsService = new RetreatsService();
