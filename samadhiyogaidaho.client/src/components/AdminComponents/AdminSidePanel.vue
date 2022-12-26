@@ -51,6 +51,7 @@
           </ul>
          Logged in:
               {{ admin.name }}
+              <Login/>
         </div>
     
       </div>
