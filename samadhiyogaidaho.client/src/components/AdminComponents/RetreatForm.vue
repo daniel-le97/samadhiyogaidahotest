@@ -288,8 +288,11 @@
       </div>
     </div>
   </div>
+  <div>
+    <RetreatCard :retreat="new Retreat(editable)"/>
+  </div>
 
-  <section>
+  <!-- <section>
     <div class="row">
       <section>
         <div class="container">
@@ -570,7 +573,6 @@
                 </div>
               </div>
               <div class="col-md-7 d-flex justify-content-end">
-                <!-- <FoodImageSwiper v-if="editable?.food?.imgs" /> -->
               </div>
             </div>
           </div>
@@ -582,7 +584,6 @@
             <div
               class="col-md-6 d-flex align-items-center justify-content-center elevation-orange"
             >
-              <!-- <AccommodationSwiper /> -->
             </div>
             <div class="col-md-6">
               <h1 class="display-3 font-2">Accommodations</h1>
@@ -632,76 +633,70 @@
           </div>
         </div>   
       </section>
-
-      <!-- <section>
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-12 mb-4">
-          <h1 class="display-2 font-1">Check Out Our Past Retreats</h1>
-        </div>
-        <div class="col-md-4" v-for="a in archived">
-          <ArchivedRetreatCard :retreat="a" />
-        </div>
-      </div>
     </div>
   </section> -->
-    </div>
-  </section>
 </template>
 
 <script>
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
+import { Retreat } from "../../models/Retreat";
 import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
+import RetreatCard from "../HomePage/RetreatCard.vue";
 
 
 export default {
-  setup() {
-    const editable = ref({
-      cost: {},
-      location: {},
-      food: {},
-      schedule: {},
-      vacancy: { filled: 0 },
-      accommodations:{}
-    });
-    const file = ref(null);
-    onMounted(() => {});
-    watchEffect(() => {});
-
-    return {
-      editable,
-      file,
-      formPaginate: computed(() => AppState.formPaginate),
-      loading: computed(() => AppState.loading),
-      async handleSubmit() {
-        try {
-          const {retreatsService} = await import("../../services/RetreatsService")
-          await retreatsService.createRetreat(editable.value);
-        } catch (error) {
-          Pop.error(error, "[createRetreat]");
-        }
-      },
-      async uploadFile(e) {
-        try {
-          AppState.loading = true;
-          const {pocketBaseService} = await import("../../services/PocketBaseService")
-          const img = await pocketBaseService.uploadFile(e);
-          editable.value.schedule.img = img;
-          AppState.loading = false;
-        } catch (error) {
-          Pop.error(error, "[fileUpload]");
-        }
-      },
-      multiStepForm(x) {
-        if (x == 1) {
-          AppState.formPaginate = 1;
-        } else AppState.formPaginate = 0;
-      },
-    };
-  },
+    setup() {
+        const editable = ref({
+            cost: {},
+            location: {},
+            food: {},
+            schedule: {},
+            vacancy: { filled: 0 },
+            accommodations: {}
+        });
+        const file = ref(null);
+        onMounted(() => { });
+        watchEffect(() => { });
+        return {
+            editable,
+            Retreat,
+            file,
+            formPaginate: computed(() => AppState.formPaginate),
+            loading: computed(() => AppState.loading),
+            async handleSubmit() {
+                try {
+                    const { retreatsService } = await import("../../services/RetreatsService");
+                    await retreatsService.createRetreat(editable.value);
+                }
+                catch (error) {
+                    Pop.error(error, "[createRetreat]");
+                }
+            },
+            async uploadFile(e) {
+                try {
+                    AppState.loading = true;
+                    const { pocketBaseService } = await import("../../services/PocketBaseService");
+                    const img = await pocketBaseService.uploadFile(e);
+                    editable.value.schedule.img = img;
+                    AppState.loading = false;
+                }
+                catch (error) {
+                    Pop.error(error, "[fileUpload]");
+                }
+            },
+            multiStepForm(x) {
+                if (x == 1) {
+                    AppState.formPaginate = 1;
+                }
+                else
+                    AppState.formPaginate = 0;
+            },
+        };
+    },
+    components: { RetreatCard }
 };
 </script>
 
