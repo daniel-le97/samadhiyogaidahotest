@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid my-5 bg-pink py-5">
+  <div class="container-fluid my-5 py-5">
     <div class="row">
       <div class="col-md-12"></div>
     </div>
@@ -38,7 +38,7 @@ Don’t break. Just be. Just breathe. Just love. Just live.
       </div>
 
       <div id="curator-feed-default-feed-layout">
-        <a href="https://curator.io" target="_blank" class="crt-logo crt-tag"
+        <a href="https://curator.io" target="_blank" class="crt-logo crt-tag mt-3 "
           >Powered by Curator.io</a
         >
       </div>
@@ -76,4 +76,5 @@ iframe {
   height: 20rem;
   margin: 4px;
 }
+
 </style>

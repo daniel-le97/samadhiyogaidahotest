@@ -95,7 +95,7 @@
         <div class="col-md-12 text-center">
         <p class="display-3 text-dark font-1 underline"> YOGA SERVICES</p>
         <p class="fs-3 text-pink darken-20 font-2">Yoga teaches one how to live in harmony with the universe as well as unity with the mind, body, and spirit.</p>
-        <p class="fs-4">Our yoga services are architected for those  seeking balance and peace in their everyday life. our yoga services are specifically tailored to serve your needs. <br> <b>All you have to do is show up and breath.</b> </p>
+        <p class="fs-4">Our yoga services are architected for those  seeking balance and peace in their everyday life.  <br> <b>All you have to do is show up and breath.</b> </p>
         </div>
       </div>
       <div class="row my-4">

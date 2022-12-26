@@ -9,7 +9,7 @@
       <h1
         class="display-1 text-light text-shadow font-1 text-wrap page-title text-center"
       >
-        Join our Events
+      EVENTS
       </h1>
       <p class="font-1 text-light text-shadow display-6">
         Enjoy an enriching and memorable experience

@@ -11,7 +11,7 @@
             :delay="200"
             class="font-1 text-shadow text-light page-title"
           >
-            Embrace Nature
+           RETREATS
           </h1>
           <p
             v-motion-slide-top
@@ -48,41 +48,57 @@
 
       <div class="row gy-3">
         <div class="col-md-6 text-center" >
-          <img
+        <div class="card elevation-6 border-0 h-100">
+          <div class="image-box h-100">
+              <img
             v-if="retreat"
-            v-motion-pop-visible-once
+           
             :src="featuredImg1"
             alt=""
             class="img-fluid rounded-4 elevation-6 first-cover-image w-100 h-100 "
           />
+          </div>
+        </div>
         </div>
         <div class="col-md-6">
           <div class="row gy-3">
             <div class="col-md-12 mb-3">
-              <img
+            <div class="card elevation-6 border-0">
+              <div class="image-box">
+                  <img
                 v-if="retreat"
-                v-motion-pop-visible-once
+              
                 :src="retreat.coverImg"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
+              </div>
+            </div>
             </div>
             <div class="col-md-6">
-              <img
+            <div class="card elevation-6 border-0">
+              <div class="image-box">
+                  <img
                 v-if="retreat"
-                v-motion-pop-visible-once
+              
                 :src="featuredImg2"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
+              </div>
+            </div>
             </div>
             <div class="col-md-6">
-              <img
-                v-motion-pop-visible-once
+            <div class="card elevation-6 border-0">
+              <div class="image-box">
+                  <img
+            
                 :src="featuredImg3"
                 alt=""
                 class="img-fluid rounded-4 elevation-6"
               />
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -253,11 +269,15 @@
           </div>
         </div>
         <div class="col-md-6 d-flex justify-content-center" >
-          <img
+         <div class="card h-100 border-0 elevation-6">
+          <div class="image-box h-100">
+             <img
             :src="retreat?.location?.img"
             alt=""
-            class="img-fluid rounded-4 elevation-5"
+            class="img-fluid rounded-4 elevation-5 location-img h-100"
           />
+          </div>
+         </div>
         </div>
         <div class="row my-5 gy-5">
           <div class="col-md-6 d-flex justify-content-center" >
@@ -504,6 +524,9 @@ aug22RetreatImages:computed(() => AppState.aug22RetreatImages),
 </script>
 
 <style lang="scss" scoped>
+.location-img{
+  object-fit: cover;
+}
 .schedule-img{
   width: 75%;
    

@@ -52,7 +52,7 @@
             </router-link>
           </li>
           <li>
-            <a href=" https://ghost.apps.ledano.tk/ " target="_blank" v-motion-pop :delay="300"
+            <a href="https://blogs.samadhiyogaidaho.com/" target="_blank" v-motion-pop :delay="300"
               class="  nav-link"
               title="blog">
               Blog

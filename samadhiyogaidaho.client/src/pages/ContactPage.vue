@@ -19,7 +19,7 @@
         :delay="200"
         class="display-1 text-light font-1 page-title"
       >
-        Connect 
+      CONNECT
       </h1>
     </div>
 
