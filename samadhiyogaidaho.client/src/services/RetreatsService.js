@@ -16,7 +16,12 @@ class RetreatsService {
     const res = await api.get("api/retreats");
     logger.log(res.data);
 AppState.retreats = res.data.map(r=> new Retreat(r))
-AppState.retreats = AppState.retreats.filter((r) => r.archived == false);
+AppState.retreats.forEach(r=> {
+  if (r.archived) {
+    AppState.archivedRetreats.push(r)
+  }
+})
+// AppState.retreats = AppState.retreats.filter((r) => r.archived == false);
 // for (const r of AppState.retreats) {
 //   if (r.archived == true) {
 //       let index = AppState.retreats.findIndex((x) => {

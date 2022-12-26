@@ -395,7 +395,7 @@
   <section class="my-5">
     <div class="container-fluid parallax"></div>
   </section>
-  <section>
+  <!-- <section>
     <div class="container my-5">
       <div class="row">
         <div class="col-md-12 mb-4 text-center">
@@ -404,10 +404,7 @@
         <div class="col-md-12 mb-4 text-center">
        
         </div>
-        <!-- <div class="col-md-4" v-for="a in archived">
-          <ArchivedRetreatCard :retreat="a" />
-        </div> -->
-
+       
    <div class="container my-4">
             <div class="masonry2">
               <div
@@ -415,7 +412,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#activeImage"
                 class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
-                v-for="f in retreat.featuredImgs"
+                v-for="f in archived"
               >
                 <img
                
@@ -425,18 +422,21 @@
                 />
               </div>
             </div>
+
+
+            {{ archived }}
           </div>
 
 
 
       </div>
     </div>
-  </section>
+  </section> -->
   <section>
-    <div class="container my-5">
+    <div class="container my-5" v-for="a in archived">
       <div class="row">
         <div class="col-md-12 mb-4 text-center">
-          <h1 class="display-2 font-1">August 2022 Costal Reset Retreat</h1>
+          <h1 class="display-2 font-1">{{a.title}}</h1>
         </div>
         <div class="col-md-12 mb-4 text-center">
        
@@ -452,14 +452,22 @@
                 data-bs-toggle="modal"
                 data-bs-target="#activeImage"
                 class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
-                v-for="a in aug22RetreatImages"
+                v-for="image in a.featuredImgs"
               >
                 <img
-               
-                  :src="a"
+               v-if="image"
+                  :src="image"
                   alt=""
                   class="img-fluid hover-image rounded-4 selectable"
                 />
+                
+                <img
+               v-else
+             src=""
+                  alt=""
+                  class="img-fluid hover-image rounded-4 selectable skeleton-loader "
+                />
+
               </div>
             </div>
           </div>
@@ -515,6 +523,7 @@ aug22RetreatImages:computed(() => AppState.aug22RetreatImages),
       ),
       retreat: computed(() => AppState.currentRetreat),
       archived: computed(() => AppState.archivedRetreats),
+      allRetreats:computed(() => AppState.retreats),
       setActiveImage(image) {
         AppState.activeImage = image;
       },
