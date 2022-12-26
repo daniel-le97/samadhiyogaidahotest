@@ -3,7 +3,7 @@
     <div class="mb-5 text-center ">
       <h1
         v-motion-slide-visible-once-left
-        class="display-1 font-1 text-start underline"
+        class="display-1 font-1 text-start text-dark underline"
       >
         Our Retreats
       </h1>

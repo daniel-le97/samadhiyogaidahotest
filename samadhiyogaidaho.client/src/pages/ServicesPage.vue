@@ -91,13 +91,24 @@
   </section> -->
   <section>
     <div class="container my-5">
+      <div class="row">
+        <div class="col-md-12 text-center">
+        <p class="display-3 text-dark font-1 underline"> YOGA SERVICES</p>
+        <p class="fs-3 text-pink darken-20 font-2">Yoga teaches one how to live in harmony with the universe as well as unity with the mind, body, and spirit.</p>
+        <p class="fs-4">Our yoga services are architected for those  seeking balance and peace in their everyday life. our yoga services are specifically tailored to serve your needs. <br> <b>All you have to do is show up and breath.</b> </p>
+        </div>
+      </div>
       <div class="row my-4">
         <div class="col-md-6">
-          <img
+         <div class="card border-0 elevation-6">
+          <div class="image-box border-0 ">
+             <img
             src="../assets/img/servicePhoto1.png"
             alt=""
             class="img-fluid rounded elevation-6 hover-image"
           />
+          </div>
+         </div>
         </div>
         <div class="col-md-6">
           <p class="fs-4 fw-bold text-center">Private
@@ -113,11 +124,6 @@
             “spiritual workout” in and getting to meditate and breathe together.
             <br />
 
-            <!-- If you have a group of people you’re interested in getting together
-            for a fun class, contact us! Whether that be a work group, a group
-            of your clients, a bachelorette or bachelor party, or just a group
-            of friends, we will work with you to create the class and experience
-            you desire. Link in the bio to book today! -->
           </p>
              <div class="card border-0 bg-pink elevation-7">
 <div class="card-body">
@@ -129,6 +135,7 @@
             you desire.
   </p>
  
+  <button class="btn btn-dark fs-4 font-2 ">Start booking your private event here</button>
 </div>
           </div>
         </div>
@@ -155,15 +162,20 @@
   <p>Katie Alverson Hosts Sessions at the Grove for 90$/Hour or 45$ for 1/2 Hour</p>
  
   <p>She also provides  At Home Visits for 100$ within an 20 mile radius and an additional $0.50 for every mile extending that radius</p>
+    <button class="btn btn-dark fs-4 font-2 ">Start your private lesson journey here</button>
 </div>
           </div>
         </div>
            <div class="col-md-6">
-          <img
+      <div class="card">
+        <div class="image-box">
+              <img
             src="../assets/img/PrivateLesson.png"
             alt=""
             class="img-fluid rounded elevation-6 hover-image"
           />
+        </div>
+      </div>
         </div>
 
         <div class="col-md-12">

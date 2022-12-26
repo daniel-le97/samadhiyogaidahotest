@@ -112,6 +112,14 @@ export default {
     watchEffect(() => {});
     const QA = [
       {
+        q: "Why should I book a private event or workshop?",
+        a: "Booking a private event for your team, a bridal party, birthday event, or any other special event is a great way to start the event off great and bring you and your companions closer together. We can design the private workshop or event to be anything you want or could possibly need. From beginners to the advanced, we will make it an event to remember.",
+      },
+      {
+        q: "Why should I book a private lesson?",
+        a: "Private lessons can be for any person from the beginner to the advanced. Whether you are looking to make sure your alignment is correct and get adjustments, want to learn more about the eight limbs of yoga or history of yoga, or want help with something specific in general, we will build your practice around you. We will build from the ground up and can provide a comfortable private space or come to your home if that makes you feel more comfortable. We can help you to build a personal home practice, build the foundations of a yoga practice, or help you to advance your practice. You'll feel so much more comfortable with your body, mind, and emotions by building this meditative practice in your life. ",
+      },
+      {
         q: "What are the benefits of yoga?",
         a: "  With regular practice, you will notice your body getting stronger and more flexible; you will feel more grounded and have better posture. On a mental level you will notice improved focus, the ability to stay calm and maintain relaxed breathing.",
       },

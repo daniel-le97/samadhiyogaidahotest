@@ -12,6 +12,7 @@
           <div
             class="card-img-overlay text-center d-flex flex-column justify-content-center align-content-center"
           >
+            <p class="text-danger fs-1 mb-0" v-if="retreat?.archived">ARCHIVED</p>
             <hr />
             <p class="card-title fs-1">{{retreat?.title}}</p>
             <p class="fs-4">IN</p>
@@ -48,6 +49,7 @@
                 </button>
               </router-link>
             </p>
+          
           </div>
         </div>
 </template>
@@ -82,11 +84,14 @@ retreat:{type:Retreat, required:true}
   height: 50vh;
   object-fit: cover;
   //when screen is 768px OR LESS
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 768px ){
    
   height: 60vh;
   }
-
+ //when screen is 768px OR LESS
+ @media only screen and (max-height: 768px){
+ height: 80vh;
+ }
 
 }
 </style>

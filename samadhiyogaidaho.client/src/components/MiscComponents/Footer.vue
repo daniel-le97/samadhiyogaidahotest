@@ -7,14 +7,14 @@
       <div class="row mt-4">
         <div class="col-md-12 text-center mb-3">
            <p class="fs-2">Stay Connected With Us</p>
-           <p class="fs-4">Sign up for our news letter and stay up to date with events, classes and retreats</p>
+           <p class="fs-4">Subscribe to get exclusive updates</p>
         </div>
         <div class="col-md-6">
           <NewsLetter />
         </div>
-        <div class="col-md-6 d-flex">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
          
-          <img src="https://img.freepik.com/free-vector/staying-touch-modern-communication-means-phone-calls-letters-emails-person-contacting-friends-customers-via-email-encouraging-feedback-vector-isolated-concept-metaphor-illustration_335657-2779.jpg?w=740&t=st=1671237218~exp=1671237818~hmac=f0cc7d983a1fc1055faa6830d3cb9820f93a12e81969470acf01ae2f51555029" alt="" class="img-fluid w-50 rounded-circle elevation-6">
+          <img src="https://img.freepik.com/free-vector/staying-touch-modern-communication-means-phone-calls-letters-emails-person-contacting-friends-customers-via-email-encouraging-feedback-vector-isolated-concept-metaphor-illustration_335657-2779.jpg?w=740&t=st=1671237218~exp=1671237818~hmac=f0cc7d983a1fc1055faa6830d3cb9820f93a12e81969470acf01ae2f51555029" alt="" class="img-fluid newsletter-img rounded-circle elevation-6">
         </div>
       </div>
 
@@ -83,7 +83,10 @@
         </div>
       </section>
       <!-- Section: Text -->
-
+<section class="text-center my-3">
+<a href="mailto:samadhiyogaidaho@gmail.com" class="text-dark font-2 fs-4">samadhiyogaidaho@gmail.com</a>
+<p class="fs-5">208-670-4139</p>
+</section>
       <!-- Section: Social -->
       <section class="text-center mb-5">
         <a
@@ -91,17 +94,17 @@
           class="text-dark me-4"
           target="_blank"
         >
-          <i class="mdi mdi-facebook fs-1 hover-image rounded-5"></i>
+          <i class="mdi mdi-facebook fs-1 media-icon "></i>
         </a>
         <a
           href="https://www.instagram.com/samadhiyogaidaho/"
           class="text-dark me-4"
           target="_blank"
         >
-          <i class="mdi mdi-instagram fs-1 hover-image rounded-5"></i>
+          <i class="mdi mdi-instagram fs-1 media-icon "></i>
         </a>
         <a href="https://www.youtube.com/@Samadhiyogaidaho" class="text-dark me-4" target="_blank">
-          <i class="mdi mdi-youtube fs-1 hover-image rounded-5"></i>
+          <i class="mdi mdi-youtube fs-1 media-icon "></i>
         </a>
       </section>
       <!-- Section: Social -->
@@ -154,6 +157,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.media-icon{
+  transition: all 0.25s ease;
+}
+.media-icon:hover{
+  color: rgb(201, 192, 192);
+  transition: all 0.25s ease;
+}
+.newsletter-img{
+  width: 200px;
+  height: 200px;
+}
 .wrapper {
   padding-bottom: 90px;
 }

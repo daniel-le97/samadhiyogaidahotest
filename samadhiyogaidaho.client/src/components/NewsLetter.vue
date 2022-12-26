@@ -37,7 +37,7 @@
                 <button
                   class="btn btn-dark fw-bold elevation-6 rounded-pill py-4 px-5"
                 >
-                  SUBMIT
+                Join
                 </button>
               </div>
             </div>

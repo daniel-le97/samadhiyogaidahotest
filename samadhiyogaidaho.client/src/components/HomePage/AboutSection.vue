@@ -39,12 +39,16 @@
       <div class="container">
         <div class="row  gy-5 justify-content-center">
           <div class="col-md-6 ">
-            <img
-             v-motion-pop-visible-once
-              src="https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/306519061_129159436532870_6494007048333346057_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=ZyXKoZ6J5CIAX-iRhfY&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCPQrcs1-iLVW0CLPjhl0-intGdQOE1_KoCweThnqKaAg&oe=639D65A6"
+          <div class="card framed border-0">
+            <div class="image-box">
+                <img
+          
+              src="../../assets/img/KatiePortrait.png"
               alt="Katie Alverson"
-              class="img-fluid elevation-6 rounded framed "
+              class="img-fluid elevation-6 rounded  "
             />
+            </div>
+          </div>
           </div>
           <div class="col-md-6">
             <h6 class="mb-0 fs-4 fw-bold text-center">
@@ -72,9 +76,9 @@
         <div class="d-flex justify-content-center justify-content-md-end">
           <router-link
             :to="{ name: 'About' }"
-            class="fs-3 btn bg-dark font-2 my-4"
+            class="my-3"
           >
-            Learn more about Katie
+         <button class="btn btn-dark font-2 fs-3">   Learn more about Katie</button>
           </router-link>
         </div>
       </div>

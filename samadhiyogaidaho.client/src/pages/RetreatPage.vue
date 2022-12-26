@@ -41,7 +41,7 @@
       </div>
 
       <div class="row my-4">
-        <div class="col-md-12">
+        <div class="col-md-12 text-center">
           <h1 class="font-1 text-dark display-4">{{ retreat.title }}</h1>
         </div>
       </div>
@@ -211,11 +211,13 @@
               </p>
             </div>
             <div class="text-center">
+          <router-link :to="{name: 'Contact'}"> 
               <button
                 class="btn btn-primary font-2 lighten-10 my-3 fs-3 fw-bold"
               >
                 CONTACT HOST
               </button>
+          </router-link>
               <p>OR</p>
               <button
                 class="btn btn-outline-primary font-2 lighten-10 my-3 fs-3 fw-bold"
@@ -226,7 +228,7 @@
           </div>
         </div>
         <div class="col-md-6" >
-          <div class="">
+          <div class="text-center">
             <h1 class="underline font-2 display-3">Summary</h1>
           </div>
           <div class="">
@@ -392,46 +394,7 @@
     </div>
   </section>
 
-  <section class="my-5">
-    <div class="container-fluid parallax"></div>
-  </section>
-  <!-- <section>
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-12 mb-4 text-center">
-          <h1 class="display-2 font-1">August 2023 Women's Desert Soul Awakening</h1>
-        </div>
-        <div class="col-md-12 mb-4 text-center">
-       
-        </div>
-       
-   <div class="container my-4">
-            <div class="masonry2">
-              <div
-                @click="setActiveImage(f)"
-                data-bs-toggle="modal"
-                data-bs-target="#activeImage"
-                class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
-                v-for="f in archived"
-              >
-                <img
-               
-                  :src="f"
-                  alt=""
-                  class="img-fluid hover-image rounded-4 selectable"
-                />
-              </div>
-            </div>
 
-
-            {{ archived }}
-          </div>
-
-
-
-      </div>
-    </div>
-  </section> -->
   <section>
     <div class="container my-5" v-for="a in archived">
       <div class="row">
@@ -441,14 +404,11 @@
         <div class="col-md-12 mb-4 text-center">
        
         </div>
-        <!-- <div class="col-md-4" v-for="a in archived">
-          <ArchivedRetreatCard :retreat="a" />
-        </div> -->
-
+    
    <div class="container my-4">
             <div class="masonry2">
               <div
-                @click="setActiveImage(f)"
+                @click="setActiveImage(image)"
                 data-bs-toggle="modal"
                 data-bs-target="#activeImage"
                 class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
@@ -458,7 +418,7 @@
                v-if="image"
                   :src="image"
                   alt=""
-                  class="img-fluid hover-image rounded-4 selectable"
+                  class="img-fluid hover-image rounded selectable"
                 />
                 
                 <img
@@ -500,11 +460,14 @@ export default {
     const editable = ref({});
 
     onMounted(() => {
-      getAllRetreats();
+      // getAllRetreats();
     });
     async function getAllRetreats() {
       try {
-        await retreatsService.getAllRetreats();
+        if (!AppState.currentRetreat) {
+          console.log(AppState.currentRetreat);
+          await retreatsService.getAllRetreats();
+        }
       } catch (error) {
         Pop.error(error, "[getCurrentRetreat]");
       }
@@ -513,13 +476,13 @@ export default {
       editable,
 aug22RetreatImages:computed(() => AppState.aug22RetreatImages),
       featuredImg1: computed(() =>
-        AppState.currentRetreat?.featuredImgs?.splice(8, 1)
+        AppState.currentRetreat?.featuredImgs?.splice(2, 1)
       ),
       featuredImg2: computed(() =>
         AppState.currentRetreat?.featuredImgs?.splice(0, 1)
       ),
       featuredImg3: computed(() =>
-        AppState.currentRetreat?.featuredImgs?.splice(5, 1)
+        AppState.currentRetreat?.featuredImgs?.splice(1, 1)
       ),
       retreat: computed(() => AppState.currentRetreat),
       archived: computed(() => AppState.archivedRetreats),

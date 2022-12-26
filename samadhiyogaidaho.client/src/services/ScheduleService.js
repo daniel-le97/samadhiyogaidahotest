@@ -12,9 +12,10 @@ class ScheduleService {
     AppState.schedules.push(newSchedule);
   }
 
-  async getSchedule() {
+  async getSchedules() {
     const res = await api.get("api/schedules");
     AppState.schedules = res.data.map((s) => new Schedule(s));
+    // console.log(AppState.schedules);
   }
   async updateSchedule(scheduleData) {
     const res = await api.put("api/schedules", scheduleData);

@@ -33,7 +33,7 @@
             <img
               src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
               alt=""
-              class="elevation-6 img-fluid forcedImg"
+              class="elevation-6 img-fluid forcedImg "
             />
             <h1 class="mb-0 fs-4 fw-bold mt-3">Jane Doe</h1>
           </div>

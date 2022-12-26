@@ -57,7 +57,7 @@
     <section>
       <ScheduleSection />
     </section>
-    <section id="Retreat-Section" class="bg-pink">
+    <section id="Retreat-Section" >
       <RetreatAndEvents />
     </section>
 
@@ -67,7 +67,7 @@
 
     <section class="bg-pink">
       <div class="container">
-        <InstagramFeed />
+    <InstagramFeed/>
       </div>
     </section>
   </div>
@@ -78,38 +78,29 @@ import ParticleComponent from "../components/PluginComponents/ParticleComponent.
 import GentleWave from "../components/PluginComponents/GentleWave.vue";
 import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
-// import TestimonialSection from "../components/HomePage/TestimonialSection.vue";
-// import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
-// import RetreatAndEvents from "../components/HomePage/RetreatAndEvents.vue";
 import { defineAsyncComponent } from "vue";
 import CommentBox from "../components/MiscComponents/CommentBox.vue";
-// import ScheduleSection from "../components/HomePage/ScheduleSection.vue";
 import ServicesSection from "../components/HomePage/ServicesSection.vue";
 import Pop from "../utils/Pop.js";
-
 import { onMounted } from "vue";
-import { pocketBaseService } from "../services/PocketBaseService.js";
-import { retreatsService } from "../services/RetreatsService.js";
-// import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
-// import { pocketBaseService } from "../services/PocketBaseService.js";
-// import AboutSection from "../components/HomePage/AboutSection.vue";
-// import { retreatsService } from "../services/RetreatsService.js";
+import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
+import { scheduleService } from "../services/ScheduleService.js";
+
+
+
 export default {
   setup() {
     onMounted(() => {
-      getAllRetreats();
-  
+  getYogaSchedules()
     });
-
-    async function getAllRetreats() {
-      try {
-     
-      await retreatsService.getAllRetreats()
-      await pocketBaseService.getPastRetreats()
-      } catch (error) {
-        Pop.error(error, "[getRetreats]");
-      }
+async function getYogaSchedules(){
+  try {
+      await scheduleService.getSchedules()
+    } catch (error) {
+      Pop.error(error,'[getYogaSchedules]')
     }
+}
+
  
     return {};
   },
@@ -119,14 +110,14 @@ export default {
     GentleWave,
     CallToAction,
     TestimonialSection: defineAsyncComponent(() => import("../components/HomePage/TestimonialSection.vue")),
-    YouTubeSection: defineAsyncComponent(() =>  import("../components/ServicesPage/YouTubeSection.vue")),
-    RetreatAndEvents: defineAsyncComponent(() =>  import("../components/HomePage/RetreatAndEvents.vue")),
+    YouTubeSection: defineAsyncComponent(() => import("../components/ServicesPage/YouTubeSection.vue")),
+    RetreatAndEvents: defineAsyncComponent(() => import("../components/HomePage/RetreatAndEvents.vue")),
     CommentBox,
     ScheduleSection: defineAsyncComponent(() => import("../components/HomePage/ScheduleSection.vue")),
     ServicesSection,
-    InstagramFeed: defineAsyncComponent(() => import("../components/HomePage/InstagramFeed.vue")),
     AboutSection: defineAsyncComponent(() => import("../components/HomePage/AboutSection.vue")),
-  },
+    InstagramFeed
+},
 };
 </script>
 

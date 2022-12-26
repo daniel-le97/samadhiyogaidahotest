@@ -110,12 +110,7 @@ export default {
 .about-page{
   margin-bottom: 100px;
 }
-.framed {
- width: 90%;
-  object-fit: cover;
 
-  box-shadow: -50px -50px 0 -40px var(--peach), 50px 50px 0 -40px var(--peach);
-}
 .page-title{
   font-size: 8rem;
 }

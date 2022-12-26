@@ -26,17 +26,21 @@ import Footer from "./components/MiscComponents/Footer.vue";
 import Navbar from "./components/MiscComponents/Navbar.vue";
 import ModalComponent from "./components/MiscComponents/ModalComponent.vue";
 import { logger } from "./utils/Logger";
+import { retreatsService } from "./services/RetreatsService.js";
 
 export default {
   setup() {
     onMounted(() => {
       hideOnScrollTest();
-      getRoute();
+      getRetreats()
     });
-    function getRoute() {
-      logger.log(route.name);
+    async function getRetreats() {
+      try {
+        await retreatsService.getAllRetreats()
+      } catch (error) {
+        Pop.error(error, "[getRetreats]");
+      }
     }
-
     function hideOnScrollTest() {
       let nav = document.querySelector("#nav");
       let prevScrollpos = window.scrollY;

@@ -144,6 +144,12 @@ cite {
   background: rgba(31, 31, 31, 0.64);
 }
 
+.framed {
+ width: 90%;
+  object-fit: cover;
+
+  box-shadow: -50px -50px 0 -40px var(--peach), 50px 50px 0 -40px var(--peach);
+}
 .text-shadow {
   color: white;
   -webkit-text-stroke: 0px #f1a3a3;

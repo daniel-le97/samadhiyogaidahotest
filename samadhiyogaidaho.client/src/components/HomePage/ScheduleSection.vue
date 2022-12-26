@@ -9,57 +9,18 @@
       </div>
 
       <div class="col-md-6 d-flex align-items-center justify-content-center">
-        <div class="card">
+        <div class="card elevation-6  ">
           <div class="image-box">
             <img
               src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
               alt=""
-              class="img-fluid rounded elevation-6 hover-image"
+              class="img-fluid rounded elevation-6 schedule-image "
             />
           </div>
         </div>
       </div>
       <div class="col-md-6 text-start">
-        <div class="">
-          <p
-            class="underline fs-2 font-1 border-2 border-bottom text-start text-pink darken-20"
-          >
-            Level 1-2 Vinyasa Style Yoga
-          </p>
-
-      <div class="d-flex">
-            <a
-            href="https://goo.gl/maps/7bXj27T2fFr8gJ7D6"
-            target="_blank"
-            class="darken-20 text-dark font-2 fs-3"
-          >
-            <i class="mdi mdi-map-marker fs-1 text-pink darken-20"></i>HollyWood
-            Market Yoga</a
-          >
-      </div>
-        </div>
-        <div class="mt-4">
-          <p
-            class="underline fs-2 font-1 border-2 border-bottom text-start text-pink darken-20"
-          >
-            Authentic Series
-          </p>
-
-          <div class="d-flex">
-            <div class="me-3">
-              <p class="text-start fs-3">Saturday 9AM</p>
-
-              <a
-                href="https://goo.gl/maps/7bXj27T2fFr8gJ7D6"
-                target="_blank"
-                class="darken-20 text-dark font-2 fs-3"
-              >
-                <i class="mdi mdi-map-marker fs-1 text-pink darken-20"></i
-                >HollyWood Market Yoga</a
-              >
-            </div>
-          </div>
-        </div>
+    <ScheduleCard  :schedule="s"  v-for="s in schedules"/>
       </div>
     </div>
 
@@ -167,26 +128,30 @@
 </template>
 
 <script>
+import { AppState } from "../../AppState.js";
+import ScheduleCard from "./ScheduleCard.vue";
+import { computed } from "@vue/reactivity";
 export default {
-  setup() {
-    return {
-      schedule: {
-        address: "https://goo.gl/maps/7bXj27T2fFr8gJ7D6",
-        title: "Level 1-2 Vinyasa Style Yoga",
-        location: "HollyWood Market Yoga",
-        time: "Monday & Wednesday 6AM",
-        cost: 0,
-      },
-      async changeText() {
-        try {
-          await scheduleService.createSchedule(this.schedule);
-        } catch (error) {
-          Pop.error(error);
-        }
-      },
-    };
-  },
+    setup() {
+        return {
+          schedules:computed(()=>AppState.schedules),
+           
+            async changeText() {
+                try {
+                    await scheduleService.createSchedule(this.schedule);
+                }
+                catch (error) {
+                    Pop.error(error);
+                }
+            },
+        };
+    },
+    components: { ScheduleCard }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+
+
+</style>
