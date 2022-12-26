@@ -1,12 +1,10 @@
-import { pop } from "@vueuse/motion";
-import { pb } from "../../lib/pocketBase";
+import { pb } from "../PocketBase";
 import { AppState } from "../AppState";
 import { generateId } from "../utils/Helper";
 import { logger } from "../utils/Logger";
 import Pop from "../utils/Pop";
 
 class PocketBaseService {
- 
   async getFiles() {
     const record = await pb.collection("images").getFullList();
     logger.log(record);
@@ -43,7 +41,7 @@ class PocketBaseService {
     const res = await pb.collection("aug22Retreat").getFullList();
     // let urls=[]
     // AppState.aug22RetreatImages= res
-    res.forEach(r=>  AppState.aug22RetreatImages.push(r.url))
+    res.forEach((r) => AppState.aug22RetreatImages.push(r.url));
     // console.log(res);
     console.log(AppState.aug22RetreatImages);
   }
@@ -53,9 +51,15 @@ class PocketBaseService {
     console.log(res);
     return await this.createCollection();
   }
-  async createCollection(){
- const collection = await pb.collections.getOne("aug22Retreat")
-    console.log(collection);
+  async createCollection() {
+    const hi = AppState.admin;
+    const collection = await pb.collections.getOne("aug22Retreat");
+    const newCollection = await pb.collections.create({
+      name: "aug25Retreat",
+      type: collection.type,
+      schema: collection.schema,
+    });
+    console.log(newCollection);
   }
 }
 export const pocketBaseService = new PocketBaseService();

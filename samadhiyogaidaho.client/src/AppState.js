@@ -5,6 +5,7 @@ export const AppState = reactive({
   user: {},
   /** @type {import('./models/Account.js').Account} */
   account: {},
+  admin: null,
 
   /** @type {import('./models/NewsLetter.js').NewsLetter[]} */
   newsLetterSubscription: [],
@@ -17,10 +18,10 @@ export const AppState = reactive({
 
   /** @type {import('./models/Retreat.js').Retreat[]} */
   retreats: [],
-  
+
   /** @type {import('./models/Schedule.js').Schedule.js[]} */
-  schedules:[],
-  aug22RetreatImages:[],
+  schedules: [],
+  aug22RetreatImages: [],
   uploadedImgs: 0,
   newActiveUpload: null,
   formPaginate: 0,
