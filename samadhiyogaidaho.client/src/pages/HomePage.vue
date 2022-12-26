@@ -89,6 +89,7 @@ import Pop from "../utils/Pop.js";
 
 import { onMounted } from "vue";
 import { pocketBaseService } from "../services/PocketBaseService.js";
+import { retreatsService } from "../services/RetreatsService.js";
 // import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
 // import { pocketBaseService } from "../services/PocketBaseService.js";
 // import AboutSection from "../components/HomePage/AboutSection.vue";
@@ -97,43 +98,18 @@ export default {
   setup() {
     onMounted(() => {
       getAllRetreats();
-      // getCollections()
-      // getPastRetreatImages()
+  
     });
-async function getPastRetreatImages(){
-  try {
-      const {pocketBaseService} = await import("../services/PocketBaseService.js")
-      await pocketBaseService.getPastRetreats()
-    } catch (error) {
-      Pop.error(error,'[getPastRetreatImages]')
-    }
-}
+
     async function getAllRetreats() {
       try {
-        const { retreatsService } = await import(
-          "../services/RetreatsService.js"
-        );
-        await retreatsService.getAllRetreats();
+     
+      await retreatsService.getAllRetreats()
       } catch (error) {
-        Pop.error(error, "[getCurrentRetreat]");
+        Pop.error(error, "[getRetreats]");
       }
     }
-    async function getPastRetreatImages() {
-      try {
-        const {pocketBaseService} = await import("../services/PocketBaseService.js")
-        await pocketBaseService.getPastRetreats();
-      } catch (error) {
-        Pop.error(error, "[]");
-      }
-    }
-    async function getYoutubeVideos() {
-      try {
-        const {youtubeService} = await import("../services/YoutubeService.js")
-        await youtubeService.getPlayList();
-      } catch (error) {
-        Pop.error(error, "[]");
-      }
-    }
+ 
     return {};
   },
   components: {
