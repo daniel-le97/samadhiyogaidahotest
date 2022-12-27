@@ -88,7 +88,7 @@ import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
 import { scheduleService } from "../services/ScheduleService.js";
 
 
-
+import { pocketBaseService } from "../services/PocketBaseService.js";
 export default {
   setup() {
     onMounted(() => {
@@ -96,7 +96,8 @@ export default {
     });
 async function getYogaSchedules(){
   try {
-      await scheduleService.getSchedules()
+      // await scheduleService.getSchedules()
+      await pocketBaseService.getFiles()
     } catch (error) {
       Pop.error(error,'[getYogaSchedules]')
     }
