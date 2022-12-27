@@ -1,6 +1,6 @@
 <template>
 <div class="modal-body bg-transparent text-center d-flex align-items-center justify-content-center border-0">
-  <img :src="image" alt="" class=" rounded-1 elevation-6 img-fluid">
+  <img :src="image" alt="" class=" rounded-1 elevation-6 img-fluid image">
 </div>
 </template>
 

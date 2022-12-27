@@ -51,14 +51,14 @@
         </div>
 
         <div class="row gy-3">
-          <div class="col-md-6 text-center">
+          <div class="col-md-6 text-center ">
             <div class="card elevation-6 border-0 h-100">
-              <div class="image-box  h-100">
+              <div class="image-box h-100 ">
                 <img
                   v-if="retreat"
                   :src="featuredImg1"
                   alt=""
-                  class=" rounded-4 elevation-6  feature-image-1 h-100"
+                  class=" rounded-4 elevation-6  feature-image-1 h-100 "
                 />
               </div>
             </div>
@@ -422,7 +422,11 @@
       <div class="container my-5" v-for="a in archived">
         <div class="row">
           <div class="col-md-12 mb-4 text-center">
-            <h1 class="display-2 font-1">{{ a.title }}</h1>
+            <p class="display-2 font-1 ">  {{ new Date(a.startDate).getFullYear() }} </p>
+            <p>  
+               {{ getSeason(new Date(a.startDate))}}
+            </p>
+            <h1 class="display-3 font-1 underline">{{ a.title }}</h1>
           </div>
           <div class="col-md-12 mb-4 text-center"></div>
 
@@ -475,7 +479,7 @@ export default {
   props: {},
   setup(props) {
     const editable = ref({});
-
+const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
     onMounted(() => {
       // getAllRetreats();
     });
@@ -491,6 +495,7 @@ export default {
     }
     return {
       editable,
+      getSeason,
       featuredImg1: computed(() =>
         AppState.currentRetreat?.featuredImgs?.slice(0)
       ),
@@ -538,7 +543,7 @@ object-position: center;
 .feature-image-1 {
   object-fit: cover;
   object-position: center;
-  width: auto;
+ 
 
 }
 .parallax {
@@ -566,7 +571,7 @@ object-position: center;
 }
 
 .masonry2 {
-  columns: 5;
+  columns: 6;
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
     columns: 1;
