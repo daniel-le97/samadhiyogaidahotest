@@ -14,7 +14,7 @@ class RetreatsService {
     return currentRetreat;
   }
   async getAllRetreats() {
-    const retreats = await dbContext.Retreats.findOne();
+    const retreats = await dbContext.Retreats.find();
 
     return retreats;
   }
