@@ -30,7 +30,7 @@ export const AppState = reactive({
   
 
   aug22RetreatImages: [],
-  uploadedImgs: 0,
+  uploadedImgs: [],
   newActiveUpload: null,
   formPaginate: 0,
   loading: false,
