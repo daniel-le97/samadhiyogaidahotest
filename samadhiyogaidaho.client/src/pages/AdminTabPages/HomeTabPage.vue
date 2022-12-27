@@ -3,8 +3,13 @@
     <div class="row">
       <div class="col-12">
         <input type="file" multiple v-on:change="uploadFile" />
-        <div v-if="loading">loading</div>
-        <button @click="transferToMongo()">transfer</button>
+        <div v-if="loading">{{ loading }} files left</div>
+        <!-- <button @click="transferToMongo()">transfer</button> -->
+      </div>
+    </div>
+    <div class="row flex-wrap">
+      <div class="col-2" v-for="upload in uploaded">
+        <img :src="upload" alt="" class="img-fluid">
       </div>
     </div>
   </div>
@@ -34,6 +39,7 @@ export default {
     // }
     return {
       loading: computed(() => AppState.loading),
+      uploaded: computed(() => AppState.uploadedImgs),
       async uploadFile(e) {
         try {
           AppState.loading = true

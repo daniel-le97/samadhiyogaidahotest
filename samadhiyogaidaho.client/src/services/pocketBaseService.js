@@ -14,35 +14,38 @@ class PocketBaseService {
   }
 
   async uploadFile(e) {
-    const imgs = [];
+    // const imgs = [];
     const files = Array.from(e.target.files);
+    AppState.loading = files.length
     //  console.log(files);
     //     let hi = await this.compressImages(files, imgs)
     //   console.log(hi);
     for await (const file of files) {
       let formData = new FormData();
-      // console.log(file);
-      let hi = await this.compress(file);
-      console.log(hi);
+      // console.log(file.size);
+      let compressed = await this.compress(file);
+      // console.log(compressed.size);
 
-        formData.append("file", hi);
+        formData.append("file", compressed);
         const createdFile = await this.createFile(formData);
-        console.log(createdFile);
+        // console.log(createdFile);
         const url = await pb.getFileUrl(createdFile, createdFile.file);
-        console.log(url);
+        // console.log(url);
         const getLastFile = await pb
           .collection("aug22Retreat")
           .update(createdFile.id, { url });
-        imgs.push(url);
+          logger.log({uncompressed: (file.size/100000) + "mb", compressed: (compressed.size/1000) + "kb", url})
+        AppState.uploadedImgs.push(url);
+        AppState.loading--
     }
     // logger.log(imgs);
-    return imgs;
+    // return imgs;
   }
   async compress(file) {
     let hi = null;
     await new Promise((resolve, reject) => {
       new Compressor(file, {
-        quality: .6,
+        quality: .2,
         success(result) {
           hi = result;
           resolve();
