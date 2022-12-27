@@ -21,7 +21,7 @@ class PocketBaseService {
     //   console.log(hi);
     for await (const file of files) {
       let formData = new FormData();
-      console.log(file);
+      // console.log(file);
       let hi = await this.compress(file);
       console.log(hi);
 
