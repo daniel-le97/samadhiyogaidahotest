@@ -16,9 +16,9 @@
           <p
             v-motion-slide-top
             :delay="400"
-            class="display-6 font-2 text-shadow text-cemter"
+            class="display-6 font-2 text-shadow text-center"
           >
-            Escape the hustle and bustle of everyday life and enjoy a new experience
+            Escape the hustle and bustle of everyday life and enrich it with a new experience
           </p>
   
     </div>
@@ -549,22 +549,14 @@ aug22RetreatImages:computed(() => AppState.aug22RetreatImages),
 }
 
 .hero-image {
-  .page-title {
-    font-size: 10rem;
-  }
+  
   height: 100vh;
-  /* always scale the image to the appropriate size of your screen */
   background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1589790272257-8c0f79c221da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
   background-position: center;
-  /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
-  //when screen is 768px OR LESS
-  @media only screen and (max-width: 768px){
-   .page-title {
-    font-size: 6rem;
-  }
-  }
+
+ 
 }
 
 

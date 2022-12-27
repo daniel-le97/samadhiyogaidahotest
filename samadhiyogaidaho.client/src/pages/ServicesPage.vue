@@ -16,8 +16,8 @@
           Take A Moment For Yourself
         </h1>
       </div>
-      <h4 v-motion-slide-top :delay="300" class="font-1 text-light text-shadow">
-        We Offer Vinyasa, Baptiste, & Yin Yoga
+      <h4 v-motion-slide-top :delay="300" class="font-2 display-6 text-light text-shadow">
+        Enrich your life and deepen your practice
       </h4>
     </div>
   </section>
@@ -237,13 +237,5 @@ export default {
   transition: all 0.25s ease;
 }
 
-.page-title {
-  font-size: 8rem;
-}
 
-@media only screen and (max-width: 768px) {
-  .page-title {
-    font-size: 4rem;
-  }
-}
 </style>

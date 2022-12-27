@@ -9,12 +9,12 @@
       </div>
 
       <div class="col-md-6 d-flex align-items-center justify-content-center">
-        <div class="card elevation-6  ">
+        <div class="card border-0 elevation-6  ">
           <div class="image-box">
             <img
               src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
               alt=""
-              class="img-fluid rounded elevation-6 schedule-image "
+              class="img-fluid rounded-4 elevation-6 schedule-image "
             />
           </div>
         </div>

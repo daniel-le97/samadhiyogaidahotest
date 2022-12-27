@@ -1,10 +1,10 @@
 <template>
   <div
-          class="card elevation-6 text-white text-shadow font-2 border-0 text-uppercase"
+          class="card elevation-6 text-white text-shadow font-2 border-0 text-uppercase rounded-4"
         >
           <div class="image-box">
             <img
-              class="card-img"
+              class="card-img rounded-4"
               :src="retreat.coverImg"
               alt="Women's Desert Soul Awakening"
             />

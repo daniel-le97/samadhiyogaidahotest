@@ -21,6 +21,9 @@
       >
       CONNECT
       </h1>
+        <p class="font-2 text-light text-shadow display-6">
+        Stay in touch and be part of our community
+      </p>
     </div>
 
  
@@ -167,13 +170,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page-title{
-  font-size: 12rem;
-  //when screen is 768px OR LESS
-  @media only screen and (max-width: 768px){
-  font-size: 6rem;
-  }
-}
+
 .image-1 {
   width: auto;
   height: 600px;

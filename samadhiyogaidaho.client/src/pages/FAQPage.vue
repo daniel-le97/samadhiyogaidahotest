@@ -14,8 +14,11 @@
             id="shadow1"
             class="font-1 text-shadow page-title courgette fw-bolder text-light"
           >
-            How Can We Help You?
+           Frequently Asked Questions
           </h1>
+            <p class="font-2 text-light text-shadow display-6">
+      How can we help you?
+      </p>
         </div>
       </div>
     </section>
@@ -172,14 +175,9 @@ export default {
   background-attachment: fixed;
 }
 
-.page-title {
-  font-size: 8rem;
-}
 
 @media only screen and (max-width: 768px) {
-  .page-title {
-    font-size: 4rem;
-  }
+ 
   .quote{
     font-size: 16px;
   }

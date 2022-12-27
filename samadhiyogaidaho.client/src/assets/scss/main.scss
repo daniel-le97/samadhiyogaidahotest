@@ -172,7 +172,14 @@ cite {
   overflow: hidden;
   border-radius: 6px;
 }
-
+.page-title {
+    font-size: 6rem;
+     @media only screen and (max-width: 768px){
+   .page-title {
+    font-size: 6rem;
+  }
+  }
+  }
 .image-box {
   overflow: hidden;
 }

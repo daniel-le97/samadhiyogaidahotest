@@ -11,7 +11,7 @@
       >
       EVENTS
       </h1>
-      <p class="font-1 text-light text-shadow display-6">
+      <p class="font-2 text-light text-shadow display-6">
         Enjoy an enriching and memorable experience
       </p>
     </div>
@@ -87,9 +87,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero-image {
-  h1 {
-    font-size: 8rem;
-  }
+  
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
@@ -99,11 +97,5 @@ export default {
   background-attachment: fixed;
 }
 
-@media only screen and (max-width: 768px) {
-  .hero-image {
-    h1 {
-      font-size: 4rem;
-    }
-  }
-}
+
 </style>
