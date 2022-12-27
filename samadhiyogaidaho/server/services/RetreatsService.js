@@ -29,7 +29,7 @@ class RetreatsService {
   async archiveRetreat(id,userId){
     await getAdmins(userId)
 let retreat = this.getRetreatById(id)
-await retreat.archived = true
+ retreat.archived = true
   await retreat.save()
   return retreat
  

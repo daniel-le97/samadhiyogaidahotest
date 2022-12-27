@@ -9,8 +9,8 @@ export class RetreatsController extends BaseController {
     this.router
       .get("", this.getallRetreats)
       .get("/:id", this.getCurrentRetreat)
-
-      .post("", this.createRetreat);
+      .use(Auth0Provider.getAuthorizedUserInfo)
+      .post("", this.createRetreat)
       .put('/:id',this.updateRetreat)
       .delete('/:id',this.archiveRetreat)
   }
