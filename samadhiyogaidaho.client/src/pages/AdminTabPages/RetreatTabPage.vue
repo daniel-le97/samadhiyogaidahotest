@@ -9,10 +9,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-12 m-5" v-for="r in retreats">
-        <div>
-          <button class="btn btn-primary" @click="editRetreat(r)">edit retreat</button>
-          <button class="btn btn-primary">delete retreat</button>
+      <div class="col-12 my-5" v-for="r in retreats">
+        <div class="mb-3">
+          <button class="btn btn-outline-warning font-2 fs-3" @click="editRetreat(r)">edit retreat</button>
+          <button class="btn btn-outline-danger font-2 fs-3">delete retreat</button>
         </div>
         <RetreatCard :retreat="r"/>
       </div>

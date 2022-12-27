@@ -2,7 +2,7 @@
   <div class="container my-5">
     <div class="row">
       <div class="col-md-12">
-        <form @submit.prevent="event ? handleEdit() : handleSubmit()" class="">
+        <form @submit.prevent="activeSchedule ? handleEdit() : handleSubmit()" class="">
           <div class="row">
             <div class="col-md-6">
               <div class="form-floating mb-3">
@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="d-flex">
-            <div class="col-md-8 d-flex">
+            <div class="col-md-5 d-flex">
               <div class="form-floating mb-3 me-3">
                 <input
                   type="text"
@@ -47,10 +47,7 @@
                 />
                 <label for="date">StartDate</label>
               </div>
-         
-            </div>
-            <div class="col-md-4">
-              <div class="form-floating mb-3">
+            <div class="form-floating mb-3 w-25">
                 <input
                   type="number"
                   class="form-control"
@@ -63,26 +60,8 @@
                 <label for="cost">Cost</label>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-floating mb-3">
-                <input
-                  type="url"
-                  class="form-control"
-                  name="coverImage"
-                  id="coverImage"
-                  placeholder="Event Cover Image"
-                  v-model="editable.img"
-                />
-                <label for="coverImage"
-                  >Cover Image (Will use a Default Image if none
-                  provided)</label
-                >
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-floating mb-3">
+            <div class="col-md-7">
+             <div class="form-floating mb-3">
                 <input
                   type="text"
                   class="form-control"
@@ -92,8 +71,14 @@
                   required
                   v-model="editable.address"
                 />
-                <label for="location">Address</label>
+                <label for="location">Address(use Google Maps Link)</label>
               </div>
+            </div>
+          </div>
+          <div class="row">
+        
+            <div class="col-md-6">
+            
             </div>
           </div>
 
@@ -104,17 +89,18 @@
               name="description"
               id="description"
               rows="6"
-              required
+              
               v-model="editable.description"
             ></textarea>
           </div>
-          <button class="btn bg-success fs-2 font-2">Submit Event</button>
+          <button class="btn bg-success fs-2 font-2" v-if="!activeSchedule">Submit Schedule</button>
+          <button class="btn bg-success fs-2 font-2" v-else>Edit Schedule</button>
         </form>
       </div>
     </div>
 
-    <div v-if="schedule">
-      <ScheduleCard :schedule="schedule" />
+    <div v-if="activeSchedule">
+      <ScheduleCard :schedule="activeSchedule" />
     </div>
   </div>
 </template>
@@ -134,23 +120,18 @@ import ScheduleCard from "../HomePage/ScheduleCard.vue";
 export default {
   setup() {
     const editable = ref({ });
-    // let activeEvent;
+
     watchEffect(() => {
       if (AppState.activeSchedule) {
         editable.value = { ...AppState.activeSchedule};
-        // changeEvent(editable.value)
+    
       }
     });
-    // async function changeEvent(value) {
-    //   value.startDate = new Date(value.startDate)
-    //   activeEvent = new Event(value)
-    // }
+
     return {
       editable,
       Event,
-      activeEvent: computed(() => new Event(editable.value)),
-      event: computed(() => AppState.activeEvent),
-      schedule:computed(() => AppState.activeSchedule),
+  
 activeSchedule: computed(() => AppState.activeSchedule),
       account: computed(() => AppState.account),
       async handleSubmit() {
@@ -167,6 +148,7 @@ activeSchedule: computed(() => AppState.activeSchedule),
           await scheduleService.updateSchedule(editable.value)
           Pop.success("Schedule Updated");
           editable.value = {};
+          AppState.activeSchedule = null
         } catch (error) {
           Pop.error("[creatorEvent]");
         }

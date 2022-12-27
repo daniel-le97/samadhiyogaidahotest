@@ -91,7 +91,7 @@ export default {
             .slice(0, -1);
           event.endDate = new Date(event.endDate).toISOString().slice(0, -1);
           AppState.activeEvent = event;
-          logger.log(event);
+          logger.log(AppState.activeEvent);
         } catch (error) {
           Pop.error(error);
         }

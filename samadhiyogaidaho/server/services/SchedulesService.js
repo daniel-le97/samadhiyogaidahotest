@@ -1,5 +1,6 @@
 import { dbContext } from "../db/DbContext";
 import { getAdmins } from "./AccountService";
+import { update } from "./EventsService.js";
 
 class SchedulesService {
   async getAllSchedules() {
@@ -33,7 +34,7 @@ class SchedulesService {
     let schedule = await this.getScheduleById(scheduleId);
 
     let newSchedule = await update(scheduleData, schedule);
-    // await newschedule.save();
+    await newSchedule.save()
     return newSchedule;
   }
 }

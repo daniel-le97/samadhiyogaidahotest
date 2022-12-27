@@ -119,7 +119,8 @@
               v-model="editable.description"
             ></textarea>
           </div>
-          <button class="btn bg-success fs-2 font-2">Submit Event</button>
+          <button type="submit" class="btn bg-success fs-2 font-2" v-if="!event">Submit Event</button>
+          <button type="submit"  class="btn bg-success fs-2 font-2" v-else>Edit Event</button>
         </form>
       </div>
     </div>
@@ -142,21 +143,17 @@ import EventCard from "../EventsPage/EventCard.vue";
 export default {
   setup() {
     const editable = ref({ location: {} });
-    // let activeEvent;
+
     watchEffect(() => {
       if (AppState.activeEvent) {
         editable.value = { ...AppState.activeEvent };
-        // changeEvent(editable.value)
+  
       }
     });
-    // async function changeEvent(value) {
-    //   value.startDate = new Date(value.startDate)
-    //   activeEvent = new Event(value)
-    // }
+
     return {
       editable,
       Event,
-      activeEvent: computed(() => new Event(editable.value)),
       event: computed(() => AppState.activeEvent),
 
       account: computed(() => AppState.account),
@@ -164,18 +161,20 @@ export default {
         try {
           await eventsService.createEvent(editable.value);
           Pop.success("Event Approved");
-          editable.value = {};
+          editable.value = {location: {}};
         } catch (error) {
-          Pop.error("[creatorEvent]");
+          Pop.error("[createEvent]");
         }
       },
       async handleEdit() {
         try {
           await eventsService.updateEvent(editable.value);
-          Pop.success("Event Approved");
-          editable.value = {};
+
+          Pop.success("Event Edited");
+        
+          AppState.activeEvent = null
         } catch (error) {
-          Pop.error("[creatorEvent]");
+          Pop.error("[updateEvent]");
         }
       },
     };

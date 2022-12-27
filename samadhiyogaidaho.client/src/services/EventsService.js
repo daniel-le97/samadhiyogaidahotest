@@ -17,8 +17,16 @@ class EventsService {
     logger.log(res.data)
     AppState.events = res.data.map(e=> new Event(e))
   }
-  async updateEvent(){
+  async updateEvent(eventData){
+    let id = eventData.id
 
+const res = await api.put(`api/events/${id}`,eventData)
+let updatedEvent = new Event(res.data)
+  let index = AppState.events.findIndex((e) => {
+      e.id == id;
+    });
+
+    AppState.events.splice(index, 1, updatedEvent);
   }
   async deleteEvent(event){
   

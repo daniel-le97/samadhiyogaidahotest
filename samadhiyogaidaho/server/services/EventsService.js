@@ -35,7 +35,7 @@ class EventsService {
     let event = await this.getEventById(eventId);
    
     let newEvent = await update(eventData, event);
-    // await newEvent.save();
+    await newEvent.save();
     return newEvent;
   }
   // event.title = eventData.title || event.title;

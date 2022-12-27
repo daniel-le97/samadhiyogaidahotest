@@ -18,10 +18,11 @@ class ScheduleService {
     // console.log(AppState.schedules);
   }
   async updateSchedule(scheduleData) {
-    const res = await api.put("api/schedules", scheduleData);
+    let id = scheduleData.id
+    const res = await api.put(`api/schedules/${id}`, scheduleData);
     let updatedSchedule = new Schedule(res.data);
     let index = AppState.schedules.findIndex((s) => {
-      s.id == scheduleData.id;
+      s.id == id;
     });
 
     AppState.schedules.splice(index, 1, updatedSchedule);

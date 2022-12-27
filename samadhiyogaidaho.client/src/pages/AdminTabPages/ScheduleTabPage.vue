@@ -1,13 +1,16 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 my-2">
+     
+    </div>
+    <div class="row " v-if="!activeSchedule">
+       <div class="col-md-12 my-2">
         <div class="">
         
        
             <button
            
-              class="btn btn-success font-2 fs-3"
+              class="btn btn-outline-success font-2 fs-3"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseExample"
@@ -22,8 +25,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row " v-if="!activeSchedule">
       <div class="col-12" v-for="s in schedules">
         <div class="position-relative">
           <ScheduleCard :schedule="s" />
@@ -83,7 +84,7 @@ export default {
     onMounted(() => {
       getSchedules();
     });
-    onBeforeRouteLeave(() => (AppState.activeEvent = null));
+    onBeforeRouteLeave(() => (AppState.activeSchedule = null));
     async function getSchedules() {
       try {
         await scheduleService.getSchedules();
@@ -101,6 +102,7 @@ export default {
       async editSchedule(schedule) {
         try {
           AppState.activeSchedule = schedule;
+          console.log(AppState.activeSchedule);
         } catch (error) {
           Pop.error(error);
         }
