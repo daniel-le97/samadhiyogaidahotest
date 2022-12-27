@@ -27,6 +27,7 @@ import Navbar from "./components/MiscComponents/Navbar.vue";
 import ModalComponent from "./components/MiscComponents/ModalComponent.vue";
 import { logger } from "./utils/Logger";
 import { retreatsService } from "./services/RetreatsService.js";
+import Pop from "./utils/Pop";
 
 export default {
   setup() {

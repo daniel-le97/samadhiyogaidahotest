@@ -15,16 +15,15 @@ class PocketBaseService {
   async uploadFile(e) {
     const imgs = [];
     const files = Array.from(e.target.files);
-    // console.log(files);
-
-    // hi
     for await (const file of files) {
       let formData = new FormData();
       formData.append("file", file);
       const createdFile = await this.createFile(formData);
+      console.log(createdFile);
       const url = await pb.getFileUrl(createdFile, createdFile.file);
+      console.log(url);
       const getLastFile = await pb
-        .collection("images")
+        .collection("aug22Retreat")
         .update(createdFile.id, { url });
       imgs.push(url);
     }
@@ -33,7 +32,7 @@ class PocketBaseService {
   }
   async createFile(formData) {
     try {
-      const file = await pb.collection("images").create(formData);
+      const file = await pb.collection("aug22Retreat").create(formData);
       return file;
     } catch (error) {
       Pop.error(e, "please contact an admin");
