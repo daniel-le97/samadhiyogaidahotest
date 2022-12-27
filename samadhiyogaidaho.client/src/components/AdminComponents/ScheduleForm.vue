@@ -75,15 +75,10 @@
               </div>
             </div>
           </div>
-          <div class="row">
         
-            <div class="col-md-6">
-            
-            </div>
-          </div>
 
           <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
+            <label for="description" class="form-label">Description(Not Required)</label>
             <textarea
               class="form-control"
               name="description"
@@ -100,23 +95,21 @@
     </div>
 
     <div v-if="activeSchedule">
-      <ScheduleCard :schedule="activeSchedule" />
+      <ScheduleCard :schedule="new Schedule(editable)" />
     </div>
   </div>
 </template>
 
 <script>
-import { watchOnce } from "@vueuse/shared";
+
 import { computed, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
-import { Event } from "../../models/Event";
-import { Schedule } from "../../models/Schedule.js";
-import { eventsService } from "../../services/EventsService";
+
 import { scheduleService } from "../../services/ScheduleService.js";
 import Pop from "../../utils/Pop";
 import EventCard from "../EventsPage/EventCard.vue";
 import ScheduleCard from "../HomePage/ScheduleCard.vue";
-
+import { Schedule } from "../../models/Schedule.js";
 export default {
   setup() {
     const editable = ref({ });
@@ -130,7 +123,7 @@ export default {
 
     return {
       editable,
-      Event,
+     Schedule,
   
 activeSchedule: computed(() => AppState.activeSchedule),
       account: computed(() => AppState.account),
@@ -147,7 +140,7 @@ activeSchedule: computed(() => AppState.activeSchedule),
         try {
           await scheduleService.updateSchedule(editable.value)
           Pop.success("Schedule Updated");
-          editable.value = {};
+          // editable.value = {};
           AppState.activeSchedule = null
         } catch (error) {
           Pop.error("[creatorEvent]");

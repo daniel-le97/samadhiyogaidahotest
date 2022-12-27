@@ -22,20 +22,25 @@ class SchedulesService {
     return schedule;
   }
   async getScheduleById(id) {
-    const schedule = await dbContext.Schedules.findOne({ id });
+    const schedule = await dbContext.Schedules.findById(id);
     if (!schedule) {
       throw new BadRequest("unable to find schedule");
     }
     return schedule;
-    
   }
   async updateSchedule(scheduleId, scheduleData, userId) {
     await getAdmins(userId);
     let schedule = await this.getScheduleById(scheduleId);
 
-    let newSchedule = await update(scheduleData, schedule);
-    await newSchedule.save()
-    return newSchedule;
+    // schedule.address =scheduleData.address || schedule.address;
+    // schedule.location = scheduleData.location || schedule.location;
+    // schedule.cost = scheduleData.cost || schedule.cost;
+    // schedule.title = scheduleData.title || schedule.title;
+    // schedule.description = scheduleData.description || schedule.description;
+    // schedule.time = scheduleData.time || schedule.time;
+    await update(scheduleData, schedule);
+    await schedule.save();
+    return schedule;
   }
 }
-export const schedulesService = new SchedulesService()
+export const schedulesService = new SchedulesService();

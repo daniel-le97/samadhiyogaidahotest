@@ -1,36 +1,28 @@
 <template>
   <div class="container-fluid">
-    <div class="row">
-     
-    </div>
-    <div class="row " v-if="!activeSchedule">
-       <div class="col-md-12 my-2">
+    <div class="row"></div>
+    <div class="row" v-if="!activeSchedule">
+      <div class="col-md-12 my-2">
         <div class="">
-        
-       
-            <button
-           
-              class="btn btn-outline-success font-2 fs-3"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseExample"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              Create Schedule
-            </button>
-       
+          <button
+            class="btn btn-outline-success font-2 fs-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Create Schedule
+          </button>
+
           <div class="collapse" id="collapseExample">
-          <ScheduleForm/>
+            <ScheduleForm />
           </div>
         </div>
       </div>
       <div class="col-12" v-for="s in schedules">
         <div class="position-relative">
-          <ScheduleCard :schedule="s" />
-          <div
-            class="d-flex justify-content-center gap-2 position-absolute top-0 end-0"
-          >
+          <div class="d-flex justify-content-center gap-2">
             <button
               class="btn btn-outline-warning font-2 fs-3"
               @click="editSchedule(s)"
@@ -44,24 +36,18 @@
               Delete Schedule
             </button>
           </div>
+          <ScheduleCard :schedule="s" />
         </div>
-        <hr>
+        <hr />
       </div>
     </div>
-    <div v-else class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <ScheduleForm/>
-          <!-- <div class="elevation-1">
-          <EventCard :event="activeEvent" />
-        </div> -->
-        </div>
+
+    <div class="row" v-else>
+      <div class="col-12">
+        <ScheduleForm />
       </div>
     </div>
   </div>
-
-  <!-- <button @click="form = !form" class="btn btn-primary">add an event</button> -->
-  <!-- <button @click="form = !form" class="btn btn-primary">edit an event</button> -->
 </template>
 
 <script>
@@ -95,17 +81,13 @@ export default {
     const form = ref(false);
     return {
       schedules: computed(() => AppState.schedules),
-      activeSchedule:computed(() => AppState.activeSchedule),
-      events: computed(() => AppState.events),
+      activeSchedule: computed(() => AppState.activeSchedule),
+
       form,
-      activeEvent: computed(() => AppState.activeEvent),
-      async editSchedule(schedule) {
-        try {
-          AppState.activeSchedule = schedule;
-          console.log(AppState.activeSchedule);
-        } catch (error) {
-          Pop.error(error);
-        }
+
+      editSchedule(schedule) {
+        AppState.activeSchedule = schedule;
+        console.log(AppState.activeSchedule);
       },
 
       async deleteSchedule(s) {

@@ -119,8 +119,16 @@
               v-model="editable.description"
             ></textarea>
           </div>
-          <button type="submit" class="btn bg-success fs-2 font-2" v-if="!event">Submit Event</button>
-          <button type="submit"  class="btn bg-success fs-2 font-2" v-else>Edit Event</button>
+          <button
+            type="submit"
+            class="btn bg-success fs-2 font-2"
+            v-if="!event"
+          >
+            Submit Event
+          </button>
+          <button type="submit" class="btn bg-success fs-2 font-2" v-else>
+            Edit Event
+          </button>
         </form>
       </div>
     </div>
@@ -147,7 +155,6 @@ export default {
     watchEffect(() => {
       if (AppState.activeEvent) {
         editable.value = { ...AppState.activeEvent };
-  
       }
     });
 
@@ -161,7 +168,7 @@ export default {
         try {
           await eventsService.createEvent(editable.value);
           Pop.success("Event Approved");
-          editable.value = {location: {}};
+          editable.value = { location: {} };
         } catch (error) {
           Pop.error("[createEvent]");
         }
@@ -171,8 +178,8 @@ export default {
           await eventsService.updateEvent(editable.value);
 
           Pop.success("Event Edited");
-        
-          AppState.activeEvent = null
+
+          AppState.activeEvent = null;
         } catch (error) {
           Pop.error("[updateEvent]");
         }

@@ -31,6 +31,7 @@ class EventsService {
     return event;
   }
   async updateEvent(eventId, eventData, userId) {
+ 
     await getAdmins(userId);
     let event = await this.getEventById(eventId);
    

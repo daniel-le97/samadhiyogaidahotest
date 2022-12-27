@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="row" v-if="!activeEvent">
-      <div class="col-12" v-for="event in events">
+      <div class="col-12" v-for="event in events" :key="event.id">
         <div class="position-relative">
           <EventCard :event="event" />
           <div

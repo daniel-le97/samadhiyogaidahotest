@@ -5,25 +5,25 @@ import { api } from "./AxiosService.js";
 
 class ScheduleService {
   async createSchedule(scheduleData) {
-   logger.log(scheduleData)
     const res = await api.post("api/schedules", scheduleData);
     let newSchedule = new Schedule(res.data);
-    logger.log(newSchedule)
+
     AppState.schedules.push(newSchedule);
   }
 
   async getSchedules() {
     const res = await api.get("api/schedules");
     AppState.schedules = res.data.map((s) => new Schedule(s));
-    // console.log(AppState.schedules);
   }
   async updateSchedule(scheduleData) {
-    let id = scheduleData.id
+    let id = scheduleData.id;
+console.log(id);
     const res = await api.put(`api/schedules/${id}`, scheduleData);
     let updatedSchedule = new Schedule(res.data);
-    let index = AppState.schedules.findIndex((s) => {
-      s.id == id;
-    });
+    logger.log(updatedSchedule)
+    // AppState.schedules.filter((s) => s.id == id);
+    // AppState.schedules.push(updatedSchedule);
+    let index = AppState.schedules.findIndex((s) =>  s.id == id);
 
     AppState.schedules.splice(index, 1, updatedSchedule);
   }
