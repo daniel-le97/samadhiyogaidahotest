@@ -16,9 +16,8 @@ class SchedulesService {
   }
   async createSchedule(scheduleData, userId) {
     await getAdmins(userId);
-    // scheduleData.creatorId = userId;
     const schedule = await dbContext.Schedules.create(scheduleData);
-    // populate
+
     return schedule;
   }
   async getScheduleById(id) {
@@ -31,13 +30,7 @@ class SchedulesService {
   async updateSchedule(scheduleId, scheduleData, userId) {
     await getAdmins(userId);
     let schedule = await this.getScheduleById(scheduleId);
-
-    // schedule.address =scheduleData.address || schedule.address;
-    // schedule.location = scheduleData.location || schedule.location;
-    // schedule.cost = scheduleData.cost || schedule.cost;
-    // schedule.title = scheduleData.title || schedule.title;
-    // schedule.description = scheduleData.description || schedule.description;
-    // schedule.time = scheduleData.time || schedule.time;
+   
     await update(scheduleData, schedule);
     await schedule.save();
     return schedule;

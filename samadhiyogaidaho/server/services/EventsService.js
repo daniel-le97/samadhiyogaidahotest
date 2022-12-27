@@ -24,7 +24,7 @@ class EventsService {
     return event;
   }
   async getEventById(id) {
-    const event = await dbContext.Events.findOne({ id });
+    const event = await dbContext.Events.findById(id);
     if (!event) {
       throw new BadRequest("unable to find event");
     }
@@ -35,18 +35,11 @@ class EventsService {
     await getAdmins(userId);
     let event = await this.getEventById(eventId);
    
-    let newEvent = await update(eventData, event);
-    await newEvent.save();
-    return newEvent;
+    await update(eventData, event);
+    await event.save();
+    return event;
   }
-  // event.title = eventData.title || event.title;
-  // event.location = eventData.location || event.location;
-  // event.date = eventData.date || event.date;
-  // event.description = eventData.description || event.description;
-  // event.cost = eventData.cost || event.cost;
-  // event.img = eventData.img || event.img;
-  // event.isArchived = eventData.isArchived || event.isArchived;
-  // await event.save();
+
 }
 
 /**
