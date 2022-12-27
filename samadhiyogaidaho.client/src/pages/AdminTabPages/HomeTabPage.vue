@@ -8,8 +8,8 @@
       </div>
     </div>
     <div class="row flex-wrap">
-      <div class="col-2" v-for="upload in uploaded">
-        <img :src="upload" alt="" class="img-fluid">
+      <div class="col-6" v-for="upload in uploaded">
+        <img :src="upload" alt="" width="500" height="500">
       </div>
     </div>
   </div>
