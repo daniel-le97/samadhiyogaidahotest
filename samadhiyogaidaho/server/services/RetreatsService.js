@@ -1,38 +1,42 @@
 import { BadRequest } from "@bcwdev/auth0provider/lib/Errors.js";
 import { dbContext } from "../db/DbContext.js";
+import { getAdmins } from "./AccountService.js";
 
 class RetreatsService {
   async createRetreat(retreatData) {
-    // const retreats = await dbContext.Retreat.find({ retreatData });
-    // if (retreats) {
-    //   throw new BadRequest("Already created this type of retreat");
-    // }
     const newRetreat = await dbContext.Retreats.create(retreatData);
     return newRetreat;
   }
 
-  async getCurrentRetreat(id){
-    const currentRetreat = await dbContext.Retreats.findById(id)
-    if (!currentRetreat) {
-        throw new BadRequest("Invalid Retreat Id");
+  async getCurrentRetreat(id) {
+   const currentRetreat = this.getRetreatById(id)
+    return currentRetreat;
+  }
+  async getAllRetreats() {
+    const retreats = await dbContext.Retreats.find();
+
+    return retreats;
+  }
+
+  async getRetreatById(id) {
+    const retreat = await dbContext.Retreats.findById(id);
+    if (!retreat) {
+      throw new BadRequest("Invalid Retreat Id");
     }
-    return currentRetreat
+    return retreat;
   }
-  async getAllRetreats(){
-    const retreats = await dbContext.Retreats.find()
-  
-    return retreats
+  async archiveRetreat(id,userId){
+    await getAdmins(userId)
+let retreat = this.getRetreatById(id)
+await retreat.archived = true
+  await retreat.save()
+ 
   }
-  // async findRetreatById(retreatId){
-  //   const found = await dbContext.Retreat.findById(retreatId)
-  //   if (!found) {
-  //     throw new BadRequest('Invalid Retreat Id')
-  //   }
-  //   return found
-  // }
 
-
-
-
+  async updateRetreat(id,newRetreatData,userId){
+    await getAdmins(userId)
+    let retreat = this.getRetreatById(id)
+   
+  }
 }
 export const retreatsService = new RetreatsService();

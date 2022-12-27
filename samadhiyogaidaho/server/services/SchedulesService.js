@@ -10,6 +10,7 @@ class SchedulesService {
   async deleteSchedule(userId, scheduleId) {
     await getAdmins(userId);
     const schedule = await this.getScheduleById(scheduleId);
+   
     // @ts-ignore
     await schedule.remove();
     return schedule;
