@@ -1,29 +1,12 @@
 <template>
-  <div class="container-fluid my-5 py-5">
-    <div class="row">
-      <div class="col-md-12"></div>
-    </div>
+  <div class="container-fluid my-5 ">
+   
     <div class="row justify-content-center">
-      <!-- <CommentBox>
-  <p class="fs-4 text-start">
-    Bend so you don’t break.
-Breathe so you don’t die.
-Meditate so you learn to feel.
-Learn to just be.
-<br>
-To release the anticipation and anxiety and expectations.
-To be compassionate with yourself.
-<br>
-Know that you are enough, just as you are.
-Don’t break. Just be. Just breathe. Just love. Just live.
- <br>
-
-<b>It’s that simple.</b>
-  </p>
-</CommentBox> -->
+ 
 
       <div class="row justify-content-center">
-        <div class="col-md-8 my-5">
+            <div class="col-md-12 text-center"><p class="display-3 font-1 underline">Online Offerings</p></div>
+        <div class="col-md-8 ">
           <p class="font-2 fs-4">
             Starting in 2022 I began recording a mix of Online class series, and
             recorded content that can be accessed on your own time. Our online
@@ -37,12 +20,14 @@ Don’t break. Just be. Just breathe. Just love. Just live.
         </div>
       </div>
 
-      <div id="curator-feed-default-feed-layout">
+    <div class="col-md-12 my-4">
+        <div id="curator-feed-default-feed-layout">
         <a href="https://curator.io" target="_blank" class="crt-logo crt-tag mt-3 "
           >Powered by Curator.io</a
         >
       </div>
   
+    </div>
     </div>
   </div>
 </template>

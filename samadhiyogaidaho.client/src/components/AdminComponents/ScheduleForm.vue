@@ -27,7 +27,7 @@
                   id="location"
                   placeholder="Location"
                   required
-                  v-model="editable.location.place"
+                  v-model="editable.location"
                 />
                 <label for="location">Location</label>
               </div>
@@ -37,28 +37,17 @@
             <div class="col-md-8 d-flex">
               <div class="form-floating mb-3 me-3">
                 <input
-                  type="datetime-local"
+                  type="text"
                   class="form-control"
                   name="date"
                   id="date"
                   placeholder="Date"
                   required
-                  v-model="editable.startDate"
+                  v-model="editable.time"
                 />
                 <label for="date">StartDate</label>
               </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="datetime-local"
-                  class="form-control"
-                  name="time"
-                  id="time"
-                  placeholder="Time"
-                  required
-                  v-model="editable.endDate"
-                />
-                <label for="time">endDate</label>
-              </div>
+         
             </div>
             <div class="col-md-4">
               <div class="form-floating mb-3">
@@ -101,7 +90,7 @@
                   id="location"
                   placeholder="Location"
                   required
-                  v-model="editable.location.address"
+                  v-model="editable.address"
                 />
                 <label for="location">Address</label>
               </div>
@@ -124,8 +113,8 @@
       </div>
     </div>
 
-    <div v-if="event">
-      <EventCard :event="new Event(editable)" />
+    <div v-if="schedule">
+      <ScheduleCard :schedule="schedule" />
     </div>
   </div>
 </template>
@@ -135,17 +124,20 @@ import { watchOnce } from "@vueuse/shared";
 import { computed, ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
 import { Event } from "../../models/Event";
+import { Schedule } from "../../models/Schedule.js";
 import { eventsService } from "../../services/EventsService";
+import { scheduleService } from "../../services/ScheduleService.js";
 import Pop from "../../utils/Pop";
 import EventCard from "../EventsPage/EventCard.vue";
+import ScheduleCard from "../HomePage/ScheduleCard.vue";
 
 export default {
   setup() {
-    const editable = ref({ location: {} });
+    const editable = ref({ });
     // let activeEvent;
     watchEffect(() => {
-      if (AppState.activeEvent) {
-        editable.value = { ...AppState.activeEvent };
+      if (AppState.activeSchedule) {
+        editable.value = { ...AppState.activeSchedule};
         // changeEvent(editable.value)
       }
     });
@@ -158,12 +150,13 @@ export default {
       Event,
       activeEvent: computed(() => new Event(editable.value)),
       event: computed(() => AppState.activeEvent),
-
+      schedule:computed(() => AppState.activeSchedule),
+activeSchedule: computed(() => AppState.activeSchedule),
       account: computed(() => AppState.account),
       async handleSubmit() {
         try {
-          await eventsService.createEvent(editable.value);
-          Pop.success("Event Approved");
+         await scheduleService.createSchedule(editable.value)
+          Pop.success("Schedule Approved");
           editable.value = {};
         } catch (error) {
           Pop.error("[creatorEvent]");
@@ -171,8 +164,8 @@ export default {
       },
       async handleEdit() {
         try {
-          await eventsService.updateEvent(editable.value);
-          Pop.success("Event Approved");
+          await scheduleService.updateSchedule(editable.value)
+          Pop.success("Schedule Updated");
           editable.value = {};
         } catch (error) {
           Pop.error("[creatorEvent]");
@@ -180,7 +173,7 @@ export default {
       },
     };
   },
-  components: { EventCard },
+  components: { EventCard, ScheduleCard },
 };
 </script>
 

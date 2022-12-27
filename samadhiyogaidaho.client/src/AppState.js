@@ -9,20 +9,26 @@ export const AppState = reactive({
 
   /** @type {import('./models/NewsLetter.js').NewsLetter[]} */
   newsLetterSubscription: [],
-  /** @type {import('./models/Event.js').Event.js[]} */
+  /** @type {import('./models/Event.js').Event[]} */
   events: [],
-  /** @type {import('./models/Retreat.js').Retreat} */
-  currentRetreat: {},
-  /** @type {import('./models/Retreat.js').Retreat[]} */
-  archivedRetreats: [],
-
+  /** @type {import('./models/Event.js').Event | null} */
+  activeEvent: null,
+  
   /** @type {import('./models/Retreat.js').Retreat[]} */
   retreats: [],
   /** @type {import('./models/Retreat.js').Retreat | null} */
   activeRetreat: null,
-
-  /** @type {import('./models/Schedule.js').Schedule.js[]} */
+  /** @type {import('./models/Retreat.js').Retreat} */
+  currentRetreat: {},
+  /** @type {import('./models/Retreat.js').Retreat[]} */
+  archivedRetreats: [],
+  
+  /** @type {import('./models/Schedule.js').Schedule[]} */
   schedules: [],
+  /** @type {import('./models/Schedule.js').Schedule | null} */
+  activeSchedule: null,
+  
+
   aug22RetreatImages: [],
   uploadedImgs: 0,
   newActiveUpload: null,
@@ -36,6 +42,5 @@ export const AppState = reactive({
     { title: "earnings", sub: "not sure", description: 1000000 },
     { title: "subscriptions", sub: "not sure", description: 245 },
   ],
-  activeEvent: null,
 });
-// hi
+

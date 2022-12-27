@@ -289,7 +289,7 @@
     </div>
   </div>
   <div>
-    <RetreatCard :retreat="new Retreat(editable)"/>
+    <RetreatCard :retreat="new Retreat(editable)" />
   </div>
 
   <!-- <section>
@@ -646,57 +646,56 @@ import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
 import RetreatCard from "../HomePage/RetreatCard.vue";
 
-
 export default {
-    setup() {
-        const editable = ref({
-            cost: {},
-            location: {},
-            food: {},
-            schedule: {},
-            vacancy: { filled: 0 },
-            accommodations: {}
-        });
-        const file = ref(null);
-        onMounted(() => { });
-        watchEffect(() => { });
-        return {
-            editable,
-            Retreat,
-            file,
-            formPaginate: computed(() => AppState.formPaginate),
-            loading: computed(() => AppState.loading),
-            async handleSubmit() {
-                try {
-                    const { retreatsService } = await import("../../services/RetreatsService");
-                    await retreatsService.createRetreat(editable.value);
-                }
-                catch (error) {
-                    Pop.error(error, "[createRetreat]");
-                }
-            },
-            async uploadFile(e) {
-                try {
-                    AppState.loading = true;
-                    const { pocketBaseService } = await import("../../services/PocketBaseService");
-                    const img = await pocketBaseService.uploadFile(e);
-                    editable.value.schedule.img = img;
-                    AppState.loading = false;
-                }
-                catch (error) {
-                    Pop.error(error, "[fileUpload]");
-                }
-            },
-            multiStepForm(x) {
-                if (x == 1) {
-                    AppState.formPaginate = 1;
-                }
-                else
-                    AppState.formPaginate = 0;
-            },
-        };
-    },
-    components: { RetreatCard }
+  setup() {
+    const editable = ref({
+      cost: {},
+      location: {},
+      food: {},
+      schedule: {},
+      vacancy: { filled: 0 },
+      accommodations: {},
+    });
+    const file = ref(null);
+    onMounted(() => {});
+    watchEffect(() => {});
+    return {
+      editable,
+      Retreat,
+      file,
+      formPaginate: computed(() => AppState.formPaginate),
+      loading: computed(() => AppState.loading),
+      async handleSubmit() {
+        try {
+          const { retreatsService } = await import(
+            "../../services/RetreatsService"
+          );
+          await retreatsService.createRetreat(editable.value);
+        } catch (error) {
+          Pop.error(error, "[createRetreat]");
+        }
+      },
+      async uploadFile(e) {
+        try {
+          AppState.loading = true;
+          const { pocketBaseService } = await import(
+            "../../services/PocketBaseService"
+          );
+          const img = await pocketBaseService.uploadFile(e);
+          editable.value.schedule.img = img;
+          AppState.loading = false;
+        } catch (error) {
+          Pop.error(error, "[fileUpload]");
+        }
+      },
+      multiStepForm(x) {
+        if (x == 1) {
+          AppState.formPaginate = 1;
+        } else AppState.formPaginate = 0;
+      },
+    };
+  },
+  components: { RetreatCard },
 };
 </script>
 
