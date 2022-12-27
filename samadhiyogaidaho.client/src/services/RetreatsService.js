@@ -8,23 +8,23 @@ class RetreatsService {
     const res = await api.post("api/retreats", retreatFormData);
     AppState.currentRetreat = new Retreat(res.data);
   }
-  
+
   async getAllRetreats() {
     const res = await api.get("api/retreats");
     logger.log(res.data);
-AppState.retreats = res.data.map(r=> new Retreat(r))
-AppState.retreats.forEach(r=> {
-  if (r.archived) {
-    AppState.archivedRetreats.push(r)
-  }
-})
+    AppState.retreats = res.data.map((r) => new Retreat(r));
+    AppState.retreats.forEach((r) => {
+      if (r.archived) {
+        AppState.archivedRetreats.push(r);
+      }
+    });
 
-AppState.retreats.find(f=> {
-  if (f.current ) {
-    AppState.currentRetreat = f
-  }
-})
- 
+    AppState.retreats.find((f) => {
+      if (f.current) {
+        AppState.currentRetreat = f;
+      }
+    });
+
     // logger.log(AppState.retreats);
   }
 }

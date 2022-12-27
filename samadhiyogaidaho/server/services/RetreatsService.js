@@ -1,5 +1,6 @@
 import { BadRequest } from "@bcwdev/auth0provider/lib/Errors.js";
 import { dbContext } from "../db/DbContext.js";
+import { update } from "../utils/Functions.js";
 import { getAdmins } from "./AccountService.js";
 
 class RetreatsService {
@@ -13,7 +14,7 @@ class RetreatsService {
     return currentRetreat;
   }
   async getAllRetreats() {
-    const retreats = await dbContext.Retreats.find();
+    const retreats = await dbContext.Retreats.findOne();
 
     return retreats;
   }
@@ -30,13 +31,16 @@ class RetreatsService {
 let retreat = this.getRetreatById(id)
 await retreat.archived = true
   await retreat.save()
+  return retreat
  
   }
 
   async updateRetreat(id,newRetreatData,userId){
     await getAdmins(userId)
     let retreat = this.getRetreatById(id)
-   
+   await update(newRetreatData,retreat)
+   await retreat.save()
+   return retreat
   }
 }
 export const retreatsService = new RetreatsService();
