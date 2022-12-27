@@ -5,6 +5,7 @@ import { logger } from "../utils/Logger";
 import Pop from "../utils/Pop";
 import { api } from "./AxiosService";
 import { Upload } from "../models/Upload";
+import Compressor from "compressorjs";
 
 class PocketBaseService {
   async getFiles() {
@@ -15,21 +16,42 @@ class PocketBaseService {
   async uploadFile(e) {
     const imgs = [];
     const files = Array.from(e.target.files);
+    //  console.log(files);
+    //     let hi = await this.compressImages(files, imgs)
+    //   console.log(hi);
     for await (const file of files) {
       let formData = new FormData();
-      formData.append("file", file);
-      const createdFile = await this.createFile(formData);
-      console.log(createdFile);
-      const url = await pb.getFileUrl(createdFile, createdFile.file);
-      console.log(url);
-      const getLastFile = await pb
-        .collection("aug22Retreat")
-        .update(createdFile.id, { url });
-      imgs.push(url);
+      console.log(file);
+      let hi = await this.compress(file);
+      console.log(hi);
+
+        formData.append("file", hi);
+        const createdFile = await this.createFile(formData);
+        console.log(createdFile);
+        const url = await pb.getFileUrl(createdFile, createdFile.file);
+        console.log(url);
+        const getLastFile = await pb
+          .collection("aug22Retreat")
+          .update(createdFile.id, { url });
+        imgs.push(url);
     }
-    logger.log(imgs);
+    // logger.log(imgs);
     return imgs;
   }
+  async compress(file) {
+    let hi = null;
+    await new Promise((resolve, reject) => {
+      new Compressor(file, {
+        quality: .6,
+        success(result) {
+          hi = result;
+          resolve();
+        },
+      });
+    });
+    return hi;
+  }
+
   async createFile(formData) {
     try {
       const file = await pb.collection("aug22Retreat").create(formData);
