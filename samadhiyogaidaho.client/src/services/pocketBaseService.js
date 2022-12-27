@@ -9,8 +9,13 @@ import Compressor from "compressorjs";
 
 class PocketBaseService {
   async getFiles() {
-    const record = await pb.collection("images").getFullList();
+    const record = await pb.collection("aug22Retreat").getFullList();
     logger.log(record);
+    let test = []
+    record.forEach(r=> {
+      test.push(r.url)
+    })
+    console.log(test);
   }
 
   async uploadFile(e) {
