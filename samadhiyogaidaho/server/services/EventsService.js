@@ -1,6 +1,7 @@
 import { Value } from "sass";
 import { dbContext } from "../db/DbContext";
 import { BadRequest, Forbidden } from "../utils/Errors";
+import { update } from "../utils/Functions";
 import { getAdmins } from "./AccountService";
 
 class EventsService {
@@ -37,23 +38,12 @@ class EventsService {
    
     await update(eventData, event);
     await event.save();
-    return event;
+    return event
   }
 
 }
 
-/**
- * @param {Object} newData data to replace existing fields
- * @param {object} originalData old data to update
- */
-export async function update(newData, originalData) {
-  for (const key in newData) {
-    if (originalData[key]) {
-      originalData[key] = newData[key] ? newData[key] : originalData[key];
-    }
-  }
-  return originalData;
-}
+
 // export async function updateObject(newData, originalData) {
 //   for (const key in newData) {
 //     if (originalData[key]) {
