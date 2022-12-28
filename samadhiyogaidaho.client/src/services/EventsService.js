@@ -28,9 +28,8 @@ class EventsService {
   async deleteEvent(id){
   
     await api.delete(`api/events/${id}`)
-  let index = AppState.events.findIndex((e) => e.id == id);
+    AppState.events = AppState.events.filter(e => e.id != id)
 
-    AppState.events.splice(index, 1);
   }
 }
 export const eventsService = new EventsService();

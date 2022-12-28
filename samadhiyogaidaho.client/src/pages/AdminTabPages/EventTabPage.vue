@@ -110,6 +110,7 @@ export default {
             return;
           }
           await eventsService.deleteEvent(id);
+          Pop.success('event deleted')
           // TODO finish connecting deleteEvent()
         } catch (error) {
           Pop.error(error, "[create Event]");

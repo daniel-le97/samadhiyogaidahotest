@@ -49,9 +49,11 @@
             </li>
           
           </ul>
-         Logged in:
-              {{ admin.name }}
+       <div class=" mt-5">
+         
+            <p class="fs-4">  {{ admin.name }}</p>
               <Login/>
+       </div>
         </div>
     
       </div>

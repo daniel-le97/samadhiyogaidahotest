@@ -30,5 +30,14 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  transform: scale(0.4);
+  }
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 1080px){
+   transform: scale(0.4);
+  }
 }
 </style>
