@@ -422,10 +422,8 @@
       <div class="container my-5" v-for="a in archived">
         <div class="row">
           <div class="col-md-12 mb-4 text-center">
-            <p class="display-2 font-1 ">  {{ new Date(a.startDate).getFullYear() }} </p>
-            <p>  
-               {{ getSeason(new Date(a.startDate))}}
-            </p>
+            <p class="display-4 font-1 ">  {{ new Date(a.startDate).getFullYear() }} </p>
+        
             <h1 class="display-3 font-1 underline">{{ a.title }}</h1>
           </div>
           <div class="col-md-12 mb-4 text-center"></div>
@@ -479,7 +477,7 @@ export default {
   props: {},
   setup(props) {
     const editable = ref({});
-const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
+
     onMounted(() => {
       // getAllRetreats();
     });
@@ -495,7 +493,7 @@ const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
     }
     return {
       editable,
-      getSeason,
+
       featuredImg1: computed(() =>
         AppState.currentRetreat?.featuredImgs?.slice(0)
       ),
