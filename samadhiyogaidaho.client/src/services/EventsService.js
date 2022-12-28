@@ -22,18 +22,14 @@ class EventsService {
 
 const res = await api.put(`api/events/${id}`,eventData)
 let updatedEvent = new Event(res.data)
-  let index = AppState.events.findIndex((e) => {
-      e.id == id;
-    });
+  let index = AppState.events.findIndex((e) =>  e.id == id);
 
     AppState.events.splice(index, 1, updatedEvent);
   }
-  async deleteEvent(event){
+  async deleteEvent(id){
   
-    await api.delete('api/events')
-  let index = AppState.events.findIndex((e) => {
-      e.id == event.id;
-    });
+    await api.delete(`api/events/${id}`)
+  let index = AppState.events.findIndex((e) => e.id == event.id);
 
     AppState.events.splice(index, 1);
   }

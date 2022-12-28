@@ -33,7 +33,7 @@
             </button>
             <button
               class="btn btn-outline-danger font-2 fs-3"
-              @click="deleteEvent(event)"
+              @click="deleteEvent(event.id)"
             >
               delete event
             </button>
@@ -103,13 +103,13 @@ export default {
           Pop.error(error, "[create Event]");
         }
       },
-      async deleteEvent(event) {
+      async deleteEvent(id) {
         try {
           const yes = await Pop.confirm();
           if (!yes) {
             return;
           }
-          await eventsService.deleteEvent(event);
+          await eventsService.deleteEvent(id);
           // TODO finish connecting deleteEvent()
         } catch (error) {
           Pop.error(error, "[create Event]");

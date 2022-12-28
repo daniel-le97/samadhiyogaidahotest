@@ -246,7 +246,7 @@
           </div>
           <div class="col-md-6">
             <div class="text-center">
-              <h1 class="underline font-2 display-3">Summary</h1>
+              <h1 class="underline font-2 fs-1">Summary</h1>
             </div>
             <div class="">
               <p class="fs-4 text-start7">{{ retreat?.description }}</p>
@@ -292,7 +292,7 @@
             </div>
             <div class="col-md-6">
               <div class="text-center">
-                <p class="display-3 font-2 underline">Daily Schedule</p>
+                <p class="fs-1 font-2 underline">Daily Schedule</p>
               </div>
               <div class="">
                 <p class="fs-4 text-start">
@@ -329,8 +329,8 @@
           <div class="row gy-3">
             <div class="col-md-5">
               <div class="text-center" v-motion-slide-visible-once-left>
-                <p class="display-3 mb-0 underline">Food</p>
-                <p class="display-6 text-muted font-2">
+                <p class="fs-1 mb-0 underline">Food</p>
+                <p class="fs-2  text-lightPink darken-20 font-2">
                   Featuring {{ retreat?.food?.chef }}
                 </p>
               </div>
@@ -353,7 +353,7 @@
           <div class="col-md-12 text-center">
             <h1
               v-motion-slide-visible-once-top
-              class="display-3 font-2 underline"
+              class="fs-1 font-2 underline"
             >
               Accommodations
             </h1>
@@ -376,7 +376,7 @@
           <div class="col-md-12 text-center">
             <h1
               v-motion-slide-visible-once-left
-              class="display-3 font-2 underline"
+              class="fs-1 font-2 underline"
             >
               FAQS
             </h1>
@@ -422,11 +422,12 @@
       <div class="container my-5" v-for="a in archived">
         <div class="row">
           <div class="col-md-12 mb-4 text-center">
-            <p class="display-4 font-1 ">  {{ new Date(a.startDate).getFullYear() }} </p>
+            <p class="display-4 font-1 ">  </p>
         
-            <h1 class="display-3 font-1 underline">{{ a.title }}</h1>
+            <h1 class="fs-1 font-1 underline mb-0">{{ a.title }} -  {{ new Date(a.startDate).toLocaleString('default',{month:'short'}) }},  {{new Date(a.startDate).getFullYear()}}</h1>
+            <p class="fs-3 text-peach  "> {{ a.location.address }}  </p> 
           </div>
-          <div class="col-md-12 mb-4 text-center"></div>
+          <div class="col-md-12 mb-4 text-center "></div>
 
           <div class="container my-4">
             <div class="masonry2">
@@ -454,7 +455,9 @@
             </div>
           </div>
         </div>
+           <hr>
       </div>
+   
     </section>
   </div>
 </template>

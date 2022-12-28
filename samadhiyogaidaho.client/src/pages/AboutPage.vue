@@ -67,7 +67,7 @@
         <div class="col-md-6">
           <div class="" v-motion-fade-visible :delay="200">
             <p class="fs-1 font-1 text-center">Katie Alverson</p>
-            <p class="fs-4 text-center">Founder, owner and teacher</p>
+            <p class="fs-4 text-center text-pink darken-20">Founder, owner and teacher</p>
             <p class="fs-5 text-start">
               Hi there! I'm Katie, and I absolutely love to get to share the
               beauty and peace of yoga with others. After practicing yoga for

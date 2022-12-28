@@ -62,7 +62,7 @@
       <RetreatAndEvents />
     </section>
 
-    <section id="Testimonials-Section " class="mb-5">
+    <section id="Testimonials-Section " class="mb-5 bg-pink py-5">
       <TestimonialSection />
     </section>
 
