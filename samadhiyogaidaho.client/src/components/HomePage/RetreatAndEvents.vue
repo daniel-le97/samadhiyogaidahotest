@@ -9,7 +9,7 @@
       </h1>
     </div>
     <div class="row justify-content-center gy-5">
-      <div class="col-md-12" v-for="r in retreats" :key="r.id">
+      <div class="col-md-10" v-for="r in retreats" :key="r.id">
         <RetreatCard  :retreat="r" />
       </div>
   
