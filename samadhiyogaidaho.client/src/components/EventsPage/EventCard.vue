@@ -16,14 +16,14 @@
 <p class="text-start">{{event.location.address}} </p> -->
 <div class="d-flex">
           <a
-            :href="event.location.address"
+            :href="event.address"
             target="_blank"
             class="  "
             title="GoogleMaps Link"
           >
             <i class="mdi mdi-map-marker fs-5 text-pink darken-20"></i
           ></a>
-          <span class="font-2  mb-0 d-flex align-items-center"> {{ event.location.place }}</span>
+          <span class="font-2  mb-0 d-flex align-items-center"> {{ event.location}}</span>
         </div>
 </div>
 

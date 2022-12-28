@@ -5,6 +5,7 @@ export class Event {
     this.id = data.id;
     this.title = data.title;
     this.location = data.location;
+    this.address = data.address
     this.startDate = data.startDate;
     this.endDate = data.endDate;
     this.cost = data.cost;

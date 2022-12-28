@@ -230,14 +230,14 @@
               <div class="text-center">
                 <router-link :to="{ name: 'Contact' }">
                   <button
-                    class="btn btn-primary font-2 lighten-10 my-3 fs-3 fw-bold"
+                    class="btn btn-dark font-2 lighten-10  fs-3 fw-bold"
                   >
                     CONTACT HOST
                   </button>
                 </router-link>
-                <p>OR</p>
+                <p class="mt-3">OR</p>
                 <button
-                  class="btn btn-outline-primary font-2 lighten-10 my-3 fs-3 fw-bold"
+                  class="btn btn-outline-dark font-2 lighten-10 fs-3 fw-bold"
                 >
                   BOOK INSTANTLY
                 </button>
@@ -260,8 +260,8 @@
       <div class="container my-5">
         <div class="row justify-content-center gy-3">
           <div class="col-md-6">
-            <div class="">
-              <h1 class="display-3 font-2 underline">
+            <div class="text-center">
+              <h1 class="fs-1 font-2 underline">
                 {{ retreat?.location?.address }}
               </h1>
             </div>
@@ -419,7 +419,7 @@
     </section>
 
     <section>
-      <div class="container my-5" v-for="a in archived">
+      <div class="container mb-5" v-for="a in archived" style="margin-top:100px">
         <div class="row">
           <div class="col-md-12 mb-4 text-center">
             <p class="display-4 font-1 ">  </p>
