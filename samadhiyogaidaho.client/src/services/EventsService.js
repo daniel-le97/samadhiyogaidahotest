@@ -24,12 +24,6 @@ class EventsService {
     let updatedEvent = new Event(res.data);
     let index = AppState.events.findIndex((e) => e.id == updatedEvent.id);
     AppState.events[index] = updatedEvent
-
-const res = await api.put(`api/events/${id}`,eventData)
-let updatedEvent = new Event(res.data)
-  let index = AppState.events.findIndex((e) =>  e.id == id);
-
-    AppState.events.splice(index, 1, updatedEvent);
   }
   async deleteEvent(id){
   
