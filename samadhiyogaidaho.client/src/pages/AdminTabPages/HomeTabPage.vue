@@ -11,7 +11,7 @@
       <div class="col-12">
         <iframe plausible-embed src="https://stats.samadhiyogaidaho.com/share/samadhiyogaidaho.com?auth=RFSfFimnknbuf4xq2-JJD&embed=true&theme=dark" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1600px;"></iframe>
 <div style="font-size: 14px; padding-bottom: 14px;">Stats powered by <a target="_blank" style="color:#342e37; text-decoration: underline;" href="https://plausible.io">Plausible Analytics</a></div>
-<!-- <script async src="https://stats.samadhiyogaidaho.com/js/embed.host.js"></script> -->
+
       </div>
     </div>
     <div class="row flex-wrap">

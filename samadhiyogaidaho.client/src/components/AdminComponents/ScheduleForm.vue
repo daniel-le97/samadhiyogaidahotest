@@ -112,7 +112,7 @@ import ScheduleCard from "../HomePage/ScheduleCard.vue";
 import { Schedule } from "../../models/Schedule.js";
 export default {
   setup() {
-    const editable = ref({ });
+    const editable = ref({});
 
     watchEffect(() => {
       if (AppState.activeSchedule) {

@@ -33,6 +33,11 @@ class PocketBaseService {
       AppState.loading--;
     }
   }
+  /**
+   * 
+   * @param {File | Blob} file 
+   * @returns a compressed file
+   */
   async compress(file) {
     let compressedFile = null;
     await new Promise((resolve, reject) => {
