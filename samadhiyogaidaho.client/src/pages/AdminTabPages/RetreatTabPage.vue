@@ -14,7 +14,7 @@
           <button class="btn btn-outline-warning font-2 fs-3" @click="editRetreat(r)">edit retreat</button>
           <button class="btn btn-outline-danger font-2 fs-3">delete retreat</button>
         </div>
-        <RetreatCard :retreat="r"/>
+        <RetreatCard :retreat="r"  />
       </div>
     </div>
   </div>

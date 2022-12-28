@@ -96,8 +96,8 @@ export default {
     });
 async function getYogaSchedules(){
   try {
-      // await scheduleService.getSchedules()
-      await pocketBaseService.getFiles()
+      await scheduleService.getSchedules()
+      // await pocketBaseService.getFiles()
     } catch (error) {
       Pop.error(error,'[getYogaSchedules]')
     }
