@@ -18,18 +18,15 @@ class EventsService {
   }
   async updateEvent(eventData) {
     let id = eventData.id;
-
     const res = await api.put(`api/events/${id}`, eventData);
-    logger.log(res.data)
+    logger.log(res.data);
     let updatedEvent = new Event(res.data);
     let index = AppState.events.findIndex((e) => e.id == updatedEvent.id);
-    AppState.events[index] = updatedEvent
+    AppState.events[index] = updatedEvent;
   }
-  async deleteEvent(id){
-  
-    await api.delete(`api/events/${id}`)
-    AppState.events = AppState.events.filter(e => e.id != id)
-
+  async deleteEvent(id) {
+    await api.delete(`api/events/${id}`);
+    AppState.events = AppState.events.filter((e) => e.id != id);
   }
 }
 export const eventsService = new EventsService();
