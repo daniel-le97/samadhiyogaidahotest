@@ -34,7 +34,7 @@ let updatedEvent = new Event(res.data)
   async deleteEvent(id){
   
     await api.delete(`api/events/${id}`)
-  let index = AppState.events.findIndex((e) => e.id == event.id);
+  let index = AppState.events.findIndex((e) => e.id == id);
 
     AppState.events.splice(index, 1);
   }
