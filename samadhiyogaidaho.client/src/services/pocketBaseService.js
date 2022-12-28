@@ -46,7 +46,6 @@ class PocketBaseService {
     });
     return compressedFile;
   }
-
   async createFile(formData, collection) {
     try {
       const file = await pb.collection(collection).create(formData);
