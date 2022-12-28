@@ -48,6 +48,26 @@
     ],
     "typescript.format.enable": true,
     "javascript.validate.enable": false,
-    "liveServer.settings.multiRootWorkspaceName": "client"
+    "liveServer.settings.multiRootWorkspaceName": "client",
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#f9ad89",
+      "activityBar.background": "#f9ad89",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#089836",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "commandCenter.border": "#15202b99",
+      "sash.hoverBorder": "#f9ad89",
+      "statusBar.background": "#f68b59",
+      "statusBar.foreground": "#15202b",
+      "statusBarItem.hoverBackground": "#f36929",
+      "statusBarItem.remoteBackground": "#f68b59",
+      "statusBarItem.remoteForeground": "#15202b",
+      "titleBar.activeBackground": "#f68b59",
+      "titleBar.activeForeground": "#15202b",
+      "titleBar.inactiveBackground": "#f68b5999",
+      "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#f68b59"
   }
 }
