@@ -94,7 +94,7 @@ export default {
 
  .router-link-exact-active {
   color: var(--peach);
-  transform: translateX(120px);
+  transform: translateX(50px);
 width: 25%;
   transition: all 0.25s ease;
   text-decoration: underline;
