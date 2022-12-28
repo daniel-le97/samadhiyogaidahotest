@@ -108,14 +108,18 @@
             </p>
           </div>
         </div>
+
+        <div class="col-md-12 my-5">
+<p class="fs-1"> WORK WITH ME</p>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import ParticleTest from "../components/PluginComponents/ParticleComponent.vue";
-import PersonComponent from "../components/PersonComponent.vue";
+import ParticleTest from "../components/MiscComponents/ParticleComponent.vue";
+import PersonComponent from "../components/MiscComponents/PersonComponent.vue";
 
 export default {
   setup() {

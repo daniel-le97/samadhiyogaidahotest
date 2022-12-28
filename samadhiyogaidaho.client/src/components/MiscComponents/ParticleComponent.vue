@@ -3,7 +3,7 @@
   <Particles
     id="tsparticles"
     :particlesInit="particlesInit"
-    :particlesLoaded="particlesLoaded"
+   
     :options="{
       fullScreen: { enable: false, zIndex: 0 },
       fpsLimit: 60,
@@ -91,9 +91,9 @@ const particlesInit = async (engine) => {
   await loadFull(engine);
 };
 
-const particlesLoaded = async (container) => {
-  logger.log("Particles container loaded", container);
-};
+// const particlesLoaded = async (container) => {
+//   logger.log("Particles container loaded", container);
+// };
 </script>
 
 <style lang="scss" scoped></style>

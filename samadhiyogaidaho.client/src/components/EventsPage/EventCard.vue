@@ -11,26 +11,27 @@
 <p class="underline  fs-1 font-1  border-2 border-bottom text-center text-pink darken-20">{{event.title}}</p>
 <div class="d-flex">
   <div  class="me-3"><p class="text-start">{{getDate(event.startDate)}} - {{getDateTime(event.endDate)}}</p>
-<!-- 
-<p class="text-start">{{event.location.place}} </p>
-<p class="text-start">{{event.location.address}} </p> -->
-<div class="d-flex">
-          <a
+
+        
+          <span class="font-2  mb-0 d-flex align-items-center"> {{ event.location}}</span>
+     <span class="font-2">
+     
+       <a
             :href="event.address"
             target="_blank"
             class="  "
             title="GoogleMaps Link"
           >
-            <i class="mdi mdi-map-marker fs-5 text-pink darken-20"></i
+            <i class="mdi mdi-map-marker fs-3 text-pink darken-20">
+               Map Link</i
           ></a>
-          <span class="font-2  mb-0 d-flex align-items-center"> {{ event.location}}</span>
-        </div>
+     </span>
 </div>
 
    
 
 <div class="fs-2 font-2 ">
-${{event.cost }}  per   <img src="https://cdn-icons-png.flaticon.com/512/8927/8927683.png" alt="" class="img-fluid" width="80" height="80">
+${{event.cost }}  per   <img src="https://cdn-icons-png.flaticon.com/512/84/84145.png" alt="Person Icon" title="Person Icon" class="img-fluid" width="70" height="60">
 
 </div>
 </div>

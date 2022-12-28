@@ -474,7 +474,7 @@ import { retreatsService } from "../services/RetreatsService.js";
 import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
 // import { onBeforeMount } from "vue";
-import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 
 export default {
   props: {},

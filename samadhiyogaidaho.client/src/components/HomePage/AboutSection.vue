@@ -87,7 +87,7 @@
 
 
 <script>
-import PersonComponent from "../PersonComponent.vue";
+import PersonComponent from "../MiscComponents/PersonComponent.vue";
 
 export default {
     setup() {

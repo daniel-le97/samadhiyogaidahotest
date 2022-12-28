@@ -61,11 +61,7 @@ const routes = [
     name: "FAQ",
     component: loadPage("FAQPage"),
   },
-  {
-    path: "/account",
-    name: "Account",
-    component: loadPage("AccountPage"),
-  },
+ 
   {
     path: "/admin",
     name: "Admin",

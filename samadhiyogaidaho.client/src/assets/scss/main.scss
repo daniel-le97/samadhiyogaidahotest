@@ -189,6 +189,9 @@ cite {
 .card:hover .image-box img {
   transform: scale(1.2);
   transition: all 4s ease;
+    width: 100%;
+  transition: 0.5s;
+  border-radius: 6px;
 }
 .card-img {
   filter: brightness(80%);
@@ -201,9 +204,7 @@ cite {
 }
 
 .image-box img {
-  width: 100%;
-  transition: 0.5s;
-  border-radius: 6px;
+
 }
 
 .text-box {
@@ -222,9 +223,7 @@ cite {
   left: 0%;
 }
 
-.image-box:hover img {
-  transform: scale(1.2);
-}
+
 
 .panel,
 .panel-group .panel-heading + .panel-collapse > .panel-body {

@@ -9,35 +9,32 @@
       <h1
         class="display-1 text-light text-shadow font-1 text-wrap page-title text-center"
       >
-      EVENTS
+        EVENTS
       </h1>
       <p class="font-2 text-light text-shadow display-6">
         Enjoy an enriching and memorable experience
       </p>
     </div>
 
-.<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-10 ">
-        <p class="fs-4 text-start">
-        We have been working hard behind the scenes getting several classes and
-        events set up for 2023! <br />
-        Space will be extremely limited at each event, So please DM us today or
-        call the Grove Fitness Club & Spa to sign up.
-        <br />
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <p class="fs-4 text-start">
+            We have been working hard behind the scenes getting several classes
+            and events set up for 2023! <br />
+            Space will be extremely limited at each event, So please DM us today
+            or call the Grove Fitness Club & Spa to sign up.
+            <br />
 
-        Our pop up schedule for 2023 will be posted soon so you can have an idea
-        and plan for events you’d like to attend next year.
-      </p>
-
-     
+            Our pop up schedule for 2023 will be posted soon so you can have an
+            idea and plan for events you’d like to attend next year.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     <div class="container my-5">
-    
-
       <div
         v-motion-slide-visible-bottom
         :delay="200"
@@ -55,20 +52,19 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import EventForm from "../components/AdminComponents/EventForm.vue";
-import CommentBox from "../components/MiscComponents/CommentBox.vue";
 import { logger } from "../utils/Logger.js";
 
 import { eventsService } from "../services/EventsService.js";
 import EventCard from "../components/EventsPage/EventCard.vue";
-import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 
 export default {
   setup() {
-    const editable = ref({});
+
     onMounted(() => {
       getEvents();
     });
-    watchEffect(() => {});
+
     async function getEvents() {
       try {
         await eventsService.getEvents();
@@ -77,17 +73,16 @@ export default {
       }
     }
     return {
-      editable,
+  
       events: computed(() => AppState.events),
     };
   },
-  components: { CommentBox, EventForm, EventCard, ParticleComponent },
+  components: { EventForm, EventCard, ParticleComponent },
 };
 </script>
 
 <style lang="scss" scoped>
 .hero-image {
-  
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
@@ -96,6 +91,4 @@ export default {
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
 }
-
-
 </style>

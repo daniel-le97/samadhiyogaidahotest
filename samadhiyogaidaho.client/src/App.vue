@@ -21,9 +21,9 @@
 import { computed, onMounted, watchEffect } from "vue";
 import { useRoute } from "vue-router";
 import { AppState } from "./AppState";
-import ActiveImage from "./components/ActiveImage.vue";
-import Footer from "./components/MiscComponents/Footer.vue";
-import Navbar from "./components/MiscComponents/Navbar.vue";
+import ActiveImage from "./components/MiscComponents/ActiveImage.vue";
+import Footer from "./components/Footer.vue";
+import Navbar from "./components/Navbar.vue";
 import ModalComponent from "./components/MiscComponents/ModalComponent.vue";
 import { logger } from "./utils/Logger";
 import { retreatsService } from "./services/RetreatsService.js";

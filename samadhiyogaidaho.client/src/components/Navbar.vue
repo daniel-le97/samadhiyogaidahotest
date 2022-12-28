@@ -67,7 +67,7 @@
             <div v-motion-fade :delay="1000" class="text-center">
               <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
                 <img
-                  src="../../assets/img/logo.png"
+                  src="../assets/img/logo.png"
                   alt=""
                   class="rounded-pill elevation-orange logo-image"
                   title="home"
@@ -129,7 +129,7 @@
 
 <script>
 import { useRoute } from "vue-router";
-import Login from "./Login.vue";
+import Login from "./MiscComponents/Login.vue";
 export default {
   setup() {
     const route = useRoute();
@@ -142,7 +142,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/scss/main.scss";
 .nav-link {
   text-transform: uppercase;
   color: #ffffff;

@@ -136,11 +136,11 @@
 <script>
 import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
-import { AppState } from "../../AppState.js";
-import { logger } from "../../utils/Logger.js";
-import Pop from "../../utils/Pop.js";
-import NewsLetter from "../NewsLetter.vue";
-import FooterWave from "../PluginComponents/FooterWave.vue";
+import { AppState } from "../AppState.js";
+import { logger } from "../utils/Logger.js";
+import Pop from "../utils/Pop.js";
+import NewsLetter from "./NewsLetter.vue";
+import FooterWave from "./MiscComponents/FooterWave.vue";
 
 export default {
   props: {},

@@ -41,6 +41,12 @@
           <cite>- SamadhiYogaIdaho</cite>
         </div>
       </div>
+      <div class="row justify-content-center mt-5 ">
+        <div class="col-md-8 text-center">
+       <p class="display-4">   We'd <i class="mdi mdi-heart-outline display-3 text-pink darken-20" />  to help!</p>
+       <p class="fs-5"> We like to create experiences with fun, open-minded people. Feel free to say hello!</p>
+        </div>
+      </div>
       <div class="row justify-content-center">
         <div class="col-md-12 my-3">
           <div class="card border-0 square elevation-orange p-3 my-5">
@@ -60,10 +66,10 @@
                 <div class="my-3">
                   <p class="fw-bold display-6 mb-0">Leave Us A Message</p>
                   <p class="fs-4">
-                    Question? about attending a class, workshop, retreat or
-                    private lesson?
+                    Question? about attending a class, workshop, retreat,
+                    private lesson or just want to get in touch?
                     <br />
-                    Use our contact form below to get in touch:
+                   Feel free to use our contact form below 
                   </p>
                 </div>
                 <form @submit.prevent="handleSubmit()">
@@ -150,21 +156,15 @@
 </template>
 
 <script>
-import { onMounted, ref, watchEffect } from "vue";
-import CommentBox from "../components/MiscComponents/CommentBox.vue";
-import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
+import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 
 export default {
-  props: {},
-  setup(props) {
-    const editable = ref({});
-    onMounted(() => {});
-    watchEffect(() => {});
+  setup() {
+
     return {
-      editable,
     };
   },
-  components: { CommentBox, ParticleComponent },
+  components: {  ParticleComponent },
 };
 </script>
 

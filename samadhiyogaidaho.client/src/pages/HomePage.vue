@@ -75,12 +75,11 @@
 </template>
 
 <script>
-import ParticleComponent from "../components/PluginComponents/ParticleComponent.vue";
-import GentleWave from "../components/PluginComponents/GentleWave.vue";
+import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
+import GentleWave from "../components/MiscComponents/GentleWave.vue";
 import SwiperComponent2 from "../components/HomePage/TestimonialSwiper.vue";
 import CallToAction from "../components/HomePage/CallToAction.vue";
 import { defineAsyncComponent } from "vue";
-import CommentBox from "../components/MiscComponents/CommentBox.vue";
 import ServicesSection from "../components/HomePage/ServicesSection.vue";
 import Pop from "../utils/Pop.js";
 import { onMounted } from "vue";
@@ -114,7 +113,7 @@ async function getYogaSchedules(){
     TestimonialSection: defineAsyncComponent(() => import("../components/HomePage/TestimonialSection.vue")),
     YouTubeSection: defineAsyncComponent(() => import("../components/ServicesPage/YouTubeSection.vue")),
     RetreatAndEvents: defineAsyncComponent(() => import("../components/HomePage/RetreatAndEvents.vue")),
-    CommentBox,
+ 
     ScheduleSection: defineAsyncComponent(() => import("../components/HomePage/ScheduleSection.vue")),
     ServicesSection,
     AboutSection: defineAsyncComponent(() => import("../components/HomePage/AboutSection.vue")),
