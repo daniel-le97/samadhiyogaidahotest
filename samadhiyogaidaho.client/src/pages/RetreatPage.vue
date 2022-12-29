@@ -430,7 +430,7 @@
           <div class="col-md-12 mb-4 text-center "></div>
 
           <div class="container my-4">
-            <div class="masonry2">
+            <div class="">
               <div
                 @click="setActiveImage(image)"
                 data-bs-toggle="modal"

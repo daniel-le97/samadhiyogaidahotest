@@ -51,12 +51,6 @@ const routes = [
   },
 
   {
-    path: "/newsletter",
-    name: "NewsLetter",
-    component: loadPage("NewsLetterPage"),
-  },
-
-  {
     path: "/faq",
     name: "FAQ",
     component: loadPage("FAQPage"),
