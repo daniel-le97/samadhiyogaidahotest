@@ -6,6 +6,7 @@ import Pop from "../utils/Pop";
 import { api } from "./AxiosService";
 import { Upload } from "../models/Upload";
 import Compressor from "compressorjs";
+import { pop } from "@vueuse/motion";
 
 class PocketBaseService {
   async getFiles() {
@@ -18,26 +19,22 @@ class PocketBaseService {
     console.log(test);
   }
 
-  async uploadFile(e) {
+  async uploadFile(e, collection) {
+   console.log(collection.name);
     const files = Array.from(e.target.files);
     AppState.loading = files.length;
     for await (const file of files) {
       let formData = new FormData();
       let compressed = await this.compress(file);
       formData.append("file", compressed);
-      const createdFile = await this.createFile(formData, "aug22Retreat");
+      const createdFile = await this.createFile(formData, collection.name);
       const url = await pb.getFileUrl(createdFile, createdFile.file, {thumb: "500x500",});
-      const getLastFile = await pb.collection("aug22Retreat").update(createdFile.id, { url });
+      const getLastFile = await pb.collection(collection.name).update(createdFile.id, { url });
       logger.log({uncompressed: file.size / 1000000 + "mb",compressed: compressed.size / 1000 + "kb",url,});
       AppState.uploadedImgs.push(url);
       AppState.loading--;
     }
   }
-  /**
-   * 
-   * @param {File | Blob} file 
-   * @returns a compressed file
-   */
   async compress(file) {
     let compressedFile = null;
     await new Promise((resolve, reject) => {
@@ -51,9 +48,9 @@ class PocketBaseService {
     });
     return compressedFile;
   }
-  async createFile(formData, collection) {
+  async createFile(formData, collectionName) {
     try {
-      const file = await pb.collection(collection).create(formData);
+      const file = await pb.collection(collectionName).create(formData);
       return file;
     } catch (error) {
       Pop.error(error, "please contact an admin");
@@ -64,25 +61,20 @@ class PocketBaseService {
     res.forEach((r) => AppState.aug22RetreatImages.push(r.url));
     logger.log(AppState.aug22RetreatImages);
   }
-  async createCollection() {
-    const hi = AppState.admin;
-    const collection = await pb.collections.getOne("aug22Retreat");
+  async createCollection(name) {
+    const collection = await pb.collections.getOne("default");
     const newCollection = await pb.collections.create({
-      name: "aug25Retreat",
+      name,
       type: collection.type,
       schema: collection.schema,
     });
+    AppState.collections = [...AppState.collections, newCollection]
   }
-  async transferToMongo() {
-    const collections = await pb.collections.getList();
-    for await (const collection of collections.items) {
-      const images = await pb.collection(`${collection.name}`).getFullList();
-      for await (const image of images) {
-        let data = new Upload(image);
-        const res = await api.post("/api/uploads", data);
-        console.log(res.data);
-      }
-    }
+  async getCollections() {
+    let collections = await (await pb.collections.getList()).items;
+    collections = collections.filter(c => c.name != "users")
+    logger.log(collections)
+    AppState.collections = collections
   }
 }
 export const pocketBaseService = new PocketBaseService();

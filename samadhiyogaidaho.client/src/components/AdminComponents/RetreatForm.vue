@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <form
-          @submit.prevent="handleSubmit()"
+          @submit.prevent="activeRetreat ? handleEdit() : handleSubmit()"
           class="my-5 p-4 elevation-6 rounded-1"
         >
           <section v-if="formPaginate == 0" v-motion-pop>
@@ -289,7 +289,8 @@
     </div>
   </div>
   <div>
-    <RetreatCard :retreat="new Retreat(editable)" />
+    <RetreatPreview :editable="editable" v-if="activeRetreat"/>
+    <!-- <RetreatCard :retreat="new Retreat(editable)" v-if="activeRetreat" /> -->
   </div>
 
   <!-- <section>
@@ -645,6 +646,7 @@ import { Retreat } from "../../models/Retreat";
 import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
 import RetreatCard from "../HomePage/RetreatCard.vue";
+import RetreatPreview from "./RetreatPreview.vue";
 
 export default {
   setup() {
@@ -658,12 +660,17 @@ export default {
     });
     const file = ref(null);
     onMounted(() => {});
-    watchEffect(() => {});
+    watchEffect(() => {
+      if (AppState.activeRetreat) {
+        editable.value = { ...AppState.activeRetreat };
+      }
+    });
     return {
       editable,
       Retreat,
       file,
       formPaginate: computed(() => AppState.formPaginate),
+      activeRetreat: computed(() => AppState.activeRetreat),
       loading: computed(() => AppState.loading),
       async handleSubmit() {
         try {
@@ -673,6 +680,13 @@ export default {
           await retreatsService.createRetreat(editable.value);
         } catch (error) {
           Pop.error(error, "[createRetreat]");
+        }
+      },
+      async handleEdit() {
+        try {
+        } catch (error) {
+          console.error("[]", error);
+          Pop.error(error);
         }
       },
       async uploadFile(e) {
@@ -695,7 +709,7 @@ export default {
       },
     };
   },
-  components: { RetreatCard },
+  components: { RetreatCard, RetreatPreview },
 };
 </script>
 
