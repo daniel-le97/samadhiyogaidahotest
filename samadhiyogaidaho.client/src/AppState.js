@@ -23,20 +23,20 @@ export const AppState = reactive({
   schedules: [],
   /** @type {import('./models/Schedule.js').Schedule | null} */
   activeSchedule: null,
-  
+
   activeImage: null,
-  
+
   //-----------------------------ADMIN PAGE-----------------------------------//
-  
+
   admin: null,
   uploadedImgs: [],
   collections: [],
   formPaginate: 0,
   loading: null,
   // activeTab: "Home",
-  
+
   /** @type {import('./models/Testimonial.js').Testimonial.js[]} */
-  testimonials [],
+  testimonials: [],
   /** @type {import('./models/FAQ.js').FAQ[]} */
   FAQS: [],
 });

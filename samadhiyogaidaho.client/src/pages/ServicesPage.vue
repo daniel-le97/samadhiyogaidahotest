@@ -18,7 +18,7 @@
         </div>
         <h4
           v-motion-slide-top
-          :delay="300"
+          :delay="400"
           class="font-2 display-6 text-light text-shadow"
         >
           Enrich your life and deepen your practice

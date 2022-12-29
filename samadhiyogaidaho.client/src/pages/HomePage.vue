@@ -9,30 +9,16 @@
           class="hero-image d-flex flex-column justify-content-center align-items-center"
         >
           <div style="margin-top: 80px" class="text-shadow container">
-               <h1
-              v-motion
-              :initial="{
-                y: -100,
-                opacity: 0,
-              }"
-              :enter="{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  type: 'spring',
-                  stiffness: 250,
-                  damping: 25,
-                  mass: 2.5,
-                },
-              }"
-              :delay="1000"
+            <h1
+         v-motion-slide-top
+              :delay="200"
               class="display-2 text-light font-1 text-center"
             >
-             SAMADHI YOGA IDAHO
+              SAMADHI YOGA IDAHO
             </h1>
             <h5
               v-motion-slide-top
-              :delay="600"
+              :delay="400"
               class="fs-2 font-2 text-light text-uppercase text-center"
             >
               <br />
@@ -40,7 +26,6 @@
               to be authentic in every day life <br />
               to transform & to love
             </h5>
-         
           </div>
         </div>
       </div>
@@ -58,7 +43,7 @@
     <section>
       <ScheduleSection />
     </section>
-    <section id="Retreat-Section" >
+    <section id="Retreat-Section">
       <RetreatAndEvents />
     </section>
 
@@ -66,9 +51,9 @@
       <TestimonialSection />
     </section>
 
-    <section >
+    <section>
       <div class="container">
-    <InstagramFeed/>
+        <InstagramFeed />
       </div>
     </section>
   </div>
@@ -86,23 +71,21 @@ import { onMounted } from "vue";
 import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
 import { scheduleService } from "../services/ScheduleService.js";
 
-
 import { pocketBaseService } from "../services/PocketBaseService.js";
 export default {
   setup() {
     onMounted(() => {
-  getYogaSchedules()
+      getYogaSchedules();
     });
-async function getYogaSchedules(){
-  try {
-      await scheduleService.getSchedules()
-      // await pocketBaseService.getFiles()
-    } catch (error) {
-      Pop.error(error,'[getYogaSchedules]')
+    async function getYogaSchedules() {
+      try {
+        await scheduleService.getSchedules();
+        // await pocketBaseService.getFiles()
+      } catch (error) {
+        Pop.error(error, "[getYogaSchedules]");
+      }
     }
-}
 
- 
     return {};
   },
   components: {
@@ -110,15 +93,25 @@ async function getYogaSchedules(){
     ParticleComponent,
     GentleWave,
     CallToAction,
-    TestimonialSection: defineAsyncComponent(() => import("../components/HomePage/TestimonialSection.vue")),
-    YouTubeSection: defineAsyncComponent(() => import("../components/ServicesPage/YouTubeSection.vue")),
-    RetreatAndEvents: defineAsyncComponent(() => import("../components/HomePage/RetreatAndEvents.vue")),
- 
-    ScheduleSection: defineAsyncComponent(() => import("../components/HomePage/ScheduleSection.vue")),
+    TestimonialSection: defineAsyncComponent(() =>
+      import("../components/HomePage/TestimonialSection.vue")
+    ),
+    YouTubeSection: defineAsyncComponent(() =>
+      import("../components/ServicesPage/YouTubeSection.vue")
+    ),
+    RetreatAndEvents: defineAsyncComponent(() =>
+      import("../components/HomePage/RetreatAndEvents.vue")
+    ),
+
+    ScheduleSection: defineAsyncComponent(() =>
+      import("../components/HomePage/ScheduleSection.vue")
+    ),
     ServicesSection,
-    AboutSection: defineAsyncComponent(() => import("../components/HomePage/AboutSection.vue")),
-    InstagramFeed
-},
+    AboutSection: defineAsyncComponent(() =>
+      import("../components/HomePage/AboutSection.vue")
+    ),
+    InstagramFeed,
+  },
 };
 </script>
 

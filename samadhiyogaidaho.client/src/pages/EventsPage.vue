@@ -7,11 +7,15 @@
       class="hero-image d-flex flex-column justify-content-center align-items-center"
     >
       <h1
+        v-motion-slide-top
+              :delay="200"
         class="display-1 text-light text-shadow font-1 text-wrap page-title text-center"
       >
         EVENTS
       </h1>
-      <p class="font-2 text-light text-shadow display-6">
+      <p
+        v-motion-slide-top
+              :delay="400" class="font-2 text-light text-shadow display-6">
         Enjoy an enriching and memorable experience
       </p>
     </div>

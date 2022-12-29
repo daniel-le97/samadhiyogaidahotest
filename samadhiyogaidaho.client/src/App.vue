@@ -3,11 +3,8 @@
     <Navbar class="d-none fixed-top d-md-flex" id="nav" v-if="!routeAdmin" />
   </header>
   <main>
-    <router-view v-slot="{ Component }">
-      <transition name="fade">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+    <router-view />
+  
   </main>
   <Navbar class="d-block fixed-bottom d-md-none" id="nav" v-if="!routeAdmin" />
 

@@ -12,11 +12,14 @@
             v-motion-slide-top
             :delay="200"
             id="shadow1"
-            class="font-1 text-shadow page-title courgette fw-bolder text-light"
+            class="font-1 text-shadow page-title text-light"
           >
             Frequently Asked Questions
           </h1>
-          <p class="font-2 text-light text-shadow display-6">
+          <p 
+            v-motion-slide-top
+              :delay="400"
+          class="font-2 text-light text-shadow display-6">
             How can we help you?
           </p>
         </div>

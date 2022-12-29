@@ -9,13 +9,15 @@
           class="col-md-8 team-section-title d-flex d-md-block flex-column align-items-sm-center justify-content-sm-center"
         >
           <h1
-            v-motion-slide-visible-once-left
+            v-motion-slide-visible-once-bottom
+            :delay="300"
             class="display-2 font-1 underline text-start text-dark"
           >
             Katie Alverson
           </h1>
           <h2
             v-motion-slide-visible-once-left
+            :delay="1200"
             class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start"
           >
             Experienced
@@ -23,6 +25,7 @@
 
           <h2
             v-motion-slide-visible-once-left
+            :delay="900"
             class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start me-md-2"
           >
             Qualified
@@ -30,6 +33,7 @@
 
           <h2
             v-motion-slide-visible-once-left
+            :delay="600"
             class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start"
           >
             Passionate
