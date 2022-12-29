@@ -28,7 +28,7 @@ export const AppState = reactive({
   
   //-----------------------------ADMIN PAGE-----------------------------------//
   
-  admin: null
+  admin: null,
   uploadedImgs: [],
   collections: [],
   formPaginate: 0,
