@@ -24,6 +24,7 @@
           Enrich your life and deepen your practice
         </h4>
       </div>
+      <HeroImageDivider/>
     </section>
 
     <!-- <section>
@@ -229,6 +230,7 @@
 
 <script>
 
+import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 
 import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
@@ -241,7 +243,7 @@ export default {
  
     };
   },
-  components: { YouTubeSection, ParticleComponent },
+  components: { YouTubeSection, ParticleComponent, HeroImageDivider },
 };
 </script>
 

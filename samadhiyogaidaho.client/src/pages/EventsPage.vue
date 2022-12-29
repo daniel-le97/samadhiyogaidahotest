@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div class="tsparticles">
-      <ParticleComponent />
-    </div>
+ 
     <div
       class="hero-image d-flex flex-column justify-content-center align-items-center"
     >
+       <div class="tsparticles">
+      <ParticleComponent />
+    </div>
       <h1
         v-motion-slide-top
               :delay="200"
@@ -18,6 +19,7 @@
               :delay="400" class="font-2 text-light text-shadow display-6">
         Enjoy an enriching and memorable experience
       </p>
+      <HeroImageDivider/>
     </div>
 
     
@@ -61,6 +63,7 @@ import { logger } from "../utils/Logger.js";
 import { eventsService } from "../services/EventsService.js";
 import EventCard from "../components/EventsPage/EventCard.vue";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
+import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
 
 export default {
   setup() {
@@ -81,7 +84,7 @@ export default {
       events: computed(() => AppState.events),
     };
   },
-  components: { EventForm, EventCard, ParticleComponent },
+  components: { EventForm, EventCard, ParticleComponent, HeroImageDivider },
 };
 </script>
 

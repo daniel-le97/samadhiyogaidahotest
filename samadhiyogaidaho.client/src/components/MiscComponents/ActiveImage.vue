@@ -33,6 +33,8 @@ props:{
 
 <style lang="scss" scoped>
 .image{
-transform: scale(1.5);
+transform: scale(1.2);
+max-height: 70vh !important;
+
 }
 </style>

@@ -23,6 +23,7 @@
             How can we help you?
           </p>
         </div>
+        <HeroImageDivider/>
       </div>
     </section>
 
@@ -108,14 +109,27 @@
 <script>
 import { AppState } from "../AppState.js";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
-import { computed } from "vue";
+import { computed,onMounted } from "vue";
+import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
+import { faqsService} from "../services/FAQsService.js"
+import { logger } from "../utils/Logger.js";
 export default {
   setup() {
+    onMounted(()=>{
+      getFAQs()
+    })
+    async function getFAQs(){
+      try {
+          await  faqsService.getFAQs()
+        } catch (error) {
+        logger.error(error,'GetFAQS')
+        }
+    }
     return {
       QA: computed(() => AppState.FAQS),
     };
   },
-  components: { ParticleComponent },
+  components: { ParticleComponent, HeroImageDivider },
 };
 </script>
 
@@ -135,4 +149,8 @@ export default {
     font-size: 16px;
   }
 }
+
+
+
+
 </style>

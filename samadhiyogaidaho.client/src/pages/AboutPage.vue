@@ -24,6 +24,7 @@
             Why we came to build SamadhiYogaIdaho
           </p>
         </div>
+        <HeroImageDivider/>
       </div>
     </section>
 
@@ -31,9 +32,7 @@
       <div class="row px-md-3 gy-5 justify-content-center">
         <div class="col-md-10 text-center">
           <div class="justify-content-center p-2">
-            <p 
-            
-             v-motion-fade-visible :delay="200" class="my-3 fs-5">
+            <p v-motion-fade-visible :delay="200" class="my-3 fs-5">
               Back in 2013, our founder took her first yoga class in the hopes
               of finding some healing. Almost 10 years later, she took the
               initiative to receive her 200-hour training and found her passion
@@ -45,26 +44,34 @@
               serene atmosphere.
             </p>
             <p class="fs-5">
-           Samadhi is the Sanskrit word for the state in which individual and universal consciousness unite. It is a blissful form of total meditative absorption, reached once the practitioner has moved through the preliminary steps on Patanjal’s eightfold path.
-
-The spiritual significance of Samadhi is profound, since it encompasses self-realization and symbolizes the ultimate connection with the Divine.
+              Samadhi is the Sanskrit word for the state in which individual and
+              universal consciousness unite. It is a blissful form of total
+              meditative absorption, reached once the practitioner has moved
+              through the preliminary steps on Patanjal’s eightfold path. The
+              spiritual significance of Samadhi is profound, since it
+              encompasses self-realization and symbolizes the ultimate
+              connection with the Divine.
             </p>
-           
           </div>
         </div>
-        <div class="col-md-6 d-flex align-items-center justify-content-center">
-          <img
-           v-motion-fade-visible :delay="200"
-            src="../assets/img/KatiePortrait.png"
-            alt=""
-            class="img-fluid framed elevation-5 ms-md-5 rounded katie-portrait"
-          />
+        <div class="col-md-6 d-flex justify-content-center align-items-md-start align-items-center">
+         <div class="card framed border-0 sticky-md-top ">
+            <div class="image-box">
+              <img
+                src="../assets/img/KatiePortrait.png"
+                alt="Katie Alverson"
+                class="img-fluid elevation-6 rounded"
+              />
+            </div>
+          </div>
         </div>
 
         <div class="col-md-6">
           <div class="" v-motion-fade-visible :delay="200">
             <p class="fs-1 font-1 text-center">Katie Alverson</p>
-            <p class="fs-4 text-center text-pink darken-20">Founder, owner and teacher</p>
+            <p class="fs-4 text-center text-pink darken-20">
+              Founder, owner and teacher
+            </p>
             <p class="fs-5 text-start">
               Hi there! I'm Katie, and I absolutely love to get to share the
               beauty and peace of yoga with others. After practicing yoga for
@@ -100,15 +107,27 @@ The spiritual significance of Samadhi is profound, since it encompasses self-rea
               get my doctorates someday.
             </p>
             <p class="fs-5 text-start">
-              That’s a little about me, thanks for taking the time to get to
-              know me and for supporting me and my business!
+     
             </p>
           </div>
         </div>
 
-        <div class="col-md-12 my-5">
-          <p class="fs-5"> I would love nothing more to connect with like minded people to </p>
-<p class="fs-1"> WORK WITH ME</p>
+        <div class="col-md-6 my-5">
+          <p class="fs-1 font-1">Work With Me</p>
+          <p class="fs-5">
+                     That’s a little about me, thanks for taking the time to get to
+              know me and for supporting me and my business!
+            I would love nothing more to connect with like minded people to
+            further our practice.
+          </p>
+          <div class="text-center">
+            <router-link
+              :to="{ name: 'Contact' }"
+              class="btn btn-dark font-2 fs-3"
+            >
+              Connect
+            </router-link>
+          </div>
         </div>
       </div>
     </section>
@@ -116,6 +135,7 @@ The spiritual significance of Samadhi is profound, since it encompasses self-rea
 </template>
 
 <script>
+import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
 import ParticleTest from "../components/MiscComponents/ParticleComponent.vue";
 import PersonComponent from "../components/MiscComponents/PersonComponent.vue";
 
@@ -123,7 +143,7 @@ export default {
   setup() {
     return {};
   },
-  components: { PersonComponent, ParticleTest },
+  components: { PersonComponent, ParticleTest, HeroImageDivider },
 };
 </script>
 <style scoped lang="scss">

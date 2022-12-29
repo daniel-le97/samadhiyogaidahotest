@@ -23,6 +23,7 @@
           experience
         </p>
       </div>
+      <HeroImageDivider />
     </section>
 
     <section>
@@ -51,14 +52,14 @@
         </div>
 
         <div class="row gy-3">
-          <div class="col-md-6 text-center ">
+          <div class="col-md-6 text-center">
             <div class="card elevation-6 border-0 h-100">
-              <div class="image-box h-100 ">
+              <div class="image-box h-100">
                 <img
                   v-if="retreat"
                   :src="featuredImg1"
                   alt=""
-                  class=" rounded-4 elevation-6  feature-image-1 h-100 "
+                  class="rounded-4 elevation-6 feature-image-1 h-100"
                 />
               </div>
             </div>
@@ -72,7 +73,7 @@
                       v-if="retreat"
                       :src="retreat.coverImg"
                       alt=""
-                      class=" rounded-4 elevation-6  feature-image"
+                      class="rounded-4 elevation-6 feature-image"
                     />
                   </div>
                 </div>
@@ -84,18 +85,18 @@
                       v-if="retreat"
                       :src="featuredImg2"
                       alt=""
-                      class=" rounded-4 elevation-6 feature-image"
+                      class="rounded-4 elevation-6 feature-image"
                     />
                   </div>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card elevation-6 border-0 ">
-                  <div class="image-box ">
+                <div class="card elevation-6 border-0">
+                  <div class="image-box">
                     <img
                       :src="featuredImg3"
                       alt=""
-                      class=" rounded-4 elevation-6   feature-image"
+                      class="rounded-4 elevation-6 feature-image"
                     />
                   </div>
                 </div>
@@ -229,9 +230,7 @@
               </div>
               <div class="text-center">
                 <router-link :to="{ name: 'Contact' }">
-                  <button
-                    class="btn btn-dark font-2 lighten-10  fs-3 fw-bold"
-                  >
+                  <button class="btn btn-dark font-2 lighten-10 fs-3 fw-bold">
                     CONTACT HOST
                   </button>
                 </router-link>
@@ -246,27 +245,27 @@
           </div>
           <div class="col-md-6">
             <div class="text-center">
-              <h1 class="underline font-2 fs-1">Summary</h1>
+              <h1 class="underline font-1 fs-1">Summary</h1>
             </div>
             <div class="">
-              <p class="fs-4 text-start7">{{ retreat?.description }}</p>
+              <p class="fs-5 text-start7">{{ retreat?.description }}</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    <!--SECTION Location-->
     <section>
       <div class="container my-5">
         <div class="row justify-content-center gy-3">
           <div class="col-md-6">
             <div class="text-center">
-              <h1 class="fs-1 font-2 underline">
+              <h1 class="fs-1 font-1 underline">
                 {{ retreat?.location?.address }}
               </h1>
             </div>
             <div class="">
-              <p class="fs-4 text-start">
+              <p class="fs-5 text-start">
                 {{ retreat?.location?.description }}
               </p>
             </div>
@@ -292,10 +291,10 @@
             </div>
             <div class="col-md-6">
               <div class="text-center">
-                <p class="fs-1 font-2 underline">Daily Schedule</p>
+                <p class="fs-1 font-1 underline">Daily Schedule</p>
               </div>
               <div class="">
-                <p class="fs-4 text-start">
+                <p class="fs-5 text-start">
                   {{ retreat?.schedule?.description }}
                 </p>
               </div>
@@ -324,141 +323,124 @@
           </div>
         </div>
       </div>
-      <section>
-        <div class="container my-5">
-          <div class="row gy-3">
-            <div class="col-md-5">
-              <div class="text-center" v-motion-slide-visible-once-left>
-                <p class="fs-1 mb-0 underline">Food</p>
-                <p class="fs-2  text-lightPink darken-20 font-2">
-                  Featuring {{ retreat?.food?.chef }}
-                </p>
-              </div>
-              <div class="">
-                <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
-              </div>
+    </section>
+    <!--!Location-->
+    <section>
+      <div class="container my-5">
+        <div class="row gy-3">
+          <div class="col-md-5">
+            <div class="text-center" v-motion-slide-visible-once-left>
+              <h1 class="fs-1 mb-0 underline font-1">Food</h1>
+              <p class="fs-2 text-lightPink darken-20 font-2">
+                Featuring {{ retreat?.food?.chef }}
+              </p>
             </div>
-            <div class="col-md-7">
-              <div v-motion-slide-visible-once-right>
-                <FoodImageSwiper v-if="retreat?.food?.imgs" />
-              </div>
+            <div class="">
+              <p class="fs-5 text-start">{{ retreat?.food?.description }}</p>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div v-motion-slide-visible-once-right>
+              <FoodImageSwiper v-if="retreat?.food?.imgs" />
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </section>
+    <!--SECTION  Accommodations-->
     <section>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-12 text-center">
-            <h1
-              v-motion-slide-visible-once-top
-              class="fs-1 font-2 underline"
-            >
+          <div class="col-md-10 text-center">
+            <h1 v-motion-slide-visible-once-top class="fs-1 font-1 underline">
               Accommodations
             </h1>
-            <p v-motion-slide-visible-once-top class="fs-4 text-start">
+            <p v-motion-slide-visible-once-top class="fs-5 text-center">
               {{ retreat?.accommodations?.description }}
             </p>
           </div>
           <div
-            class="col-md-10 d-flex align-items-center justify-content-center elevation-orange"
+            class="col-md-10 d-flex align-items-center justify-content-center"
           >
             <AccommodationSwiper v-motion-slide-visible-once-bottom />
           </div>
         </div>
       </div>
     </section>
-
+    <!--!Accommodations-->
+    <!--SECTION FAQ/Highlights-->
     <section>
       <div class="container my-5">
         <div class="row gy-3">
-          <div class="col-md-12 text-center">
+          <div class="col-md-6">
             <h1
               v-motion-slide-visible-once-left
-              class="fs-1 font-2 underline"
+              class="fs-1 font-1 underline text-center"
             >
+              Highlights
+            </h1>
+            <div class="">
+              <!-- Some borders are removed -->
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item hover-image font-2 fs-5" v-for="h in retreat.highlights">
+                  {{ h }}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <h1 v-motion-slide-visible-once-left class="fs-1 font-1 underline">
               FAQS
             </h1>
-          </div>
-        </div>
-        <div
-          v-motion-slide-visible-once-bottom
-          class="accordion border-0"
-          id="accordionExample"
-        >
-          <div
-            class="accordion-item border-0"
-            v-for="(f, index) in retreat?.FAQS"
-          >
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button text-dark font-2 fs-3 bg-transparent border-0"
-                type="button"
-                data-bs-toggle="collapse"
-                :data-bs-target="`#collapse${index.toString()}`"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-              >
-                <i class="mdi mdi-help-circle me-3"></i> {{ f.question }}
-              </button>
-            </h2>
             <div
-              :id="`collapse${index.toString()}`"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample"
+              v-motion-slide-visible-once-bottom
+              class="accordion border-0"
+              id="accordionExample"
             >
-              <div class="accordion-body">
-                <p class="fs-3">{{ f.answer }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container mb-5" v-for="a in archived" style="margin-top:100px">
-        <div class="row">
-          <div class="col-md-12 mb-4 text-center">
-            <p class="display-4 font-1 ">  </p>
-        
-            <h1 class="fs-1 font-1 underline mb-0">{{ a.title }} -  {{ new Date(a.startDate).toLocaleString('default',{month:'short'}) }},  {{new Date(a.startDate).getFullYear()}}</h1>
-            <p class="fs-3 text-peach  "> {{ a.location.address }}  </p> 
-          </div>
-          <div class="col-md-12 mb-4 text-center "></div>
-
-          <div class="container my-4">
-            <div class="">
               <div
-                @click="setActiveImage(image)"
-                data-bs-toggle="modal"
-                data-bs-target="#activeImage"
-                class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
-                v-for="image in a.featuredImgs"
+                class="accordion-item border-0"
+                v-for="(f, index) in retreat?.FAQS"
               >
-                <img
-                  v-if="image"
-                  :src="image"
-                  alt=""
-                  class="img-fluid hover-image rounded selectable"
-                />
-
-                <img
-                  v-else
-                  src=""
-                  alt=""
-                  class="img-fluid hover-image rounded-4 selectable skeleton-loader"
-                />
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button text-dark font-2 fs-3 bg-transparent border-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    :data-bs-target="`#collapse${index.toString()}`"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  >
+                    <i class="mdi mdi-help-circle me-3"></i> {{ f.question }}
+                  </button>
+                </h2>
+                <div
+                  :id="`collapse${index.toString()}`"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-3">{{ f.answer }}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-           <hr>
       </div>
-   
     </section>
+    <!-- !FAQ/Highlights -->
+    <!--SECTION Archived Retreats-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" v-for="a in archived" :key="a.id">
+            <ArchivedRetreat :retreat="a" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--!Archived Retreats-->
   </div>
 </template>
 
@@ -467,14 +449,13 @@ import { computed } from "@vue/reactivity";
 import { onMounted, ref, watchEffect } from "vue";
 import { AppState } from "../AppState.js";
 import AccommodationSwiper from "../components/RetreatPage/AccommodationSwiper.vue";
-import ArchivedRetreatCard from "../components/RetreatPage/ArchivedRetreatCard.vue";
 import FoodImageSwiper from "../components/RetreatPage/FoodImageSwiper.vue";
 import RetreatForm from "../components/AdminComponents/RetreatForm.vue";
 import { retreatsService } from "../services/RetreatsService.js";
-import { logger } from "../utils/Logger.js";
 import Pop from "../utils/Pop.js";
-// import { onBeforeMount } from "vue";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
+import ArchivedRetreat from "../components/RetreatPage/ArchivedRetreat.vue";
+import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
 
 export default {
   props: {},
@@ -508,7 +489,6 @@ export default {
       ),
       retreat: computed(() => AppState.currentRetreat),
       archived: computed(() => AppState.archivedRetreats),
-      allRetreats: computed(() => AppState.retreats),
       setActiveImage(image) {
         AppState.activeImage = image;
         console.log(AppState.activeImage);
@@ -517,10 +497,11 @@ export default {
   },
   components: {
     RetreatForm,
-    ArchivedRetreatCard,
     FoodImageSwiper,
     AccommodationSwiper,
     ParticleComponent,
+    ArchivedRetreat,
+    HeroImageDivider,
   },
 };
 </script>
@@ -530,7 +511,7 @@ export default {
   object-fit: cover;
 }
 .schedule-img {
-  width: 75%;
+  width: 65%;
 
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
@@ -539,14 +520,12 @@ export default {
 }
 .feature-image {
   object-fit: cover;
-object-position: center;
+  object-position: center;
   height: 300px;
 }
 .feature-image-1 {
   object-fit: cover;
   object-position: center;
- 
-
 }
 .parallax {
   background-size: cover;
@@ -582,4 +561,48 @@ object-position: center;
 .scrollable-y {
   height: 650px;
 }
+
+
+
+/* List */
+ul {
+  counter-reset: index;  
+  padding: 0;
+
+}
+
+/* List element */
+li {
+  counter-increment: index; 
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+
+
+/* Element counter */
+li::before {
+  content: counters(index, ".", decimal-leading-zero);
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  min-width: 50px;
+  padding-right: 12px;
+  font-variant-numeric: tabular-nums;
+  align-self: flex-start;
+  background-image: linear-gradient(to bottom, aquamarine, orangered);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Element separation */
+li + li {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+
+
 </style>
