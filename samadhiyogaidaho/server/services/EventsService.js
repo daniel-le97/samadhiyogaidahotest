@@ -44,32 +44,5 @@ class EventsService {
 }
 
 
-// export async function updateObject(newData, originalData) {
-//   for (const key in newData) {
-//     if (originalData[key]) {
-//       let prop = originalData[key];
-//       if (typeof prop == Array) {
-//         originalData[key] = await sortArray(prop, newData[key]);
-//       } else {
-//         originalData[key] = await sortObject(prop, newData[key]);
-//       }
-//     }
-//   }
-//   return originalData;
-// }
-// async function sortArray(original, subData) {
-//   for (const prop of subData) {
-//     for (const key of original) {
-//       prop = key ? key : prop;
-//     }
-//   }
-//   return original;
-// }
-// function sortObject(prop, subData) {
-//   for (const subKey in subData) {
-//       prop[subKey] = subData[subKey] ? subData[subKey] : prop[subKey];
-//   }
-//   return prop;
-// }
 
 export const eventsService = new EventsService();
