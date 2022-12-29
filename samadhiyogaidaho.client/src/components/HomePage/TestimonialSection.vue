@@ -23,7 +23,15 @@
       <div class="col-md-8">
         <TestimonialSwiper />
       </div>
-     <div class="d-flex justify-content-end"> <button class="btn btn-dark font-2 fs-3"> Leave a review</button></div>
+     <div class="d-flex justify-content-end">
+      
+      <a 
+      target="_blank"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeIJYitUiRWOANo04GwFIfYINEu5NUUI6oYXUtmQzu0jfYvJw/viewform">
+<button class="btn btn-dark font-2 fs-3"> Leave a review</button>
+
+      </a>
+      </div>
     </div>
   </div>
 </template>

@@ -13,10 +13,9 @@ class DbContext {
   NewsLetters = mongoose.model("NewsLetter", NewsLetterSchema);
   Contacts = mongoose.model("Contact", ContactSchema);
   Retreats = mongoose.model("Retreat", RetreatSchema);
-  Uploads = mongoose.model('Upload',UploadSchema)
-  Events = mongoose.model('Event', EventSchema)
-  Schedules = mongoose.model('Schedule', ScheduleSchema)
-  
+  Uploads = mongoose.model("Upload", UploadSchema);
+  Events = mongoose.model("Event", EventSchema);
+  Schedules = mongoose.model("Schedule", ScheduleSchema);
 }
 
 export const dbContext = new DbContext();

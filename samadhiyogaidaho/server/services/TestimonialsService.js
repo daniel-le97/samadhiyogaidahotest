@@ -41,6 +41,4 @@ class TestimonialsService {
   }
 }
 
-
-
 export const testimonialsService = new TestimonialsService();

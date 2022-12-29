@@ -15,7 +15,7 @@
                   required
                   v-model="editable.title"
                 />
-                <label for="title">Title</label>
+                <label for="title">Title*</label>
               </div>
             </div>
             <div class="col-md-6">
@@ -29,7 +29,7 @@
                   required
                   v-model="editable.location.place"
                 />
-                <label for="location">Location</label>
+                <label for="location">Location*</label>
               </div>
             </div>
           </div>
@@ -41,11 +41,11 @@
                   class="form-control"
                   name="date"
                   id="date"
-                  placeholder="Date"
+                  placeholder="Date*"
                   required
                   v-model="editable.startDate"
                 />
-                <label for="date">StartDate</label>
+                <label for="date">StartDate*</label>
               </div>
               <div class="form-floating mb-3">
                 <input
@@ -53,11 +53,11 @@
                   class="form-control"
                   name="time"
                   id="time"
-                  placeholder="Time"
+                  placeholder="Time*"
                   required
                   v-model="editable.endDate"
                 />
-                <label for="time">endDate</label>
+                <label for="time">EndDate*</label>
               </div>
             </div>
             <div class="col-md-4">
@@ -67,11 +67,11 @@
                   class="form-control"
                   name="cost"
                   id="cost"
-                  placeholder=""
+                  placeholder="cost*"
                   required
                   v-model="editable.cost"
                 />
-                <label for="cost">Cost</label>
+                <label for="cost">Cost*</label>
               </div>
             </div>
           </div>
@@ -103,19 +103,19 @@
                   required
                   v-model="editable.location.address"
                 />
-                <label for="location">Address</label>
+                <label for="location">Address*</label>
               </div>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
             <textarea
               class="form-control"
               name="description"
               id="description"
               rows="6"
               required
+              placeholder="Description*"
               v-model="editable.description"
             ></textarea>
           </div>

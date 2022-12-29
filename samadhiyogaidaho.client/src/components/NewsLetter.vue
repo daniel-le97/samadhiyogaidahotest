@@ -31,7 +31,7 @@
                 id=""
                 v-model="editable.email"
                 class="form-control rounded-pill p-3 mx-2 border-0 bg-white"
-                placeholder="Enter email address"
+                placeholder="Email*"
               />
               <div class="">
                 <button
