@@ -3,7 +3,7 @@ import { eventsService } from "../services/EventsService.js";
 // import { newsLetterService } from "../services/NewsLetterService.js";
 import BaseController from "../utils/BaseController.js";
 import { testimonialsService } from "../services/TestimonialsService.js";
-export class testimonialsController extends BaseController {
+export class TestimonialsController extends BaseController {
   constructor() {
     super("api/testimonials");
     this.router
