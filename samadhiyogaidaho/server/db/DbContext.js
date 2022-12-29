@@ -20,7 +20,5 @@ class DbContext {
   Schedules = mongoose.model('Schedule', ScheduleSchema)
   FAQs = mongoose.model("FAQ" , FAQSchema)
   Testimonials = mongoose.model("Testimonial" , TestimonialSchema)
-  
 }
-
 export const dbContext = new DbContext();

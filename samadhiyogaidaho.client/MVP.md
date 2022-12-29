@@ -31,4 +31,4 @@
 - still need to fix email config
 
 ### misc
-- add appstate.FAQS and testimonials to pocket or mongo
+
