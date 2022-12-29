@@ -12,16 +12,13 @@ class TestimonialsService {
   async deleteTestimonial(userId, testimonialId) {
     await getAdmins(userId);
     const testimonial = await this.getTestimonialById(testimonialId);
-    // @ts-ignore
     await testimonial.remove();
     return testimonial;
-    //
   }
   async createTestimonial(testimonialData, userId) {
     await getAdmins(userId);
     testimonialData.creatorId = userId;
     const testimonial = await dbContext.Testimonials.create(testimonialData);
-    // populate
     return testimonial;
   }
   async getTestimonialById(id) {
@@ -34,9 +31,8 @@ class TestimonialsService {
   async updateTestimonial(testimonialId, testimonialData, userId) {
     await getAdmins(userId);
     let testimonial = await this.getTestimonialById(testimonialId);
-
     await update(testimonialData, testimonial);
-    await testimonial.save();
+    await testimonial.save()
     return testimonial;
   }
 }
