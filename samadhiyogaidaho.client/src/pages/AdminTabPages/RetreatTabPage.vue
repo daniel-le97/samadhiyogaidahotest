@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid" v-if="!activeRetreat">
     <div class="row">
-      <div class="col-12">
-        <button @click="form = !form" class="btn btn-primary">
-          add an event
+      <div class="col-12 mt-2">
+        <button @click="form = !form" class="btn btn-outline-success font-2 fs-3">
+         Create Retreat
         </button>
         <RetreatForm v-if="form" />
       </div>
@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col-12 my-5" v-for="r in retreats">
         <div class="mb-3">
-          <button class="btn btn-outline-warning font-2 fs-3" @click="editRetreat(r)">edit retreat</button>
+          <button class="btn btn-outline-warning font-2 fs-3 me-2" @click="editRetreat(r)">edit retreat</button>
           <button class="btn btn-outline-danger font-2 fs-3">delete retreat</button>
         </div>
         <RetreatCard :retreat="r"  />

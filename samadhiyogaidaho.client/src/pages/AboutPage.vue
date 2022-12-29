@@ -45,14 +45,11 @@
               serene atmosphere.
             </p>
             <p class="fs-5">
-              Physical and mental wellbeing are of utmost importance to living a
-              healthy life and require practice and dedication.
+           Samadhi is the Sanskrit word for the state in which individual and universal consciousness unite. It is a blissful form of total meditative absorption, reached once the practitioner has moved through the preliminary steps on Patanjal’s eightfold path.
+
+The spiritual significance of Samadhi is profound, since it encompasses self-realization and symbolizes the ultimate connection with the Divine.
             </p>
-            <p class="my-3 fs-5">
-              Our Small Business provides the setting and guidance you need to
-              strengthen your body, mind and soul. All you have to do is show up
-              and breathe.
-            </p>
+           
           </div>
         </div>
         <div class="col-md-6 d-flex align-items-center justify-content-center">

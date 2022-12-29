@@ -1,5 +1,11 @@
 <template>
   <swiper
+  
+  :autoplay="{
+      delay: 2500,
+      disableOnInteraction: false,
+    }"
+  :grabCursor="true"
     :pagination="true" :modules="modules" class="mySwiper fluid bg-transparent"
     v-motion-pop-visible-once
    
@@ -56,6 +62,7 @@ import {
   EffectCreative,
   Pagination,
   Navigation,
+  Autoplay
 } from "swiper";
 import { AppState } from "../../AppState.js";
 
@@ -67,7 +74,7 @@ export default {
   setup() {
     return {
       testimonials:computed(() => AppState.testimonials),
-      modules: [EffectCoverflow, Pagination, EffectCreative, Navigation],
+      modules: [EffectCoverflow, Pagination, EffectCreative, Navigation,Autoplay],
     };
   },
 };

@@ -511,6 +511,7 @@ export default {
       allRetreats: computed(() => AppState.retreats),
       setActiveImage(image) {
         AppState.activeImage = image;
+        console.log(AppState.activeImage);
       },
     };
   },
@@ -572,7 +573,7 @@ object-position: center;
 }
 
 .masonry2 {
-  columns: 6;
+  columns: 4;
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
     columns: 1;

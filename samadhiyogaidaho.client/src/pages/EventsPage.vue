@@ -17,19 +17,19 @@
     </div>
 
     
-    <div class="container">
+    <div class="container mt-5">
       <div class="row justify-content-center">
-        <div class="col-md-10">
-          <p class="fs-4 text-start">
+        <div class="col-md-10 text-center">
+          <p class="fs-4 ">
             We have been working hard behind the scenes getting several classes
             and events set up for 2023! <br />
             Space will be extremely limited at each event, So please DM us today
             or call the Grove Fitness Club & Spa to sign up.
             <br />
 
-            Our pop up schedule for 2023 will be posted soon so you can have an
-            idea and plan for events you’d like to attend next year.
+        
           </p>
+          <p class="fs-4 text-pink darken-20">    Our pop up schedule for 2023 will be posted soon.</p>
         </div>
       </div>
     </div>

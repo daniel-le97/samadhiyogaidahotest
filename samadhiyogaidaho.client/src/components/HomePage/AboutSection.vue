@@ -1,102 +1,98 @@
 <template>
-<div >
-      <div class="container position-relative py-5 ">
-        <div class="floating-image-1 d-none d-md-block">
-          <PersonComponent />
-        </div>
-        <div class="row">
-          <div class="col-md-8 team-section-title d-flex d-md-block flex-column  align-items-sm-center  justify-content-sm-center">
-            <h1
-              v-motion-slide-visible-once-left
-              class="display-2 font-1 underline text-start text-dark"
-            >
-              Katie Alverson
-            </h1>
-            <h2
-              v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start"
-            >
-              Experienced
-            </h2>
+  <div>
+    <div class="container position-relative py-5">
+      <div class="floating-image-1 d-none d-md-block">
+        <PersonComponent />
+      </div>
+      <div class="row">
+        <div
+          class="col-md-8 team-section-title d-flex d-md-block flex-column align-items-sm-center justify-content-sm-center"
+        >
+          <h1
+            v-motion-slide-visible-once-left
+            class="display-2 font-1 underline text-start text-dark"
+          >
+            Katie Alverson
+          </h1>
+          <h2
+            v-motion-slide-visible-once-left
+            class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start"
+          >
+            Experienced
+          </h2>
 
-            <h2
-              v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20 text-center  text-md-start me-md-2"
-            >
-              Qualified
-            </h2>
+          <h2
+            v-motion-slide-visible-once-left
+            class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start me-md-2"
+          >
+            Qualified
+          </h2>
 
-            <h2
-              v-motion-slide-visible-once-left
-              class="display-6 font-2 underline text-lightPink darken-20  text-center text-md-start"
-            >
-              Passionate
-            </h2>
-          </div>
+          <h2
+            v-motion-slide-visible-once-left
+            class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start"
+          >
+            Passionate
+          </h2>
         </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="row  gy-5 justify-content-center">
-          <div class="col-md-6  d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row gy-5 justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
           <div class="card framed border-0">
             <div class="image-box">
-                <img
-          
-              src="../../assets/img/KatiePortrait.png"
-              alt="Katie Alverson"
-              class="img-fluid elevation-6 rounded  "
-            />
-            </div>
-          </div>
-          </div>
-          <div class="col-md-6">
-            <h6 class="mb-0 fs-4 fw-bold text-center">
-              Founder, Owner, Teacher
-            </h6>
-            <p class="text-start fs-4 font-2">
-              I believe that to question, to inquire, to seek understanding is a
-              core part of what it means to be human. Whether its at home or
-              away on a retreat, they are always inspired by the experiences of
-              life. the core of a healthy person is in the wellbeing of their
-              body, mind, and soul.
-            </p>
-
-            <div class="text-center">
               <img
-                src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg"
-                alt=""
-                width="150"
-                height="150"
-                class="rounded-circle elevation-6"
+                src="../../assets/img/KatiePortrait.png"
+                alt="Katie Alverson"
+                class="img-fluid elevation-6 rounded"
               />
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-center justify-content-md-end">
-          <router-link
-            :to="{ name: 'About' }"
-            class="my-3"
-          >
-         <button class="btn btn-dark font-2 fs-3">   Learn more about Katie</button>
-          </router-link>
+        <div class="col-md-6">
+          <h6 class="mb-0 fs-4 fw-bold text-center">Founder, Owner, Teacher</h6>
+          <p class="text-start fs-4 font-2">
+            I believe that to question, to inquire, to seek understanding is a
+            core part of what it means to be human. Whether its at home or away
+            on a retreat, they are always inspired by the experiences of life.
+            the core of a healthy person is in the wellbeing of their body,
+            mind, and soul.
+          </p>
+
+          <div class="text-center">
+            <img
+              src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg"
+              alt=""
+              width="150"
+              height="150"
+              class="rounded-circle elevation-6"
+            />
+          </div>
         </div>
       </div>
-</div>
+      <div class="d-flex justify-content-center justify-content-md-end">
+        <router-link :to="{ name: 'About' }" class="my-3">
+          <button class="btn btn-dark font-2 fs-3">
+            Learn more about Katie
+          </button>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
-
 
 <script>
 import PersonComponent from "../MiscComponents/PersonComponent.vue";
 
 export default {
-    setup() {
-        return {};
-    },
-    components: { PersonComponent }
-}
+  setup() {
+    return {};
+  },
+  components: { PersonComponent },
+};
 </script>
-
 
 <style lang="scss" scoped>
 .floating-image-1 {
@@ -115,5 +111,4 @@ export default {
     height: 300px;
   }
 }
-
 </style>

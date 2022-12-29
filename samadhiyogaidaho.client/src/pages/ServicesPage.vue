@@ -98,22 +98,26 @@
         <div class="row call-to-action">
           <div class="col-md-12 text-center">
             <p class="display-3 text-dark font-1 underline">YOGA SERVICES</p>
-            <p class="fs-3 text-pink darken-20 font-2">
+            <!-- <p class="fs-3 text-pink darken-20 font-2">
               Yoga teaches one how to live in harmony with the universe as well
               as unity with the mind, body, and spirit. It's not about how fast
               or well you can hold a pose it's about feeling each pose and each
               breath.
-            </p>
+            </p> -->
             <p class="fs-4">
               Our yoga services are architected for those seeking balance and
               peace in their everyday life, without rush or worry about
               perfection of technique but taking you into the present moment.
-              <br />
-              <b>All you have to do is show up and breath.</b>
+               for individuals wanting to grow their own practice, whether their goal be flexibility, enlightenment, better mental health, enrich their yoga journey, or to begin their yoga journey.
+            
+             
+            </p>
+            <p class="fs-4 text-pink darken-20">
+               All you have to do is show up and breath.
             </p>
           </div>
         </div>
-        <div class="row private-lesson">
+        <div class="row group-workshops">
           <div class="col-md-6">
             <div class="card border-0 elevation-6">
               <div class="image-box border-0">
@@ -243,7 +247,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.private-lesson{
+.group-workshops{
  
   @media only screen and (min-width: 768px){
     margin-top: 2.5rem;

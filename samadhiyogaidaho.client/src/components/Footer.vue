@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <section class="mt-5">
+      <!-- <section class="mt-5">
    
         <div class="row text-center d-flex justify-content-center pt-5">
     
@@ -67,7 +67,7 @@
  
         </div>
 
-      </section>
+      </section> -->
       <!-- Section: Links -->
 
   
@@ -84,7 +84,7 @@
       </section>
       <!-- Section: Text -->
 <section class="text-center my-3">
-<a href="mailto:samadhiyogaidaho@gmail.com" class="text-dark font-2 fs-4">samadhiyogaidaho@gmail.com</a>
+<a href="mailto:samadhiyogaidaho@gmail.com" class="text-dark font-2 fs-4 media-icon">samadhiyogaidaho@gmail.com</a>
 <p class="fs-5">208-670-4139</p>
 </section>
       <!-- Section: Social -->
@@ -161,7 +161,7 @@ export default {
   transition: all 0.25s ease;
 }
 .media-icon:hover{
-  color: rgb(201, 192, 192);
+  color: #f68b59 !important;
   transition: all 0.25s ease;
 }
 .newsletter-img{
