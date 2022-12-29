@@ -76,16 +76,5 @@ class PocketBaseService {
     logger.log(collections)
     AppState.collections = collections
   }
-
-  async transfer(){
-    let transfer = AppState.testimonials
-    let response = []
-    for await(const item of transfer) {
-      const res = await api.post("/api/testimonials", item)
-      logger.log(res.data)
-      response.push(res.data)
-    }
-    logger.log(response)
-  }
 }
 export const pocketBaseService = new PocketBaseService();

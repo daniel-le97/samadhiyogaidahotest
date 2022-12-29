@@ -30,11 +30,6 @@
         <img :src="upload" alt="" width="500" height="500" />
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <button @click="sendToDb()">send</button>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -98,16 +93,6 @@ export default {
           Pop.error(error);
         }
       },
-      async sendToDb(){
-        try {
-           const { pocketBaseService } = await import(
-            "../../services/PocketBaseService.js"
-          );
-            await pocketBaseService.transfer()
-          } catch (error) {
-            Pop.error(error)
-          }
-      }
     };
   },
 };
