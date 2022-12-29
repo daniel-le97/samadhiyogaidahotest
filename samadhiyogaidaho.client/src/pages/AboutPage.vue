@@ -107,6 +107,7 @@ The spiritual significance of Samadhi is profound, since it encompasses self-rea
         </div>
 
         <div class="col-md-12 my-5">
+          <p class="fs-5"> I would love nothing more to connect with like minded people to </p>
 <p class="fs-1"> WORK WITH ME</p>
         </div>
       </div>
