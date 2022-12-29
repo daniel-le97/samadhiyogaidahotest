@@ -17,7 +17,6 @@ class TestimonialsService {
   }
   async createTestimonial(testimonialData, userId) {
     await getAdmins(userId);
-    testimonialData.creatorId = userId;
     const testimonial = await dbContext.Testimonials.create(testimonialData);
     return testimonial;
   }

@@ -32,7 +32,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <button @click="sendToDb()"></button>
+        <button @click="sendToDb()">send</button>
       </div>
     </div>
   </div>
