@@ -8,6 +8,7 @@ import { UploadSchema } from "../models/Upload.js";
 import { ValueSchema } from "../models/Value";
 import { ScheduleSchema } from "../models/Schedule.js";
 import { FAQSchema } from "../models/FAQ";
+import { TestimonialSchema } from "../models/Testimonial";
 class DbContext {
   Values = mongoose.model("Value", ValueSchema);
   Account = mongoose.model("Account", AccountSchema);
@@ -18,6 +19,7 @@ class DbContext {
   Events = mongoose.model('Event', EventSchema)
   Schedules = mongoose.model('Schedule', ScheduleSchema)
   FAQs = mongoose.model("FAQ" , FAQSchema)
+  Testimonials = mongoose.model("Testimonial" , TestimonialSchema)
   
 }
 
