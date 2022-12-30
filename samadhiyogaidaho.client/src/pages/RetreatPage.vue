@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="retreat">
     <section>
       <div class="tsparticles">
         <ParticleComponent />
@@ -22,8 +22,8 @@
           Escape the hustle and bustle of everyday life and enrich it with a new
           experience
         </p>
+        <HeroImageDivider />
       </div>
-      <HeroImageDivider />
     </section>
 
     <section>
@@ -293,7 +293,7 @@
               <div class="text-center">
                 <p class="fs-1 font-1 underline">Daily Schedule</p>
               </div>
-              <div class="">
+              <div >
                 <p class="fs-5 text-start">
                   {{ retreat?.schedule?.description }}
                 </p>
@@ -303,9 +303,9 @@
                 v-if="retreat?.activities"
               >
                 <div class="col-md-6">
-                  <div class="card border-0 elevation-orange p-2">
+                  <div class="card border-0 elevation-orange p-2 ">
                     <div class="card-body">
-                      <p class="fs-4 text-decoration-underline">
+                      <p class="fs-4 text-decoration-underline text-center">
                         Optional Activities
                       </p>
                       <ul>
@@ -382,7 +382,10 @@
             <div class="">
               <!-- Some borders are removed -->
               <ul class="list-group list-group-flush">
-                <li class="list-group-item hover-image font-2 fs-5" v-for="h in retreat.highlights">
+                <li
+                  class="list-group-item hover-image font-2 fs-5"
+                  v-for="h in retreat.highlights"
+                >
                   {{ h }}
                 </li>
               </ul>
@@ -442,6 +445,7 @@
     </section>
     <!--!Archived Retreats-->
   </div>
+  <LoadingComponent v-else/>
 </template>
 
 <script>
@@ -502,7 +506,7 @@ export default {
     ParticleComponent,
     ArchivedRetreat,
     HeroImageDivider,
-  },
+},
 };
 </script>
 
@@ -516,6 +520,13 @@ export default {
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
     width: 100%;
+  }
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 1202px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 978px) {
+    height: 75%;
   }
 }
 .feature-image {
@@ -562,24 +573,20 @@ export default {
   height: 650px;
 }
 
-
-
 /* List */
 ul {
-  counter-reset: index;  
+  counter-reset: index;
   padding: 0;
-
 }
 
 /* List element */
 li {
-  counter-increment: index; 
+  counter-increment: index;
   display: flex;
   align-items: center;
   padding: 12px 0;
   box-sizing: border-box;
 }
-
 
 /* Element counter */
 li::before {
@@ -597,12 +604,8 @@ li::before {
   -webkit-text-fill-color: transparent;
 }
 
-
 /* Element separation */
 li + li {
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-
-
 </style>

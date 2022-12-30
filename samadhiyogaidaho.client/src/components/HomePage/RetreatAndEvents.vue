@@ -2,7 +2,8 @@
   <div class="container-md container-fluid py-5">
     <div class="mb-5 text-center ">
       <h1
-        v-motion-slide-visible-once-left
+       v-motion-slide-visible-once-bottom
+          :delay="300"
         class="display-1 font-1 text-start text-dark underline"
       >
         Our Retreats

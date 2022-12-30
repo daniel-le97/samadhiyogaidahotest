@@ -21,8 +21,8 @@
           <li>
             <router-link
               :to="{ name: 'Home' }"
-              v-motion-pop
-              :delay="300"
+              v-motion-slide-bottom
+          :delay="300"
               class="nav-link"
               title="home"
             >
@@ -32,8 +32,8 @@
           <li class="">
             <router-link
               :to="{ name: 'About' }"
-              v-motion-pop
-              :delay="300"
+              v-motion-slide-bottom
+          :delay="300"
               class="nav-link"
               title="about"
             >
@@ -43,8 +43,8 @@
           <li>
             <router-link
               :to="{ name: 'Retreats' }"
-              v-motion-pop
-              :delay="300"
+              v-motion-slide-bottom
+          :delay="300"
               class="nav-link"
             >
               Retreats
@@ -53,8 +53,8 @@
           <li>
             <router-link
               :to="{ name: 'Services' }"
-              v-motion-pop
-              :delay="300"
+              v-motion-slide-bottom
+          :delay="300"
               class="nav-link"
               title="services"
             >
@@ -78,8 +78,8 @@
           <li>
             <router-link
               :to="{ name: 'Events' }"
-              v-motion-pop
-              :delay="300"
+               v-motion-slide-bottom
+          :delay="300"
               class="nav-link"
               title="events"
             >
@@ -90,8 +90,8 @@
             <a
               href="https://blogs.samadhiyogaidaho.com/"
               target="_blank"
-              v-motion-pop
-              :delay="300"
+              v-motion-slide-bottom
+          :delay="300"
               class="nav-link"
               title="blog"
             >
@@ -102,8 +102,8 @@
           <li>
             <router-link
               :to="{ name: 'FAQ' }"
-              v-motion-pop
-              :delay="300"
+             v-motion-slide-bottom
+          :delay="300"
               class="nav-link"
               title="FAQ"
             >
@@ -113,8 +113,8 @@
           <li>
             <router-link
               :to="{ name: 'Contact' }"
-              v-motion-pop
-              :delay="300"
+               v-motion-slide-bottom
+          :delay="300"
               class="nav-link"
               title="connect"
             >

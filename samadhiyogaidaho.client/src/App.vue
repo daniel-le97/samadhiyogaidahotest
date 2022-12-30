@@ -3,8 +3,7 @@
     <Navbar class="d-none fixed-top d-md-flex" id="nav" v-if="!routeAdmin" />
   </header>
   <main>
-    <router-view />
-  
+    <router-view   />
   </main>
   <Navbar class="d-block fixed-bottom d-md-none" id="nav" v-if="!routeAdmin" />
 
@@ -30,11 +29,14 @@ export default {
   setup() {
     onMounted(() => {
       hideOnScrollTest();
-      getRetreats()
+      getRetreats();
     });
+    
+  
+
     async function getRetreats() {
       try {
-        await retreatsService.getAllRetreats()
+        await retreatsService.getAllRetreats();
       } catch (error) {
         Pop.error(error, "[getRetreats]");
       }

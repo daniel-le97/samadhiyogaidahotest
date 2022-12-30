@@ -16,14 +16,15 @@
           >
             Frequently Asked Questions
           </h1>
-          <p 
+          <p
             v-motion-slide-top
-              :delay="400"
-          class="font-2 text-light text-shadow display-6">
+            :delay="400"
+            class="font-2 text-light text-shadow display-6"
+          >
             How can we help you?
           </p>
         </div>
-        <HeroImageDivider/>
+        <HeroImageDivider />
       </div>
     </section>
 
@@ -32,33 +33,57 @@
         <div
           class="col-md-8 d-flex justify-content-center flex-column align-content-center align-items-center"
         >
-          <blockquote class="font-1 quote text-center">
+          <blockquote
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            class="font-1 quote text-center"
+          >
             On an inhale, think of the things that are no longer serving you,
             whatever that may be. Maybe it’s a thought Maybe it’s a feeling
             Maybe it’s a person Or an experience But taking it, And on an
             exhale, choosing consciously to let it go.
           </blockquote>
-          <cite>- SamadhiYogaIdaho</cite>
+          <cite v-motion-slide-visible-once-bottom :delay="300"
+            >- SamadhiYogaIdaho</cite
+          >
         </div>
       </div>
       <div class="row my-5">
         <div class="col-md-6">
-          <p class="fs-2 text-center">Frequently Asked Questions</p>
+          <p
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            class="fs-2 text-center"
+          >
+            Frequently Asked Questions
+          </p>
         </div>
         <div class="col-md-6">
-          <p class="fs-5">
+          <p v-motion-slide-visible-once-bottom :delay="300" class="fs-5">
             Got a question? W're here to answer! if you don't see your question
-            here, drop us a line on our <a href="/contact" class="text-pink darken-20">Connect Page.</a>
+            here, drop us a line on our
+            <a href="/contact" class="text-pink darken-20">Connect Page.</a>
           </p>
         </div>
         <div class="col-md-12 text-center">
-          <img src="../assets/img/FAQ.svg" alt="" class="w-50" />
+          <img
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            src="../assets/img/FAQ.svg"
+            alt=""
+            class="w-50"
+          />
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-md-12">
           <div class="accordion" id="faqAccordion">
-            <div class="accordion-item border-0" v-for="(faq, index) in QA">
+            <div
+              v-motion-slide-visible-once-bottom
+              :delay="300"
+              class="accordion-item border-0"
+              v-for="(faq, index) in QA"
+            >
               <h2
                 class="accordion-header border-0"
                 :id="`heading${index.toString()}`"
@@ -109,21 +134,21 @@
 <script>
 import { AppState } from "../AppState.js";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
-import { computed,onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
-import { faqsService} from "../services/FAQsService.js"
+import { faqsService } from "../services/FAQsService.js";
 import { logger } from "../utils/Logger.js";
 export default {
   setup() {
-    onMounted(()=>{
-      getFAQs()
-    })
-    async function getFAQs(){
+    onMounted(() => {
+      getFAQs();
+    });
+    async function getFAQs() {
       try {
-          await  faqsService.getFAQs()
-        } catch (error) {
-        logger.error(error,'GetFAQS')
-        }
+        await faqsService.getFAQs();
+      } catch (error) {
+        logger.error(error, "GetFAQS");
+      }
     }
     return {
       QA: computed(() => AppState.FAQS),
@@ -149,8 +174,4 @@ export default {
     font-size: 16px;
   }
 }
-
-
-
-
 </style>

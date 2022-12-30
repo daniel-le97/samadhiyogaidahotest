@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <section id="Hero-Section">
       <div class="position-relative px-0">
         <div class="tsparticles">
@@ -10,7 +10,7 @@
         >
           <div style="margin-top: 80px" class="text-shadow container">
             <h1
-         v-motion-slide-top
+              v-motion-slide-top
               :delay="200"
               class="display-2 text-light font-1 text-center"
             >
@@ -57,6 +57,7 @@
       </div>
     </section>
   </div>
+  <!-- <LoadingComponent /> -->
 </template>
 
 <script>
@@ -70,13 +71,16 @@ import Pop from "../utils/Pop.js";
 import { onMounted } from "vue";
 import InstagramFeed from "../components/HomePage/InstagramFeed.vue";
 import { scheduleService } from "../services/ScheduleService.js";
-
+import { computed } from "@vue/reactivity";
 import { pocketBaseService } from "../services/PocketBaseService.js";
+import LoadingComponent from "../components/LoadingComponent.vue";
+import { AppState } from "../AppState.js";
 export default {
   setup() {
     onMounted(() => {
       getYogaSchedules();
     });
+let rest = true
     async function getYogaSchedules() {
       try {
         await scheduleService.getSchedules();
@@ -86,7 +90,10 @@ export default {
       }
     }
 
-    return {};
+    return {
+      rest,
+      schedules: computed(() => AppState.schedules),
+    };
   },
   components: {
     SwiperComponent2,
@@ -102,7 +109,6 @@ export default {
     RetreatAndEvents: defineAsyncComponent(() =>
       import("../components/HomePage/RetreatAndEvents.vue")
     ),
-
     ScheduleSection: defineAsyncComponent(() =>
       import("../components/HomePage/ScheduleSection.vue")
     ),
@@ -111,6 +117,7 @@ export default {
       import("../components/HomePage/AboutSection.vue")
     ),
     InstagramFeed,
+    LoadingComponent,
   },
 };
 </script>

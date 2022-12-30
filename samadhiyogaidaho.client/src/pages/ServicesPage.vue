@@ -24,7 +24,7 @@
           Enrich your life and deepen your practice
         </h4>
       </div>
-      <HeroImageDivider/>
+      <HeroImageDivider />
     </section>
 
     <!-- <section>
@@ -98,29 +98,41 @@
       <div class="container" style="">
         <div class="row call-to-action">
           <div class="col-md-12 text-center">
-            <p class="display-3 text-dark font-1 underline">YOGA SERVICES</p>
+            <p 
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="display-3 text-dark font-1 underline" >YOGA SERVICES</p>
             <!-- <p class="fs-3 text-pink darken-20 font-2">
               Yoga teaches one how to live in harmony with the universe as well
               as unity with the mind, body, and spirit. It's not about how fast
               or well you can hold a pose it's about feeling each pose and each
               breath.
             </p> -->
-            <p class="fs-4">
+            <p 
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="fs-4">
               Our yoga services are architected for those seeking balance and
               peace in their everyday life, without rush or worry about
               perfection of technique but taking you into the present moment.
-               for individuals wanting to grow their own practice, whether their goal be flexibility, enlightenment, better mental health, enrich their yoga journey, or to begin their yoga journey.
-            
-             
+              for individuals wanting to grow their own practice, whether their
+              goal be flexibility, enlightenment, better mental health, enrich
+              their yoga journey, or to begin their yoga journey.
             </p>
-            <p class="fs-4 text-pink darken-20">
-               All you have to do is show up and breath.
+            <p 
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="fs-4 text-pink darken-20">
+              All you have to do is show up and breath.
             </p>
           </div>
         </div>
         <div class="row group-workshops">
           <div class="col-md-6">
-            <div class="card border-0 elevation-6">
+            <div 
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="card border-0 elevation-6">
               <div class="image-box border-0">
                 <img
                   src="../assets/img/servicePhoto1.png"
@@ -131,10 +143,16 @@
             </div>
           </div>
           <div class="col-md-6">
-            <p class="fs-2 fw-bold text-center">
+            <p 
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="fs-2 fw-bold text-center">
               Private classes & Workshops for groups
             </p>
-            <p class="fs-5 text-start">
+            <p
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="fs-5 text-start">
               One of our favorite things to do at Samadhi Yoga Is to host
               private classes & Workshops for groups .We got to lead the amazing
               @onlyjewel personal training group through a 90 minute flow.<br />
@@ -146,7 +164,10 @@
               together.
               <br />
             </p>
-            <div class="card border-0 bg-pink elevation-7">
+            <div 
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="card border-0 bg-pink elevation-7">
               <div class="card-body">
                 <p class="fs-4">
                   If you have a group of people you’re interested in getting
@@ -157,19 +178,28 @@
                 </p>
               </div>
               <div class="d-flex justify-content-center">
-                <button class="btn btn-dark fs-4 font-2">
+                <button 
+                              v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="btn btn-dark fs-4 font-2">
                   Start booking your private event here
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="row ">
+        <div class="row">
           <div class="col-md-6">
-            <p class="fs-2 fw-bold text-center mt-3">
+            <p
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="fs-2 fw-bold text-center mt-3">
               Why would someone want a private yoga lesson?
             </p>
-            <p class="fs-5 text-start">
+            <p 
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="fs-5 text-start">
               It’s an opportunity for so many things. To improve your practice,
               to improve your postures and make sure they’re anatomically
               correct, to work more in-depth on a certain area, and so much
@@ -184,27 +214,42 @@
             </p>
             <div class="card border-0 bg-pink elevation-7">
               <div class="card-body">
-                <p class="fs-5">Interested in your own private yoga lesson?</p>
-                <p>
+                <p
+                              v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="fs-5">Interested in your own private yoga lesson?</p>
+                <p
+                              v-motion-slide-visible-once-bottom
+          :delay="300"
+                >
                   Katie Alverson Hosts Sessions at the Grove for 90$/Hour or 45$
                   for 1/2 Hour
                 </p>
 
-                <p>
+                <p
+                              v-motion-slide-visible-once-bottom
+          :delay="300"
+                >
                   She also provides At Home Visits for 100$ within an 20 mile
                   radius and an additional $0.50 for every mile extending that
                   radius
                 </p>
               </div>
               <div class="d-flex justify-content-center">
-                <button class="btn btn-dark fs-4 font-2">
+                <button 
+                              v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="btn btn-dark fs-4 font-2">
                   Start your private lesson journey here
                 </button>
               </div>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card">
+            <div 
+                          v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="card">
               <div class="image-box">
                 <img
                   src="../assets/img/PrivateLesson.png"
@@ -218,42 +263,31 @@
       </div>
     </section>
 
-
-
-
-      <section id="Video-Section">
-        <YouTubeSection />
-      </section>
-  
+    <section id="Video-Section">
+      <YouTubeSection />
+    </section>
   </div>
 </template>
 
 <script>
-
 import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 
 import YouTubeSection from "../components/ServicesPage/YouTubeSection.vue";
 
 export default {
-
   setup() {
-
-    return {
- 
-    };
+    return {};
   },
   components: { YouTubeSection, ParticleComponent, HeroImageDivider },
 };
 </script>
 
 <style lang="scss" scoped>
-
-.group-workshops{
- 
-  @media only screen and (min-width: 768px){
+.group-workshops {
+  @media only screen and (min-width: 768px) {
     margin-top: 2.5rem;
-  margin-bottom: 5rem;
+    margin-bottom: 5rem;
   }
 }
 .call-to-action {

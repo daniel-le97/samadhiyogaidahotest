@@ -71,7 +71,7 @@
         <div
           class="card border-0 elevation-7 bg-pink p-2"
     v-motion-slide-visible-once-bottom
-          :delay="600"
+          :delay="800"
         >
           <div class="card-title font-2 fs-3 text-center">
             Pranayama & Meditation

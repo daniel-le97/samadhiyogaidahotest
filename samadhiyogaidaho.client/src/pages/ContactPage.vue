@@ -11,62 +11,88 @@
           class="text-center text-shadow container d-flex flex-column justify-content-center align-items-center"
         >
           <h1
-            v-motion
-            :initial="{ opacity: 0, y: -100 }"
-            :enter="{ opacity: 1, y: 0, scale: 1 }"
-            :variants="{ custom: { scale: 2 } }"
+            v-motion-slide-top
             :delay="200"
             class="display-1 text-light font-1 page-title"
           >
             CONNECT
           </h1>
-          <p class="font-2 text-light text-shadow display-6">
+          <p
+            v-motion-slide-top
+            :delay="400"
+            class="font-2 text-light text-shadow display-6"
+          >
             Stay in touch and be part of our community
           </p>
         </div>
-        <HeroImageDivider/>
+        <HeroImageDivider />
       </div>
     </section>
 
     <section class="container mt-5">
       <div class="row justify-content-center">
-          <div
+        <div
           class="col-md-8 d-flex justify-content-center flex-column align-content-center align-items-center"
         >
-          <blockquote class="font-1 quote text-center ">
+          <blockquote
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            class="font-1 quote text-center"
+          >
             On an inhale, think of the things that are no longer serving you,
             whatever that may be. Maybe it’s a thought Maybe it’s a feeling
             Maybe it’s a person Or an experience But taking it, And on an
             exhale, choosing consciously to let it go.
           </blockquote>
-          <cite>- SamadhiYogaIdaho</cite>
+          <cite v-motion-slide-visible-once-bottom :delay="300"
+            >- SamadhiYogaIdaho</cite
+          >
         </div>
       </div>
-      <div class="row justify-content-center mt-5 ">
+      <div class="row justify-content-center mt-5">
         <div class="col-md-8 text-center">
-       <p class="display-4">   We'd <i class="mdi mdi-heart-outline display-3 text-pink darken-20" />  to help!</p>
-       <p class="fs-5"> We like to create experiences with fun, open-minded people. Feel free to say hello!</p>
+          <p v-motion-slide-visible-once-bottom :delay="300" class="display-4">
+            We'd
+            <i class="mdi mdi-heart-outline display-3 text-pink darken-20" /> to
+            help!
+          </p>
+          <p v-motion-slide-visible-once-bottom :delay="300" class="fs-5">
+            We like to create experiences with fun, open-minded people. Feel
+            free to say hello!
+          </p>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-md-12 my-3">
-         <ContactForm/>
+        <div
+          v-motion-slide-visible-once-bottom
+          :delay="300"
+          class="col-md-12 my-3"
+        >
+          <ContactForm />
         </div>
       </div>
     </section>
     <section class="container-fluid my-5 bg-pink">
       <div class="row">
-        <div class="col-md-6  p-5">
-          <p class="display-4">Contact Us Directly or Visit Our Studio</p>
-          <p>
+        <div class="col-md-6 p-5">
+          <p v-motion-slide-visible-once-bottom :delay="300" class="display-4">
+            Contact Us Directly or Visit Our Studio
+          </p>
+          <p v-motion-slide-visible-once-bottom :delay="300">
             <i class="mdi mdi-map-marker fs-3"></i> Address: 2414 Sydney Street
             Chattanooga, TN 37408
           </p>
-          <p><i class="mdi mdi-phone fs-3"></i> Phone Number: (423) 531.6977</p>
-          <p><i class="mdi mdi-email fs-3"></i> E-mail: info@yogalanding.net</p>
+          <p v-motion-slide-visible-once-bottom :delay="300">
+            <i class="mdi mdi-phone fs-3"></i> Phone Number: (423) 531.6977
+          </p>
+          <p v-motion-slide-visible-once-bottom :delay="300">
+            <i class="mdi mdi-email fs-3"></i> E-mail: info@yogalanding.net
+          </p>
         </div>
         <div class="col-md-6 p-0">
           <img
+            v-motion-slide-visible-once-bottom
+            :delay="300"
             src="https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             alt=""
             class="img-fluid"
@@ -84,16 +110,13 @@ import ParticleComponent from "../components/MiscComponents/ParticleComponent.vu
 
 export default {
   setup() {
-
-    return {
-    };
+    return {};
   },
   components: { ParticleComponent, ContactForm, HeroImageDivider },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .hero-image {
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */

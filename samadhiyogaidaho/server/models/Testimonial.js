@@ -4,7 +4,7 @@ const ObjectId = mongoose.Types.ObjectId;
 
 export const TestimonialSchema = new Schema(
   {
-    rating: { type: String, required: true },
+    rating: { type: Number, required: true },
     text: { type: String, required: true },
     name: { type: String, required: true },
   },

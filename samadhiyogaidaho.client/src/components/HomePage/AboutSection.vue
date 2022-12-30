@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="container position-relative py-5">
-      <div class="floating-image-1 d-none d-md-block">
+      <div 
+         v-motion-slide-visible-once-bottom
+          :delay="300"
+      class="floating-image-1 d-none d-md-block">
         <PersonComponent />
       </div>
       <div class="row">
@@ -16,24 +19,24 @@
             Katie Alverson
           </h1>
           <h2
-            v-motion-slide-visible-once-left
-            :delay="1200"
+             v-motion-slide-visible-once-bottom
+          :delay="1200"
             class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start"
           >
             Experienced
           </h2>
 
           <h2
-            v-motion-slide-visible-once-left
-            :delay="900"
+             v-motion-slide-visible-once-bottom
+          :delay="900"
             class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start me-md-2"
           >
             Qualified
           </h2>
 
           <h2
-            v-motion-slide-visible-once-left
-            :delay="600"
+             v-motion-slide-visible-once-bottom
+          :delay="300"
             class="display-6 font-2 underline text-lightPink darken-20 text-center text-md-start"
           >
             Passionate
@@ -45,7 +48,10 @@
     <div class="container">
       <div class="row gy-5 justify-content-center">
         <div class="col-md-6 d-flex justify-content-center align-items-center">
-          <div class="card framed border-0">
+          <div 
+             v-motion-slide-visible-once-bottom
+          :delay="300"
+          class="card framed border-0">
             <div class="image-box">
               <img
                 src="../../assets/img/KatiePortrait.png"
@@ -56,8 +62,11 @@
           </div>
         </div>
         <div class="col-md-6">
-          <h6 class="mb-0 fs-4 fw-bold text-center">Founder, Owner, Teacher</h6>
-          <p class="text-start fs-4 font-2">
+       
+          <p 
+             v-motion-slide-visible-once-bottom
+          :delay="300"
+          class="text-start fs-4 font-2">
             I believe that to question, to inquire, to seek understanding is a
             core part of what it means to be human. Whether its at home or away
             on a retreat, they are always inspired by the experiences of life.
@@ -67,6 +76,8 @@
 
           <div class="text-center">
             <img
+               v-motion-slide-visible-once-bottom
+          :delay="600"
               src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg"
               alt=""
               width="150"
@@ -77,7 +88,10 @@
         </div>
       </div>
       <div class="d-flex justify-content-center justify-content-md-end">
-        <router-link :to="{ name: 'About' }" class="my-3">
+        <router-link 
+           v-motion-slide-visible-once-bottom
+          :delay="300"
+        :to="{ name: 'About' }" class="my-3">
           <button class="btn btn-dark font-2 fs-3">
             Learn more about Katie
           </button>

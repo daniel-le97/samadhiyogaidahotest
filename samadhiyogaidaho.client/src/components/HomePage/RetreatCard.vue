@@ -1,5 +1,7 @@
 <template>
   <div
+     v-motion-slide-visible-once-bottom
+          :delay="300"
     class="card elevation-6 text-white text-shadow font-2 border-0 text-uppercase rounded-4"
   >
     <div class="image-box">

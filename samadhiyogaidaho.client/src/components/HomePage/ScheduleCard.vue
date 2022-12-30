@@ -1,5 +1,9 @@
 <template>
-  <div class="mt-4 text-center text-md-start">
+  <div
+    v-motion-slide-visible-once-bottom
+    :delay="300"
+    class="mt-4 text-center text-md-start"
+  >
     <p class="underline fs-2 font-1 border-2 border-bottom text-pink darken-20">
       {{ schedule.title }}
     </p>
@@ -12,12 +16,14 @@
           <a
             :href="schedule.address"
             target="_blank"
-            class="darken-20 text-dark font-2 fs-3 "
+            class="darken-20 text-dark font-2 fs-3"
             title="GoogleMaps Link"
           >
             <i class="mdi mdi-map-marker fs-1 text-pink darken-20"></i
           ></a>
-          <span class="font-2 fs-3 mb-0 d-flex align-items-center"> {{ schedule.location }}</span>
+          <span class="font-2 fs-3 mb-0 d-flex align-items-center">
+            {{ schedule.location }}</span
+          >
         </div>
       </div>
     </div>
@@ -25,7 +31,6 @@
 </template>
 
 <script>
-import { onMounted, ref, watchEffect } from "vue";
 import { Schedule } from "../../models/Schedule.js";
 
 export default {
@@ -33,7 +38,6 @@ export default {
     schedule: { type: Schedule, required: true },
   },
   setup(props) {
-    onMounted(() => {});
 
     return {};
   },

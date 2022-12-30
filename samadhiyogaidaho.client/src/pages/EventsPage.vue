@@ -26,7 +26,10 @@
     <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-10 text-center">
-          <p class="fs-4 ">
+          <p 
+                        v-motion-slide-visible-once-bottom
+          :delay="300"
+          class="fs-4 ">
             We have been working hard behind the scenes getting several classes
             and events set up for 2023! <br />
             Space will be extremely limited at each event, So please DM us today
@@ -35,15 +38,18 @@
 
         
           </p>
-          <p class="fs-4 text-pink darken-20">    Our pop up schedule for 2023 will be posted soon.</p>
+          <p
+                        v-motion-slide-visible-once-bottom
+          :delay="300"
+          class="fs-4 text-pink darken-20">    Our pop up schedule for 2023 will be posted soon.</p>
         </div>
       </div>
     </div>
 
     <div class="container my-5">
       <div
-        v-motion-slide-visible-bottom
-        :delay="200"
+                    v-motion-slide-visible-once-bottom
+          :delay="200"
         v-for="e in events"
         :key="e.id"
       >

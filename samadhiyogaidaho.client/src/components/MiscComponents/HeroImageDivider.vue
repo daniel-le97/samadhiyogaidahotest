@@ -25,6 +25,18 @@ export default {
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    //when screen is 768px OR LESS
+    @media only screen and (max-width: 1280px){
+        bottom: -18px;
+    }
+    //when screen is 768px OR LESS
+    @media only screen and (max-width: 1510px){
+      bottom: 0px;
+    }
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+      bottom: 5px;
+  }
 }
 
 .custom-shape-divider-bottom-1672343325 svg {

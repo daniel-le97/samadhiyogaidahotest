@@ -65,13 +65,26 @@ import {
   Autoplay
 } from "swiper";
 import { AppState } from "../../AppState.js";
+import { testimonialsService } from "../../services/TestimonialsService.js";
+import { onMounted } from "vue";
 
 export default {
+
   components: {
     Swiper,
     SwiperSlide,
   },
   setup() {
+    onMounted(()=>{
+      getTestimonials()
+    })
+    async function getTestimonials(){
+      try {
+          await testimonialsService.getTestimonials()
+        } catch (error) {
+          Pop.error(error,'[getTestimonials]')
+        }
+    }
     return {
       testimonials:computed(() => AppState.testimonials),
       modules: [EffectCoverflow, Pagination, EffectCreative, Navigation,Autoplay],

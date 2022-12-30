@@ -3,10 +3,16 @@
     <div class="row justify-content-center">
       <div class="row justify-content-center">
         <div class="col-md-12 text-center">
-          <p class="display-3 font-1 underline">ONLINE OFFERINGS</p>
+          <p 
+                        v-motion-slide-visible-once-bottom
+          :delay="300"
+          class="display-3 font-1 underline">ONLINE OFFERINGS</p>
         </div>
         <div class="col-md-8">
-          <p class="font-2 fs-4">
+          <p 
+                        v-motion-slide-visible-once-bottom
+          :delay="300"
+          class="font-2 fs-4">
             Starting in 2022 I began recording a mix of Online class series, and
             recorded content that can be accessed on your own time. Our online
             offerings are to meant to help you experience the beauty and art of
@@ -14,7 +20,10 @@
             own home and integrate it into your daily life.
           </p>
          <div class="text-center">
-           <p class="font-2 fs-4 text-pink darken-20">
+           <p 
+                         v-motion-slide-visible-once-bottom
+          :delay="300"
+           class="font-2 fs-4 text-pink darken-20">
             There Will be a new video every two weeks!
           </p>
          </div>
@@ -22,7 +31,10 @@
       </div>
 
       <div class="col-md-12 my-4">
-        <div id="curator-feed-default-feed-layout">
+        <div 
+                      v-motion-slide-visible-once-bottom
+          :delay="300"
+        id="curator-feed-default-feed-layout">
           <a
             href="https://curator.io"
             target="_blank"
