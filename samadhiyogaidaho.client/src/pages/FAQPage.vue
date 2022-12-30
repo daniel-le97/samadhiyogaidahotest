@@ -1,31 +1,37 @@
 <template>
   <div>
     <section id="hero-section">
-      <div
-        class="hero-image d-flex flex-column align-items-center justify-content-center"
-      >
-        <div class="tsparticles">
-          <ParticleComponent />
+       <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 p-0">
+              <div
+                class="hero-image d-flex flex-column align-items-center justify-content-center"
+              >
+                <div class="tsparticles">
+                  <ParticleComponent />
+                </div>
+                <div class="text-center container">
+                  <h1
+                    v-motion-slide-top
+                    :delay="200"
+                    id="shadow1"
+                    class="font-1 text-shadow page-title text-light"
+                  >
+                    Frequently Asked Questions
+                  </h1>
+                  <p
+                    v-motion-slide-top
+                    :delay="400"
+                    class="font-2 text-light text-shadow display-6"
+                  >
+                    How can we help you?
+                  </p>
+                </div>
+                <HeroImageDivider />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="text-center container">
-          <h1
-            v-motion-slide-top
-            :delay="200"
-            id="shadow1"
-            class="font-1 text-shadow page-title text-light"
-          >
-            Frequently Asked Questions
-          </h1>
-          <p
-            v-motion-slide-top
-            :delay="400"
-            class="font-2 text-light text-shadow display-6"
-          >
-            How can we help you?
-          </p>
-        </div>
-        <HeroImageDivider />
-      </div>
     </section>
 
     <section id="accordion-faq" class="container my-5">

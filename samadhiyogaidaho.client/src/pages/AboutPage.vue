@@ -1,30 +1,36 @@
 <template>
   <div class="about-page">
     <section>
-      <div
-        class="heroImage d-flex flex-column align-items-center justify-content-center"
-      >
-        <div class="tsparticles">
-          <ParticleTest />
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <div
+              class="heroImage d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="tsparticles">
+                <ParticleTest />
+              </div>
+              <div class="text-center">
+                <h1
+                  v-motion-slide-top
+                  :delay="200"
+                  id="shadow1"
+                  class="font-1 text-shadow page-title courgette fw-bolder text-light"
+                >
+                  OUR STORY
+                </h1>
+                <p
+                  v-motion-slide-top
+                  :delay="400"
+                  class="display-6 font-2 text-shadow"
+                >
+                  Why we came to build SamadhiYogaIdaho
+                </p>
+              </div>
+              <HeroImageDivider />
+            </div>
+          </div>
         </div>
-        <div class="text-center">
-          <h1
-            v-motion-slide-top
-            :delay="200"
-            id="shadow1"
-            class="font-1 text-shadow page-title courgette fw-bolder text-light"
-          >
-            OUR STORY
-          </h1>
-          <p
-            v-motion-slide-top
-            :delay="400"
-            class="display-6 font-2 text-shadow"
-          >
-            Why we came to build SamadhiYogaIdaho
-          </p>
-        </div>
-        <HeroImageDivider />
       </div>
     </section>
 
@@ -32,11 +38,7 @@
       <div class="row gy-5 justify-content-center">
         <div class="col-md-10 text-center">
           <div class=" ">
-            <p
-              v-motion-slide-visible-once-bottom
-              :delay="300"
-              class=" fs-5"
-            >
+            <p v-motion-slide-visible-once-bottom :delay="300" class="fs-5">
               Back in 2013, our founder took her first yoga class in the hopes
               of finding some healing. Almost 10 years later, she took the
               initiative to receive her 200-hour training and found her passion
@@ -132,11 +134,7 @@
           </div>
         </div>
 
-        <div
-          class="col-md-6 "
-          v-motion-slide-visible-once-bottom
-          :delay="300"
-        >
+        <div class="col-md-6" v-motion-slide-visible-once-bottom :delay="300">
           <p class="fs-1 font-1">Work With Me</p>
           <p class="fs-5">
             That’s a little about me, thanks for taking the time to get to know

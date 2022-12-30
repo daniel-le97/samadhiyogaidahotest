@@ -1,29 +1,36 @@
 <template>
   <div v-if="retreat">
     <section>
-      <div class="tsparticles">
-        <ParticleComponent />
-      </div>
-      <div
-        class="hero-image text-center d-flex flex-column justify-content-center align-content-center"
-      >
-        <h1
-          v-motion-slide-top
-          :delay="200"
-          class="font-1 text-shadow text-light page-title"
-        >
-          RETREATS
-        </h1>
-        <p
-          v-motion-slide-top
-          :delay="400"
-          class="display-6 font-2 text-shadow text-center"
-        >
-          Escape the hustle and bustle of everyday life and enrich it with a new
-          experience
-        </p>
-        <HeroImageDivider />
-      </div>
+       <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 p-0">
+              <div class="tsparticles">
+                <ParticleComponent />
+              </div>
+              <div
+                class="hero-image text-center d-flex flex-column justify-content-center align-content-center"
+              >
+                <h1
+                  v-motion-slide-top
+                  :delay="200"
+                  class="font-1 text-shadow text-light page-title"
+                >
+                  RETREATS
+                </h1>
+                <p
+                  v-motion-slide-top
+                  :delay="400"
+                  class="display-6 font-2 text-shadow text-center"
+                >
+                  Escape the hustle and bustle of everyday life and enrich it with a new
+                  experience
+                </p>
+                <HeroImageDivider />
+              </div>
+            </div>
+          </div>
+        </div>
+                
     </section>
 
     <section>

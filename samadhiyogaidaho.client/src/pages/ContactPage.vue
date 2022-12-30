@@ -1,31 +1,37 @@
 <template>
   <div>
     <section>
-      <div
-        class="hero-image position-relative d-flex flex-column justify-content-center align-items-center"
-      >
-        <div class="tsparticles">
-          <ParticleComponent />
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <div
+              class="hero-image position-relative d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="tsparticles">
+                <ParticleComponent />
+              </div>
+              <div
+                class="text-center text-shadow container d-flex flex-column justify-content-center align-items-center"
+              >
+                <h1
+                  v-motion-slide-top
+                  :delay="200"
+                  class="display-1 text-light font-1 page-title"
+                >
+                  CONNECT
+                </h1>
+                <p
+                  v-motion-slide-top
+                  :delay="400"
+                  class="font-2 text-light text-shadow display-6"
+                >
+                  Stay in touch and be part of our community
+                </p>
+              </div>
+              <HeroImageDivider />
+            </div>
+          </div>
         </div>
-        <div
-          class="text-center text-shadow container d-flex flex-column justify-content-center align-items-center"
-        >
-          <h1
-            v-motion-slide-top
-            :delay="200"
-            class="display-1 text-light font-1 page-title"
-          >
-            CONNECT
-          </h1>
-          <p
-            v-motion-slide-top
-            :delay="400"
-            class="font-2 text-light text-shadow display-6"
-          >
-            Stay in touch and be part of our community
-          </p>
-        </div>
-        <HeroImageDivider />
       </div>
     </section>
 
@@ -75,16 +81,28 @@
     <section class="container-fluid my-5 bg-pink">
       <div class="row">
         <div class="col-md-6 p-5">
-          <p v-motion-slide-visible-once-bottom :delay="300" class="display-4 text-center">
+          <p
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            class="display-4 text-center"
+          >
             Contact Us Directly or Visit Our Studio
           </p>
 
-          <p v-motion-slide-visible-once-bottom :delay="300" class="text-center text-md-start">
+          <p
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            class="text-center text-md-start"
+          >
             <a href="tel:208-670-4139" class="text-dark font-2 email-phone">
               <i class="mdi mdi-phone fs-3"></i> 208-670-4139</a
             >
           </p>
-          <p v-motion-slide-visible-once-bottom :delay="300" class="text-center text-md-start">
+          <p
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            class="text-center text-md-start"
+          >
             <a
               href="mailto:samadhiyogaidaho@gmail.com"
               class="text-dark font-2 email-phone"

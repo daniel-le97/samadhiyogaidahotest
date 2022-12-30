@@ -1,30 +1,37 @@
 <template>
   <div>
     <section>
-      <div class="tsparticles">
-        <ParticleComponent />
-      </div>
-      <div
-        class="hero-image d-flex justify-content-center align-items-center flex-column"
-      >
-        <div class="px-5">
-          <h1
-            v-motion-slide-top
-            :delay="200"
-            class="page-title font-1 text-light text-shadow text-center"
-          >
-            Take A Moment For Yourself
-          </h1>
+       <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 p-0">
+              <div class="tsparticles">
+                <ParticleComponent />
+              </div>
+              <div
+                class="hero-image d-flex justify-content-center align-items-center flex-column"
+              >
+                <div class="px-5">
+                  <h1
+                    v-motion-slide-top
+                    :delay="200"
+                    class="page-title font-1 text-light text-shadow text-center"
+                  >
+                    Take A Moment For Yourself
+                  </h1>
+                </div>
+                <h4
+                  v-motion-slide-top
+                  :delay="400"
+                  class="font-2 display-6 text-light text-shadow text-center"
+                >
+                  Enrich your life and deepen your practice
+                </h4>
+              </div>
+              <HeroImageDivider />
+            </div>
+          </div>
         </div>
-        <h4
-          v-motion-slide-top
-          :delay="400"
-          class="font-2 display-6 text-light text-shadow text-center"
-        >
-          Enrich your life and deepen your practice
-        </h4>
-      </div>
-      <HeroImageDivider />
+        
     </section>
 
     <!-- <section>

@@ -1,55 +1,59 @@
 <template>
   <div>
- 
-    <div
-      class="hero-image d-flex flex-column justify-content-center align-items-center"
-    >
-       <div class="tsparticles">
-      <ParticleComponent />
-    </div>
-      <h1
-        v-motion-slide-top
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 p-0">
+          <div
+            class="hero-image d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="tsparticles">
+              <ParticleComponent />
+            </div>
+            <h1
+              v-motion-slide-top
               :delay="200"
-        class="display-1 text-light text-shadow font-1 text-wrap page-title text-center"
-      >
-        EVENTS
-      </h1>
-      <p
-        v-motion-slide-top
-              :delay="400" class="font-2 text-light text-shadow display-6 text-center">
-        Enjoy an enriching and memorable experience
-      </p>
-      <HeroImageDivider/>
+              class="display-1 text-light text-shadow font-1 text-wrap page-title text-center"
+            >
+              EVENTS
+            </h1>
+            <p
+              v-motion-slide-top
+              :delay="400"
+              class="font-2 text-light text-shadow display-6 text-center"
+            >
+              Enjoy an enriching and memorable experience
+            </p>
+            <HeroImageDivider />
+          </div>
+        </div>
+      </div>
     </div>
 
-    
     <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-10 text-center">
-          <p 
-                        v-motion-slide-visible-once-bottom
-          :delay="300"
-          class="fs-4 ">
+          <p v-motion-slide-visible-once-bottom :delay="300" class="fs-4">
             We have been working hard behind the scenes getting several classes
             and events set up for 2023! <br />
             Space will be extremely limited at each event, So please DM us today
             or call the Grove Fitness Club & Spa to sign up.
             <br />
-
-        
           </p>
           <p
-                        v-motion-slide-visible-once-bottom
-          :delay="300"
-          class="fs-4 text-pink darken-20">    Our pop up schedule for 2023 will be posted soon.</p>
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            class="fs-4 text-pink darken-20"
+          >
+            Our pop up schedule for 2023 will be posted soon.
+          </p>
         </div>
       </div>
     </div>
 
     <div class="container my-5">
       <div
-                    v-motion-slide-visible-once-bottom
-          :delay="200"
+        v-motion-slide-visible-once-bottom
+        :delay="200"
         v-for="e in events"
         :key="e.id"
       >
@@ -73,7 +77,6 @@ import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue"
 
 export default {
   setup() {
-
     onMounted(() => {
       getEvents();
     });
@@ -86,7 +89,6 @@ export default {
       }
     }
     return {
-  
       events: computed(() => AppState.events),
     };
   },
