@@ -1,41 +1,42 @@
 <template>
   <div>
     <section id="Hero-Section">
-      <div class="position-relative px-0">
-        <div class="tsparticles">
-          <ParticleComponent />
-        </div>
-        <div
-          class="hero-image d-flex flex-column justify-content-center align-items-center"
-        >
-          <div style="margin-top: 80px" class="text-shadow container">
-            <h1
-              v-motion-slide-top
-              :delay="200"
-              class="display-2 text-light font-1 text-center"
-            >
-              SAMADHI YOGA IDAHO
-            </h1>
-            <h5
-              v-motion-slide-top
-              :delay="400"
-              class="fs-2 font-2 text-light text-uppercase text-center"
-            >
-              <br />
-              Become aware of your capacity to create <br />
-              to be authentic in every day life <br />
-              to transform & to love
-            </h5>
+       <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 p-0">
+              <div class="position-relative px-0">
+                <div class="tsparticles">
+                  <ParticleComponent />
+                </div>
+                <div
+                  class="hero-image d-flex flex-column justify-content-center align-items-center"
+                >
+                  <div style="margin-top: 80px" class="text-shadow container">
+                    <h1
+                      v-motion-slide-top
+                      :delay="200"
+                      class="display-2 text-light font-1 text-center"
+                    >
+                      SAMADHI YOGA IDAHO
+                    </h1>
+                    <h5
+                      v-motion-slide-top
+                      :delay="400"
+                      class="fs-2 font-2 text-light text-uppercase text-center"
+                    >
+                      <br />
+                      Become aware of your capacity to create <br />
+                      to be authentic in every day life <br />
+                      to transform & to love
+                    </h5>
+                  </div>
+                </div>
+                <GentleWave />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <GentleWave />
-          </div>
-        </div>
-      </div>
+        
     </section>
 
     <section id="Call-To-Action-Section" class="my-5">
