@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <section id="Hero-Section">
       <div class="position-relative px-0">
         <div class="tsparticles">
@@ -29,7 +29,13 @@
           </div>
         </div>
       </div>
-      <GentleWave />
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <GentleWave />
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="Call-To-Action-Section" class="my-5">
@@ -80,7 +86,7 @@ export default {
     onMounted(() => {
       getYogaSchedules();
     });
-let rest = true
+    let rest = true;
     async function getYogaSchedules() {
       try {
         await scheduleService.getSchedules();
