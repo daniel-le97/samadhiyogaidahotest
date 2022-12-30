@@ -28,7 +28,6 @@
 - styles
 
 ### blog (ghost)
-- still need to fix email config
 
 ### misc
 
