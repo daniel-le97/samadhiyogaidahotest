@@ -27,8 +27,8 @@
                   Why we came to build SamadhiYogaIdaho
                 </p>
               </div>
-              <HeroImageDivider />
             </div>
+            <HeroImageDivider />
           </div>
         </div>
       </div>
