@@ -1,7 +1,7 @@
 <template>
   <div
     v-motion-pop-visible-once
-    class="container mt-5 image d-flex align-items-center rounded flex-column justify-content-center"
+    class="container mt-md-5 image d-flex align-items-center rounded flex-column justify-content-center"
   >
     <form @submit.prevent="handleSubmit()">
       <div class="container mailing-list my-2">

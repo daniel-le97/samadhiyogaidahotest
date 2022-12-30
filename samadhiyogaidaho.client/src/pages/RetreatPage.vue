@@ -108,6 +108,7 @@
             </div>
           </div>
         </div>
+     <!-- SECTION Collapse Featured Images -->
               <div class="mt-3 sticky-top d-flex justify-content-end">
             <button
               class="btn btn-dark font-2 fs-3 sticky-top"
@@ -140,12 +141,13 @@
               </div>
             </div>
           </div>
+     <!-- !Collapse Featured Images -->
       </div>
     </section>
 
     <section>
       <div class="container my-5">
-        <div class="row">
+        <div class="row gy-5">
           <div class="col-md-6">
             <div class="card elevation-7 border-0 rounded-4 p-3">
               <div class="d-flex">
@@ -306,7 +308,7 @@
                 v-if="retreat?.activities"
               >
                 <div class="col-md-6">
-                  <div class="card border-0 elevation-orange p-2">
+                  <div class="card border-0 p-2">
                     <div class="card-body">
                       <p class="fs-4 text-decoration-underline text-center">
                         Optional Activities
@@ -331,7 +333,7 @@
           <div class="row gy-3">
             <div class="col-md-5">
               <div class="text-center" v-motion-slide-visible-once-left>
-                <p class="fs-1 mb-0 underline">Food</p>
+                <p class="fs-1 mb-0 underline font-1">Food</p>
                 <p class="fs-2 text-lightPink darken-20 font-2">
                   Featuring {{ retreat?.food?.chef }}
                 </p>
@@ -354,7 +356,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
-            <h1 v-motion-slide-visible-once-top class="fs-1 font-2 underline">
+            <h1 v-motion-slide-visible-once-top class="fs-1 font-1 underline">
               Accommodations
             </h1>
             <p v-motion-slide-visible-once-top class="fs-5 text-center">
@@ -374,8 +376,18 @@
     <section>
       <div class="container my-5">
         <div class="row gy-3">
-          <div class="col-md-12 text-center">
-            <h1 v-motion-slide-visible-once-left class="fs-1 font-2 underline">
+          
+          <div class="col-md-6">
+<div class="text-center">
+  <p class="font-1 fs-3">HighLights</p>
+</div>
+<ul class="">
+  <li class="font-2 fs-5" v-for="h in retreat?.highlights"> {{ h }} </li>
+
+</ul>
+          </div>
+          <div class="col-md-6 text-center">
+            <h1 v-motion-slide-visible-once-left class="fs-1 font-1 underline">
               FAQS
             </h1>
             <div
@@ -544,6 +556,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.page-title{
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  font-size: 5rem;
+  }
+}
+
 .location-img {
   object-fit: cover;
 }
@@ -559,13 +578,10 @@ export default {
   @media only screen and (max-width: 1202px) {
     width: 100%;
   }
-  @media only screen and (max-width: 978px) {
-    height: 75%;
-  }
+
 }
 .feature-image {
   object-fit: cover;
-  object-position: center;
   object-position: center;
   height: 300px;
 }
@@ -573,13 +589,7 @@ export default {
   object-fit: cover;
   object-position: center;
 }
-.parallax {
-  background-size: cover;
-  height: 40vh;
-  background-position: center;
-  background-image: url(https://images.unsplash.com/photo-1576191919769-40424bb34367?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80);
-  background-attachment: fixed;
-}
+
 
 .hero-image {
   height: 100vh;

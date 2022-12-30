@@ -2,7 +2,7 @@
   <swiper
   
   :autoplay="{
-      delay: 2500,
+      delay: 5000,
       disableOnInteraction: false,
     }"
   :grabCursor="true"
@@ -19,26 +19,27 @@
             <img
               src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
               alt=""
-              class="elevation-6 img-fluid forcedImg"
+              class="elevation-6 img-fluid forcedImg d-none d-md-block"
             />
       
           </div>
 
-          <div class="d-flex justify-content-center mt-2">
+       
+          <div
+            class="  text-center px-5 pb-3 d-flex flex-column align-items-center justify-content-center "
+          >
+                <h1 class="mb-0 fs-4 fw-bold mt-3 font-1"> {{t.name  }} </h1>
+                   <div class="d-flex justify-content-center mt-2">
             <i
               class="mdi mdi-star stars text-warning text-shadow"
               v-for="i in t.rating"
             ></i>
             
           </div>
-          <div
-            class="text-center px-5 pb-3 d-flex flex-column align-items-center justify-content-center "
-          >
-                <h1 class="mb-0 fs-4 fw-bold mt-3"> {{t.name  }} </h1>
-            <p class="text-center fs-4">
+            <p class="text-center testimonial-text ">
               <i class="mdi mdi-format-quote-open text-dark fs-3"></i>
               {{ t.text }}
-              <i class="mdi mdi-format-quote-close text-dark fs-4"></i>
+              <i class="mdi mdi-format-quote-close text-dark fs-3"></i>
             </p>
           </div>
         </div>
@@ -94,12 +95,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.testimonial-text{
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  font-size: 16px;
+  }
+}
 .fluid{
   max-width: 100%;
   height: fit-content;
 }
 .mdi-star{
   font-size: 4rem;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  font-size: 1.5rem;
+  }
 }
 .forcedImg {
   height: 200px;

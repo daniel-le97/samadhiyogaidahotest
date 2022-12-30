@@ -14,7 +14,7 @@
           <h1
             v-motion-slide-visible-once-bottom
             :delay="300"
-            class="display-2 font-1 underline text-start text-dark"
+            class="display-2 font-1 underline text-center text-md-start text-dark"
           >
             Katie Alverson
           </h1>

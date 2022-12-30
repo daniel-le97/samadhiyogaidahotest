@@ -5,7 +5,7 @@
     <FooterWave />
     <div class="container">
       <div class="row mt-4">
-        <div class="col-md-12 text-center mb-3">
+        <div class="col-md-12 text-center mb-md-3">
            <p class="fs-2">Stay Connected With Us</p>
            <p class="fs-4">Subscribe to get exclusive updates</p>
         </div>
@@ -73,7 +73,7 @@
   
       <div class="divider div-transparent div-dot my-5"></div>
       <!-- Section: Text -->
-      <section class="mb-5">
+      <section class="mb-md-5">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
             <p>
@@ -83,28 +83,30 @@
         </div>
       </section>
       <!-- Section: Text -->
-<section class="text-center my-3">
-<a href="mailto:samadhiyogaidaho@gmail.com" class="text-dark font-2 fs-4 media-icon">samadhiyogaidaho@gmail.com</a>
-<p class="fs-5">208-670-4139</p>
+<section class="text-center my-md-3">
+<a href="mailto:samadhiyogaidaho@gmail.com" class="text-dark font-2 email-phone ">samadhiyogaidaho@gmail.com</a>
+<br>
+<a href="tel:208-670-4139" class="text-dark font-2 email-phone ">208-670-4139</a>
+
 </section>
       <!-- Section: Social -->
-      <section class="text-center mb-5">
+      <section class="text-center mb-md-5">
         <a
           href="https://www.facebook.com/people/Samadhi-Yoga-Idaho/100083164429288/?fref=nf&paipv=0&eav=AfZsU1GyYC-3TCWawqpkhNjTENoxFcR48yXyJKsoQDuqyKNUkhTIyy2dAGa7wTrD6QQ&_rdr"
           class="text-dark me-4"
           target="_blank"
         >
-          <i class="mdi mdi-facebook fs-1 media-icon "></i>
+          <i class="mdi mdi-facebook media-icon "></i>
         </a>
         <a
           href="https://www.instagram.com/samadhiyogaidaho/"
           class="text-dark me-4"
           target="_blank"
         >
-          <i class="mdi mdi-instagram fs-1 media-icon "></i>
+          <i class="mdi mdi-instagram  media-icon "></i>
         </a>
         <a href="https://www.youtube.com/@Samadhiyogaidaho" class="text-dark me-4" target="_blank">
-          <i class="mdi mdi-youtube fs-1 media-icon "></i>
+          <i class="mdi mdi-youtube media-icon "></i>
         </a>
       </section>
       <!-- Section: Social -->
@@ -130,6 +132,7 @@
       <!-- <a href="https://www.freepik.com">designed by Freepik - Freepik.com</a> -->
     </div>
     <!-- Copyright -->
+    <div class="py-4 bg-peach"></div>
   </footer>
 </template>
 
@@ -157,8 +160,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.email-phone{
+  font-size: 2rem;
+    transition: all 0.25s ease;
+}
+.email-phone:hover{
+    color: #f68b59 !important;
+  transition: all 0.25s ease;
+}
 .media-icon{
   transition: all 0.25s ease;
+    font-size: 2rem;
 }
 .media-icon:hover{
   color: #f68b59 !important;
