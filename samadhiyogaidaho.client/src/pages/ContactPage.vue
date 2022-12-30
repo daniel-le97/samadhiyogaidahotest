@@ -37,7 +37,7 @@
           <blockquote
             v-motion-slide-visible-once-bottom
             :delay="300"
-            class="font-1 quote text-center"
+            class="font-1 text-center"
           >
             On an inhale, think of the things that are no longer serving you,
             whatever that may be. Maybe it’s a thought Maybe it’s a feeling
@@ -75,18 +75,22 @@
     <section class="container-fluid my-5 bg-pink">
       <div class="row">
         <div class="col-md-6 p-5">
-          <p v-motion-slide-visible-once-bottom :delay="300" class="display-4">
+          <p v-motion-slide-visible-once-bottom :delay="300" class="display-4 text-center">
             Contact Us Directly or Visit Our Studio
           </p>
-          <p v-motion-slide-visible-once-bottom :delay="300">
-            <i class="mdi mdi-map-marker fs-3"></i> Address: 2414 Sydney Street
-            Chattanooga, TN 37408
+
+          <p v-motion-slide-visible-once-bottom :delay="300" class="text-center text-md-start">
+            <a href="tel:208-670-4139" class="text-dark font-2 email-phone">
+              <i class="mdi mdi-phone fs-3"></i> 208-670-4139</a
+            >
           </p>
-          <p v-motion-slide-visible-once-bottom :delay="300">
-            <i class="mdi mdi-phone fs-3"></i> Phone Number: (423) 531.6977
-          </p>
-          <p v-motion-slide-visible-once-bottom :delay="300">
-            <i class="mdi mdi-email fs-3"></i> E-mail: info@yogalanding.net
+          <p v-motion-slide-visible-once-bottom :delay="300" class="text-center text-md-start">
+            <a
+              href="mailto:samadhiyogaidaho@gmail.com"
+              class="text-dark font-2 email-phone"
+            >
+              <i class="mdi mdi-email fs-3"></i> samadhiyogaidaho@gmail.com</a
+            >
           </p>
         </div>
         <div class="col-md-6 p-0">

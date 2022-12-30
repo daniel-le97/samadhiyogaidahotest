@@ -16,7 +16,7 @@
       </h1>
       <p
         v-motion-slide-top
-              :delay="400" class="font-2 text-light text-shadow display-6">
+              :delay="400" class="font-2 text-light text-shadow display-6 text-center">
         Enjoy an enriching and memorable experience
       </p>
       <HeroImageDivider/>

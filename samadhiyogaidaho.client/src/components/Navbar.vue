@@ -2,7 +2,7 @@
   <nav
     class="navbar navbar-expand-md navbar-dark text-dark px-3 font-2 nav py-md-2"
   >
-    <div class="d-md-flex mx-auto justify-content-center">
+    <div class="  d-md-flex mx-auto justify-content-center">
       <p class="mb-0">
         <button
           class="navbar-toggler btn-dark text-dark bg-dark"
@@ -16,13 +16,13 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </p>
-      <div class="collapse navbar-collapse" id="navbarText">
+      <div class="collapse navbar-collapse " id="navbarText">
         <ul class="navbar-nav me-auto">
           <li>
             <router-link
               :to="{ name: 'Home' }"
               v-motion-slide-bottom
-          :delay="300"
+              :delay="300"
               class="nav-link"
               title="home"
             >
@@ -33,7 +33,7 @@
             <router-link
               :to="{ name: 'About' }"
               v-motion-slide-bottom
-          :delay="300"
+              :delay="300"
               class="nav-link"
               title="about"
             >
@@ -44,7 +44,7 @@
             <router-link
               :to="{ name: 'Retreats' }"
               v-motion-slide-bottom
-          :delay="300"
+              :delay="300"
               class="nav-link"
             >
               Retreats
@@ -54,7 +54,7 @@
             <router-link
               :to="{ name: 'Services' }"
               v-motion-slide-bottom
-          :delay="300"
+              :delay="300"
               class="nav-link"
               title="services"
             >
@@ -78,8 +78,8 @@
           <li>
             <router-link
               :to="{ name: 'Events' }"
-               v-motion-slide-bottom
-          :delay="300"
+              v-motion-slide-bottom
+              :delay="300"
               class="nav-link"
               title="events"
             >
@@ -91,7 +91,7 @@
               href="https://blogs.samadhiyogaidaho.com/"
               target="_blank"
               v-motion-slide-bottom
-          :delay="300"
+              :delay="300"
               class="nav-link"
               title="blog"
             >
@@ -102,8 +102,8 @@
           <li>
             <router-link
               :to="{ name: 'FAQ' }"
-             v-motion-slide-bottom
-          :delay="300"
+              v-motion-slide-bottom
+              :delay="300"
               class="nav-link"
               title="FAQ"
             >
@@ -113,8 +113,8 @@
           <li>
             <router-link
               :to="{ name: 'Contact' }"
-               v-motion-slide-bottom
-          :delay="300"
+              v-motion-slide-bottom
+              :delay="300"
               class="nav-link"
               title="connect"
             >
@@ -142,6 +142,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .nav-link {
   text-transform: uppercase;
   color: #ffffff;
@@ -161,7 +162,7 @@ export default {
     rgba(0, 0, 0, 0) 100%
   );
   @media only screen and (max-width: 768px) {
-    background: #ffa67cc2;
+    background: #ffa57c7a;
     backdrop-filter: blur(4px);
   }
 }
@@ -172,7 +173,18 @@ export default {
 .logo {
   object-fit: cover;
 }
-
+.navbar-nav{
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+    
+li{
+  justify-content: center;
+  display: flex;
+}
+ 
+  width: 25%;
+  }
+}
 .navbar-nav .router-link-exact-active {
   border-bottom: 4px solid var(--peach);
   border-bottom-left-radius: 0;

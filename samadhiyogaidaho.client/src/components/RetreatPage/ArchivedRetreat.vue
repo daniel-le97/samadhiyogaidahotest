@@ -14,7 +14,7 @@
       <p class="fs-3 text-pink darken-20">{{ retreat.location.address }}</p>
     </div>
 
-    <div class="row my-3">
+    <div class="row my-md-3">
       <div
         @click="setActiveImage(image)"
         data-bs-toggle="modal"

@@ -59,8 +59,8 @@
           </p>
         </div>
         <div class="col-md-6">
-          <p v-motion-slide-visible-once-bottom :delay="300" class="fs-5">
-            Got a question? W're here to answer! if you don't see your question
+          <p v-motion-slide-visible-once-bottom :delay="300" class="fs-5 text-center ">
+            Got a question? We're here to answer! if you don't see your question
             here, drop us a line on our
             <a href="/contact" class="text-pink darken-20">Connect Page.</a>
           </p>
@@ -159,6 +159,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.page-title{
+  font-size: 4.5rem;
+}
 .hero-image {
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */

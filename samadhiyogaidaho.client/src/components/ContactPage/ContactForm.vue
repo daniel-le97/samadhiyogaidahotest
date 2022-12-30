@@ -1,5 +1,5 @@
 <template>
-  <div class="card border-0 square elevation-orange p-3 my-5">
+  <div class="card border-0 square elevation-orange p-3  my-3 my-md-5">
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="card elevation-6">
@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="col-md-6">
-        <div class="my-3 text-center">
+        <div class="my-5 my-md-3 text-center">
           <p class="fw-bold display-6 mb-0">Leave Us A Message</p>
           <p class="fs-4">
             Question? about attending a class, workshop, retreat, private lesson
@@ -108,5 +108,11 @@ export default {
   max-width: 100%;
   height: 650px;
   object-fit: cover;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px) {
+    height: 25%;
+  
+ 
+  }
 }
 </style>

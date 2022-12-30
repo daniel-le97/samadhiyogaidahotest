@@ -1,20 +1,21 @@
 <template>
- 
   <footer class="text-center text-dark footer-image bg-pink position-relative">
-
     <FooterWave />
     <div class="container">
       <div class="row mt-4">
         <div class="col-md-12 text-center mb-md-3">
-           <p class="fs-2">Stay Connected With Us</p>
-           <p class="fs-4">Subscribe to get exclusive updates</p>
+          <p class="fs-2">Stay Connected With Us</p>
+          <p class="fs-4">Subscribe to get exclusive updates</p>
         </div>
         <div class="col-md-6">
           <NewsLetter />
         </div>
         <div class="col-md-6 d-flex justify-content-center align-items-center">
-         
-          <img src="https://img.freepik.com/free-vector/staying-touch-modern-communication-means-phone-calls-letters-emails-person-contacting-friends-customers-via-email-encouraging-feedback-vector-isolated-concept-metaphor-illustration_335657-2779.jpg?w=740&t=st=1671237218~exp=1671237818~hmac=f0cc7d983a1fc1055faa6830d3cb9820f93a12e81969470acf01ae2f51555029" alt="" class="img-fluid newsletter-img rounded-circle elevation-6">
+          <img
+            src="https://img.freepik.com/free-vector/staying-touch-modern-communication-means-phone-calls-letters-emails-person-contacting-friends-customers-via-email-encouraging-feedback-vector-isolated-concept-metaphor-illustration_335657-2779.jpg?w=740&t=st=1671237218~exp=1671237818~hmac=f0cc7d983a1fc1055faa6830d3cb9820f93a12e81969470acf01ae2f51555029"
+            alt=""
+            class="img-fluid newsletter-img rounded-circle elevation-6"
+          />
         </div>
       </div>
 
@@ -70,25 +71,30 @@
       </section> -->
       <!-- Section: Links -->
 
-  
       <div class="divider div-transparent div-dot my-5"></div>
       <!-- Section: Text -->
       <section class="mb-md-5">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
             <p>
-              "Yoga is not about touching your toes, it’s about what you learn on the way down." — Jigar Gor
+              "Yoga is not about touching your toes, it’s about what you learn
+              on the way down." — Jigar Gor
             </p>
           </div>
         </div>
       </section>
       <!-- Section: Text -->
-<section class="text-center my-md-3">
-<a href="mailto:samadhiyogaidaho@gmail.com" class="text-dark font-2 email-phone ">samadhiyogaidaho@gmail.com</a>
-<br>
-<a href="tel:208-670-4139" class="text-dark font-2 email-phone ">208-670-4139</a>
-
-</section>
+      <section class="text-center my-md-3">
+        <a
+          href="mailto:samadhiyogaidaho@gmail.com"
+          class="text-dark font-2 email-phone"
+          >samadhiyogaidaho@gmail.com</a
+        >
+        <br />
+        <a href="tel:208-670-4139" class="text-dark font-2 email-phone"
+          >208-670-4139</a
+        >
+      </section>
       <!-- Section: Social -->
       <section class="text-center mb-md-5">
         <a
@@ -96,17 +102,21 @@
           class="text-dark me-4"
           target="_blank"
         >
-          <i class="mdi mdi-facebook media-icon "></i>
+          <i class="mdi mdi-facebook media-icon"></i>
         </a>
         <a
           href="https://www.instagram.com/samadhiyogaidaho/"
           class="text-dark me-4"
           target="_blank"
         >
-          <i class="mdi mdi-instagram  media-icon "></i>
+          <i class="mdi mdi-instagram media-icon"></i>
         </a>
-        <a href="https://www.youtube.com/@Samadhiyogaidaho" class="text-dark me-4" target="_blank">
-          <i class="mdi mdi-youtube media-icon "></i>
+        <a
+          href="https://www.youtube.com/@Samadhiyogaidaho"
+          class="text-dark me-4"
+          target="_blank"
+        >
+          <i class="mdi mdi-youtube media-icon"></i>
         </a>
       </section>
       <!-- Section: Social -->
@@ -116,7 +126,7 @@
     <p>
       Vector Images by
       <a
-      target="_blank"
+        target="_blank"
         href="https://www.freepik.com/free-vector/organic-flat-people-meditating-illustration_13297280.htm#query=yoga&position=3&from_view=search&track=sph"
         >Freepik</a
       >
@@ -160,24 +170,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.email-phone{
+.email-phone {
   font-size: 2rem;
-    transition: all 0.25s ease;
-}
-.email-phone:hover{
-    color: #f68b59 !important;
   transition: all 0.25s ease;
 }
-.media-icon{
-  transition: all 0.25s ease;
-    font-size: 2rem;
-}
-.media-icon:hover{
+.email-phone:hover {
   color: #f68b59 !important;
   transition: all 0.25s ease;
 }
-.newsletter-img{
+.media-icon {
+  transition: all 0.25s ease;
+  font-size: 2rem;
+}
+.media-icon:hover {
+  color: #f68b59 !important;
+  transition: all 0.25s ease;
+}
+.newsletter-img {
   width: 200px;
   height: 200px;
 }
@@ -206,7 +215,6 @@ export default {
     transparent
   );
 }
-
 
 .div-dot:after {
   content: "";

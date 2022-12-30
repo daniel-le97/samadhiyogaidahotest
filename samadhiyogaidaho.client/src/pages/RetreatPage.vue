@@ -28,24 +28,9 @@
 
     <section>
       <div class="container">
-        <div class="row my-5 justify-content-center">
-          <div
-            class="col-md-6 d-md-flex d-none justify-content-center flex-column align-content-center align-items-center"
-          >
-            <blockquote
-              class="font-1 quote text-center"
-              v-motion-pop-visible-once
-            >
-              On an inhale, think of the things that are no longer serving you,
-              whatever that may be. Maybe it’s a thought Maybe it’s a feeling
-              Maybe it’s a person Or an experience But taking it, And on an
-              exhale, choosing consciously to let it go.
-            </blockquote>
-            <cite v-motion-pop-visible-once>- SamadhiYogaIdaho</cite>
-          </div>
-        </div>
+     
 
-        <div class="row my-4">
+        <div class="row my-5">
           <div class="col-md-12 text-center">
             <h1 class="font-1 text-dark display-4">{{ retreat.title }}</h1>
           </div>
@@ -286,7 +271,7 @@
               </div>
             </div>
           </div>
-          <div class="row my-5 gy-5">
+          <div class="row gy-3 ">
             <div class="col-md-6 d-flex justify-content-center">
               <img
                 :src="retreat?.schedule?.img"
@@ -304,11 +289,11 @@
                 </p>
               </div>
               <div
-                class="row justify-content-center mt-5"
+                class="row justify-content-center mt-md-5"
                 v-if="retreat?.activities"
               >
                 <div class="col-md-6">
-                  <div class="card border-0 p-2">
+                  <div class="card border-0 p-md-2 ">
                     <div class="card-body">
                       <p class="fs-4 text-decoration-underline text-center">
                         Optional Activities
