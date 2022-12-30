@@ -520,6 +520,7 @@ export default {
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
     width: 100%;
+    height: 100%;
   }
   //when screen is 768px OR LESS
   @media only screen and (max-width: 1202px) {
