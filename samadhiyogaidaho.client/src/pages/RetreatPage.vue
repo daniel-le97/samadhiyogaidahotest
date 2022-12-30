@@ -423,7 +423,6 @@
         <div class="row">
           <div class="col-md-12" v-for="a in archived" :key="a.id">
             <ArchivedRetreat  :retreat="a"  />
-
           </div>
         </div>
       </div>
@@ -507,7 +506,8 @@ export default {
     });
     async function getRetreats() {
       try {
-        await retreatsService.getAllRetreats();
+        const hi = "retreatPage"
+        await retreatsService.getAllRetreats(hi);
       } catch (error) {
         Pop.error(error, "[getRetreats]");
       }

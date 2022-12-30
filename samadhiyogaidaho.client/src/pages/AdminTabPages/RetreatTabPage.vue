@@ -51,7 +51,8 @@ export default {
     const form = ref(false);
     async function getRetreats() {
       try {
-        await retreatsService.getAllRetreats();
+        const hi = "adminRetreatPage"
+        await retreatsService.getAllRetreats(hi);
       } catch (error) {
         Pop.error(error);
       }
