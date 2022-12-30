@@ -9,7 +9,7 @@
         Our Retreats
       </h1>
     </div>
-    <div class="row justify-content-center gy-5">
+    <div class="row justify-content-center gy-5" v-if="retreats">
       <div class="col-md-10" v-for="r in retreats" :key="r.id">
         <RetreatCard  :retreat="r" />
       </div>
@@ -22,8 +22,22 @@
 import { AppState } from "../../AppState.js";
 import { computed } from "@vue/reactivity";
 import RetreatCard from "./RetreatCard.vue";
+import { retreatsService } from "../../services/RetreatsService";
+import Pop from "../../utils/Pop";
+import { onMounted } from "vue";
 export default {
     setup() {
+      onMounted(() => {
+        getRetreats()
+      })
+          async function getRetreats() {
+      try {
+        await retreatsService.getAllRetreats()
+      } catch (error) {
+        Pop.error(error, "[getRetreats]");
+      }
+    }
+
         return {
             retreats: computed(() => AppState.retreats.filter(r=> !r.archived)),
         };
