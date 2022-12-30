@@ -17,7 +17,7 @@
 FROM node:16 AS build-env
 
 WORKDIR /app
-RUN rm ./client/assets
+RUN rm /client/assets
 RUN cd ../samadhiyogaidaho.client && npm run build
 COPY ./package*.json ./
 RUN npm install 
