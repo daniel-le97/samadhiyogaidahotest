@@ -1,6 +1,7 @@
 FROM node:16 AS build-env
+WORKDIR /samadhiyogaidaho.client
+RUN npm run build
 WORKDIR /app
-RUN ls && cd samadhiyogaidaho.client && npm run build
 COPY ./package*.json ./
 RUN npm install 
 RUN ls
