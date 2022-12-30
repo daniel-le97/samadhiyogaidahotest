@@ -418,7 +418,16 @@
     <!-- !FAQ/Highlights -->
     <!--SECTION Archived Retreats-->
     <section>
-      <div
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" v-for="a in archived" :key="a.id">
+            <ArchivedRetreat  :retreat="a"  />
+
+          </div>
+        </div>
+      </div>
+      <!-- <div
         class="container mb-5"
         v-for="a in archived"
         style="margin-top: 100px"
@@ -466,7 +475,7 @@
           </div>
         </div>
         <hr />
-      </div>
+      </div> -->
     </section>
     <!--!Archived Retreats-->
   </div>
@@ -485,6 +494,7 @@ import Pop from "../utils/Pop.js";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 import ArchivedRetreat from "../components/RetreatPage/ArchivedRetreat.vue";
 import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
+
 
 export default {
   props: {},
@@ -529,7 +539,7 @@ export default {
     ParticleComponent,
     ArchivedRetreat,
     HeroImageDivider,
-  },
+},
 };
 </script>
 
