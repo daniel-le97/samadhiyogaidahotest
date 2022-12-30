@@ -53,12 +53,15 @@
 
         <div class="row gy-3">
           <div class="col-md-6 text-center">
+          <div class="col-md-6 text-center">
             <div class="card elevation-6 border-0 h-100">
+              <div class="image-box h-100">
               <div class="image-box h-100">
                 <img
                   v-if="retreat"
                   :src="featuredImg1"
                   alt=""
+                  class="rounded-4 elevation-6 feature-image-1 h-100"
                   class="rounded-4 elevation-6 feature-image-1 h-100"
                 />
               </div>
@@ -74,6 +77,7 @@
                       :src="retreat.coverImg"
                       alt=""
                       class="rounded-4 elevation-6 feature-image"
+                      class="rounded-4 elevation-6 feature-image"
                     />
                   </div>
                 </div>
@@ -86,6 +90,7 @@
                       :src="featuredImg2"
                       alt=""
                       class="rounded-4 elevation-6 feature-image"
+                      class="rounded-4 elevation-6 feature-image"
                     />
                   </div>
                 </div>
@@ -93,9 +98,12 @@
               <div class="col-md-6">
                 <div class="card elevation-6 border-0">
                   <div class="image-box">
+                <div class="card elevation-6 border-0">
+                  <div class="image-box">
                     <img
                       :src="featuredImg3"
                       alt=""
+                      class="rounded-4 elevation-6 feature-image"
                       class="rounded-4 elevation-6 feature-image"
                     />
                   </div>
@@ -231,6 +239,7 @@
               <div class="text-center">
                 <router-link :to="{ name: 'Contact' }">
                   <button class="btn btn-dark font-2 lighten-10 fs-3 fw-bold">
+                  <button class="btn btn-dark font-2 lighten-10 fs-3 fw-bold">
                     CONTACT HOST
                   </button>
                 </router-link>
@@ -323,36 +332,35 @@
           </div>
         </div>
       </div>
-    </section>
-    <!--!Location-->
-    <section>
-      <div class="container my-5">
-        <div class="row gy-3">
-          <div class="col-md-5">
-            <div class="text-center" v-motion-slide-visible-once-left>
-              <h1 class="fs-1 mb-0 underline font-1">Food</h1>
-              <p class="fs-2 text-lightPink darken-20 font-2">
-                Featuring {{ retreat?.food?.chef }}
-              </p>
+      <section>
+        <div class="container my-5">
+          <div class="row gy-3">
+            <div class="col-md-5">
+              <div class="text-center" v-motion-slide-visible-once-left>
+                <p class="fs-1 mb-0 underline">Food</p>
+                <p class="fs-2 text-lightPink darken-20 font-2">
+                  Featuring {{ retreat?.food?.chef }}
+                </p>
+              </div>
+              <div class="">
+                <p class="fs-4 text-start">{{ retreat?.food?.description }}</p>
+              </div>
             </div>
-            <div class="">
-              <p class="fs-5 text-start">{{ retreat?.food?.description }}</p>
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div v-motion-slide-visible-once-right>
-              <FoodImageSwiper v-if="retreat?.food?.imgs" />
+            <div class="col-md-7">
+              <div v-motion-slide-visible-once-right>
+                <FoodImageSwiper v-if="retreat?.food?.imgs" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
     <!--SECTION  Accommodations-->
     <section>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-10 text-center">
-            <h1 v-motion-slide-visible-once-top class="fs-1 font-1 underline">
+          <div class="col-md-12 text-center">
+            <h1 v-motion-slide-visible-once-top class="fs-1 font-2 underline">
               Accommodations
             </h1>
             <p v-motion-slide-visible-once-top class="fs-5 text-center">
@@ -372,27 +380,8 @@
     <section>
       <div class="container my-5">
         <div class="row gy-3">
-          <div class="col-md-6">
-            <h1
-              v-motion-slide-visible-once-left
-              class="fs-1 font-1 underline text-center"
-            >
-              Highlights
-            </h1>
-            <div class="">
-              <!-- Some borders are removed -->
-              <ul class="list-group list-group-flush">
-                <li
-                  class="list-group-item hover-image font-2 fs-5"
-                  v-for="h in retreat.highlights"
-                >
-                  {{ h }}
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 text-center">
-            <h1 v-motion-slide-visible-once-left class="fs-1 font-1 underline">
+          <div class="col-md-12 text-center">
+            <h1 v-motion-slide-visible-once-left class="fs-1 font-2 underline">
               FAQS
             </h1>
             <div
@@ -435,12 +424,54 @@
     <!-- !FAQ/Highlights -->
     <!--SECTION Archived Retreats-->
     <section>
-      <div class="container">
+      <div
+        class="container mb-5"
+        v-for="a in archived"
+        style="margin-top: 100px"
+      >
         <div class="row">
-          <div class="col-md-12" v-for="a in archived" :key="a.id">
-            <ArchivedRetreat :retreat="a" />
+          <div class="col-md-12 mb-4 text-center">
+            <p class="display-4 font-1"></p>
+
+            <h1 class="fs-1 font-1 underline mb-0">
+              {{ a.title }} -
+              {{
+                new Date(a.startDate).toLocaleString("default", {
+                  month: "short",
+                })
+              }}, {{ new Date(a.startDate).getFullYear() }}
+            </h1>
+            <p class="fs-3 text-peach">{{ a.location.address }}</p>
+          </div>
+          <div class="col-md-12 mb-4 text-center"></div>
+
+          <div class="container my-4">
+            <div class="">
+              <div
+                @click="setActiveImage(image)"
+                data-bs-toggle="modal"
+                data-bs-target="#activeImage"
+                class="card border-0 elevation-6 bg-transparent my-3 rounded-4"
+                v-for="image in a.featuredImgs"
+              >
+                <img
+                  v-if="image"
+                  :src="image"
+                  alt=""
+                  class="img-fluid hover-image rounded selectable"
+                />
+
+                <img
+                  v-else
+                  src=""
+                  alt=""
+                  class="img-fluid hover-image rounded-4 selectable skeleton-loader"
+                />
+              </div>
+            </div>
           </div>
         </div>
+        <hr />
       </div>
     </section>
     <!--!Archived Retreats-->
@@ -468,15 +499,13 @@ export default {
 
     onMounted(() => {
       // getAllRetreats();
+      getRetreats();
     });
-    async function getAllRetreats() {
+    async function getRetreats() {
       try {
-        if (!AppState.currentRetreat) {
-          console.log(AppState.currentRetreat);
-          await retreatsService.getAllRetreats();
-        }
+        await retreatsService.getAllRetreats();
       } catch (error) {
-        Pop.error(error, "[getCurrentRetreat]");
+        Pop.error(error, "[getRetreats]");
       }
     }
     return {
@@ -532,6 +561,7 @@ export default {
 }
 .feature-image {
   object-fit: cover;
+  object-position: center;
   object-position: center;
   height: 300px;
 }
