@@ -28,12 +28,15 @@
       </div>
     </section>
 
-    <section class="container-fluid mt-5">
-      <div class="row px-md-3 gy-5 justify-content-center">
+    <section class="container mt-5">
+      <div class="row gy-5 justify-content-center">
         <div class="col-md-10 text-center">
-          <div class="justify-content-center p-2">
-            <p       v-motion-slide-visible-once-bottom
-          :delay="300" class="my-3 fs-5">
+          <div class=" ">
+            <p
+              v-motion-slide-visible-once-bottom
+              :delay="300"
+              class=" fs-5"
+            >
               Back in 2013, our founder took her first yoga class in the hopes
               of finding some healing. Almost 10 years later, she took the
               initiative to receive her 200-hour training and found her passion
@@ -44,8 +47,7 @@
               self-reflect and reconnect with themselves in a beautiful and
               serene atmosphere.
             </p>
-            <p class="fs-5"       v-motion-slide-visible-once-bottom
-          :delay="300">
+            <p class="fs-5" v-motion-slide-visible-once-bottom :delay="300">
               Samadhi is the Sanskrit word for the state in which individual and
               universal consciousness unite. It is a blissful form of total
               meditative absorption, reached once the practitioner has moved
@@ -59,11 +61,13 @@
         <div
           class="col-md-6 d-flex justify-content-center align-items-md-start align-items-center"
         >
-          <div class="card framed border-0 sticky-md-top"               v-motion-slide-visible-once-bottom
-          :delay="300">
+          <div
+            class="card framed border-0 sticky-md-top"
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+          >
             <div class="image-box">
               <img
-       
                 src="../assets/img/KatiePortrait.png"
                 alt="Katie Alverson"
                 class="img-fluid elevation-6 rounded"
@@ -73,14 +77,16 @@
         </div>
 
         <div class="col-md-6">
-          <div class=""       v-motion-slide-visible-once-bottom
-          :delay="300">
+          <div class="" v-motion-slide-visible-once-bottom :delay="300">
             <p class="fs-1 font-1 text-center">Katie Alverson</p>
             <p class="fs-4 text-center text-pink darken-20">
               Founder, owner and teacher
             </p>
-            <p class="fs-5 text-start"      v-motion-slide-visible-once-bottom
-          :delay="300">
+            <p
+              class="fs-5 text-start"
+              v-motion-slide-visible-once-bottom
+              :delay="300"
+            >
               Hi there! I'm Katie, and I absolutely love to get to share the
               beauty and peace of yoga with others. After practicing yoga for
               ten years, I decided I wanted to bring yoga to others to enrich
@@ -91,8 +97,11 @@
               if you're lucky, you might catch me singing in savasana at the end
               of your practice.
             </p>
-            <p class="fs-5 text-start"       v-motion-slide-visible-once-bottom
-          :delay="300">
+            <p
+              class="fs-5 text-start"
+              v-motion-slide-visible-once-bottom
+              :delay="300"
+            >
               My favorite thing to do in the world is to put together fully
               inclusive and restorative yoga retreats for people to get to know
               themselves and their bodies better. I have always been a planner.
@@ -104,8 +113,11 @@
               yourself once you accept and practice the eight limbs of yoga in
               your life.
             </p>
-            <p class="fs-5 text-start"       v-motion-slide-visible-once-bottom
-          :delay="300">
+            <p
+              class="fs-5 text-start"
+              v-motion-slide-visible-once-bottom
+              :delay="300"
+            >
               When I’m not teaching yoga, planning retreats, or working at my
               day job in finance, you can catch me spending time with my partner
               and our fur babies either traveling, exploring breweries and
@@ -120,8 +132,11 @@
           </div>
         </div>
 
-        <div class="col-md-6 my-5"       v-motion-slide-visible-once-bottom
-          :delay="300">
+        <div
+          class="col-md-6 "
+          v-motion-slide-visible-once-bottom
+          :delay="300"
+        >
           <p class="fs-1 font-1">Work With Me</p>
           <p class="fs-5">
             That’s a little about me, thanks for taking the time to get to know

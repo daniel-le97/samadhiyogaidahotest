@@ -94,14 +94,14 @@
       </div>
     </div>
   </section> -->
-    <section class="">
-      <div class="container" style="">
-        <div class="row call-to-action">
+    <section class="container mt-5 ">
+   
+        <div class="row my-5">
           <div class="col-md-12 text-center">
             <p
               v-motion-slide-visible-once-bottom
               :delay="300"
-              class="display-3 text-dark font-1 underline mt-5"
+              class="display-3 text-dark font-1 underline"
             >
               YOGA SERVICES
             </p>
@@ -128,7 +128,7 @@
             </p>
           </div>
         </div>
-        <div class="row group-workshops ">
+        <div class="row  my-5">
           <div class="col-md-6">
             <div
               v-motion-slide-visible-once-bottom
@@ -259,7 +259,7 @@
             </div>
           </div>
         </div>
-      </div>
+     
     </section>
 
     <section id="Video-Section">
@@ -283,18 +283,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.group-workshops {
-  @media only screen and (min-width: 768px) {
-    margin-top: 2.5rem;
-    margin-bottom: 5rem;
-  }
-}
-.call-to-action {
-  @media only screen and (min-width: 768px) {
-    margin-top: 2.5rem;
-    margin-bottom: 8rem;
-  }
-}
+
 .hero-image {
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */
