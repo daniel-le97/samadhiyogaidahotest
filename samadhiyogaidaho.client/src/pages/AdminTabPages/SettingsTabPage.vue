@@ -74,22 +74,22 @@ export default {
       async makeActiveCollection(collection) {
         try {
           activeCollection.value.collection = collection;
-          console.log(activeCollection.value.collection);
+       
         } catch (error) {
-          console.error("[]", error);
+       
           Pop.error(error);
         }
       },
       async addCollection() {
         try {
           let name = activeCollection.value.newName;
-          // console.log(activeCollection.value.newName);
+        
           const { pocketBaseService } = await import(
             "../../services/PocketBaseService.js"
           );
           await pocketBaseService.createCollection(name);
         } catch (error) {
-          console.error("[]", error);
+        
           Pop.error(error);
         }
       },

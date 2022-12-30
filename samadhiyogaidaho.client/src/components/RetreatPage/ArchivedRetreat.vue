@@ -19,7 +19,7 @@
         @click="setActiveImage(image)"
         data-bs-toggle="modal"
         data-bs-target="#activeImage"
-        class="col-md-3 border-0 bg-transparent my-3 rounded-4"
+        class="col-4 col-md-3 border-0 bg-transparent my-3 rounded-4"
         v-for="image in retreat.featuredImgs"
       >
         <img
@@ -54,7 +54,7 @@ export default {
     return {
       setActiveImage(image) {
         AppState.activeImage = image;
-        console.log(AppState.activeImage);
+     
       },
     };
   },

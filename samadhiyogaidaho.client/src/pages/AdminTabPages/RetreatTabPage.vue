@@ -69,7 +69,7 @@ export default {
             .toISOString()
             .slice(0, -1);
           AppState.activeRetreat = retreat;
-          console.log(AppState.activeRetreat);
+        
         } catch (error) {
           Pop.error(error);
         }

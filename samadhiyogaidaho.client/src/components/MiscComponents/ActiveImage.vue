@@ -35,6 +35,9 @@ props:{
 .image{
 transform: scale(1.2);
 max-height: 70vh !important;
-
+//when screen is 768px OR LESS
+@media only screen and (max-width: 768px){
+transform: scale(0.8);
+}
 }
 </style>

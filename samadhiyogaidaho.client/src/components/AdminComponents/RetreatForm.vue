@@ -349,7 +349,7 @@ export default {
       async handleEdit() {
         try {
         } catch (error) {
-          console.error("[]", error);
+        
           Pop.error(error);
         }
       },

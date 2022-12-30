@@ -16,11 +16,11 @@ class PocketBaseService {
     record.forEach((r) => {
       test.push(r.url);
     });
-    console.log(test);
+   
   }
 
   async uploadFile(e, collection) {
-   console.log(collection.name);
+ 
     const files = Array.from(e.target.files);
     AppState.loading = files.length;
     for await (const file of files) {

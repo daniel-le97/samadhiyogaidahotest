@@ -175,7 +175,7 @@ export default {
       },
       async handleEdit() {
         try {
-          console.log(editable.value);
+        
           await eventsService.updateEvent(editable.value);
 
           Pop.success("Event Edited");

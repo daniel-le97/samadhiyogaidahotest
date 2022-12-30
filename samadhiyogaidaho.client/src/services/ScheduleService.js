@@ -17,7 +17,7 @@ class ScheduleService {
   }
   async updateSchedule(scheduleData) {
     let id = scheduleData.id;
-console.log(id);
+
     const res = await api.put(`api/schedules/${id}`, scheduleData);
     let updatedSchedule = new Schedule(res.data);
     logger.log(updatedSchedule)

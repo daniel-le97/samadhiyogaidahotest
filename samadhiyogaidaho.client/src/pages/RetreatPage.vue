@@ -528,7 +528,7 @@ export default {
       archived: computed(() => AppState.archivedRetreats),
       setActiveImage(image) {
         AppState.activeImage = image;
-        console.log(AppState.activeImage);
+     
       },
     };
   },

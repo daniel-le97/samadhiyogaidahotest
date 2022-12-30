@@ -87,7 +87,7 @@ export default {
 
       editSchedule(schedule) {
         AppState.activeSchedule = schedule;
-        console.log(AppState.activeSchedule);
+    
       },
 
       async deleteSchedule(s) {
