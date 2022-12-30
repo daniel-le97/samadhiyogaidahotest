@@ -52,20 +52,22 @@
         </div>
 
         <div class="row gy-3">
-          <div class="col-md-6 text-center">
+  
           <div class="col-md-6 text-center">
             <div class="card elevation-6 border-0 h-100">
-              <div class="image-box h-100">
+           
               <div class="image-box h-100">
                 <img
                   v-if="retreat"
                   :src="featuredImg1"
                   alt=""
                   class="rounded-4 elevation-6 feature-image-1 h-100"
-                  class="rounded-4 elevation-6 feature-image-1 h-100"
+              
                 />
               </div>
             </div>
+          </div>
+          </div>
           </div>
           <div class="col-md-6">
             <div class="row gy-3">
@@ -77,7 +79,7 @@
                       :src="retreat.coverImg"
                       alt=""
                       class="rounded-4 elevation-6 feature-image"
-                      class="rounded-4 elevation-6 feature-image"
+                    
                     />
                   </div>
                 </div>
@@ -90,7 +92,7 @@
                       :src="featuredImg2"
                       alt=""
                       class="rounded-4 elevation-6 feature-image"
-                      class="rounded-4 elevation-6 feature-image"
+                  
                     />
                   </div>
                 </div>
@@ -104,7 +106,7 @@
                       :src="featuredImg3"
                       alt=""
                       class="rounded-4 elevation-6 feature-image"
-                      class="rounded-4 elevation-6 feature-image"
+                  
                     />
                   </div>
                 </div>
@@ -238,7 +240,7 @@
               </div>
               <div class="text-center">
                 <router-link :to="{ name: 'Contact' }">
-                  <button class="btn btn-dark font-2 lighten-10 fs-3 fw-bold">
+               
                   <button class="btn btn-dark font-2 lighten-10 fs-3 fw-bold">
                     CONTACT HOST
                   </button>
