@@ -12,7 +12,7 @@
     <img
       v-else
       ref="head"
-      src="../assets/img/yogaperson2.png"
+      src="../../assets/img/yogaperson2.png"
       class="img-fluid rounded-pill"
     />
   </div>

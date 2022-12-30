@@ -435,7 +435,6 @@
         <div class="row">
           <div class="col-md-12" v-for="a in archived" :key="a.id">
             <ArchivedRetreat  :retreat="a"  />
-
           </div>
         </div>
       </div>
@@ -496,7 +495,7 @@
 
 <script>
 import { computed } from "@vue/reactivity";
-import { onMounted, ref, watchEffect } from "vue";
+import { onMounted, ref, watchEffect, onBeforeMount} from "vue";
 import { AppState } from "../AppState.js";
 import AccommodationSwiper from "../components/RetreatPage/AccommodationSwiper.vue";
 import FoodImageSwiper from "../components/RetreatPage/FoodImageSwiper.vue";
@@ -509,21 +508,22 @@ import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue"
 
 
 export default {
-  props: {},
-  setup(props) {
+  setup() {
     const editable = ref({});
+  
 
-    onMounted(() => {
-      // getAllRetreats();
-      getRetreats();
-    });
-    async function getRetreats() {
-      try {
-        await retreatsService.getAllRetreats();
-      } catch (error) {
-        Pop.error(error, "[getRetreats]");
-      }
-    }
+    // onMounted(() => {
+    //   // getAllRetreats();
+    //   getRetreats();
+    // });
+    // async function getRetreats() {
+    //   try {
+    //     const hi = "retreatPage"
+    //     await retreatsService.getAllRetreats(hi);
+    //   } catch (error) {
+    //     Pop.error(error, "[getRetreats]");
+    //   }
+    // }
     return {
       editable,
 

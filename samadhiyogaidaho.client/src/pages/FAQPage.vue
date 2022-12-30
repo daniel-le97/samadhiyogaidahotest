@@ -69,7 +69,7 @@
           <img
             v-motion-slide-visible-once-bottom
             :delay="300"
-            src="../assets/img/FAQ.svg"
+            src="../assets/svg/FAQ.svg"
             alt=""
             class="w-50"
           />

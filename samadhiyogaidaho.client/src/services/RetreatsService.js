@@ -9,12 +9,15 @@ class RetreatsService {
     AppState.currentRetreat = new Retreat(res.data);
   }
 
-  async getAllRetreats() {
+  async getAllRetreats(hi) {
+    if (hi) {
+      logger.log(`${hi}`)
+    }
     const res = await api.get("api/retreats");
-    // logger.log(res.data, "retreats");
-    
-      AppState.retreats = res.data.map((r) => new Retreat(r));
-    
+    // logger.log(AppState.retreats, "retreats");
+    let newRetreats = res.data.map((r) => new Retreat(r));
+    AppState.retreats = newRetreats;
+
     AppState.retreats.forEach((r) => {
       if (r.archived) {
         AppState.archivedRetreats.push(r);

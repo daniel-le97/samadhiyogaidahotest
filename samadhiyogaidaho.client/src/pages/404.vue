@@ -3,7 +3,7 @@
    <div class="row">
      <div class="col-md-12 text-center">
        <h1 class="display-1 font-1">(404) Page NotFound</h1>
-       <img src="../assets/img/not-found.svg" alt="">
+       <img src="../assets/svg/not-found.svg" alt="">
       </div>
      <div class=" d-flex justify-content-center mt-4">
     <router-link :to="{name: 'Home'}"> 
