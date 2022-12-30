@@ -15,7 +15,6 @@
 
 
 FROM node:16 AS build-env
-
 WORKDIR /app
 RUN cd ../samadhiyogaidaho.client && npm run build
 COPY ./package*.json ./
