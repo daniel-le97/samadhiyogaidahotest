@@ -52,22 +52,17 @@
         </div>
 
         <div class="row gy-3">
-  
           <div class="col-md-6 text-center">
             <div class="card elevation-6 border-0 h-100">
-           
               <div class="image-box h-100">
                 <img
                   v-if="retreat"
                   :src="featuredImg1"
                   alt=""
                   class="rounded-4 elevation-6 feature-image-1 h-100"
-              
                 />
               </div>
             </div>
-          </div>
-          </div>
           </div>
           <div class="col-md-6">
             <div class="row gy-3">
@@ -79,7 +74,6 @@
                       :src="retreat.coverImg"
                       alt=""
                       class="rounded-4 elevation-6 feature-image"
-                    
                     />
                   </div>
                 </div>
@@ -92,7 +86,6 @@
                       :src="featuredImg2"
                       alt=""
                       class="rounded-4 elevation-6 feature-image"
-                  
                     />
                   </div>
                 </div>
@@ -100,21 +93,22 @@
               <div class="col-md-6">
                 <div class="card elevation-6 border-0">
                   <div class="image-box">
-                <div class="card elevation-6 border-0">
-                  <div class="image-box">
-                    <img
-                      :src="featuredImg3"
-                      alt=""
-                      class="rounded-4 elevation-6 feature-image"
-                  
-                    />
+                    <div class="card elevation-6 border-0">
+                      <div class="image-box">
+                        <img
+                          :src="featuredImg3"
+                          alt=""
+                          class="rounded-4 elevation-6 feature-image"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="mt-3 sticky-top d-flex justify-content-end">
+        </div>
+              <div class="mt-3 sticky-top d-flex justify-content-end">
             <button
               class="btn btn-dark font-2 fs-3 sticky-top"
               type="button"
@@ -146,7 +140,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
 
@@ -240,7 +233,6 @@
               </div>
               <div class="text-center">
                 <router-link :to="{ name: 'Contact' }">
-               
                   <button class="btn btn-dark font-2 lighten-10 fs-3 fw-bold">
                     CONTACT HOST
                   </button>
@@ -304,7 +296,7 @@
               <div class="text-center">
                 <p class="fs-1 font-1 underline">Daily Schedule</p>
               </div>
-              <div >
+              <div>
                 <p class="fs-5 text-start">
                   {{ retreat?.schedule?.description }}
                 </p>
@@ -314,7 +306,7 @@
                 v-if="retreat?.activities"
               >
                 <div class="col-md-6">
-                  <div class="card border-0 elevation-orange p-2 ">
+                  <div class="card border-0 elevation-orange p-2">
                     <div class="card-body">
                       <p class="fs-4 text-decoration-underline text-center">
                         Optional Activities
@@ -478,7 +470,7 @@
     </section>
     <!--!Archived Retreats-->
   </div>
-  <LoadingComponent v-else/>
+  <LoadingComponent v-else />
 </template>
 
 <script>
@@ -537,7 +529,7 @@ export default {
     ParticleComponent,
     ArchivedRetreat,
     HeroImageDivider,
-},
+  },
 };
 </script>
 

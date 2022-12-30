@@ -9,10 +9,9 @@ function loadComponent(component) {
 }
 
 const routes = [
-  
   {
     path: "/:pathMatch(.*)*",
-    
+
     name: "not-found",
     component: loadPage("404"),
   },
@@ -55,7 +54,7 @@ const routes = [
     name: "FAQ",
     component: loadPage("FAQPage"),
   },
- 
+
   {
     path: "/admin",
     name: "Admin",
@@ -105,6 +104,6 @@ export const router = createRouter({
   },
 });
 router.resolve({
-  name: 'not-found',
-  params: { pathMatch: ['not', 'found'] },
-}).href // '/not/found'
+  name: "not-found",
+  params: { pathMatch: ["not", "found"] },
+}).href; // '/not/found'
