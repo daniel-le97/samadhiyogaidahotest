@@ -26,17 +26,17 @@ import Pop from "../../utils/Pop";
 import { onMounted } from "vue";
 export default {
   setup() {
-    onMounted(() => {
-      getRetreats();
-    });
-    async function getRetreats() {
-      try {
-        const hi = "retreatsAndEvents"
-        await retreatsService.getAllRetreats(hi);
-      } catch (error) {
-        Pop.error(error, "[getRetreats]");
-      }
-    }
+    // onMounted(() => {
+    //   getRetreats();
+    // });
+    // async function getRetreats() {
+    //   try {
+    //     const hi = "retreatsAndEvents"
+    //     await retreatsService.getAllRetreats(hi);
+    //   } catch (error) {
+    //     Pop.error(error, "[getRetreats]");
+    //   }
+    // }
 
     return {
       retreats: computed(() => AppState.retreats.filter((r) => !r.archived)),

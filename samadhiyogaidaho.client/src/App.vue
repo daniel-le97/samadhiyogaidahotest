@@ -29,15 +29,15 @@ export default {
   setup() {
     onMounted(() => {
       hideOnScrollTest();
-      // getRetreats()
+      getRetreats()
     });
-    // async function getRetreats() {
-    //   try {
-    //     await retreatsService.getAllRetreats()
-    //   } catch (error) {
-    //     Pop.error(error, "[getRetreats]");
-    //   }
-    // }
+    async function getRetreats() {
+      try {
+        await retreatsService.getAllRetreats()
+      } catch (error) {
+        Pop.error(error, "[getRetreats]");
+      }
+    }
     function hideOnScrollTest() {
       let nav = document.querySelector("#nav");
       let prevScrollpos = window.scrollY;

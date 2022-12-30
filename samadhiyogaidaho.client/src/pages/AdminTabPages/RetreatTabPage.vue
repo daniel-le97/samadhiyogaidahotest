@@ -46,17 +46,17 @@ import { AppState } from "../../AppState";
 export default {
   setup() {
     onMounted(() => {
-      getRetreats();
+      // getRetreats();
     });
     const form = ref(false);
-    async function getRetreats() {
-      try {
-        const hi = "adminRetreatPage"
-        await retreatsService.getAllRetreats(hi);
-      } catch (error) {
-        Pop.error(error);
-      }
-    }
+    // async function getRetreats() {
+    //   try {
+    //     const hi = "adminRetreatPage"
+    //     await retreatsService.getAllRetreats(hi);
+    //   } catch (error) {
+    //     Pop.error(error);
+    //   }
+    // }
     return {
       form,
       activeRetreat: computed(() => AppState.activeRetreat),
