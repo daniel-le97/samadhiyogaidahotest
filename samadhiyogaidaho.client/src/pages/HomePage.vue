@@ -149,6 +149,7 @@ export default {
   background-attachment: fixed;
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px){
+    height: auto;
   background-position: center;
   }
 }
