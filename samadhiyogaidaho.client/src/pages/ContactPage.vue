@@ -148,5 +148,9 @@ export default {
   background-position: bottom;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
+     @media only screen and (max-width: 768px){
+ background-attachment: scroll;
+ 
+  }
 }
 </style>

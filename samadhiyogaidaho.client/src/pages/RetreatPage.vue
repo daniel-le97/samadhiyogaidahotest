@@ -586,6 +586,10 @@ export default {
   background-image: url(https://images.unsplash.com/photo-1589790272257-8c0f79c221da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
   background-position: center;
   background-attachment: fixed;
+     @media only screen and (max-width: 768px){
+ background-attachment: scroll;
+ 
+  }
 }
 
 .masonry {
