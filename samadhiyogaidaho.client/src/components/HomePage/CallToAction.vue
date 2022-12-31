@@ -55,8 +55,8 @@
       <div class="col-md-4 mb-3 mb-md-0">
         <div
           class="card border-0 elevation-7 bg-pink p-2"
-      v-motion-slide-visible-once-left
-          :delay="600"
+     v-motion-slide-visible-once-bottom
+          :delay="300"
         >
           <div class="card-title font-2 fs-3 text-center">Vinyasa</div>
           <div class="card-body text-center font-2 fs-5">
@@ -71,7 +71,7 @@
         <div
           class="card border-0 elevation-7 bg-pink p-2"
     v-motion-slide-visible-once-bottom
-          :delay="800"
+          :delay="300"
         >
           <div class="card-title font-2 fs-3 text-center">
             Pranayama & Meditation
@@ -85,9 +85,10 @@
       </div>
       <div class="col-md-4">
         <div
+          v-motion-slide-visible-once-bottom
+          :delay="300"
           class="card border-0 elevation-7 bg-pink p-2"
-        v-motion-slide-visible-once-right
-          :delay="600"
+    
         >
           <div class="card-title font-2 fs-3 text-center">Journaling</div>
           <div class="card-body text-center font-2 fs-5">
