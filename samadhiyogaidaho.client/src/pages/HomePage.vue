@@ -3,7 +3,7 @@
     <section id="Hero-Section">
        <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12 p-0">
+            <div class="col-12 p-0">
               <div class="position-relative px-0">
                 <div class="tsparticles">
                   <ParticleComponent />
@@ -147,10 +147,9 @@ export default {
   background-position: center;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
-  @media only screen and (max-width: 768px){
-  background-size: contain;
-  background-position: center;
-  }
+  // @media only screen and (max-width: 768px){
+  // background-position: center;
+  // }
 }
 
 //when screen is 768px OR LESS
