@@ -9,7 +9,7 @@
                   <ParticleComponent />
                 </div>
                 <div
-                  class="hero-image d-flex flex-column justify-content-center align-items-center"
+                  class="hero-image container-fluid d-flex flex-column justify-content-center align-items-center"
                 >
                   <div style="margin-top: 80px" class="text-shadow container">
                     <h1
@@ -144,7 +144,7 @@ export default {
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1600618528240-fb9fc964b853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8);
-  background-position: end;
+  background-position: center;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
   //when screen is 768px OR LESS
