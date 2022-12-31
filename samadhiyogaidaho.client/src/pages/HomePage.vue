@@ -151,6 +151,7 @@ export default {
   @media only screen and (max-width: 768px){
     height: 100vh;
   width: 100vw;
+  // background-attachment: scroll;
   background-position: center;
   }
 }
