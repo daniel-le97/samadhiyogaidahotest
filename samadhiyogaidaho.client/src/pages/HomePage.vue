@@ -139,7 +139,7 @@ export default {
   }
 }
 .hero-image {
-  width: 100%;
+
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
@@ -159,4 +159,6 @@ export default {
     margin-top: 140px;
   }
 }
+
+
 </style>
