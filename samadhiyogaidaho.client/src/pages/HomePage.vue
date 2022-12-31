@@ -6,12 +6,12 @@
             <div class="col-12 p-0">
               <div class="position-relative px-0">
                 <div class="tsparticles">
-                  <!-- <ParticleComponent /> -->
+                  <ParticleComponent />
                 </div>
                 <div
                   class="hero-image container-fluid d-flex flex-column justify-content-center align-items-center"
                 >
-                  <!-- <div style="margin-top: 80px" class="text-shadow container">
+                  <div style="margin-top: 80px" class="text-shadow container">
                     <h1
                       v-motion-slide-top
                       :delay="200"
@@ -29,7 +29,7 @@
                       to be authentic in every day life <br />
                       to transform & to love
                     </h5>
-                  </div> -->
+                  </div>
                 </div>
                 <GentleWave />
               </div>
