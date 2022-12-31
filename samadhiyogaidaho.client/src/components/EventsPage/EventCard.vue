@@ -13,7 +13,7 @@
       >
         {{ event.title }}
       </p>
-      <div class="d-flex">
+      <div class="d-md-flex">
         <div class="me-3">
           <p class="text-start">
             {{ getDate(event.startDate) }} - {{ getDateTime(event.endDate) }}

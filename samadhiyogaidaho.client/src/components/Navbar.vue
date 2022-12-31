@@ -152,6 +152,12 @@ export default {
   text-shadow: 0px 1px 4px #000000;
   font-weight: bold;
   font-size: 1.25rem;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  font-size: 2.5rem;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  }
 }
 .nav-link:hover {
   color: var(--peach) !important;
