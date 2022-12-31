@@ -28,7 +28,7 @@
                 </p>
               </div>
             </div>
-            <HeroImageDivider />
+        
           </div>
         </div>
       </div>
@@ -156,7 +156,7 @@
 </template>
 
 <script>
-import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
+
 import ParticleTest from "../components/MiscComponents/ParticleComponent.vue";
 import PersonComponent from "../components/MiscComponents/PersonComponent.vue";
 
@@ -164,7 +164,7 @@ export default {
   setup() {
     return {};
   },
-  components: { PersonComponent, ParticleTest, HeroImageDivider },
+  components: { PersonComponent, ParticleTest },
 };
 </script>
 <style scoped lang="scss">

@@ -147,6 +147,10 @@ export default {
   background-position: end;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+  background-position: center;
+  }
 }
 
 //when screen is 768px OR LESS

@@ -25,7 +25,7 @@
                   Escape the hustle and bustle of everyday life and enrich it with a new
                   experience
                 </p>
-                <HeroImageDivider />
+            
               </div>
             </div>
           </div>
@@ -492,11 +492,9 @@ import { AppState } from "../AppState.js";
 import AccommodationSwiper from "../components/RetreatPage/AccommodationSwiper.vue";
 import FoodImageSwiper from "../components/RetreatPage/FoodImageSwiper.vue";
 import RetreatForm from "../components/AdminComponents/RetreatForm.vue";
-import { retreatsService } from "../services/RetreatsService.js";
-import Pop from "../utils/Pop.js";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 import ArchivedRetreat from "../components/RetreatPage/ArchivedRetreat.vue";
-import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
+
 
 
 export default {
@@ -542,7 +540,6 @@ export default {
     AccommodationSwiper,
     ParticleComponent,
     ArchivedRetreat,
-    HeroImageDivider,
 },
 };
 </script>

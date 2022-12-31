@@ -23,7 +23,7 @@
             >
               Enjoy an enriching and memorable experience
             </p>
-            <HeroImageDivider />
+       
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ import { logger } from "../utils/Logger.js";
 import { eventsService } from "../services/EventsService.js";
 import EventCard from "../components/EventsPage/EventCard.vue";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
-import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
+
 
 export default {
   setup() {
@@ -92,7 +92,7 @@ export default {
       events: computed(() => AppState.events),
     };
   },
-  components: { EventForm, EventCard, ParticleComponent, HeroImageDivider },
+  components: { EventForm, EventCard, ParticleComponent, },
 };
 </script>
 

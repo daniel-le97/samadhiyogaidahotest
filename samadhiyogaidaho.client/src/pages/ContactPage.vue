@@ -28,7 +28,7 @@
                   Stay in touch and be part of our community
                 </p>
               </div>
-              <HeroImageDivider />
+          
             </div>
           </div>
         </div>
@@ -127,14 +127,14 @@
 
 <script>
 import ContactForm from "../components/ContactPage/ContactForm.vue";
-import HeroImageDivider from "../components/MiscComponents/HeroImageDivider.vue";
+
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 
 export default {
   setup() {
     return {};
   },
-  components: { ParticleComponent, ContactForm, HeroImageDivider },
+  components: { ParticleComponent, ContactForm, },
 };
 </script>
 
