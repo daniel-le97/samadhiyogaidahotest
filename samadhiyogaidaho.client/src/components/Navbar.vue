@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar navbar-expand-md navbar-dark text-dark px-3 font-2 nav py-md-2"
+    class="navbar navbar-expand-md navbar-dark text-dark px-3 font-2 nav py-md-2 text-center  text-md-start"
   >
     <div class="  d-md-flex mx-auto justify-content-center">
       <p class="mb-0">
@@ -16,8 +16,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </p>
-      <div class="collapse navbar-collapse " id="navbarText">
-        <ul class="navbar-nav me-auto">
+      <div class="collapse navbar-collapse  " id="navbarText">
+        <ul class="navbar-nav me-auto ">
           <li>
             <router-link
               :to="{ name: 'Home' }"
@@ -143,6 +143,7 @@ export default {
 
 <style scoped lang="scss">
 
+
 .nav-link {
   text-transform: uppercase;
   color: #ffffff;
@@ -162,7 +163,7 @@ export default {
     rgba(0, 0, 0, 0) 100%
   );
   @media only screen and (max-width: 768px) {
-    background: #ffa57c7a;
+    background: #ffa57ca2;
     backdrop-filter: blur(4px);
   }
 }
@@ -182,7 +183,7 @@ li{
   display: flex;
 }
  
-  width: 25%;
+ 
   }
 }
 .navbar-nav .router-link-exact-active {

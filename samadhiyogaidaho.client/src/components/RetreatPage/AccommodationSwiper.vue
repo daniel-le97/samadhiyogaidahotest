@@ -7,12 +7,12 @@
   >
     <swiper-slide
       v-for="a in retreat?.accommodations?.rooms"
-      class="bg-white p-3"
+      class="bg-white p-3 d-flex flex-column"
     >
-      <div class="d-flex text-dark">
+      <div class="d-md-flex text-dark">
         <img :src="a.img" alt="" class="img-fluid hover-image rounded" />
       </div>
-      <div class="d-flex flex-column bg-white ms-4">
+      <div class="d-md-flex flex-column bg-white ms-4 mt-3 mt-md-0">
         <p class="font-2 fs-3 text-dark">{{ a.description }}</p>
         <p class="font-2 fs-3 text-pink darken-20">
           Available:

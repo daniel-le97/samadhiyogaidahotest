@@ -127,7 +127,7 @@
                   <img
                     :src="f"
                     alt=""
-                    class="img-fluid hover-image rounded-4 selectable h-100"
+                    class="img-fluid hover-image rounded-4 selectable "
                   />
                 </div>
               </div>
@@ -597,6 +597,12 @@ export default {
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
     columns: 1;
+    img{
+    
+ 
+     width: 100vw;
+      object-fit: cover;
+    }
   }
 }
 

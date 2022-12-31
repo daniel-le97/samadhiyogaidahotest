@@ -36,9 +36,9 @@
 
     <section class="container mt-5">
       <div class="row gy-5 justify-content-center">
-        <div class="col-md-10 text-center">
+        <div class="col-md-10 ">
           <div class=" ">
-            <p v-motion-slide-visible-once-bottom :delay="300" class="fs-5">
+            <p v-motion-slide-visible-once-bottom :delay="300" class="fs-5 text-start text-md-center">
               Back in 2013, our founder took her first yoga class in the hopes
               of finding some healing. Almost 10 years later, she took the
               initiative to receive her 200-hour training and found her passion
@@ -49,7 +49,7 @@
               self-reflect and reconnect with themselves in a beautiful and
               serene atmosphere.
             </p>
-            <p class="fs-5" v-motion-slide-visible-once-bottom :delay="300">
+            <!-- <p class="fs-5" v-motion-slide-visible-once-bottom :delay="300">
               Samadhi is the Sanskrit word for the state in which individual and
               universal consciousness unite. It is a blissful form of total
               meditative absorption, reached once the practitioner has moved
@@ -57,7 +57,7 @@
               spiritual significance of Samadhi is profound, since it
               encompasses self-realization and symbolizes the ultimate
               connection with the Divine.
-            </p>
+            </p> -->
           </div>
         </div>
         <div
