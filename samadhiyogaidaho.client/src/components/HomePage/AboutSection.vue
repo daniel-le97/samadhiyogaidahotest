@@ -67,11 +67,7 @@
              v-motion-slide-visible-once-bottom
           :delay="300"
           class="text-start fs-4 font-2">
-            I believe that to question, to inquire, to seek understanding is a
-            core part of what it means to be human. Whether its at home or away
-            on a retreat, they are always inspired by the experiences of life.
-            the core of a healthy person is in the wellbeing of their body,
-            mind, and soul.
+          Hi there! I'm Katie, and I absolutely love to get to share the beauty and peace of yoga with others. After practicing yoga for ten years, I decided I wanted to bring yoga to others to enrich their lives the same way mine has been enriched and took the plunge to get my RYT 200. I teach Baptiste power yoga, Vinyasa style, Yin, and Restorative yoga. I love music with my whole soul and love to incorporate music into my classes. I love to sing and if you're lucky, you might catch me singing in savasana at the end of your practice.
           </p>
 
           <div class="text-center">

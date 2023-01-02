@@ -58,7 +58,7 @@
      v-motion-slide-visible-once-bottom
           :delay="300"
         >
-          <div class="card-title font-2 fs-3 text-center">Vinyasa</div>
+          <div class="card-title font-1 fs-3 text-center">Vinyasa</div>
           <div class="card-body text-center font-2 fs-5">
             Vinyasa (Flow) is a flowing of postures executed in succession,
             often timed with the breath to attain balance in the mind and body.
@@ -73,7 +73,7 @@
     v-motion-slide-visible-once-bottom
           :delay="300"
         >
-          <div class="card-title font-2 fs-3 text-center">
+          <div class="card-title font-1 fs-3 text-center">
             Pranayama & Meditation
           </div>
           <div class="card-body text-center font-2 fs-5">
@@ -90,7 +90,7 @@
           class="card border-0 elevation-7 bg-pink p-2"
     
         >
-          <div class="card-title font-2 fs-3 text-center">Journaling</div>
+          <div class="card-title font-1 fs-3 text-center">Journaling</div>
           <div class="card-body text-center font-2 fs-5">
             Keeping a yoga journal leads to more mindful yoga practice. You
             notice the sensations of each of your movements, drawing your mind
