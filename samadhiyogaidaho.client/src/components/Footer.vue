@@ -142,7 +142,7 @@
       <!-- <a href="https://www.freepik.com">designed by Freepik - Freepik.com</a> -->
     </div>
     <!-- Copyright -->
-    <div class="py-4 bg-peach"></div>
+    <div class="py-4 py-md-0 bg-peach"></div>
   </footer>
 </template>
 

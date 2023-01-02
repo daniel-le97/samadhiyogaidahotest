@@ -295,11 +295,16 @@
                   </button>
                 </router-link>
                 <p class="mt-3">OR</p>
-                <button
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScoIY1nW3mHn65RkRIqeLQ2jBXiKfMPmvPhM8GsDLjES6BHZw/viewform?embedded=true"
+                
+                target="_blank">
+                     <button
                   class="btn btn-outline-dark font-2 lighten-10 fs-3 fw-bold"
                 >
                   BOOK INSTANTLY
                 </button>
+                </a>
+             
               </div>
             </div>
           </div>

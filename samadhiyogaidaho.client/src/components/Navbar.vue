@@ -176,10 +176,10 @@ export default {
 .logo-image {
   width: 100px;
   height: 160px;
+//when screen is 768px OR LESS
+
 }
-.logo {
-  object-fit: cover;
-}
+
 .navbar-nav{
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px){
