@@ -27,7 +27,7 @@
                     How can we help you?
                   </p>
                 </div>
-                <HeroImageDivider />
+                <!-- <HeroImageDivider /> -->
               </div>
             </div>
           </div>

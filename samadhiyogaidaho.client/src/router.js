@@ -41,6 +41,9 @@ const routes = [
     path: "/retreats",
     name: "Retreats",
     component: loadPage("RetreatPage"),
+    meta:{
+      title: 'yoga retreats in boise'
+    }
   },
 
   {
