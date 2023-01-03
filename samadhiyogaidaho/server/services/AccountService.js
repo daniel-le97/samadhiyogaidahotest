@@ -53,13 +53,17 @@ class AccountService {
    * @param {any} user
    */
   async getAccount(user) {
-    let account = await dbContext.Account.findOne({
-      _id: user.id,
-    });
-   
-      account = await createAccountIfNeeded(account, user);
-    
-    await mergeSubsIfNeeded(account, user);
+   const account =  await getAdmins(user.id);
+    // let account = await dbContext.Account.findOne({
+    //   _id: user.id,
+    // });
+    // if (!account) {
+
+    // }
+
+    // account = await createAccountIfNeeded(account, user);
+
+    // await mergeSubsIfNeeded(account, user);
     return account;
   }
 
@@ -81,7 +85,7 @@ class AccountService {
 export const accountService = new AccountService();
 
 export async function getAdmins(id) {
-  const isAdmin = await dbContext.Account.find({ id });
+  const isAdmin = await dbContext.Account.findById( id );
   if (!isAdmin) {
     throw new Forbidden("you should not be able to access this");
   }
