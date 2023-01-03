@@ -3,6 +3,12 @@
     <div class="row">
       <div class="col-12">
         <div>
+          <span>choose a collection to upload to:</span>
+          <div class="d-flex flex-wrap gap-3">
+            <div v-for="c in collections">
+              <div @click="makeActiveCollection(c)" :class="activeCollection.collection?.name == c.name? 'bg-primary' : ''">{{ c.name }}</div>
+            </div>
+          </div>
           <form @submit.prevent="addCollection">
             <input
               type="text"
@@ -11,12 +17,6 @@
             />
             <button type="submit">create new collection</button>
           </form>
-        </div>
-        <span>choose a collection to upload to</span>
-        <div class="d-flex flex-wrap gap-3">
-          <div v-for="c in collections">
-            <div @click="makeActiveCollection(c)" :class="activeCollection.collection?.name == c.name? 'bg-primary' : ''">{{ c.name }}</div>
-          </div>
         </div>
       </div>
       <div class="col-12">

@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-<div class="" v-else>loading...</div>
+<div class="" v-else>please log in...</div>
 </template>
 
 <script>

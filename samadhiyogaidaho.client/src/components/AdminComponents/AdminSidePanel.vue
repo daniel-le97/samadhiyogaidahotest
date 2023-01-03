@@ -2,9 +2,7 @@
   <div class="container-fluid sticky-md-top fixed-bottom">
     <div class="row">
       <div class="col-md-12 p-0">
-        <div
-          class=" p-3 text-white bg-dark elevation-6  sticky-top grow"
-        >
+        <div class="p-3 text-white bg-dark elevation-6 sticky-top grow">
           <a
             href="/"
             class="d-none d-md-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none justify-content-center"
@@ -20,8 +18,8 @@
           </a>
 
           <hr class="d-none d-md-block" />
-        
-          <ul class="  d-flex flex-md-column justify-content-evenly p-2 p-md-0">
+
+          <ul class="d-flex flex-md-column justify-content-evenly p-2 p-md-0">
             <li class="list-group-item">
               <router-link class="nav-link" :to="{ name: 'AdminHome' }">
                 Home
@@ -47,15 +45,13 @@
                 Settings
               </router-link>
             </li>
-          
           </ul>
-       <div class=" mt-5">
-         
-            <p class="fs-4">  {{ admin.name }}</p>
-              <Login/>
-       </div>
+          <div class="mt-5">
+            <p class="fs-4">{{ admin.name }}</p>
+            <Login />
+            <button @click="logout" class="btn btn-danger lighten-45">logout</button>
+          </div>
         </div>
-    
       </div>
     </div>
   </div>
@@ -68,19 +64,19 @@ import { computed } from "@vue/reactivity";
 import Login from "../MiscComponents/Login.vue";
 
 export default {
-    setup() {
-        return {
-            admin: computed(() => AppState?.account),
-            async loadTab(tab) {
-                AppState.activeTab = tab;
-            },
-            async logout() {
-                AuthService.logout({ returnTo: window.location.origin });
-                // AuthService.
-            },
-        };
-    },
-    components: { Login }
+  setup() {
+    return {
+      admin: computed(() => AppState?.account),
+      async loadTab(tab) {
+        AppState.activeTab = tab;
+      },
+      async logout() {
+        AuthService.logout({ returnTo: window.location.origin });
+        // AuthService.
+      },
+    };
+  },
+  components: { Login },
 };
 </script>
 
@@ -93,11 +89,10 @@ export default {
   }
 }
 
-
- .router-link-exact-active {
+.router-link-exact-active {
   color: var(--peach);
   transform: translateX(50px);
-width: 25%;
+  width: 25%;
   transition: all 0.25s ease;
   text-decoration: underline;
   font-size: 2.5rem;
