@@ -37,7 +37,7 @@
         </p>
         <p class="fs-4"    v-motion-slide-visible-once-bottom
           :delay="300">
-          Escape with us and learn how to see yourself without judgment
+          Escape with us and find freedom and clarity through yoga and self-exploration
         </p>
         <p>
           <a
