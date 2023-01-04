@@ -28,6 +28,6 @@
 - styles
 
 ### blog (ghost)
-
+make sure addNewsLetterSubscription in newsletterService works
 ### misc
 

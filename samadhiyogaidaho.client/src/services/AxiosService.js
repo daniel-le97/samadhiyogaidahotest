@@ -21,7 +21,7 @@ export const instagramAPI = Axios.create({
 });
 
 export const ghostAPI = Axios.create({
-  baseURL: "https://ghost.apps.ledano.tk/members/",
+  baseURL: "https://blogs.samadhiyogaidaho.com/members/",
   timeout:8000,
   params:{
 
