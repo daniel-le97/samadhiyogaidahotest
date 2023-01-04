@@ -85,17 +85,7 @@
             hope to see you on the mat soon!
           </p>
 
-          <div class="text-center">
-            <img
-              v-motion-slide-visible-once-bottom
-              :delay="600"
-              src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg"
-              alt=""
-              width="150"
-              height="150"
-              class="rounded-circle elevation-6"
-            />
-          </div>
+      
         </div>
       </div>
       <div class="d-flex justify-content-center justify-content-md-end">

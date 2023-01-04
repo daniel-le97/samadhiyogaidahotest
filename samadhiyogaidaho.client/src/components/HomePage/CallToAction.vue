@@ -51,7 +51,7 @@
       </div>
     </div>
     <hr class="my-5" />
-    <div class="row g-3">
+    <!-- <div class="row g-3">
       <div class="col-md-4 mb-3 mb-md-0">
         <div
           class="card border-0 elevation-7 bg-pink p-2"
@@ -99,15 +99,24 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+
+
+    <div class="row">
+      <CTACard/>
     </div>
   </div>
 </template>
 
 <script>
+import CTACard from "../CTACard.vue";
+
 export default {
-  setup() {
-    return {};
-  },
+    setup() {
+        return {};
+    },
+    components: { CTACard }
 };
 </script>
 

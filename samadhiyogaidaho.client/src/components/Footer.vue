@@ -4,8 +4,8 @@
     <div class="container">
       <div class="row mt-4">
         <div class="col-md-12 text-center mb-md-3">
-          <p class="fs-2">Stay Connected With Us</p>
-          <p class="fs-4">Subscribe to get exclusive updates</p>
+          <p class="fs-2">Stay Connected </p>
+          <p class="fs-4"> Sign Up for Our Newsletter and Stay Up-to-Date on Classes and Events</p>
         </div>
         <div class="col-md-6">
           <NewsLetter />

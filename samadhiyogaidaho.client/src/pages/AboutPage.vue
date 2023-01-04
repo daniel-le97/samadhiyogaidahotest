@@ -28,7 +28,6 @@
                 </p>
               </div>
             </div>
-        
           </div>
         </div>
       </div>
@@ -36,9 +35,13 @@
 
     <section class="container mt-5">
       <div class="row gy-5 justify-content-center">
-        <div class="col-md-10 ">
+        <div class="col-md-10">
           <div class=" ">
-            <p v-motion-slide-visible-once-bottom :delay="300" class="fs-5 text-start text-md-center">
+            <p
+              v-motion-slide-visible-once-bottom
+              :delay="300"
+              class="fs-5 text-start text-md-center"
+            >
               Back in 2013, our founder took her first yoga class in the hopes
               of finding some healing. Almost 10 years later, she took the
               initiative to receive her 200-hour training and found her passion
@@ -61,20 +64,32 @@
           </div>
         </div>
         <div
-          class="col-md-6 d-flex justify-content-center align-items-md-start align-items-center"
+          class="col-md-6 d-flex flex-column justify-content-center align-items-center"
         >
           <div
-            class="card framed border-0 sticky-md-top"
+            class="card framed border-0"
             v-motion-slide-visible-once-bottom
             :delay="300"
           >
             <div class="image-box">
               <img
-                src="../assets/img/KatiePortrait.png"
+                src="../assets/img/KatiePortrait2.jpg"
                 alt="Katie Alverson"
                 class="img-fluid elevation-6 rounded"
               />
             </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <img
+              v-motion-slide-visible-once-bottom
+              :delay="600"
+              src="https://www.yogahouse.gr/wp-content/uploads/2016/12/RYT-200-AROUND-BLACK-600x600.jpg"
+              alt=""
+              width="150"
+              height="150"
+              class="rounded-circle elevation-6"
+            />
           </div>
         </div>
 
@@ -126,28 +141,53 @@
               wineries, painting oil landscapes and animals, or spending time
               with family. My favorite place to visit and the place I feel most
               at peace is the ocean and like to incorporate a water theme in
-              practice often. On top of everything else, I’m going to school
-              right now to get my bachelor's in business management and plan to
-              get my doctorates someday.
+              practice often.
             </p>
-            <p class="fs-5 text-start"></p>
+            <p class="fs-5 text-start">
+              In addition to my work as a small business entrepreneur and yoga
+              teacher, I am also currently pursuing my bachelor's degree in
+              business management. I am driven to constantly learn and grow,
+              both personally and professionally.I am passionate about using my
+              education and skills to make a positive impact in the world, and I
+              believe that by combining my love for business and my passion for
+              yoga, I can make a meaningful difference in the lives of others. I
+              am excited to see where my journey takes me, and I am grateful for
+              the opportunity to learn and grow every step of the way.
+            </p>
           </div>
         </div>
 
-        <div class="col-md-6" v-motion-slide-visible-once-bottom :delay="300">
+        <div
+          class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+          v-motion-slide-visible-once-bottom
+          :delay="300"
+        >
           <p class="fs-1 font-1">Work With Me</p>
           <p class="fs-5">
             That’s a little about me, thanks for taking the time to get to know
             me and for supporting me and my business! I would love nothing more
             to connect with like minded people to further our practice.
           </p>
-          <div class="text-center">
+          <div class="text-center mb-3">
             <router-link
               :to="{ name: 'Contact' }"
               class="btn btn-dark font-2 fs-3"
             >
               Connect
             </router-link>
+          </div>
+          <div
+            class="card framed border-0 sticky-md-top"
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+          >
+            <div class="image-box">
+              <img
+                src="../assets/img/servicePhoto5.jpg"
+                alt="Katie Alverson"
+                class="img-fluid elevation-6 rounded"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -156,7 +196,6 @@
 </template>
 
 <script>
-
 import ParticleTest from "../components/MiscComponents/ParticleComponent.vue";
 import PersonComponent from "../components/MiscComponents/PersonComponent.vue";
 
@@ -186,9 +225,8 @@ export default {
   background-position: center;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
-     @media only screen and (max-width: 768px){
- background-attachment: scroll;
- 
+  @media only screen and (max-width: 768px) {
+    background-attachment: scroll;
   }
 }
 </style>
