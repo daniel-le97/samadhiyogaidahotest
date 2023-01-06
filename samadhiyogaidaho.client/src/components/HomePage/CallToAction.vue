@@ -2,8 +2,10 @@
   <div class="container bg-white mt-4">
     <div class="row justify-content-center">
       <div class="col-md-12 text-center">
+        <div></div>
+
         <h1
-        v-motion-slide-visible-once-bottom
+          v-motion-slide-visible-once-bottom
           :delay="300"
           class="display-1 font-1 underline text-center text-dark mt-md-5"
         >
@@ -12,7 +14,7 @@
         <br />
 
         <h2
-      v-motion-slide-visible-once-bottom
+          v-motion-slide-visible-once-bottom
           :delay="300"
           class="display-6 font-2 underline text-lightPink darken-20 mb-4"
         >
@@ -20,31 +22,28 @@
         </h2>
       </div>
       <div class="col-md-8 text-center">
-        <p    v-motion-slide-visible-once-bottom
-          :delay="300" class="fs-4 px-md-5">
-          Is based on the idea that people want to be at peace with who they
-          truly are, and that at every moment is an opportunity where they can
-          be authentic with themselves in everyday life.
+        <p v-motion-slide-visible-once-bottom :delay="300" class="fs-4 px-md-5">
+          Is that we all want to be at peace with who we truly are, and that at
+          every moment is an opportunity where we can be authentic with
+          ourselves in everyday life.
         </p>
 
-        <p    v-motion-slide-visible-once-bottom
-          :delay="300" class="fs-4 px-md-5">
-          <b> SamadhiYogaIdaho </b> is a holistic approach in using pranayama,
-          asana, journaling, and meditation practices to increase our knowledge
-          of <em>self</em>, <em>life</em>, <em>mobility</em> and to help every
-          person recognize their <em>worthiness</em> , <em>beauty</em>, and
-          <em>uniqueness</em>.
+        <p v-motion-slide-visible-once-bottom :delay="300" class="fs-4 px-md-5">
+          <b> SamadhiYogaIdaho </b> is a holistic approach to wellness using
+          pranayama, asana, journaling, and meditation practices to increase our
+          knowledge of self, life, mobility, and to help every person recognize
+          their worthiness, beauty, and uniqueness.
         </p>
-        <p class="fs-4"    v-motion-slide-visible-once-bottom
-          :delay="300">
-          Escape with us and find freedom and clarity through yoga and self-exploration
+        <p class="fs-4" v-motion-slide-visible-once-bottom :delay="300">
+          Escape with us and learn how to see yourself without judgment
         </p>
         <p>
           <a
-          
-             v-motion-slide-visible-once-bottom
-          :delay="300"
-          href="#newsletter" class="btn bg-warning selectable fs-3 px-4">
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            href="#newsletter"
+            class="btn bg-warning selectable fs-3 px-4"
+          >
             Begin Your Journey</a
           >
         </p>
@@ -101,22 +100,26 @@
       </div>
     </div> -->
 
-
-
     <div class="row">
-      <CTACard/>
+      <CTACard />
     </div>
   </div>
 </template>
 
 <script>
 import CTACard from "../CTACard.vue";
-
+import { onMounted } from "vue";
 export default {
-    setup() {
-        return {};
-    },
-    components: { CTACard }
+  setup() {
+    onMounted(()=>{
+     
+         const script = document.createElement('script')
+    script.innerHTML = `src="https://cdn.wetravel.com/widgets/embed_packages.js" id="wetravel_package_listing" data-env="https://www.wetravel.com" data-version="v0.3" data-uid="564570" data-uuid="61962464" data-color="33ae3f" data-text="Book Now" data-showreviews="true"`
+    document.head.appendChild(script)
+    })
+    return {};
+  },
+  components: { CTACard },
 };
 </script>
 

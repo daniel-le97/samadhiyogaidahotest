@@ -24,7 +24,7 @@
                   :delay="400"
                   class="display-6 font-2 text-shadow"
                 >
-                  Why we came to build SamadhiYogaIdaho
+              How SamadhiYogaIdaho was born 
                 </p>
               </div>
             </div>
@@ -42,25 +42,9 @@
               :delay="300"
               class="fs-5 text-start text-md-center"
             >
-              Back in 2013, our founder took her first yoga class in the hopes
-              of finding some healing. Almost 10 years later, she took the
-              initiative to receive her 200-hour training and found her passion
-              in teaching. She realized that people want and need the time and
-              space to push pause on their daily routine. They need a safe space
-              for healing, breathing, and feeling. That is why Samadhi Yoga
-              Idaho was created, so our community of participants can
-              self-reflect and reconnect with themselves in a beautiful and
-              serene atmosphere.
+             Back in 2013, Katie took her first yoga class in the hopes of finding some healing. Almost 10 years later, she took the initiative to receive her 200-hour training and found her passion in teaching. She realized that we all need the time and space to push pause on their daily routine.  We need a safe space for healing, breathing, and feeling. That is why Samadhi Yoga Idaho was created, so our community of participants can self-reflect and reconnect with themselves in a beautiful and serene atmosphere.
             </p>
-            <!-- <p class="fs-5" v-motion-slide-visible-once-bottom :delay="300">
-              Samadhi is the Sanskrit word for the state in which individual and
-              universal consciousness unite. It is a blissful form of total
-              meditative absorption, reached once the practitioner has moved
-              through the preliminary steps on Patanjal’s eightfold path. The
-              spiritual significance of Samadhi is profound, since it
-              encompasses self-realization and symbolizes the ultimate
-              connection with the Divine.
-            </p> -->
+           
           </div>
         </div>
         <div
@@ -119,31 +103,17 @@
               v-motion-slide-visible-once-bottom
               :delay="300"
             >
-              My favorite thing to do in the world is to put together fully
-              inclusive and restorative yoga retreats for people to get to know
-              themselves and their bodies better. I have always been a planner.
-              I love putting together great events and being able to bring
-              humans closer together and closer to their truest, most authentic
-              selves. I want to travel the world and have plans to host retreats
-              globally all around the world someday. I believe that you can find
-              peace within yourself, and accept the deepest, darkest parts of
-              yourself once you accept and practice the eight limbs of yoga in
-              your life.
+           My favorite thing to do in the world is to put together fully inclusive and restorative yoga retreats for people to get to know themselves and their bodies better. I have always been a planner. I love putting together great events, fostering human connection, and bringing humans closer together and closer to their truest, most authentic selves. I want to travel the world and have plans to host retreats globally all around the world someday. I believe that the eight limbs of yoga can help us find peace within ourselves, and accept the deepest, darkest parts of ourselves.
+
             </p>
             <p
               class="fs-5 text-start"
               v-motion-slide-visible-once-bottom
               :delay="300"
             >
-              When I’m not teaching yoga, planning retreats, or working at my
-              day job in finance, you can catch me spending time with my partner
-              and our fur babies either traveling, exploring breweries and
-              wineries, painting oil landscapes and animals, or spending time
-              with family. My favorite place to visit and the place I feel most
-              at peace is the ocean and like to incorporate a water theme in
-              practice often.
+         When I’m not teaching yoga, planning retreats, or working at my day job in finance, you can catch me spending time with my partner and our fur babies either traveling, exploring breweries and wineries, painting oil landscapes and animals, or spending time with family. My favorite place to visit and the place I feel most at peace is the ocean and like to incorporate a water theme in practice often. I’m also a student at Boise State University, getting my bachelor's in business management and I plan to get my doctorate someday.
             </p>
-            <p class="fs-5 text-start">
+            <!-- <p class="fs-5 text-start">
               In addition to my work as a small business entrepreneur and yoga
               teacher, I am also currently pursuing my bachelor's degree in
               business management. I am driven to constantly learn and grow,
@@ -153,7 +123,7 @@
               yoga, I can make a meaningful difference in the lives of others. I
               am excited to see where my journey takes me, and I am grateful for
               the opportunity to learn and grow every step of the way.
-            </p>
+            </p> -->
           </div>
         </div>
 

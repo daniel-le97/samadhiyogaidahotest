@@ -1,6 +1,6 @@
 <template>
-<ul class="cards">
-  <li>
+
+ <div class="col-md-4">
     <div class="card bg-pink elevation-6">
       <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog-assets.thedyrt.com%2Fuploads%2F2019%2F01%2Fshutterstock_469246787-1-1024x683.jpg&f=1&nofb=1&ipt=5e4acb057c2ed13775efba33027c164339e6515ac5bff714da2ccc15d75deddb&ipo=images" class="card__image" alt="" />
       <div class="card__overlay rounded-bottom">
@@ -14,10 +14,11 @@
         </div>
         <p class="card__description">Vinyasa (Flow) is a flowing of postures executed in succession, often timed with the breath to attain balance in the mind and body. Classes build heat, endurance, flexibility, strength and conscious breathing.</p>
       </div>
-    </div>      
-  </li>
-  <li>
-    <div class="card bg-pink elevation-6">
+    </div>  
+ </div>
+ 
+ <div class="col-md-4">
+     <div class="card bg-pink elevation-6">
       <img src="https://images.unsplash.com/photo-1526916027372-0c0852cef5d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80" class="card__image" alt="" />
       <div class="card__overlay rounded-bottom">
         <div class="card__header">
@@ -31,10 +32,9 @@
         <p class="card__description">Pranayama (Breath control) an ancient tradition, is the conscious awareness of breath using specific rhythms & techniques to bring us to the present moment increasing our self-awareness.</p>
       </div>
     </div>
-  </li>
- 
-  <li>
-    <div  class="card bg-pink elevation-6">
+ </div>
+ <div class="col-md-4">
+  <div  class="card bg-pink elevation-6">
       <img src="https://images.unsplash.com/photo-1568819297129-80fd50360f8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" class="card__image" alt="" />
      <div class="card__overlay rounded-bottom">
         <div class="card__header">
@@ -49,8 +49,10 @@
         
       </div>
     </div>
-  </li>    
-</ul>
+ </div>
+ 
+      
+
 </template>
 
 <script>
@@ -108,7 +110,7 @@ props:{
 
 .card__overlay {
   position: absolute;
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
   bottom: 40px;
   left: 0;
   right: 0;
@@ -117,11 +119,22 @@ props:{
   background-color: #fff;      
   transform: translateY(100%);
   transition: .5s ease-in-out;
+  //when screen is 768px OR LESS
+  @media only screen and (max-width: 768px){
+    bottom: -20px;
+  }
 }
 
 .card:hover .card__overlay {
-  transform: translateY(-30%);
+  transform: translateY(20%);
     transition: .5s ease-in-out;
+    //when screen is 768px OR LESS
+      background-color:    #f68b59
+;
+    @media only screen and (max-width: 768px){
+      transform: translateY(-0%);
+        padding-bottom: 4rem;
+    }
 }
 
 .card__header {
@@ -143,15 +156,27 @@ props:{
   bottom: 100%;
   right: 0;      
   z-index: 1;
+  
 }
 
 .card__arc path {
+   transition: .5s ease-in-out;
   fill: #fff;
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }       
-
+.card .card__header{
+     transition: .5s ease-in-out;
+}
 .card:hover .card__header {
   transform: translateY(0);
+    transition: .5s ease-in-out;
+     background-color:    #f68b59
+  
+}
+.card:hover .card__arc path{
+     transition: .5s ease-in-out;
+     fill:    #f68b59
+  
 }
 
 .card__thumb {
