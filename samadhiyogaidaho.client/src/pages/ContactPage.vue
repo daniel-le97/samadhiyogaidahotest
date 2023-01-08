@@ -134,7 +134,7 @@
             :delay="300"
             src="../assets/img/IMG_4916.jpg"
             alt=""
-            class="img-fluid"
+            class="img-fluid studio-img"
           />
         </div>
       </div>
@@ -156,6 +156,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.studio-img{
+  width: 100%;
+  height:800px;
+  object-fit: cover;
+}
 .hero-image {
   height: 100vh;
   /* always scale the image to the appropriate size of your screen */

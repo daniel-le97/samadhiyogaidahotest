@@ -7,10 +7,10 @@
           <p class="fs-2">Stay Connected </p>
           <p class="fs-4"> Sign Up for Our Newsletter and Stay Up-to-Date on Classes and Events</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 d-flex align-items-center justify-content-end ">
           <NewsLetter />
         </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="col-md-6 d-flex justify-content-start align-items-center">
           <img
             src="https://img.freepik.com/free-vector/staying-touch-modern-communication-means-phone-calls-letters-emails-person-contacting-friends-customers-via-email-encouraging-feedback-vector-isolated-concept-metaphor-illustration_335657-2779.jpg?w=740&t=st=1671237218~exp=1671237818~hmac=f0cc7d983a1fc1055faa6830d3cb9820f93a12e81969470acf01ae2f51555029"
             alt=""

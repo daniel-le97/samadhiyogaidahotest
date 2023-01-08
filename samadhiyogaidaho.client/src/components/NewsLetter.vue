@@ -1,11 +1,8 @@
 <template>
-  <div
-    v-motion-pop-visible-once
-    class="container mt-md-5 image d-flex align-items-center rounded flex-column justify-content-center"
-  >
+
     <form @submit.prevent="handleSubmit()">
       <div class="container mailing-list my-2">
-        <div class="row">
+     
           
           <!-- <div class="col-md-6">
             <div
@@ -21,7 +18,7 @@
               />
             </div>
           </div> -->
-          <div class="col-md-12 my-4">
+     
             <div
               class="d-flex rounded-pill p-1 bg-white align-items-center elevation-5"
             >
@@ -41,11 +38,11 @@
                 </button>
               </div>
             </div>
-          </div>
-        </div>
+      
+  
       </div>
     </form>
-  </div>
+
 </template>
 
 <script>
