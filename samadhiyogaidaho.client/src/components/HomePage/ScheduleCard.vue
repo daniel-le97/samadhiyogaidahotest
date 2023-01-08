@@ -2,13 +2,13 @@
   <div
     v-motion-slide-visible-once-bottom
     :delay="300"
-    class="mt-4 text-center text-md-start"
+    class="mt-4 text-center "
   >
     <p class="underline fs-2 font-1 border-2 border-bottom text-pink darken-20">
       {{ schedule.title }}
     </p>
 
-    <div class="d-flex justify-content-center justify-content-md-start">
+    <div class="d-flex justify-content-center ">
       <div class="me-3">
         <p class="fs-3">{{ schedule.time }}</p>
 

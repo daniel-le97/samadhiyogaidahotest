@@ -80,6 +80,7 @@
       detectRetina: true,
     }"
   />
+  
 </template>
 
 <script setup>
