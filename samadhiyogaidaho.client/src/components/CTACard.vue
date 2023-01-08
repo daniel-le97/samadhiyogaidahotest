@@ -129,7 +129,7 @@ props:{
   transform: translateY(20%);
     transition: .5s ease-in-out;
     //when screen is 768px OR LESS
-      background-color:    #f68b59
+
 ;
     @media only screen and (max-width: 768px){
       transform: translateY(-0%);
@@ -170,12 +170,12 @@ props:{
 .card:hover .card__header {
   transform: translateY(0);
     transition: .5s ease-in-out;
-     background-color:    #f68b59
+  
   
 }
 .card:hover .card__arc path{
      transition: .5s ease-in-out;
-     fill:    #f68b59
+
   
 }
 

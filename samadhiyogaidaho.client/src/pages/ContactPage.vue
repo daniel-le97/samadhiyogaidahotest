@@ -110,12 +110,29 @@
               <i class="mdi mdi-email fs-3"></i> samadhiyogaidaho@gmail.com</a
             >
           </p>
+
+
+          <div class="row">
+
+<div class="col-md-12">
+    <p
+            v-motion-slide-visible-once-bottom
+            :delay="300"
+            class="display-4 text-center"
+          >
+            Hollywood Market
+          </p>
+
+</div>
+
+
+          </div>
         </div>
         <div class="col-md-6 p-0">
           <img
             v-motion-slide-visible-once-bottom
             :delay="300"
-            src="https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            src="../assets/img/IMG_4916.jpg"
             alt=""
             class="img-fluid"
           />
