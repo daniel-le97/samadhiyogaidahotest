@@ -35,7 +35,7 @@
       <div class="container">
         <div class="row my-5">
           <div class="col-md-12 text-center">
-            <h1 
+            <h1
                v-motion-slide-visible-once-bottom
           :delay="300" class="font-1 text-dark display-4">{{ retreat.title }}</h1>
           </div>
@@ -43,7 +43,7 @@
 
         <div class="row gy-3">
           <div class="col-md-6 text-center">
-            <div 
+            <div
                v-motion-slide-visible-once-bottom
           :delay="300"
             class="card elevation-6 border-0 h-100">
@@ -60,7 +60,7 @@
           <div class="col-md-6">
             <div class="row gy-3">
               <div class="col-md-12 mb-md-3">
-                <div 
+                <div
                    v-motion-slide-visible-once-bottom
           :delay="300"
                 class="card elevation-6 border-0">
@@ -75,7 +75,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div 
+                <div
                    v-motion-slide-visible-once-bottom
           :delay="300"
                 class="card elevation-6 border-0">
@@ -152,165 +152,10 @@
     <section>
       <div class="container my-5">
         <div class="row gy-5">
-          <div class="col-md-6">
-            <div 
-               v-motion-slide-visible-once-bottom
-          :delay="300"
-            class="card elevation-7 border-0 rounded-4 p-3">
-              <div class="d-flex">
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="fs-5 text-muted">4 days / 3nights</p>
-              </div>
 
-              <div>
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="fs-5 text-start">{{ retreat?.cost?.text }}</p>
-              </div>
-              <div class="">
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="fs-5 text-start">Payment Options :</p>
-              </div>
-              <div class="d-flex text-dark p-2 bg-primary rounded">
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="fs-4 me-3 mb-0">Early Bird</p>
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="fw-bold fs-4 mb-0">USD ${{ retreat?.cost?.price }}</p>
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="mb-0 ms-2">
-                  <b class="text-danger">-$200 </b>(if paid in full by Dec 1st)
-                </p>
-              </div>
-              <div class="d-flex text-dark p-2 bg-success rounded my-2">
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="fs-4 me-3 mb-0">Payment Plan</p>
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="fw-bold fs-4 mb-0">USD $247.27</p>
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="mb-0 ms-2">
-                  800$ deposit required for couple, $1637.50/$247.27
-                </p>
-              </div>
-              <div class="rounded-4 bg-pink p-2 d-flex justify-content-around">
-                <div class="">
-                  <p 
-                     v-motion-slide-visible-once-bottom
-          :delay="300"
-                  class="mb-0 fs-5">
-                    <i class="mdi mdi-calendar bg-muted fs-3"></i> Start Date
-                  </p>
-                  <p 
-                     v-motion-slide-visible-once-bottom
-          :delay="300"
-                  class="fw-semi-bold fs-4">
-                    {{ new Date(retreat?.startDate).toLocaleDateString() }}
-                  </p>
-                </div>
-                <div class="">
-                  <p 
-                     v-motion-slide-visible-once-bottom
-          :delay="300"
-                  class="mb-0 fs-5">
-                    <i class="mdi mdi-calendar bg-muted fs-3"></i> End Date
-                  </p>
-                  <p
-                     v-motion-slide-visible-once-bottom
-          :delay="300"
-                  class="fw-semi-bold fs-4">
-                    {{ new Date(retreat?.endDate).toLocaleDateString() }}
-                  </p>
-                </div>
-              </div>
-              <div class="fs-5"><p class="">Accepted Payment Methods</p></div>
-              <div 
-                 v-motion-slide-visible-once-bottom
-          :delay="300"
-              class="d-flex justify-content-evenly">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/4305/4305518.png"
-                  alt=""
-                  class="img-fluid"
-                  width="40"
-                  height="20"
-                  title="Cash"
-                />
-                <img
-                  src="https://logodix.com/logo/385467.png"
-                  alt=""
-                  class="img-fluid rounded-5"
-                  width="40"
-                  height="20"
-                  title="Zelle"
-                />
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/5968/5968630.png"
-                  alt=""
-                  class="img-fluid rounded-5"
-                  width="40"
-                  height="20"
-                  title="Apple Pay"
-                />
-
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/423/423468.png"
-                  alt=""
-                  class="img-fluid"
-                  width="40"
-                  height="20"
-                  title="Card payment option does incur a 3% charge each transaction"
-                />
-              </div>
-              <div class="mt-2 fs-5">
-                <p 
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="">
-                  Card payment option does incur a 3% charge each transaction
-                </p>
-              </div>
-              <div 
-                 v-motion-slide-visible-once-bottom
-          :delay="300"
-              class="text-center">
-                <router-link :to="{ name: 'Contact' }">
-                  <button class="btn btn-dark font-2 lighten-10 fs-3 fw-bold">
-                    CONTACT HOST
-                  </button>
-                </router-link>
-                <p class="mt-3">OR</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScoIY1nW3mHn65RkRIqeLQ2jBXiKfMPmvPhM8GsDLjES6BHZw/viewform?embedded=true"
-                
-                target="_blank">
-                     <button
-                  class="btn btn-outline-dark font-2 lighten-10 fs-3 fw-bold"
-                >
-                  BOOK INSTANTLY
-                </button>
-                </a>
-             
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="text-center">
-              <h1 
+              <h1
                  v-motion-slide-visible-once-bottom
           :delay="300"
               class="underline font-1 fs-1">Summary</h1>
@@ -331,7 +176,7 @@
         <div class="row justify-content-center gy-3">
           <div class="col-md-6">
             <div class="text-center">
-              <h1 
+              <h1
                  v-motion-slide-visible-once-bottom
           :delay="300"
               class="fs-1 font-1 underline">
@@ -339,7 +184,7 @@
               </h1>
             </div>
             <div class="">
-              <p 
+              <p
                  v-motion-slide-visible-once-bottom
           :delay="300"
               class="fs-5 text-start">
@@ -373,13 +218,13 @@
             </div>
             <div class="col-md-6">
               <div class="text-center">
-                <p 
+                <p
                    v-motion-slide-visible-once-bottom
           :delay="300"
                 class="fs-1 font-1 underline">Daily Schedule</p>
               </div>
               <div>
-                <p 
+                <p
                    v-motion-slide-visible-once-bottom
           :delay="300"
                 class="fs-5 text-start">
@@ -396,8 +241,8 @@
           :delay="300"
                   class="card border-0 p-md-2">
                     <div class="card-body">
-                      <p 
-                      
+                      <p
+
                       class="fs-4 text-decoration-underline text-center">
                         Optional Activities
                       </p>
@@ -425,7 +270,7 @@
                    v-motion-slide-visible-once-bottom
           :delay="300"
                 class="fs-1 mb-0 underline font-1">Food</p>
-                <p 
+                <p
                    v-motion-slide-visible-once-bottom
           :delay="300"
                 class="fs-2 text-lightPink darken-20 font-2">
@@ -536,6 +381,137 @@
     </section>
     <!-- !FAQ/Highlights -->
 
+
+<section>
+  <div class="container my-md-5 my-3">
+    <div class="row justify-content-center">
+       <div class="col-md-10">
+            <div
+               v-motion-slide-visible-once-bottom
+          :delay="300"
+            class="card elevation-7 border-0 rounded-4 p-3">
+              <div class="d-flex">
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="fs-5 text-muted">4 days / 3nights</p>
+              </div>
+
+              <div>
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="fs-5 text-start">{{ retreat?.cost?.text }}</p>
+              </div>
+              <div class="">
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="fs-5 text-start">Payment Options :</p>
+              </div>
+              <div class="d-flex text-dark p-2 bg-primary rounded">
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="fs-4 me-3 mb-0">Early Bird</p>
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="fw-bold fs-4 mb-0">USD ${{ retreat?.cost?.price }}</p>
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="mb-0 ms-2">
+                  <b class="text-danger">-$200 </b>(if paid in full by Dec 1st)
+                </p>
+              </div>
+              <div class="d-flex text-dark p-2 bg-success rounded my-2">
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="fs-4 me-3 mb-0">Payment Plan</p>
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="fw-bold fs-4 mb-0">USD $247.27</p>
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="mb-0 ms-2">
+                  800$ deposit required for couple, $1637.50/$247.27
+                </p>
+              </div>
+
+              <div class="fs-5"><p class="">Accepted Payment Methods</p></div>
+              <div
+                 v-motion-slide-visible-once-bottom
+          :delay="300"
+              class="d-flex justify-content-evenly">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/4305/4305518.png"
+                  alt=""
+                  class="img-fluid"
+                  width="40"
+                  height="20"
+                  title="Cash"
+                />
+                <img
+                  src="https://logodix.com/logo/385467.png"
+                  alt=""
+                  class="img-fluid rounded-5"
+                  width="40"
+                  height="20"
+                  title="Zelle"
+                />
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968630.png"
+                  alt=""
+                  class="img-fluid rounded-5"
+                  width="40"
+                  height="20"
+                  title="Apple Pay"
+                />
+
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/423/423468.png"
+                  alt=""
+                  class="img-fluid"
+                  width="40"
+                  height="20"
+                  title="Card payment option does incur a 3% charge each transaction"
+                />
+              </div>
+              <div class="mt-2 fs-5">
+                <p
+                   v-motion-slide-visible-once-bottom
+          :delay="300"
+                class="">
+                  Card payment option does incur a 3% charge each transaction
+                </p>
+              </div>
+              <div
+                 v-motion-slide-visible-once-bottom
+          :delay="300"
+              class="text-center">
+                <router-link :to="{ name: 'Contact' }">
+                  <button class="btn btn-dark font-2 lighten-10 fs-3 fw-bold">
+                    CONTACT HOST
+                  </button>
+                </router-link>
+                <p class="mt-3">OR</p>
+             <RetreatButton/>
+
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
     <!--SECTION Archived Retreats-->
     <section>
       <div class="container">
@@ -560,6 +536,7 @@ import FoodImageSwiper from "../components/RetreatPage/FoodImageSwiper.vue";
 import RetreatForm from "../components/AdminComponents/RetreatForm.vue";
 import ParticleComponent from "../components/MiscComponents/ParticleComponent.vue";
 import ArchivedRetreat from "../components/RetreatPage/ArchivedRetreat.vue";
+import RetreatButton from "../components/RetreatButton.vue";
 
 export default {
   setup() {
@@ -602,7 +579,8 @@ export default {
     AccommodationSwiper,
     ParticleComponent,
     ArchivedRetreat,
-  },
+    RetreatButton
+},
 };
 </script>
 

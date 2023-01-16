@@ -28,7 +28,6 @@
                   Stay in touch and be part of our community
                 </p>
               </div>
-          
             </div>
           </div>
         </div>
@@ -79,54 +78,81 @@
       </div>
     </section>
     <section class="container-fluid my-5 bg-pink">
-      <div class="row">
-        <div class="col-md-6 p-5">
-          <p
+      <div class="row ">
+        <div class="col-md-6 p-5 ">
+        <div >
+            <p
             v-motion-slide-visible-once-bottom
             :delay="300"
             class="display-4 text-center"
           >
-            Contact Us Directly or Visit Our Studio
+            Contact us directly at:
           </p>
 
-          <p
-            v-motion-slide-visible-once-bottom
-            :delay="300"
-            class="text-center text-md-start"
-          >
-            <a href="tel:208-670-4139" class="text-dark font-2 email-phone">
-              <i class="mdi mdi-phone fs-3"></i> 208-670-4139</a
+          <div class="text-center">
+            <p
+              v-motion-slide-visible-once-bottom
+              :delay="300"
+              class="text-center fs-3"
             >
-          </p>
-          <p
-            v-motion-slide-visible-once-bottom
-            :delay="300"
-            class="text-center text-md-start"
-          >
-            <a
-              href="mailto:samadhiyogaidaho@gmail.com"
-              class="text-dark font-2 email-phone"
+              <a href="tel:208-670-4139" class="text-dark font-2 email-phone">
+                <i class="mdi mdi-phone fs-3"></i> 208-670-4139</a
+              >
+            </p>
+            <p
+              v-motion-slide-visible-once-bottom
+              :delay="300"
+              class="text-center fs-3"
             >
-              <i class="mdi mdi-email fs-3"></i> samadhiyogaidaho@gmail.com</a
-            >
-          </p>
-
-
-          <div class="row">
-
-<div class="col-md-12">
-    <p
-            v-motion-slide-visible-once-bottom
-            :delay="300"
-            class="display-4 text-center"
-          >
-            Hollywood Market
-          </p>
-
-</div>
-
-
+              <a
+                href="mailto:samadhiyogaidaho@gmail.com"
+                class="text-dark font-2 email-phone"
+              >
+                <i class="mdi mdi-email fs-3"></i> samadhiyogaidaho@gmail.com</a
+              >
+            </p>
           </div>
+
+        </div>
+              <div class="row mt-2 mt-md-5 ">
+               <div class="col-md-6">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.0401171489025!2d-116.1999963838341!3d43.62652396217208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aef9219118320f%3A0x8e084b9e409ec87!2sHollywood%20Market%20Yoga%20%26%20Massage!5e0!3m2!1sen!2sus!4v1673220559248!5m2!1sen!2sus"
+                      class="elevation-6 rounded"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div class="col-md-6">
+                  <p class="fs-5">Hollywood Market</p>
+                  <p class="fs-5">5634 W State St, Boise, ID 83703</p>
+                  <p class="fs-5"> Monday & Wednesday </p>
+                </div>
+
+              </div>
+              <div class="row mt-4">
+
+
+
+                  <div class="col-md-6">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11546.307468094212!2d-116.27678296044921!3d43.656971100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aeff6d66eadd35%3A0x135a6917ddd02c27!2sAuthentic%20Yoga%20Studio!5e0!3m2!1sen!2sus!4v1673220846993!5m2!1sen!2sus"
+                 class="elevation-6 rounded"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div class="col-md-6">
+                  <p class="fs-5">
+                    Authentic Yoga
+                  </p>
+                  <p class="fs-5">1319 N 8th St, Boise, ID 83702</p>
+                  <p class="fs-5">Saturday</p>
+                </div>
+              </div>
+
         </div>
         <div class="col-md-6 p-0">
           <img
@@ -151,14 +177,14 @@ export default {
   setup() {
     return {};
   },
-  components: { ParticleComponent, ContactForm, },
+  components: { ParticleComponent, ContactForm },
 };
 </script>
 
 <style lang="scss" scoped>
-.studio-img{
+.studio-img {
   width: 100%;
-  height:800px;
+  height: 800px;
   object-fit: cover;
 }
 .hero-image {
@@ -170,9 +196,8 @@ export default {
   background-position: bottom;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
-     @media only screen and (max-width: 768px){
- background-attachment: scroll;
- 
+  @media only screen and (max-width: 768px) {
+    background-attachment: scroll;
   }
 }
 </style>

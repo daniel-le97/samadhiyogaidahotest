@@ -37,6 +37,7 @@
         <p class="fs-4" v-motion-slide-visible-once-bottom :delay="300">
           Escape with us and learn how to see yourself without judgment
         </p>
+        <RetreatButton />
         <p>
           <a
             v-motion-slide-visible-once-bottom
@@ -60,10 +61,11 @@
 <script>
 import CTACard from "../CTACard.vue";
 import { onMounted } from "vue";
+import RetreatButton from "../RetreatButton.vue"
 export default {
   setup() {
     onMounted(() => {
-     
+
     });
     return {};
   },
