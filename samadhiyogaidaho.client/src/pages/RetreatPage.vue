@@ -158,13 +158,14 @@
               <h1
                  v-motion-slide-visible-once-bottom
           :delay="300"
-              class="underline font-1 fs-1">Summary</h1>
+              class="underline font-1 fs-1">About this trip</h1>
             </div>
-            <div class="">
+            <div class="" >
               <p
                  v-motion-slide-visible-once-bottom
           :delay="300"
-              class="fs-5 text-start7">{{ retreat?.description }}</p>
+              class="fs-5 text-start7"  >{{ retreat?.description }}</p>
+
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ class RetreatsService {
       logger.log(`${hi}`)
     }
     const res = await api.get("api/retreats");
-    // logger.log(AppState.retreats, "retreats");
+    logger.log(res.data, "retreats");
     let newRetreats = res.data.map((r) => new Retreat(r));
     AppState.retreats = newRetreats;
 
