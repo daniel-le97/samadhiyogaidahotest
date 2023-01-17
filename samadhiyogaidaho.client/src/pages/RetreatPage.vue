@@ -632,6 +632,7 @@ export default {
 
 .masonry {
   columns: 4;
+  
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
     columns: 1;

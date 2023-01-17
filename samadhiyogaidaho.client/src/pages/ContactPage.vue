@@ -118,7 +118,8 @@
                <div class="col-md-6">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.0401171489025!2d-116.1999963838341!3d43.62652396217208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aef9219118320f%3A0x8e084b9e409ec87!2sHollywood%20Market%20Yoga%20%26%20Massage!5e0!3m2!1sen!2sus!4v1673220559248!5m2!1sen!2sus"
-                      class="elevation-6 rounded"
+                      class="elevation-6 rounded img-fluid"
+
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
@@ -138,7 +139,7 @@
                   <div class="col-md-6">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11546.307468094212!2d-116.27678296044921!3d43.656971100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aeff6d66eadd35%3A0x135a6917ddd02c27!2sAuthentic%20Yoga%20Studio!5e0!3m2!1sen!2sus!4v1673220846993!5m2!1sen!2sus"
-                 class="elevation-6 rounded"
+                 class="elevation-6 rounded img-fluid"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
