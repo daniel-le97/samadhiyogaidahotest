@@ -1,5 +1,5 @@
 
-FROM node:16.3.0-alpine3.16
+FROM node:19.0.0-alpine3.16
 ENV NODE_ENV=production
 WORKDIR /app
 COPY ./package*.json ./
