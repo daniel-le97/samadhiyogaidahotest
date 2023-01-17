@@ -586,6 +586,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+
 .page-title {
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
@@ -597,17 +600,15 @@ export default {
   object-fit: cover;
 }
 .schedule-img {
-  width: 65%;
+
 
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    height: 75%;
   }
   //when screen is 768px OR LESS
-  @media only screen and (max-width: 1202px) {
-    width: 100%;
-  }
+
 }
 .feature-image {
   object-fit: cover;
@@ -632,7 +633,7 @@ export default {
 
 .masonry {
   columns: 4;
-  
+
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
     columns: 1;
