@@ -232,37 +232,16 @@
                   {{ retreat?.schedule?.description }}
                 </p>
               </div>
-              <div
-                class="row justify-content-center mt-md-5"
-                v-if="retreat?.activities"
-              >
-                <div class="col-md-6">
-                  <div
-                     v-motion-slide-visible-once-bottom
-          :delay="300"
-                  class="card border-0 p-md-2">
-                    <div class="card-body">
-                      <p
-
-                      class="fs-4 text-decoration-underline text-center">
-                        Optional Activities
-                      </p>
-                      <ul>
-                        <li v-for="a in retreat?.activities">
-                          <p class="fs-5 text-start">
-                            {{ a }}
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+         
             </div>
           </div>
         </div>
       </div>
-      <section>
+
+    </section>
+
+<!-- SECTION FOOD -->
+   <!-- <section>
         <div class="container my-5">
           <div class="row gy-3">
             <div class="col-md-5">
@@ -293,8 +272,10 @@
             </div>
           </div>
         </div>
-      </section>
-    </section>
+      </section> -->
+<!-- !SECTION FOOD -->
+
+
 
     <!--SECTION  Accommodations-->
     <section>
@@ -592,7 +573,8 @@ export default {
   object-fit: cover;
 }
 .schedule-img {
-
+    width: 75%;
+    height: 100%;
 
   //when screen is 768px OR LESS
   @media only screen and (max-width: 768px) {
