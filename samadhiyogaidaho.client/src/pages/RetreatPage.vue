@@ -52,7 +52,7 @@
                   v-if="retreat"
                   :src="featuredImg1"
                   alt=""
-                  class="rounded-4 elevation-6 feature-image-1 h-100"
+                  class="elevation-6 feature-image-1 h-100"
                 />
               </div>
             </div>
@@ -69,7 +69,7 @@
                       v-if="retreat"
                       :src="retreat.coverImg"
                       alt=""
-                      class="rounded-4 elevation-6 feature-image"
+                      class=" elevation-6 feature-image"
                     />
                   </div>
                 </div>
@@ -84,7 +84,7 @@
                       v-if="retreat"
                       :src="featuredImg2"
                       alt=""
-                      class="rounded-4 elevation-6 feature-image"
+                      class=" elevation-6 feature-image"
                     />
                   </div>
                 </div>
@@ -100,7 +100,7 @@
                         <img
                           :src="featuredImg3"
                           alt=""
-                          class="rounded-4 elevation-6 feature-image"
+                          class=" elevation-6 feature-image"
                         />
                       </div>
                     </div>
@@ -559,7 +559,7 @@ export default {
       editable,
 
       featuredImg1: computed(() =>
-        AppState.currentRetreat?.featuredImgs?.slice(0)
+        'https://process.filestackapi.com/resize=fit:clip,width:1440,height:1000/quality=v:79/compress/cache=expiry:604800/ulZS0Im4SWlJe6tuvHXc'
       ),
       featuredImg2: computed(() =>
         AppState.currentRetreat?.featuredImgs?.slice(1)
