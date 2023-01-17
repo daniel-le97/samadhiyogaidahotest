@@ -20,9 +20,9 @@
       </div>
 
       <!-- <section class="mt-5">
-   
+
         <div class="row text-center d-flex justify-content-center pt-5">
-    
+
           <div class="col-md-2">
             <router-link :to="{ name: 'About' }" title="about">
               <h6 class="text-uppercase font-weight-bold  text-dark">
@@ -30,7 +30,7 @@
               </h6>
               </router-link>
           </div>
-  
+
           <div class="col-md-2">
             <router-link :to="{ name: 'Services' }" title="services">
               <h6 class="text-uppercase font-weight-bold  text-dark">
@@ -38,18 +38,18 @@
               </h6>
             </router-link>
           </div>
-  
+
           <div class="col-md-2">
-            
+
               <h6 class="text-uppercase font-weight-bold  text-dark">
                 <a href=" https://ghost.apps.ledano.tk/ " target="_blank"
                   class="text-dark" title="blog">
                   Blog
                 </a>
               </h6>
-            
+
           </div>
-  
+
           <div class="col-md-2">
             <router-link :to="{ name: 'FAQ' }" title="FAQ">
               <h6 class="text-uppercase font-weight-bold  text-dark">
@@ -65,7 +65,7 @@
               </h6>
             </router-link>
           </div>
- 
+
         </div>
 
       </section> -->
@@ -134,9 +134,8 @@
     <!-- Copyright -->
     <div class="text-center p-3 bg-lightPink darken-10">
       © 2022 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/"
-        >Samadhi Yoga Idaho, created by <b> Dev Opportunities</b></a
-      >
+
+        Samadhi Yoga Idaho, created by <b> Dev Opportunities</b>
     </div>
     <div class="">
       <!-- <a href="https://www.freepik.com">designed by Freepik - Freepik.com</a> -->
@@ -154,9 +153,9 @@ import FooterWave from "./MiscComponents/FooterWave.vue";
 export default {
 
   setup() {
-  
+
     return {
-   
+
     };
   },
   components: { NewsLetter, FooterWave },

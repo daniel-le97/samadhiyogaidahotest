@@ -46,13 +46,13 @@
             <div
                v-motion-slide-visible-once-bottom
           :delay="300"
-            class="card elevation-6 border-0 h-100">
+            class="card elevation-6 border-0 h-100 rounded-4">
               <div class="image-box h-100">
                 <img
                   v-if="retreat"
                   :src="featuredImg1"
                   alt=""
-                  class="elevation-6 feature-image-1 h-100"
+                  class="elevation-6 feature-image-1 h-100 rounded-4"
                 />
               </div>
             </div>
@@ -63,13 +63,13 @@
                 <div
                    v-motion-slide-visible-once-bottom
           :delay="300"
-                class="card elevation-6 border-0">
+                class="card elevation-6 border-0 rounded-4">
                   <div class="image-box">
                     <img
                       v-if="retreat"
                       :src="retreat.coverImg"
                       alt=""
-                      class=" elevation-6 feature-image"
+                      class=" elevation-6 feature-image rounded-4"
                     />
                   </div>
                 </div>
@@ -78,13 +78,13 @@
                 <div
                    v-motion-slide-visible-once-bottom
           :delay="300"
-                class="card elevation-6 border-0">
+                class="card elevation-6 border-0 rounded-4">
                   <div class="image-box">
                     <img
                       v-if="retreat"
                       :src="featuredImg2"
                       alt=""
-                      class=" elevation-6 feature-image"
+                      class=" elevation-6 feature-image rounded-4"
                     />
                   </div>
                 </div>
@@ -95,12 +95,12 @@
           :delay="300"
                 class="card elevation-6 border-0">
                   <div class="image-box">
-                    <div class="card elevation-6 border-0">
+                    <div class="card elevation-6 border-0 rounded-4">
                       <div class="image-box">
                         <img
                           :src="featuredImg3"
                           alt=""
-                          class=" elevation-6 feature-image"
+                          class=" elevation-6 feature-image rounded-4"
                         />
                       </div>
                     </div>
@@ -197,7 +197,7 @@
             <div
                v-motion-slide-visible-once-bottom
           :delay="300"
-            class="card h-100 border-0 elevation-6">
+            class="card h-100 border-0 elevation-6 ">
               <div class="image-box h-100">
                 <img
                   :src="retreat?.location?.img"
@@ -310,12 +310,12 @@
               {{ retreat?.accommodations?.description }}
             </p>
           </div>
-          <div
+          <!-- <div
             class="col-md-10 d-flex align-items-center justify-content-center"
           >
             <AccommodationSwiper    v-motion-slide-visible-once-bottom
           :delay="300" />
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
