@@ -410,23 +410,15 @@
           :delay="300"
                 class="fs-5 text-start">Payment Options :</p>
               </div>
-              <div class="d-flex text-dark p-2 bg-primary rounded">
+              <div class="d-flex text-dark p-2 bg-primary rounded my-2" v-for="p in retreat?.cost?.paymentOptions">
+
                 <p
                    v-motion-slide-visible-once-bottom
           :delay="300"
-                class="fs-4 me-3 mb-0">Early Bird</p>
-                <p
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="fw-bold fs-4 mb-0">USD ${{ retreat?.cost?.price }}</p>
-                <p
-                   v-motion-slide-visible-once-bottom
-          :delay="300"
-                class="mb-0 ms-2">
-                  <b class="text-danger">-$200 </b>(if paid in full by Dec 1st)
-                </p>
+                class=" mb-0 font-2 fs-5">{{p }}</p>
+
               </div>
-              <div class="d-flex text-dark p-2 bg-success rounded my-2">
+              <!-- <div class="d-flex text-dark p-2 bg-success rounded my-2">
                 <p
                    v-motion-slide-visible-once-bottom
           :delay="300"
@@ -441,9 +433,9 @@
                 class="mb-0 ms-2">
                   800$ deposit required for couple, $1637.50/$247.27
                 </p>
-              </div>
+              </div> -->
 
-              <div class="fs-5"><p class="">Accepted Payment Methods</p></div>
+              <!-- <div class="fs-5"><p class="">Accepted Payment Methods</p></div>
               <div
                  v-motion-slide-visible-once-bottom
           :delay="300"
@@ -489,7 +481,7 @@
                 class="">
                   Card payment option does incur a 3% charge each transaction
                 </p>
-              </div>
+              </div> -->
               <div
                  v-motion-slide-visible-once-bottom
           :delay="300"
