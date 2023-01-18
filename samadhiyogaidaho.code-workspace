@@ -52,6 +52,7 @@
     "typescript.format.enable": true,
     "javascript.validate.enable": false,
     "liveServer.settings.multiRootWorkspaceName": "client",
+<<<<<<< HEAD
     "workbench.colorCustomizations": {
       "activityBar.activeBackground": "#f9ad89",
       "activityBar.background": "#f9ad89",
@@ -72,6 +73,8 @@
       "titleBar.inactiveForeground": "#15202b99"
     },
     "peacock.color": "#f68b59",
+=======
+>>>>>>> d338859b (1)
     "nuxt.isNuxtApp": false
   }
 }
